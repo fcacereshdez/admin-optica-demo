@@ -102,5 +102,141 @@ namespace DataAccess
                 }
             }
         }
+
+        public void SelectUserById(Int64 user_id)
+        {
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                using (var cmd = new SqlCommand())
+                {
+                    cmd.Connection = conn;
+                    cmd.CommandText = "SelectUserById";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@user_id", user_id);
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            UserEditor.user_id = reader.GetInt64(0);
+                            UserEditor.name = reader.GetString(1);
+                            UserEditor.lastname = reader.GetString(2);
+                            UserEditor.username = reader.GetString(3);
+                            UserEditor.email = reader.GetString(5);
+                            UserEditor.phone = reader.GetString(6);
+                            UserEditor.role = reader.GetInt64(7);
+                            UserEditor.status = reader.GetInt64(8);
+                        }
+                    }
+                }
+            }
+        }
+
+        public void UpdateUser(string name, string lastname, string username, string password, string email, string phone, Int64 role_id, Int64 user_status_id ,Int64 user_id, DateTime updated_at)
+        {
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                using (var cmd = new SqlCommand())
+                {
+                    cmd.Connection = conn;
+                    cmd.CommandText = "UpdateUser";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@name", name);
+                    cmd.Parameters.AddWithValue("@lastname", lastname);
+                    cmd.Parameters.AddWithValue("@username", username);
+                    cmd.Parameters.AddWithValue("@password", password);
+                    cmd.Parameters.AddWithValue("@email", email);
+                    cmd.Parameters.AddWithValue("@phone", phone);
+                    cmd.Parameters.AddWithValue("@role_id", role_id);
+                    cmd.Parameters.AddWithValue("@user_status_id", user_status_id);
+                    cmd.Parameters.AddWithValue("@user_id", user_id);
+                    cmd.Parameters.AddWithValue("@updated_at", updated_at);
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                }
+            }
+        }
+
+        public void CreateUser(string name, string lastname, string username, string password, string email, string phone, Int64 role_id, Int64 user_status_id, DateTime created_at)
+        {
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                using (var cmd = new SqlCommand())
+                {
+                    cmd.Connection = conn;
+                    cmd.CommandText = "CreateUser";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@name", name);
+                    cmd.Parameters.AddWithValue("@lastname", lastname);
+                    cmd.Parameters.AddWithValue("@username", username);
+                    cmd.Parameters.AddWithValue("@password", password);
+                    cmd.Parameters.AddWithValue("@email", email);
+                    cmd.Parameters.AddWithValue("@phone", phone);
+                    cmd.Parameters.AddWithValue("@role_id", role_id);
+                    cmd.Parameters.AddWithValue("@user_status_id", user_status_id);
+                    cmd.Parameters.AddWithValue("@created_at", created_at);
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                }
+            }
+        }
+
+        public void DeleteUser(Int64 user_id)
+        {
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                using (var cmd = new SqlCommand())
+                {
+                    cmd.Connection = conn;
+                    cmd.CommandText = "DeleteUser";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@user_id", user_id);
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                }
+            }
+        }
+
+        public DataTable SelectAllRoles()
+        {
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                using (var cmd = new SqlCommand())
+                {
+                    cmd.Connection = conn;
+                    cmd.CommandText = "SelectRoles";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    SqlDataReader ReaderRoles = cmd.ExecuteReader();
+                    DataTable TableRoles = new DataTable();
+                    TableRoles.Load(ReaderRoles);
+                    conn.Close();
+                    return TableRoles;
+                }
+            }
+        }
+
+        public DataTable SelectAllStatus()
+        {
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                using (var cmd = new SqlCommand())
+                {
+                    cmd.Connection = conn;
+                    cmd.CommandText = "SelectUserStatus";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    SqlDataReader ReaderStatus= cmd.ExecuteReader();
+                    DataTable TableStatus = new DataTable();
+                    TableStatus.Load(ReaderStatus);
+                    conn.Close();
+                    return TableStatus;
+                }
+            }
+        }
     }
 }

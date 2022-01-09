@@ -11,6 +11,7 @@
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -26,8 +27,7 @@
     <ProductName>Sistema de Gestión para Ópticas</ProductName>
     <PublisherName>Mango Studios</PublisherName>
     <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ApplicationVersion>2.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -89,6 +89,18 @@
     <Compile Include="View\Forms\Home\AdminForm.Designer.cs">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Forms\User\UserCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\User\UserCreate.Designer.cs">
+      <DependentUpon>UserCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\User\UserEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\User\UserEdit.Designer.cs">
+      <DependentUpon>UserEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Forms\User\UsersForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +125,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\Home\AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\User\UserCreate.resx">
+      <DependentUpon>UserCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\User\UserEdit.resx">
+      <DependentUpon>UserEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\User\UsersForm.resx">
       <DependentUpon>UsersForm.cs</DependentUpon>
@@ -249,6 +267,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\close-eyes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-editar.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-editar-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-crear-nuevo-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-editar-24 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-eliminar-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-añadir-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-eliminar-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-usuario-hombre-verificado-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-asignación-entregado-24 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-exportación-de-base-de-datos-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-guardar-24.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

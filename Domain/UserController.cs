@@ -33,5 +33,39 @@ namespace Domain
         {
             userData.UpdateLastAccessUser(user_id, Convert.ToDateTime(last_access));
         }
+
+        public void SelectUserById(Int64 user_id)
+        {
+            userData.SelectUserById(user_id);
+        }
+
+        public void UpdateUser(string name, string lastname, string username, string password, string email, string phone, string role_id, string user_status_id, Int64 user_id, string updated_at)
+        {
+            userData.UpdateUser(name, lastname, username, password, email, phone, Convert.ToInt64(role_id), Convert.ToInt64(user_status_id), user_id, Convert.ToDateTime(updated_at));
+        }
+
+        public DataTable SelectAllRoles()
+        {
+            DataTable TableRoles = new DataTable();
+            TableRoles = userData.SelectAllRoles();
+            return TableRoles;
+        }
+
+        public DataTable SelectAllstatus()
+        {
+            DataTable TableStatus = new DataTable();
+            TableStatus = userData.SelectAllStatus();
+            return TableStatus;
+        }
+
+        public void CreateUser(string name, string lastname, string username, string password, string email, string phone, string role_id, string user_status_id, string created_at)
+        {
+            userData.CreateUser(name, lastname, username, password, email, phone, Convert.ToInt64(role_id), Convert.ToInt64(user_status_id), Convert.ToDateTime(created_at));
+        }
+
+        public void DeleteUser(Int64 user_id)
+        {
+            userData.DeleteUser(user_id);
+        }
     }
 }
