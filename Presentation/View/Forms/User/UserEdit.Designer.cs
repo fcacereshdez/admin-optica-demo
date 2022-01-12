@@ -51,6 +51,7 @@ namespace Presentation.View.Forms.User
             this.pcb_close_edit_user = new System.Windows.Forms.PictureBox();
             this.pcb_exit = new System.Windows.Forms.PictureBox();
             this.pcb_minus = new System.Windows.Forms.PictureBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.pnl_top.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_close_edit_user)).BeginInit();
@@ -61,6 +62,7 @@ namespace Presentation.View.Forms.User
             // pnl_top
             // 
             this.pnl_top.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(29)))), ((int)(((byte)(26)))));
+            this.pnl_top.Controls.Add(this.label10);
             this.pnl_top.Controls.Add(this.pcb_close_edit_user);
             this.pnl_top.Controls.Add(this.pcb_exit);
             this.pnl_top.Controls.Add(this.pcb_minus);
@@ -166,8 +168,10 @@ namespace Presentation.View.Forms.User
             // 
             this.txt_password.Location = new System.Drawing.Point(165, 92);
             this.txt_password.Name = "txt_password";
+            this.txt_password.PasswordChar = '●';
             this.txt_password.Size = new System.Drawing.Size(150, 25);
             this.txt_password.TabIndex = 7;
+            this.txt_password.UseSystemPasswordChar = true;
             // 
             // label4
             // 
@@ -276,8 +280,20 @@ namespace Presentation.View.Forms.User
             this.pcb_minus.TabIndex = 2;
             this.pcb_minus.TabStop = false;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(9, 4);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(118, 17);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "Editor de usuarios";
+            // 
             // UserEdit
             // 
+            this.AcceptButton = this.btn_edit_user;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -293,6 +309,7 @@ namespace Presentation.View.Forms.User
             this.Text = "UserEdit";
             this.Load += new System.EventHandler(this.UserEdit_Load);
             this.pnl_top.ResumeLayout(false);
+            this.pnl_top.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_close_edit_user)).EndInit();
@@ -326,5 +343,6 @@ namespace Presentation.View.Forms.User
         public System.Windows.Forms.TextBox txt_phone;
         public System.Windows.Forms.ComboBox cb_role;
         public System.Windows.Forms.ComboBox cb_status;
+        private System.Windows.Forms.Label label10;
     }
 }

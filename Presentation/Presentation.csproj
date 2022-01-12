@@ -83,6 +83,36 @@
     <Compile Include="View\Forms\Auth\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Forms\Client\ClientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Client\ClientForm.Designer.cs">
+      <DependentUpon>ClientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\Company\CompanyCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Company\CompanyCreate.Designer.cs">
+      <DependentUpon>CompanyCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\Company\CompanyEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Company\CompanyEdit.Designer.cs">
+      <DependentUpon>CompanyEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\Company\CompanyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Company\CompanyForm.Designer.cs">
+      <DependentUpon>CompanyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\Company\CompanyView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Company\CompanyView.Designer.cs">
+      <DependentUpon>CompanyView.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Forms\Home\AdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +153,21 @@
     <EmbeddedResource Include="View\Forms\Auth\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Client\ClientForm.resx">
+      <DependentUpon>ClientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Company\CompanyCreate.resx">
+      <DependentUpon>CompanyCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Company\CompanyEdit.resx">
+      <DependentUpon>CompanyEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Company\CompanyForm.resx">
+      <DependentUpon>CompanyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Company\CompanyView.resx">
+      <DependentUpon>CompanyView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\Home\AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -158,9 +203,7 @@
       <Name>Domain</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="View\Forms\Client\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
       <Visible>False</Visible>
@@ -300,6 +343,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-guardar-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-ver-24.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

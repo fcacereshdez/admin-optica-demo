@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Common.Cache
 {
-   public class UserEditor
+   public class Users
     {
         public static Int64 user_id { get; set; }
         public static string name { get; set; }

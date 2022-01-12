@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Domain;
 using Common.Cache;
+using Common.Models;
 
 namespace Presentation.View.Forms.User
 {
@@ -61,50 +62,58 @@ namespace Presentation.View.Forms.User
             UserController userController = new UserController();
             userController.SelectUserById(user_id);
             UserEdit userEdit = new UserEdit();
-            userEdit.txt_name.Text = UserEditor.name;
-            userEdit.txt_lastname.Text = UserEditor.lastname;
-            userEdit.txt_username.Text = UserEditor.username;
-            userEdit.txt_phone.Text = UserEditor.phone;
-            userEdit.txt_email.Text = UserEditor.email;
-            userEdit.FormClosed += new System.Windows.Forms.FormClosedEventHandler(UserEdit_FormClosed);
+            userEdit.txt_name.Text = Users.name;
+            userEdit.txt_lastname.Text = Users.lastname;
+            userEdit.txt_username.Text = Users.username;
+            userEdit.txt_phone.Text = Users.phone;
+            userEdit.txt_email.Text = Users.email;
+            userEdit.txt_password.Text = Users.password;
+            userEdit.FormClosed += new FormClosedEventHandler(UserEdit_FormClosed);
             userEdit.ShowDialog();
         }
 
         private void btn_create_user_Click(object sender, EventArgs e)
         {
             UserCreate userCreate = new UserCreate();
-            userCreate.FormClosed += new System.Windows.Forms.FormClosedEventHandler(UserCreate_FormClosed);
+            userCreate.FormClosed += new FormClosedEventHandler(UserCreate_FormClosed);
             userCreate.ShowDialog();
         }
 
 
         private void btn_user_delete_Click(object sender, EventArgs e)
         {
-            bool msg = MsgBoxUsers("Eliminación", "¿Está seguro de eliminar este registro?", MessageBoxButtons.YesNo);
+            bool msg = MsgBoxUsers("¿Está seguro de eliminar este registro?", "Eliminación", MessageBoxButtons.YesNo);
             if (msg == true)
             {
                 UserController userController = new UserController();
-                userController.DeleteUser(Convert.ToInt64(dgv_users.SelectedRows[0].Cells[0].Value));
-                LoadAllUsers();
+                try
+                {
+                    userController.DeleteUser(Convert.ToInt64(dgv_users.SelectedRows[0].Cells[0].Value));
+                    MsgBoxUsers("Registro eliminado", "Procesado", MessageBoxButtons.OK);
+                    userController.InsertActionsUser("Eliminió un usuario", Environment.MachineName, "127.0.0.1", UserCache.user_id, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+                    LoadAllUsers();
+                }
+                catch (Exception exception)
+                {
+                    MessageBox.Show("Error MSSQLSERVER (0x000001): " + exception.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); ;
+                }
+                
             }
-            MsgBoxUsers("Procesado", "Registro eliminado.", MessageBoxButtons.OK);
         }
 
         private void UserEdit_FormClosed(object sender, FormClosedEventArgs e)
         {
             LoadAllUsers();
-            MsgBoxUsers("Procesado", "Registro actualizado.", MessageBoxButtons.OK);
         }
 
         private void UserCreate_FormClosed(object sender, FormClosedEventArgs e)
         {
             LoadAllUsers();
-            MsgBoxUsers("Procesado", "Registro creado.", MessageBoxButtons.OK);
         }
 
         private bool MsgBoxUsers(string title, string msg, MessageBoxButtons buttons)
         {
-            DialogResult dialogResult = MessageBox.Show(msg, title, buttons);
+            DialogResult dialogResult = MessageBox.Show(msg, title, buttons, MessageBoxIcon.Information);
             if (dialogResult == DialogResult.Yes)
             {
                 return true;

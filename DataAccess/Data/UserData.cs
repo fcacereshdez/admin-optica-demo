@@ -119,14 +119,15 @@ namespace DataAccess
                     {
                         while (reader.Read())
                         {
-                            UserEditor.user_id = reader.GetInt64(0);
-                            UserEditor.name = reader.GetString(1);
-                            UserEditor.lastname = reader.GetString(2);
-                            UserEditor.username = reader.GetString(3);
-                            UserEditor.email = reader.GetString(5);
-                            UserEditor.phone = reader.GetString(6);
-                            UserEditor.role = reader.GetInt64(7);
-                            UserEditor.status = reader.GetInt64(8);
+                            Users.user_id = reader.GetInt64(0);
+                            Users.name = reader.GetString(1);
+                            Users.lastname = reader.GetString(2);
+                            Users.username = reader.GetString(3);
+                            Users.password = reader.GetString(4);
+                            Users.email = reader.GetString(5);
+                            Users.phone = reader.GetString(6);
+                            Users.role = reader.GetInt64(7);
+                            Users.status = reader.GetInt64(8);
                         }
                     }
                 }

@@ -51,9 +51,10 @@ namespace Presentation
             this.pnl_layout = new System.Windows.Forms.Panel();
             this.pcb_logo = new System.Windows.Forms.PictureBox();
             this.pnl_name_view = new System.Windows.Forms.Panel();
+            this.pcb_close_form = new System.Windows.Forms.PictureBox();
             this.lbl_form_name = new System.Windows.Forms.Label();
             this.tmr_layout = new System.Windows.Forms.Timer(this.components);
-            this.pcb_close_form = new System.Windows.Forms.PictureBox();
+            this.btn_companies = new System.Windows.Forms.Button();
             this.pnl_menu.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_logout)).BeginInit();
@@ -71,6 +72,7 @@ namespace Presentation
             // pnl_menu
             // 
             this.pnl_menu.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnl_menu.Controls.Add(this.btn_companies);
             this.pnl_menu.Controls.Add(this.panel1);
             this.pnl_menu.Controls.Add(this.btn_user);
             this.pnl_menu.Controls.Add(this.btn_labs);
@@ -172,7 +174,7 @@ namespace Presentation
             this.btn_clients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_clients.Image = global::Presentation.Properties.Resources.costumer;
             this.btn_clients.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_clients.Location = new System.Drawing.Point(2, 124);
+            this.btn_clients.Location = new System.Drawing.Point(2, 298);
             this.btn_clients.Name = "btn_clients";
             this.btn_clients.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
             this.btn_clients.Size = new System.Drawing.Size(200, 41);
@@ -321,6 +323,18 @@ namespace Presentation
             this.pnl_name_view.Size = new System.Drawing.Size(844, 26);
             this.pnl_name_view.TabIndex = 4;
             // 
+            // pcb_close_form
+            // 
+            this.pcb_close_form.Image = global::Presentation.Properties.Resources.close_eyes;
+            this.pcb_close_form.Location = new System.Drawing.Point(821, 3);
+            this.pcb_close_form.Name = "pcb_close_form";
+            this.pcb_close_form.Size = new System.Drawing.Size(20, 20);
+            this.pcb_close_form.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcb_close_form.TabIndex = 1;
+            this.pcb_close_form.TabStop = false;
+            this.pcb_close_form.Visible = false;
+            this.pcb_close_form.Click += new System.EventHandler(this.pcb_close_form_Click);
+            // 
             // lbl_form_name
             // 
             this.lbl_form_name.AutoSize = true;
@@ -335,17 +349,20 @@ namespace Presentation
             this.tmr_layout.Enabled = true;
             this.tmr_layout.Tick += new System.EventHandler(this.tmr_layout_Tick);
             // 
-            // pcb_close_form
+            // btn_companies
             // 
-            this.pcb_close_form.Image = global::Presentation.Properties.Resources.close_eyes;
-            this.pcb_close_form.Location = new System.Drawing.Point(821, 3);
-            this.pcb_close_form.Name = "pcb_close_form";
-            this.pcb_close_form.Size = new System.Drawing.Size(20, 20);
-            this.pcb_close_form.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pcb_close_form.TabIndex = 1;
-            this.pcb_close_form.TabStop = false;
-            this.pcb_close_form.Visible = false;
-            this.pcb_close_form.Click += new System.EventHandler(this.pcb_close_form_Click);
+            this.btn_companies.FlatAppearance.BorderSize = 0;
+            this.btn_companies.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_companies.Image = global::Presentation.Properties.Resources.costumer;
+            this.btn_companies.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_companies.Location = new System.Drawing.Point(3, 345);
+            this.btn_companies.Name = "btn_companies";
+            this.btn_companies.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
+            this.btn_companies.Size = new System.Drawing.Size(200, 41);
+            this.btn_companies.TabIndex = 5;
+            this.btn_companies.Text = "Empresas";
+            this.btn_companies.UseVisualStyleBackColor = true;
+            this.btn_companies.Click += new System.EventHandler(this.btn_companies_Click);
             // 
             // Layout
             // 
@@ -409,6 +426,7 @@ namespace Presentation
         private System.Windows.Forms.PictureBox pcb_logo;
         private System.Windows.Forms.Label lbl_version_sw;
         private System.Windows.Forms.PictureBox pcb_close_form;
+        private System.Windows.Forms.Button btn_companies;
     }
 }
 

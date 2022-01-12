@@ -1,4 +1,5 @@
-﻿using Domain;
+﻿using Common.Cache;
+using Domain;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -56,6 +57,7 @@ namespace Presentation.View.Forms.User
             lbl_error.Visible = false;
             UserController userController = new UserController();
             userController.CreateUser(txt_name.Text, txt_lastname.Text, txt_username.Text, txt_password.Text, txt_email.Text, txt_phone.Text, cb_role.SelectedValue.ToString(), cb_status.SelectedValue.ToString(), DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+            userController.InsertActionsUser("Creó un usuario con idetificado como: " + txt_username.Text, Environment.MachineName, "127.0.0.1", UserCache.user_id, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
             this.Close();
         }
 

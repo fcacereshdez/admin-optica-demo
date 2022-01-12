@@ -12,6 +12,7 @@ using Presentation.View.Forms.Home;
 using Presentation.View.Forms.User;
 using Common.Cache;
 using System.Net;
+using Presentation.View.Forms.Company;
 
 namespace Presentation
 {
@@ -99,6 +100,11 @@ namespace Presentation
             lbl_form_name.Text = "";
             pcb_close_form.Visible = false;
             pcb_logo.Visible = true;
+        }
+
+        private void btn_companies_Click(object sender, EventArgs e)
+        {
+            ShowForm(new CompanyForm());
         }
     }
 }

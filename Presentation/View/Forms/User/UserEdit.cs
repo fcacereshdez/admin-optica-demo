@@ -27,7 +27,9 @@ namespace Presentation.View.Forms.User
         private void btn_edit_user_Click(object sender, EventArgs e)
         {
             UserController userController = new UserController();
-            userController.UpdateUser(txt_name.Text, txt_lastname.Text, txt_username.Text, txt_password.Text, txt_email.Text, txt_phone.Text, cb_role.SelectedValue.ToString(), cb_status.SelectedValue.ToString(), UserEditor.user_id, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+            userController.UpdateUser(txt_name.Text, txt_lastname.Text, txt_username.Text, txt_password.Text, txt_email.Text, txt_phone.Text, cb_role.SelectedValue.ToString(), cb_status.SelectedValue.ToString(), Users.user_id, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+            userController.InsertActionsUser("Modificó un usuario con idetificado como: " + txt_username.Text, Environment.MachineName, "127.0.0.1", UserCache.user_id, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+            MessageBox.Show("Registro actualizado", "Procesado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
         }
 
@@ -44,8 +46,8 @@ namespace Presentation.View.Forms.User
 
         private void GetSelectedValues()
         {
-            cb_role.SelectedValue = UserEditor.role;
-            cb_status.SelectedValue = UserEditor.status;
+            cb_role.SelectedValue = Users.role;
+            cb_status.SelectedValue = Users.status;
         }
 
         private void UserEdit_Load(object sender, EventArgs e)
