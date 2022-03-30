@@ -13,6 +13,7 @@ using Presentation.View.Forms.User;
 using Common.Cache;
 using System.Net;
 using Presentation.View.Forms.Company;
+using Presentation.View.Forms.Client;
 
 namespace Presentation
 {
@@ -105,6 +106,11 @@ namespace Presentation
         private void btn_companies_Click(object sender, EventArgs e)
         {
             ShowForm(new CompanyForm());
+        }
+
+        private void btn_clients_Click(object sender, EventArgs e)
+        {
+            ShowForm(new ClientForm());
         }
     }
 }

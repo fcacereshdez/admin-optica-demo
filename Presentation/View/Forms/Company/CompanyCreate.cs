@@ -74,7 +74,7 @@ namespace Presentation.View.Forms.Company
         private void SelectLastCodeCompany()
         {
             companyController.SelectLastCodeCompany();
-            int tmp_company_code = Convert.ToInt32(Companies.code) + 1;
+            int tmp_company_code = Convert.ToInt32(Common.Models.Company.code) + 1;
             txt_code.Text = tmp_company_code.ToString();
         }
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Common.Models
 {
-    public class Companies
+    public class Company
     {
         public static Int64 company_id;
         public static string full_name;

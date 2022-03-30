@@ -30,6 +30,10 @@ namespace Presentation.View.Forms.Company
         private void InitializeComponent()
         {
             this.pnl_top = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.pcb_close_create_user = new System.Windows.Forms.PictureBox();
+            this.pcb_exit = new System.Windows.Forms.PictureBox();
+            this.pcb_minus = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txt_iva = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -55,17 +59,13 @@ namespace Presentation.View.Forms.Company
             this.label11 = new System.Windows.Forms.Label();
             this.lbl_error = new System.Windows.Forms.Label();
             this.btn_save_company = new System.Windows.Forms.Button();
-            this.pcb_close_create_user = new System.Windows.Forms.PictureBox();
-            this.pcb_exit = new System.Windows.Forms.PictureBox();
-            this.pcb_minus = new System.Windows.Forms.PictureBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.pnl_top.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_close_create_user)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_exit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_minus)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_top
@@ -81,6 +81,51 @@ namespace Presentation.View.Forms.Company
             this.pnl_top.Name = "pnl_top";
             this.pnl_top.Size = new System.Drawing.Size(553, 29);
             this.pnl_top.TabIndex = 7;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(11, 4);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(137, 17);
+            this.label10.TabIndex = 6;
+            this.label10.Text = "Creador de empresas";
+            // 
+            // pcb_close_create_user
+            // 
+            this.pcb_close_create_user.Image = global::Presentation.Properties.Resources.close;
+            this.pcb_close_create_user.Location = new System.Drawing.Point(520, 4);
+            this.pcb_close_create_user.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pcb_close_create_user.Name = "pcb_close_create_user";
+            this.pcb_close_create_user.Size = new System.Drawing.Size(25, 25);
+            this.pcb_close_create_user.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcb_close_create_user.TabIndex = 4;
+            this.pcb_close_create_user.TabStop = false;
+            this.pcb_close_create_user.Click += new System.EventHandler(this.pcb_close_create_user_Click);
+            // 
+            // pcb_exit
+            // 
+            this.pcb_exit.Image = global::Presentation.Properties.Resources.close;
+            this.pcb_exit.Location = new System.Drawing.Point(1389, 7);
+            this.pcb_exit.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.pcb_exit.Name = "pcb_exit";
+            this.pcb_exit.Size = new System.Drawing.Size(34, 43);
+            this.pcb_exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcb_exit.TabIndex = 3;
+            this.pcb_exit.TabStop = false;
+            // 
+            // pcb_minus
+            // 
+            this.pcb_minus.Image = global::Presentation.Properties.Resources.minus;
+            this.pcb_minus.Location = new System.Drawing.Point(1347, 7);
+            this.pcb_minus.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.pcb_minus.Name = "pcb_minus";
+            this.pcb_minus.Size = new System.Drawing.Size(34, 43);
+            this.pcb_minus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcb_minus.TabIndex = 2;
+            this.pcb_minus.TabStop = false;
             // 
             // groupBox1
             // 
@@ -128,6 +173,7 @@ namespace Presentation.View.Forms.Company
             // 
             // txt_code
             // 
+            this.txt_code.BackColor = System.Drawing.Color.White;
             this.txt_code.Location = new System.Drawing.Point(69, 89);
             this.txt_code.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_code.Name = "txt_code";
@@ -334,51 +380,6 @@ namespace Presentation.View.Forms.Company
             this.btn_save_company.UseVisualStyleBackColor = false;
             this.btn_save_company.Click += new System.EventHandler(this.btn_save_company_Click);
             // 
-            // pcb_close_create_user
-            // 
-            this.pcb_close_create_user.Image = global::Presentation.Properties.Resources.close;
-            this.pcb_close_create_user.Location = new System.Drawing.Point(520, 4);
-            this.pcb_close_create_user.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pcb_close_create_user.Name = "pcb_close_create_user";
-            this.pcb_close_create_user.Size = new System.Drawing.Size(25, 25);
-            this.pcb_close_create_user.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pcb_close_create_user.TabIndex = 4;
-            this.pcb_close_create_user.TabStop = false;
-            this.pcb_close_create_user.Click += new System.EventHandler(this.pcb_close_create_user_Click);
-            // 
-            // pcb_exit
-            // 
-            this.pcb_exit.Image = global::Presentation.Properties.Resources.close;
-            this.pcb_exit.Location = new System.Drawing.Point(1389, 7);
-            this.pcb_exit.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.pcb_exit.Name = "pcb_exit";
-            this.pcb_exit.Size = new System.Drawing.Size(34, 43);
-            this.pcb_exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pcb_exit.TabIndex = 3;
-            this.pcb_exit.TabStop = false;
-            // 
-            // pcb_minus
-            // 
-            this.pcb_minus.Image = global::Presentation.Properties.Resources.minus;
-            this.pcb_minus.Location = new System.Drawing.Point(1347, 7);
-            this.pcb_minus.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.pcb_minus.Name = "pcb_minus";
-            this.pcb_minus.Size = new System.Drawing.Size(34, 43);
-            this.pcb_minus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pcb_minus.TabIndex = 2;
-            this.pcb_minus.TabStop = false;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(11, 4);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(137, 17);
-            this.label10.TabIndex = 6;
-            this.label10.Text = "Creador de empresas";
-            // 
             // CompanyCreate
             // 
             this.AcceptButton = this.btn_save_company;
@@ -399,15 +400,15 @@ namespace Presentation.View.Forms.Company
             this.Text = "CompanyCreate";
             this.pnl_top.ResumeLayout(false);
             this.pnl_top.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcb_close_create_user)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcb_exit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcb_minus)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcb_close_create_user)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcb_exit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcb_minus)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

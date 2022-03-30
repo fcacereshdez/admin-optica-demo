@@ -41,8 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\ClientData.cs" />
     <Compile Include="Data\CompanyData.cs" />
     <Compile Include="Database\DBConnection.cs" />
+    <Compile Include="Data\ProviderData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Data\UserData.cs" />
   </ItemGroup>

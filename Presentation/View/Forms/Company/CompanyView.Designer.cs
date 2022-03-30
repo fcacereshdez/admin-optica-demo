@@ -30,6 +30,8 @@ namespace Presentation.View.Forms.Company
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txt_code = new System.Windows.Forms.TextBox();
             this.txt_iva = new System.Windows.Forms.TextBox();
             this.txt_nit = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -37,6 +39,7 @@ namespace Presentation.View.Forms.Company
             this.txt_fullname = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pnl_top = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
             this.pcb_close_edit_company = new System.Windows.Forms.PictureBox();
             this.pcb_exit = new System.Windows.Forms.PictureBox();
             this.pcb_minus = new System.Windows.Forms.PictureBox();
@@ -54,9 +57,7 @@ namespace Presentation.View.Forms.Company
             this.label8 = new System.Windows.Forms.Label();
             this.txt_attendance_fullname = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txt_code = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.btn_edit_company = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.pnl_top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_close_edit_company)).BeginInit();
@@ -84,6 +85,24 @@ namespace Presentation.View.Forms.Company
             this.groupBox1.TabIndex = 30;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Información de la empresa";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(12, 97);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(54, 17);
+            this.label9.TabIndex = 16;
+            this.label9.Text = "Código:";
+            // 
+            // txt_code
+            // 
+            this.txt_code.Location = new System.Drawing.Point(69, 94);
+            this.txt_code.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txt_code.Name = "txt_code";
+            this.txt_code.ReadOnly = true;
+            this.txt_code.Size = new System.Drawing.Size(159, 25);
+            this.txt_code.TabIndex = 17;
             // 
             // txt_iva
             // 
@@ -152,6 +171,17 @@ namespace Presentation.View.Forms.Company
             this.pnl_top.Name = "pnl_top";
             this.pnl_top.Size = new System.Drawing.Size(553, 29);
             this.pnl_top.TabIndex = 29;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(12, 4);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(119, 17);
+            this.label10.TabIndex = 5;
+            this.label10.Text = "Visor de empresas";
             // 
             // pcb_close_edit_company
             // 
@@ -328,40 +358,29 @@ namespace Presentation.View.Forms.Company
             this.label11.TabIndex = 9;
             this.label11.Text = "Nombre completo:";
             // 
-            // label9
+            // btn_edit_company
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(12, 97);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(54, 17);
-            this.label9.TabIndex = 16;
-            this.label9.Text = "Código:";
-            // 
-            // txt_code
-            // 
-            this.txt_code.Location = new System.Drawing.Point(69, 94);
-            this.txt_code.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txt_code.Name = "txt_code";
-            this.txt_code.ReadOnly = true;
-            this.txt_code.Size = new System.Drawing.Size(159, 25);
-            this.txt_code.TabIndex = 17;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(12, 4);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(119, 17);
-            this.label10.TabIndex = 5;
-            this.label10.Text = "Visor de empresas";
+            this.btn_edit_company.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.btn_edit_company.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.btn_edit_company.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_edit_company.ForeColor = System.Drawing.Color.White;
+            this.btn_edit_company.Image = global::Presentation.Properties.Resources.icons8_guardar_24;
+            this.btn_edit_company.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_edit_company.Location = new System.Drawing.Point(419, 432);
+            this.btn_edit_company.Name = "btn_edit_company";
+            this.btn_edit_company.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btn_edit_company.Size = new System.Drawing.Size(123, 30);
+            this.btn_edit_company.TabIndex = 29;
+            this.btn_edit_company.Text = "Modificar";
+            this.btn_edit_company.UseVisualStyleBackColor = false;
+            this.btn_edit_company.Click += new System.EventHandler(this.btn_edit_company_Click);
             // 
             // CompanyView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(553, 441);
+            this.ClientSize = new System.Drawing.Size(553, 471);
+            this.Controls.Add(this.btn_edit_company);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pnl_top);
             this.Controls.Add(this.groupBox2);
@@ -417,5 +436,6 @@ namespace Presentation.View.Forms.Company
         private System.Windows.Forms.Label label9;
         public System.Windows.Forms.TextBox txt_code;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button btn_edit_company;
     }
 }

@@ -47,17 +47,17 @@ namespace DataAccess
                     {
                         while (reader.Read())
                         {
-                            Companies.company_id = reader.GetInt64(0);
-                            Companies.full_name = reader.GetString(1);
-                            Companies.code = reader.GetString(2);
-                            Companies.phone = reader.GetString(3);
-                            Companies.secondary_phone = reader.GetString(4);
-                            Companies.email = reader.GetString(5);
-                            Companies.address = reader.GetString(6);
-                            Companies.nit = reader.GetString(7);
-                            Companies.iva = reader.GetString(8);
-                            Companies.attendance_fullname = reader.GetString(9);
-                            Companies.attendance_role = reader.GetString(10);
+                            Company.company_id = reader.GetInt64(0);
+                            Company.full_name = reader.GetString(1);
+                            Company.code = reader.GetString(2);
+                            Company.phone = reader.GetString(3);
+                            Company.secondary_phone = reader.GetString(4);
+                            Company.email = reader.GetString(5);
+                            Company.address = reader.GetString(6);
+                            Company.nit = reader.GetString(7);
+                            Company.iva = reader.GetString(8);
+                            Company.attendance_fullname = reader.GetString(9);
+                            Company.attendance_role = reader.GetString(10);
                         }
                     }
                 }
@@ -150,32 +150,32 @@ namespace DataAccess
                     {
                         while (reader.Read())
                         {
-                            Companies.company_id = reader.GetInt64(0);
-                            Companies.full_name = reader.GetString(1);
-                            Companies.code = reader.GetString(2);
-                            Companies.phone = reader.GetString(3);
-                            Companies.secondary_phone = reader.GetString(4);
-                            Companies.email = reader.GetString(5);
-                            Companies.address = reader.GetString(6);
-                            Companies.nit = reader.GetString(7);
-                            Companies.iva = reader.GetString(8);
-                            Companies.attendance_fullname = reader.GetString(9);
-                            Companies.attendance_role = reader.GetString(10);
+                            Company.company_id = reader.GetInt64(0);
+                            Company.full_name = reader.GetString(1);
+                            Company.code = reader.GetString(2);
+                            Company.phone = reader.GetString(3);
+                            Company.secondary_phone = reader.GetString(4);
+                            Company.email = reader.GetString(5);
+                            Company.address = reader.GetString(6);
+                            Company.nit = reader.GetString(7);
+                            Company.iva = reader.GetString(8);
+                            Company.attendance_fullname = reader.GetString(9);
+                            Company.attendance_role = reader.GetString(10);
                         }
                     }
                     else
                     {
-                        Companies.company_id = 0;
-                        Companies.full_name = "";
-                        Companies.code = "1";
-                        Companies.phone = "";
-                        Companies.secondary_phone = "";
-                        Companies.email = "";
-                        Companies.address = "";
-                        Companies.nit = "";
-                        Companies.iva = "";
-                        Companies.attendance_fullname = "";
-                        Companies.attendance_role = "";
+                        Company.company_id = 0;
+                        Company.full_name = "";
+                        Company.code = "1";
+                        Company.phone = "";
+                        Company.secondary_phone = "";
+                        Company.email = "";
+                        Company.address = "";
+                        Company.nit = "";
+                        Company.iva = "";
+                        Company.attendance_fullname = "";
+                        Company.attendance_role = "";
                     }
                 }
             }

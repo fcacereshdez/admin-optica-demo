@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Common.Cache;
 using Domain;
+using Presentation.View.Forms.Client;
 
 namespace Presentation.View.Forms.Company
 {
@@ -27,8 +28,8 @@ namespace Presentation.View.Forms.Company
         {
             dgv_companies.DataSource = companyController.SelectAllCompanies();
             dgv_companies.Columns[0].Width = 25;
-            dgv_companies.Columns[1].Width = 150;
-            dgv_companies.Columns[2].Width = 90;
+            dgv_companies.Columns[1].Width = 170;
+            dgv_companies.Columns[2].Width = 75;
             dgv_companies.Columns[3].Width = 90;
             dgv_companies.Columns[4].Width = 130;
             dgv_companies.Columns[5].Width = 90;
@@ -84,6 +85,26 @@ namespace Presentation.View.Forms.Company
                 }
 
             }
+        }
+
+        private void btn_view_company_Click(object sender, EventArgs e)
+        {
+            companyController.SelectCompanyById(dgv_companies.SelectedRows[0].Cells[0].Value.ToString());
+            CompanyView companyView  = new CompanyView();
+            companyView.ShowDialog();
+        }
+
+        private void pcb_close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void dgv_companies_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            ClientCreate clientCreate = new ClientCreate();
+            clientCreate.txt_company_client.Text = dgv_companies.SelectedRows[0].Cells[0].Value.ToString();
+            clientCreate.txt_company_client_view.Text = dgv_companies.SelectedRows[0].Cells[1].Value.ToString();
+            this.Close();
         }
     }
 }

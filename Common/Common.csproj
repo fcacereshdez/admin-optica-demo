@@ -42,8 +42,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cache\UserCache.cs" />
+    <Compile Include="Models\Client.cs" />
+    <Compile Include="Models\Provider.cs" />
     <Compile Include="Models\Users.cs" />
-    <Compile Include="Models\Companies.cs" />
+    <Compile Include="Models\Company.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

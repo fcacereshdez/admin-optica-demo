@@ -1,4 +1,5 @@
 ﻿using Common.Cache;
+using Common.Models;
 using Domain;
 using System;
 using System.Collections.Generic;
