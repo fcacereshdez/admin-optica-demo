@@ -263,6 +263,16 @@ namespace Presentation.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_back_to_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-back-to-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_charts_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-charts-24", resourceCulture);
@@ -373,9 +383,39 @@ namespace Presentation.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_next_page_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-next-page-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_organización_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-organización-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_pen_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-pen-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_print_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-print-24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -396,6 +436,16 @@ namespace Presentation.Properties {
         internal static System.Drawing.Bitmap icons8_shipping_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-shipping-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_trash_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-trash-24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

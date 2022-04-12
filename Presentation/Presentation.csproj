@@ -137,6 +137,12 @@
     <Compile Include="View\Forms\Home\AdminForm.Designer.cs">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Forms\Home\SellerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Home\SellerForm.Designer.cs">
+      <DependentUpon>SellerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Forms\Product\ProductCreate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +190,30 @@
     </Compile>
     <Compile Include="View\Forms\Provider\ProviderView.Designer.cs">
       <DependentUpon>ProviderView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\Recipe\RecipeCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Recipe\RecipeCreate.Designer.cs">
+      <DependentUpon>RecipeCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\Recipe\RecipeEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Recipe\RecipeEdit.Designer.cs">
+      <DependentUpon>RecipeEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\Recipe\RecipeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Recipe\RecipeForm.Designer.cs">
+      <DependentUpon>RecipeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\Recipe\RecipeView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Recipe\RecipeView.Designer.cs">
+      <DependentUpon>RecipeView.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Forms\Shipping\ShippingCreate.cs">
       <SubType>Form</SubType>
@@ -275,6 +305,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\Home\AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Recipe\RecipeForm.resx">
+      <DependentUpon>RecipeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\User\UserCreate.resx">
       <DependentUpon>UserCreate.cs</DependentUpon>
@@ -483,6 +516,21 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="View\Reports\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-back-to-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-next-page-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-pen-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-trash-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-print-24.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

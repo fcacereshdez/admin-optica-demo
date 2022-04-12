@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 using Domain;
 using Presentation.View.Forms.Home;
 using Presentation.View.Forms.User;
@@ -19,6 +20,10 @@ namespace Presentation
 {
     public partial class Layout : Form
     {
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
         public Layout()
         {
             InitializeComponent();
@@ -111,6 +116,33 @@ namespace Presentation
         private void btn_clients_Click(object sender, EventArgs e)
         {
             ShowForm(new ClientForm());
+        }
+
+        public void showError()
+        {
+            string error = "El tiempo de prueba de tu licencia ha expirado, por favor, completa el pago del servicio para continuar...";
+            MessageBox.Show(error, "Licencia inválida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        public void alertCloseApp()
+        {
+            string error = "La aplicación se ha detenido.";
+            DialogResult errorClose = MessageBox.Show(error, "Licencia inválida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            if (errorClose == DialogResult.OK)
+            {
+                Environment.Exit(1);
+            }
+            else
+            {
+                Environment.Exit(1);
+            }
+                
+        }
+
+        private void pnl_top_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(Handle, 0x112, 0x0f012, 0);
         }
     }
 }

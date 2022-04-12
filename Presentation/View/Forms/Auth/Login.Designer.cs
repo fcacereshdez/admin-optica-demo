@@ -31,19 +31,19 @@ namespace Presentation.View.Forms
         {
             this.pnl_left = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbl_msg_error = new System.Windows.Forms.Label();
             this.pnl_right = new System.Windows.Forms.Panel();
+            this.pcb_exit = new System.Windows.Forms.PictureBox();
             this.btn_login = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_password = new System.Windows.Forms.TextBox();
             this.txt_user = new System.Windows.Forms.TextBox();
-            this.pcb_exit = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnl_left.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnl_right.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_exit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_left
@@ -66,6 +66,16 @@ namespace Presentation.View.Forms
             this.label1.Size = new System.Drawing.Size(304, 17);
             this.label1.TabIndex = 7;
             this.label1.Text = "Copyrigth 2022 © Todos los derechos reservados.";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Presentation.Properties.Resources.logo_horizontal;
+            this.pictureBox1.Location = new System.Drawing.Point(50, 151);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(335, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // lbl_msg_error
             // 
@@ -93,6 +103,17 @@ namespace Presentation.View.Forms
             this.pnl_right.Name = "pnl_right";
             this.pnl_right.Size = new System.Drawing.Size(298, 361);
             this.pnl_right.TabIndex = 1;
+            // 
+            // pcb_exit
+            // 
+            this.pcb_exit.Image = global::Presentation.Properties.Resources.close;
+            this.pcb_exit.Location = new System.Drawing.Point(270, 3);
+            this.pcb_exit.Name = "pcb_exit";
+            this.pcb_exit.Size = new System.Drawing.Size(25, 25);
+            this.pcb_exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcb_exit.TabIndex = 7;
+            this.pcb_exit.TabStop = false;
+            this.pcb_exit.Click += new System.EventHandler(this.pcb_exit_Click);
             // 
             // btn_login
             // 
@@ -145,27 +166,6 @@ namespace Presentation.View.Forms
             this.txt_user.Size = new System.Drawing.Size(224, 25);
             this.txt_user.TabIndex = 1;
             // 
-            // pcb_exit
-            // 
-            this.pcb_exit.Image = global::Presentation.Properties.Resources.close;
-            this.pcb_exit.Location = new System.Drawing.Point(270, 3);
-            this.pcb_exit.Name = "pcb_exit";
-            this.pcb_exit.Size = new System.Drawing.Size(25, 25);
-            this.pcb_exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pcb_exit.TabIndex = 7;
-            this.pcb_exit.TabStop = false;
-            this.pcb_exit.Click += new System.EventHandler(this.pcb_exit_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Presentation.Properties.Resources.logo_horizontal;
-            this.pictureBox1.Location = new System.Drawing.Point(50, 151);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(335, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // Login
             // 
             this.AcceptButton = this.btn_login;
@@ -182,10 +182,10 @@ namespace Presentation.View.Forms
             this.Text = "Auth";
             this.pnl_left.ResumeLayout(false);
             this.pnl_left.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnl_right.ResumeLayout(false);
             this.pnl_right.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_exit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
