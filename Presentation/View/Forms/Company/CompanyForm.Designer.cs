@@ -205,7 +205,7 @@ namespace Presentation.View.Forms.Company
             this.dgv_companies.Size = new System.Drawing.Size(617, 345);
             this.dgv_companies.TabIndex = 7;
 //            this.dgv_companies.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_companies_CellContentClick);
-            this.dgv_companies.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_companies_CellDoubleClick);
+    //        this.dgv_companies.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_companies_CellDoubleClick);
             // 
             // groupBox2
             // 

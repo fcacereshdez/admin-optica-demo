@@ -30,22 +30,21 @@ namespace Presentation.View.Forms.Recipe
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pnl_tool_options_recipe = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pnl_tool_options_recipe = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
             this.pcb_close_edit_company = new System.Windows.Forms.PictureBox();
-            this.btn_edit_company = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            this.pnl_tool_options_recipe.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.pnl_tool_options_recipe.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_close_edit_company)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,6 +61,29 @@ namespace Presentation.View.Forms.Recipe
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(829, 44);
             this.panel1.TabIndex = 1;
+            // 
+            // pnl_tool_options_recipe
+            // 
+            this.pnl_tool_options_recipe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(29)))), ((int)(((byte)(26)))));
+            this.pnl_tool_options_recipe.Controls.Add(this.pcb_close_edit_company);
+            this.pnl_tool_options_recipe.Controls.Add(this.label10);
+            this.pnl_tool_options_recipe.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnl_tool_options_recipe.Location = new System.Drawing.Point(0, 0);
+            this.pnl_tool_options_recipe.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pnl_tool_options_recipe.Name = "pnl_tool_options_recipe";
+            this.pnl_tool_options_recipe.Size = new System.Drawing.Size(829, 36);
+            this.pnl_tool_options_recipe.TabIndex = 0;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(12, 9);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(104, 17);
+            this.label10.TabIndex = 6;
+            this.label10.Text = "Visor de recetas";
             // 
             // pictureBox5
             // 
@@ -118,29 +140,6 @@ namespace Presentation.View.Forms.Recipe
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // pnl_tool_options_recipe
-            // 
-            this.pnl_tool_options_recipe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(29)))), ((int)(((byte)(26)))));
-            this.pnl_tool_options_recipe.Controls.Add(this.pcb_close_edit_company);
-            this.pnl_tool_options_recipe.Controls.Add(this.label10);
-            this.pnl_tool_options_recipe.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnl_tool_options_recipe.Location = new System.Drawing.Point(0, 0);
-            this.pnl_tool_options_recipe.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pnl_tool_options_recipe.Name = "pnl_tool_options_recipe";
-            this.pnl_tool_options_recipe.Size = new System.Drawing.Size(829, 36);
-            this.pnl_tool_options_recipe.TabIndex = 0;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(12, 9);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(104, 17);
-            this.label10.TabIndex = 6;
-            this.label10.Text = "Visor de recetas";
-            // 
             // pcb_close_edit_company
             // 
             this.pcb_close_edit_company.Image = global::Presentation.Properties.Resources.close;
@@ -152,29 +151,11 @@ namespace Presentation.View.Forms.Recipe
             this.pcb_close_edit_company.TabIndex = 5;
             this.pcb_close_edit_company.TabStop = false;
             // 
-            // btn_edit_company
-            // 
-            this.btn_edit_company.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
-            this.btn_edit_company.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
-            this.btn_edit_company.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_edit_company.ForeColor = System.Drawing.Color.White;
-            this.btn_edit_company.Image = global::Presentation.Properties.Resources.icons8_guardar_24;
-            this.btn_edit_company.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_edit_company.Location = new System.Drawing.Point(672, 432);
-            this.btn_edit_company.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btn_edit_company.Name = "btn_edit_company";
-            this.btn_edit_company.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
-            this.btn_edit_company.Size = new System.Drawing.Size(143, 39);
-            this.btn_edit_company.TabIndex = 30;
-            this.btn_edit_company.Text = "Modificar";
-            this.btn_edit_company.UseVisualStyleBackColor = false;
-            // 
             // RecipeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(829, 486);
-            this.Controls.Add(this.btn_edit_company);
+            this.ClientSize = new System.Drawing.Size(829, 432);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnl_tool_options_recipe);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F);
@@ -184,13 +165,13 @@ namespace Presentation.View.Forms.Recipe
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RecipeForm";
             this.panel1.ResumeLayout(false);
+            this.pnl_tool_options_recipe.ResumeLayout(false);
+            this.pnl_tool_options_recipe.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.pnl_tool_options_recipe.ResumeLayout(false);
-            this.pnl_tool_options_recipe.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_close_edit_company)).EndInit();
             this.ResumeLayout(false);
 
@@ -206,6 +187,5 @@ namespace Presentation.View.Forms.Recipe
         private System.Windows.Forms.Panel pnl_tool_options_recipe;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox pcb_close_edit_company;
-        private System.Windows.Forms.Button btn_edit_company;
     }
 }

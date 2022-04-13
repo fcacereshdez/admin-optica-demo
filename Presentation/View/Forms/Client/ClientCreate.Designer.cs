@@ -60,12 +60,15 @@ namespace Presentation.View.Forms.Client
             this.pnl_top = new System.Windows.Forms.Panel();
             this.lbl_error = new System.Windows.Forms.Label();
             this.txt_company_client = new System.Windows.Forms.TextBox();
+            this.txt_notes_client = new System.Windows.Forms.TextBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_close_create_client)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_exit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_minus)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.pnl_top.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label7
@@ -194,7 +197,7 @@ namespace Presentation.View.Forms.Client
             // pcb_close_create_client
             // 
             this.pcb_close_create_client.Image = global::Presentation.Properties.Resources.close;
-            this.pcb_close_create_client.Location = new System.Drawing.Point(564, 2);
+            this.pcb_close_create_client.Location = new System.Drawing.Point(753, 2);
             this.pcb_close_create_client.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pcb_close_create_client.Name = "pcb_close_create_client";
             this.pcb_close_create_client.Size = new System.Drawing.Size(25, 25);
@@ -234,7 +237,7 @@ namespace Presentation.View.Forms.Client
             this.btn_save_client.ForeColor = System.Drawing.Color.White;
             this.btn_save_client.Image = global::Presentation.Properties.Resources.icons8_guardar_24;
             this.btn_save_client.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_save_client.Location = new System.Drawing.Point(466, 337);
+            this.btn_save_client.Location = new System.Drawing.Point(643, 337);
             this.btn_save_client.Name = "btn_save_client";
             this.btn_save_client.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btn_save_client.Size = new System.Drawing.Size(123, 30);
@@ -375,7 +378,7 @@ namespace Presentation.View.Forms.Client
             this.pnl_top.Location = new System.Drawing.Point(0, 0);
             this.pnl_top.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.pnl_top.Name = "pnl_top";
-            this.pnl_top.Size = new System.Drawing.Size(597, 29);
+            this.pnl_top.Size = new System.Drawing.Size(781, 29);
             this.pnl_top.TabIndex = 23;
             // 
             // lbl_error
@@ -392,18 +395,40 @@ namespace Presentation.View.Forms.Client
             // txt_company_client
             // 
             this.txt_company_client.BackColor = System.Drawing.Color.White;
-            this.txt_company_client.Location = new System.Drawing.Point(399, 341);
+            this.txt_company_client.Location = new System.Drawing.Point(36, 347);
             this.txt_company_client.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_company_client.Name = "txt_company_client";
             this.txt_company_client.ReadOnly = true;
             this.txt_company_client.Size = new System.Drawing.Size(61, 20);
             this.txt_company_client.TabIndex = 23;
+            this.txt_company_client.Visible = false;
+            // 
+            // txt_notes_client
+            // 
+            this.txt_notes_client.Location = new System.Drawing.Point(6, 48);
+            this.txt_notes_client.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txt_notes_client.Multiline = true;
+            this.txt_notes_client.Name = "txt_notes_client";
+            this.txt_notes_client.Size = new System.Drawing.Size(159, 216);
+            this.txt_notes_client.TabIndex = 21;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.txt_notes_client);
+            this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.groupBox3.Location = new System.Drawing.Point(595, 38);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(171, 281);
+            this.groupBox3.TabIndex = 29;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Observaciones";
             // 
             // ClientCreate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(597, 379);
+            this.ClientSize = new System.Drawing.Size(781, 380);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.txt_company_client);
             this.Controls.Add(this.btn_save_client);
             this.Controls.Add(this.groupBox2);
@@ -423,6 +448,8 @@ namespace Presentation.View.Forms.Client
             this.groupBox1.PerformLayout();
             this.pnl_top.ResumeLayout(false);
             this.pnl_top.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -461,5 +488,7 @@ namespace Presentation.View.Forms.Client
         private System.Windows.Forms.Panel pnl_top;
         private System.Windows.Forms.Label lbl_error;
         public System.Windows.Forms.TextBox txt_company_client;
+        public System.Windows.Forms.TextBox txt_notes_client;
+        private System.Windows.Forms.GroupBox groupBox3;
     }
 }

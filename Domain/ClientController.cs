@@ -27,9 +27,9 @@ namespace Domain
             clientData.CreateClient(name, lastname, code, dui, nit, phone, secondary_phone, email, address, notes, Convert.ToInt64(company_id), Convert.ToDateTime(created_at));
         }
 
-        public void UpdateClient(string name, string lastname, string dui, string nit, string phone, string secondary_phone, string email, string address, string notes, string company_id, string updated_at, Int64 client_id)
+        public void UpdateClient(string name, string lastname, string dui, string nit, string phone, string secondary_phone, string email, string address, string notes, string updated_at, Int64 client_id)
         {
-            clientData.UpdateClient(name, lastname, dui, nit, phone, secondary_phone, email, address, notes, Convert.ToInt64(company_id), Convert.ToDateTime(updated_at), client_id);
+            clientData.UpdateClient(name, lastname, dui, nit, phone, secondary_phone, email, address, notes, Convert.ToDateTime(updated_at), client_id);
         }
 
         public void DeleteClient(Int64 client_id)

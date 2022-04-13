@@ -98,13 +98,5 @@ namespace Presentation.View.Forms.Company
         {
             this.Close();
         }
-
-        private void dgv_companies_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            ClientCreate clientCreate = new ClientCreate();
-            clientCreate.txt_company_client.Text = dgv_companies.SelectedRows[0].Cells[0].Value.ToString();
-            clientCreate.txt_company_client_view.Text = dgv_companies.SelectedRows[0].Cells[1].Value.ToString();
-            this.Close();
-        }
     }
 }

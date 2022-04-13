@@ -107,6 +107,12 @@
     <Compile Include="View\Forms\Client\ClientForm.Designer.cs">
       <DependentUpon>ClientForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Forms\Client\CompanySelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Client\CompanySelector.Designer.cs">
+      <DependentUpon>CompanySelector.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Forms\Company\CompanyCreate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -290,6 +296,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\Client\ClientView.resx">
       <DependentUpon>ClientView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Client\CompanySelector.resx">
+      <DependentUpon>CompanySelector.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\Company\CompanyCreate.resx">
       <DependentUpon>CompanyCreate.cs</DependentUpon>

@@ -53,9 +53,11 @@ namespace DataAccess.Data
                             Client.dui = reader.GetString(4);
                             Client.nit = reader.GetString(5);
                             Client.phone = reader.GetString(6);
-                            Client.address = reader.GetString(7);
-                            Client.notes = reader.GetString(8);
-                            Client.company_id = reader.GetInt64(9);
+                            Client.secondary_phone = reader.GetString(7);
+                            Client.email = reader.GetString(8);
+                            Client.address = reader.GetString(9);
+                            Client.notes = reader.GetString(10);
+                            Client.company_id = reader.GetInt64(11);
                         }
                     }
                 }
@@ -90,7 +92,7 @@ namespace DataAccess.Data
             }
         }
 
-        public void UpdateClient(string name, string lastname, string dui, string nit, string phone, string secondary_phone, string email, string address, string notes, Int64 company_id, DateTime updated_at, Int64 client_id)
+        public void UpdateClient(string name, string lastname, string dui, string nit, string phone, string secondary_phone, string email, string address, string notes, DateTime updated_at, Int64 client_id)
         {
             using (var conn = GetConnection())
             {
@@ -109,7 +111,6 @@ namespace DataAccess.Data
                     cmd.Parameters.AddWithValue("@email", email);
                     cmd.Parameters.AddWithValue("@address", address);
                     cmd.Parameters.AddWithValue("@notes", notes);
-                    cmd.Parameters.AddWithValue("@company_id", company_id);
                     cmd.Parameters.AddWithValue("@updated_at", updated_at);
                     cmd.Parameters.AddWithValue("@client_id", client_id);
                     cmd.ExecuteNonQuery();
@@ -150,7 +151,7 @@ namespace DataAccess.Data
                     {
                         while (reader.Read())
                         {
-                            Client.client_id = 0;
+                            Client.client_id = reader.GetInt64(0);
                             Client.name = "";
                             Client.lastname = "";
                             Client.code = reader.GetString(3);
@@ -167,7 +168,7 @@ namespace DataAccess.Data
                         Client.client_id = 0;
                         Client.name = "";
                         Client.lastname = "";
-                        Client.code = "1";
+                        Client.code = "0";
                         Client.dui = "";
                         Client.nit = "";
                         Client.phone = "";
