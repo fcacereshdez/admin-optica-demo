@@ -1,4 +1,5 @@
-﻿using DataAccess.Data;
+﻿using Common.Cache;
+using DataAccess.Data;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -11,6 +12,7 @@ namespace Domain
    public class ClientController
     {
         ClientData clientData = new ClientData();
+        ClientAccountData clientAccountData = new ClientAccountData();
 
         public DataTable SelectAllClients()
         {
@@ -40,6 +42,23 @@ namespace Domain
         public void SelectLastCodeClient()
         {
             clientData.SelectLastCodeClient();
+        }
+
+        public DataTable GetInvoiceByClient(Int64 client_id)
+        {
+            DataTable TableInvoices = new DataTable();
+            TableInvoices = clientAccountData.GetInvoiceByClient(client_id);
+            return TableInvoices;
+        }
+
+        public void GetClientAccountById(Int64 invoice_id)
+        {
+            clientAccountData.GetClientAccountById(invoice_id);
+        }
+
+        public void PayInovice(string amount, string invoice)
+        {
+            clientAccountData.PayInovice(Convert.ToDecimal(amount), DateTime.Now.ToString("yyyy-MM-dd"), 1, DateTime.Now.ToString("yyyy-MM-dd"), Convert.ToInt64(invoice));
         }
     }
 }

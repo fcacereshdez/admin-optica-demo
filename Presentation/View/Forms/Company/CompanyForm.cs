@@ -27,8 +27,8 @@ namespace Presentation.View.Forms.Company
         private void SelectAllCompanies()
         {
             dgv_companies.DataSource = companyController.SelectAllCompanies();
-            dgv_companies.Columns[0].Width = 25;
-            dgv_companies.Columns[1].Width = 170;
+            //dgv_companies.Columns[0].Width = 30;
+            dgv_companies.Columns[1].Width = 225;
             dgv_companies.Columns[2].Width = 75;
             dgv_companies.Columns[3].Width = 90;
             dgv_companies.Columns[4].Width = 130;

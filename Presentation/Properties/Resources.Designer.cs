@@ -433,6 +433,26 @@ namespace Presentation.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_reembolso_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-reembolso-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_script_de_informes_de_gráficos_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-script-de-informes-de-gráficos-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_shipping_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-shipping-24", resourceCulture);

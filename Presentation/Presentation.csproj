@@ -150,6 +150,18 @@
     <Compile Include="View\Forms\Home\SellerForm.Designer.cs">
       <DependentUpon>SellerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Forms\Invoice\InvoiceView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Invoice\InvoiceView.Designer.cs">
+      <DependentUpon>InvoiceView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\Payment\PayFee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Payment\PayFee.Designer.cs">
+      <DependentUpon>PayFee.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Forms\Product\ProductCreate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -316,6 +328,12 @@
     <EmbeddedResource Include="View\Forms\Home\AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Invoice\InvoiceView.resx">
+      <DependentUpon>InvoiceView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Payment\PayFee.resx">
+      <DependentUpon>PayFee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\Recipe\RecipeForm.resx">
       <DependentUpon>RecipeForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -345,6 +363,10 @@
     <ProjectReference Include="..\Common\Common.csproj">
       <Project>{5e381be3-a439-4b14-aaed-de2a8da6f5b6}</Project>
       <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{73BDB24F-A94C-42F8-894E-D9AE73D4BD41}</Project>
+      <Name>DataAccess</Name>
     </ProjectReference>
     <ProjectReference Include="..\Domain\Domain.csproj">
       <Project>{bd179250-452c-4404-9f1a-f744daa9380b}</Project>
@@ -536,6 +558,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-print-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-reembolso-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-script-de-informes-de-gráficos-24.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

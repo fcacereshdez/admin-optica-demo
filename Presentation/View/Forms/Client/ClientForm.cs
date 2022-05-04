@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Domain;
 using Common.Models;
+using Presentation.View.Forms.Payment;
+using Presentation.View.Forms.Invoice;
 
 namespace Presentation.View.Forms.Client
 {
@@ -77,6 +79,25 @@ namespace Presentation.View.Forms.Client
             clientEdit.txt_id_client.Text = Common.Models.Client.client_id.ToString();
 
             clientEdit.ShowDialog();
+        }
+
+        private void btn_pay_fee_Click(object sender, EventArgs e)
+        {
+            ClientController clientController = new ClientController();
+            if (dgv_clients.SelectedRows.Count > 0)
+            {
+                InvoiceView invoiceView = new InvoiceView();
+                invoiceView.dgv_invoices_client.DataSource = clientController.GetInvoiceByClient(Convert.ToInt64(dgv_clients.CurrentRow.Cells[0].Value));
+                invoiceView.dgv_invoices_client.Columns[0].Width = 25;
+                invoiceView.dgv_invoices_client.Columns[1].Width = 75;
+                invoiceView.dgv_invoices_client.Columns[2].Width = 130;
+                invoiceView.dgv_invoices_client.Columns[3].Width = 100;
+                invoiceView.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar un registro de la tabla para modificar", "Aviso");
+            }
         }
     }
 }
