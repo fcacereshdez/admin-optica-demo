@@ -105,6 +105,7 @@ namespace Presentation
             this.btn_reports.TabIndex = 9;
             this.btn_reports.Text = "Informes";
             this.btn_reports.UseVisualStyleBackColor = true;
+            this.btn_reports.Click += new System.EventHandler(this.btn_reports_Click);
             // 
             // btn_products
             // 
@@ -119,6 +120,7 @@ namespace Presentation
             this.btn_products.TabIndex = 8;
             this.btn_products.Text = "Inventarios";
             this.btn_products.UseVisualStyleBackColor = true;
+            this.btn_products.Click += new System.EventHandler(this.btn_products_Click);
             // 
             // btn_shipping
             // 
@@ -133,6 +135,7 @@ namespace Presentation
             this.btn_shipping.TabIndex = 6;
             this.btn_shipping.Text = "Entregas";
             this.btn_shipping.UseVisualStyleBackColor = true;
+            this.btn_shipping.Click += new System.EventHandler(this.btn_shipping_Click);
             // 
             // btn_users
             // 
@@ -162,6 +165,7 @@ namespace Presentation
             this.btn_recipes.TabIndex = 7;
             this.btn_recipes.Text = "Recetas";
             this.btn_recipes.UseVisualStyleBackColor = true;
+            this.btn_recipes.Click += new System.EventHandler(this.btn_recipes_Click);
             // 
             // btn_companies
             // 
@@ -246,6 +250,7 @@ namespace Presentation
             this.btn_labs.TabIndex = 2;
             this.btn_labs.Text = "Laboratorios";
             this.btn_labs.UseVisualStyleBackColor = true;
+            this.btn_labs.Click += new System.EventHandler(this.btn_labs_Click);
             // 
             // btn_clients
             // 

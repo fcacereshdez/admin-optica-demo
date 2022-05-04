@@ -17,6 +17,12 @@ namespace Presentation.View.Forms
         public Login()
         {
             InitializeComponent();
+            InicializeInformationEdition();
+        }
+
+        private void InicializeInformationEdition()
+        {
+            lbl_version_login.Text = "Release Version - v" + System.Reflection.Assembly.GetEntryAssembly().GetName().Version.ToString();
         }
 
         private void btn_login_Click(object sender, EventArgs e)

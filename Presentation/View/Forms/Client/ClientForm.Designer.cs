@@ -43,9 +43,13 @@ namespace Presentation.View.Forms.Client
             this.btn_create_client = new System.Windows.Forms.Button();
             this.btn_delete_client = new System.Windows.Forms.Button();
             this.btn_edit_client = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_clients)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -145,7 +149,7 @@ namespace Presentation.View.Forms.Client
             this.groupBox1.Size = new System.Drawing.Size(177, 228);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Comunes";
+            this.groupBox1.Text = "Funciones";
             // 
             // btn_view_client
             // 
@@ -234,12 +238,64 @@ namespace Presentation.View.Forms.Client
             this.btn_edit_client.UseVisualStyleBackColor = false;
             this.btn_edit_client.Click += new System.EventHandler(this.btn_edit_client_Click);
             // 
+            // groupBox3
+            // 
+            this.groupBox3.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox3.Controls.Add(this.button2);
+            this.groupBox3.Controls.Add(this.button4);
+            this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.groupBox3.Location = new System.Drawing.Point(18, 324);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.groupBox3.Size = new System.Drawing.Size(177, 116);
+            this.groupBox3.TabIndex = 10;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Comunes";
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = global::Presentation.Properties.Resources.icons8_exportación_de_base_de_datos_24;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(18, 65);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button2.Name = "button2";
+            this.button2.Padding = new System.Windows.Forms.Padding(17, 0, 6, 0);
+            this.button2.Size = new System.Drawing.Size(143, 30);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Reportes";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Image = global::Presentation.Properties.Resources.icons8_eliminar_241;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(18, 27);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button4.Name = "button4";
+            this.button4.Padding = new System.Windows.Forms.Padding(17, 0, 6, 0);
+            this.button4.Size = new System.Drawing.Size(143, 30);
+            this.button4.TabIndex = 2;
+            this.button4.Text = "Abonos";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
             // ClientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(849, 453);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.dgv_clients);
             this.Controls.Add(this.groupBox1);
@@ -253,6 +309,7 @@ namespace Presentation.View.Forms.Client
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_clients)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -269,5 +326,8 @@ namespace Presentation.View.Forms.Client
         private System.Windows.Forms.Button btn_create_client;
         private System.Windows.Forms.Button btn_delete_client;
         private System.Windows.Forms.Button btn_edit_client;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button4;
     }
 }

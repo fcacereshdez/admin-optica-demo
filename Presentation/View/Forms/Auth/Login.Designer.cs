@@ -40,6 +40,7 @@ namespace Presentation.View.Forms
             this.label2 = new System.Windows.Forms.Label();
             this.txt_password = new System.Windows.Forms.TextBox();
             this.txt_user = new System.Windows.Forms.TextBox();
+            this.lbl_version_login = new System.Windows.Forms.Label();
             this.pnl_left.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnl_right.SuspendLayout();
@@ -49,6 +50,7 @@ namespace Presentation.View.Forms
             // pnl_left
             // 
             this.pnl_left.BackColor = System.Drawing.Color.White;
+            this.pnl_left.Controls.Add(this.lbl_version_login);
             this.pnl_left.Controls.Add(this.label1);
             this.pnl_left.Controls.Add(this.pictureBox1);
             this.pnl_left.Dock = System.Windows.Forms.DockStyle.Left;
@@ -61,7 +63,7 @@ namespace Presentation.View.Forms
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.Gray;
-            this.label1.Location = new System.Drawing.Point(47, 335);
+            this.label1.Location = new System.Drawing.Point(62, 308);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(304, 17);
             this.label1.TabIndex = 7;
@@ -166,6 +168,16 @@ namespace Presentation.View.Forms
             this.txt_user.Size = new System.Drawing.Size(224, 25);
             this.txt_user.TabIndex = 1;
             // 
+            // lbl_version_login
+            // 
+            this.lbl_version_login.AutoSize = true;
+            this.lbl_version_login.ForeColor = System.Drawing.Color.Gray;
+            this.lbl_version_login.Location = new System.Drawing.Point(132, 335);
+            this.lbl_version_login.Name = "lbl_version_login";
+            this.lbl_version_login.Size = new System.Drawing.Size(11, 17);
+            this.lbl_version_login.TabIndex = 8;
+            this.lbl_version_login.Text = ".";
+            // 
             // Login
             // 
             this.AcceptButton = this.btn_login;
@@ -203,5 +215,6 @@ namespace Presentation.View.Forms
         private System.Windows.Forms.Label lbl_msg_error;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pcb_exit;
+        private System.Windows.Forms.Label lbl_version_login;
     }
 }

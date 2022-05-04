@@ -144,5 +144,30 @@ namespace Presentation
             ReleaseCapture();
             SendMessage(Handle, 0x112, 0x0f012, 0);
         }
+
+        private void btn_labs_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Este servicio no ha sido habilitado", "Laboratorios", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btn_recipes_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Este servicio no ha sido habilitado", "Recetas", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btn_products_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Este servicio no ha sido habilitado", "Inventarios", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btn_reports_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Este servicio no ha sido habilitado", "Informes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btn_shipping_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Este servicio no ha sido habilitado", "Entregas", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

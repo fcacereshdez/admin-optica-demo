@@ -43,13 +43,12 @@ namespace Presentation.View.Forms.Company
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txt_search_company = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.pnl_top = new System.Windows.Forms.Panel();
-            this.pcb_close = new System.Windows.Forms.PictureBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_companies)).BeginInit();
             this.groupBox2.SuspendLayout();
-            this.pnl_top.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcb_close)).BeginInit();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -204,8 +203,6 @@ namespace Presentation.View.Forms.Company
             this.dgv_companies.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_companies.Size = new System.Drawing.Size(617, 345);
             this.dgv_companies.TabIndex = 7;
-//            this.dgv_companies.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_companies_CellContentClick);
-    //        this.dgv_companies.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_companies_CellDoubleClick);
             // 
             // groupBox2
             // 
@@ -234,28 +231,38 @@ namespace Presentation.View.Forms.Company
             this.label1.TabIndex = 0;
             this.label1.Text = "Buscar:";
             // 
-            // pnl_top
+            // groupBox3
             // 
-            this.pnl_top.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(29)))), ((int)(((byte)(26)))));
-            this.pnl_top.Controls.Add(this.pcb_close);
-            this.pnl_top.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnl_top.Location = new System.Drawing.Point(0, 0);
-            this.pnl_top.Name = "pnl_top";
-            this.pnl_top.Size = new System.Drawing.Size(849, 27);
-            this.pnl_top.TabIndex = 9;
-            this.pnl_top.Visible = false;
+            this.groupBox3.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox3.Controls.Add(this.button2);
+            this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.groupBox3.Location = new System.Drawing.Point(18, 316);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.groupBox3.Size = new System.Drawing.Size(177, 124);
+            this.groupBox3.TabIndex = 11;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Comunes";
             // 
-            // pcb_close
+            // button2
             // 
-            this.pcb_close.Image = global::Presentation.Properties.Resources.close;
-            this.pcb_close.Location = new System.Drawing.Point(821, 2);
-            this.pcb_close.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pcb_close.Name = "pcb_close";
-            this.pcb_close.Size = new System.Drawing.Size(25, 25);
-            this.pcb_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pcb_close.TabIndex = 5;
-            this.pcb_close.TabStop = false;
-            this.pcb_close.Click += new System.EventHandler(this.pcb_close_Click);
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = global::Presentation.Properties.Resources.icons8_exportación_de_base_de_datos_24;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(18, 27);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button2.Name = "button2";
+            this.button2.Padding = new System.Windows.Forms.Padding(17, 0, 6, 0);
+            this.button2.Size = new System.Drawing.Size(143, 30);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Reportes";
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // CompanyForm
             // 
@@ -263,7 +270,7 @@ namespace Presentation.View.Forms.Company
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(849, 453);
-            this.Controls.Add(this.pnl_top);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.dgv_companies);
             this.Controls.Add(this.groupBox1);
@@ -277,8 +284,7 @@ namespace Presentation.View.Forms.Company
             ((System.ComponentModel.ISupportInitialize)(this.dgv_companies)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.pnl_top.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pcb_close)).EndInit();
+            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -294,7 +300,7 @@ namespace Presentation.View.Forms.Company
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txt_search_company;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pcb_close;
-        public System.Windows.Forms.Panel pnl_top;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button button2;
     }
 }
