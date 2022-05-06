@@ -15,6 +15,7 @@ using Common.Cache;
 using System.Net;
 using Presentation.View.Forms.Company;
 using Presentation.View.Forms.Client;
+using Presentation.View.Forms.About;
 
 namespace Presentation
 {
@@ -168,6 +169,11 @@ namespace Presentation
         private void btn_shipping_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Este servicio no ha sido habilitado", "Entregas", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btn_about_info_Click(object sender, EventArgs e)
+        {
+            ShowForm(new AboutForm());
         }
     }
 }

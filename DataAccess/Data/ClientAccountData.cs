@@ -85,5 +85,52 @@ namespace DataAccess.Data
             }
         }
 
+        public void GetTotalByCompany(Int64 company_id)
+        {
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                using (var cmd = new SqlCommand())
+                {
+                    cmd.Connection = conn;
+                    cmd.CommandText = "TotalByCompany";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@company_id", company_id);
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            Company.company_id = reader.GetInt64(0);
+                            Company.full_name = reader.GetString(1);
+                            Company.invoices = reader.GetInt32(2);
+                            Company.total_invoice = reader.GetDecimal(3);
+                            Company.total_clients = reader.GetInt32(4);
+                        }
+                    }
+                }
+            }
+        }
+
+        public DataTable GetClientsByCompany(Int64 company_id)
+        {
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                using (var cmd = new SqlCommand())
+                {
+                    cmd.Connection = conn;
+                    cmd.CommandText = "GetClientsByCompany";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@company_id", company_id);
+                    SqlDataReader ReaderClients = cmd.ExecuteReader();
+                    DataTable TableClients = new DataTable();
+                    TableClients.Load(ReaderClients);
+                    conn.Close();
+                    return TableClients;
+                }
+            }
+        }
+
     }
 }

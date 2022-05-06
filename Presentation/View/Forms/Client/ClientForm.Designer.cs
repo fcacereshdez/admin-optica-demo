@@ -29,23 +29,23 @@ namespace Presentation.View.Forms.Client
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txt_search_company = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgv_clients = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btn_get_report = new System.Windows.Forms.Button();
-            this.btn_pay_fee = new System.Windows.Forms.Button();
             this.btn_view_client = new System.Windows.Forms.Button();
             this.btn_export_clients = new System.Windows.Forms.Button();
             this.btn_create_client = new System.Windows.Forms.Button();
             this.btn_delete_client = new System.Windows.Forms.Button();
             this.btn_edit_client = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btn_client_report = new System.Windows.Forms.Button();
+            this.btn_pay_fee = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_clients)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -92,23 +92,23 @@ namespace Presentation.View.Forms.Client
             this.dgv_clients.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(241)))));
             this.dgv_clients.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_clients.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(134)))), ((int)(((byte)(14)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(171)))), ((int)(((byte)(173)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_clients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(134)))), ((int)(((byte)(14)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(171)))), ((int)(((byte)(173)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_clients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgv_clients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.WindowFrame;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_clients.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.WindowFrame;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_clients.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgv_clients.EnableHeadersVisualStyles = false;
             this.dgv_clients.Location = new System.Drawing.Point(201, 95);
             this.dgv_clients.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
@@ -116,17 +116,17 @@ namespace Presentation.View.Forms.Client
             this.dgv_clients.Name = "dgv_clients";
             this.dgv_clients.ReadOnly = true;
             this.dgv_clients.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(134)))), ((int)(((byte)(14)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.WindowFrame;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_clients.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.WindowFrame;
-            this.dgv_clients.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(134)))), ((int)(((byte)(14)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.WindowFrame;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_clients.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.WindowFrame;
+            this.dgv_clients.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dgv_clients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_clients.Size = new System.Drawing.Size(617, 345);
             this.dgv_clients.TabIndex = 10;
@@ -150,58 +150,6 @@ namespace Presentation.View.Forms.Client
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Funciones";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox3.Controls.Add(this.btn_get_report);
-            this.groupBox3.Controls.Add(this.btn_pay_fee);
-            this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.groupBox3.Location = new System.Drawing.Point(18, 324);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.groupBox3.Size = new System.Drawing.Size(177, 116);
-            this.groupBox3.TabIndex = 10;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Comunes";
-            // 
-            // btn_get_report
-            // 
-            this.btn_get_report.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
-            this.btn_get_report.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
-            this.btn_get_report.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_get_report.ForeColor = System.Drawing.Color.White;
-            this.btn_get_report.Image = global::Presentation.Properties.Resources.icons8_script_de_informes_de_gráficos_24;
-            this.btn_get_report.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_get_report.Location = new System.Drawing.Point(18, 65);
-            this.btn_get_report.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btn_get_report.Name = "btn_get_report";
-            this.btn_get_report.Padding = new System.Windows.Forms.Padding(17, 0, 6, 0);
-            this.btn_get_report.Size = new System.Drawing.Size(143, 30);
-            this.btn_get_report.TabIndex = 4;
-            this.btn_get_report.Text = "Reportes";
-            this.btn_get_report.UseVisualStyleBackColor = false;
-            // 
-            // btn_pay_fee
-            // 
-            this.btn_pay_fee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
-            this.btn_pay_fee.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
-            this.btn_pay_fee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_pay_fee.ForeColor = System.Drawing.Color.White;
-            this.btn_pay_fee.Image = global::Presentation.Properties.Resources.icons8_reembolso_24;
-            this.btn_pay_fee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_pay_fee.Location = new System.Drawing.Point(18, 27);
-            this.btn_pay_fee.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btn_pay_fee.Name = "btn_pay_fee";
-            this.btn_pay_fee.Padding = new System.Windows.Forms.Padding(17, 0, 6, 0);
-            this.btn_pay_fee.Size = new System.Drawing.Size(143, 30);
-            this.btn_pay_fee.TabIndex = 2;
-            this.btn_pay_fee.Text = "Abonos";
-            this.btn_pay_fee.UseVisualStyleBackColor = false;
-            this.btn_pay_fee.Click += new System.EventHandler(this.btn_pay_fee_Click);
             // 
             // btn_view_client
             // 
@@ -290,6 +238,58 @@ namespace Presentation.View.Forms.Client
             this.btn_edit_client.UseVisualStyleBackColor = false;
             this.btn_edit_client.Click += new System.EventHandler(this.btn_edit_client_Click);
             // 
+            // groupBox3
+            // 
+            this.groupBox3.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox3.Controls.Add(this.btn_client_report);
+            this.groupBox3.Controls.Add(this.btn_pay_fee);
+            this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.groupBox3.Location = new System.Drawing.Point(18, 324);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.groupBox3.Size = new System.Drawing.Size(177, 116);
+            this.groupBox3.TabIndex = 10;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Comunes";
+            // 
+            // btn_client_report
+            // 
+            this.btn_client_report.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.btn_client_report.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.btn_client_report.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_client_report.ForeColor = System.Drawing.Color.White;
+            this.btn_client_report.Image = global::Presentation.Properties.Resources.icons8_script_de_informes_de_gráficos_24;
+            this.btn_client_report.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_client_report.Location = new System.Drawing.Point(18, 65);
+            this.btn_client_report.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_client_report.Name = "btn_client_report";
+            this.btn_client_report.Padding = new System.Windows.Forms.Padding(17, 0, 6, 0);
+            this.btn_client_report.Size = new System.Drawing.Size(143, 30);
+            this.btn_client_report.TabIndex = 4;
+            this.btn_client_report.Text = "Reportes";
+            this.btn_client_report.UseVisualStyleBackColor = false;
+            // 
+            // btn_pay_fee
+            // 
+            this.btn_pay_fee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.btn_pay_fee.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.btn_pay_fee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_pay_fee.ForeColor = System.Drawing.Color.White;
+            this.btn_pay_fee.Image = global::Presentation.Properties.Resources.icons8_reembolso_24;
+            this.btn_pay_fee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_pay_fee.Location = new System.Drawing.Point(18, 27);
+            this.btn_pay_fee.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_pay_fee.Name = "btn_pay_fee";
+            this.btn_pay_fee.Padding = new System.Windows.Forms.Padding(17, 0, 6, 0);
+            this.btn_pay_fee.Size = new System.Drawing.Size(143, 30);
+            this.btn_pay_fee.TabIndex = 2;
+            this.btn_pay_fee.Text = "Abonos";
+            this.btn_pay_fee.UseVisualStyleBackColor = false;
+            this.btn_pay_fee.Click += new System.EventHandler(this.btn_pay_fee_Click);
+            // 
             // ClientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -328,7 +328,7 @@ namespace Presentation.View.Forms.Client
         private System.Windows.Forms.Button btn_delete_client;
         private System.Windows.Forms.Button btn_edit_client;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button btn_get_report;
+        private System.Windows.Forms.Button btn_client_report;
         private System.Windows.Forms.Button btn_pay_fee;
     }
 }

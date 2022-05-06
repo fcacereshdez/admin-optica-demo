@@ -5,12 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DataAccess;
+using DataAccess.Data;
 
 namespace Domain
 {
     public class CompanyController
     {
         CompanyData companyData = new CompanyData();
+        ClientAccountData clientAccountData = new ClientAccountData();
 
         public DataTable SelectAllCompanies()
         {
@@ -40,6 +42,18 @@ namespace Domain
         public void SelectLastCodeCompany()
         {
             companyData.SelectLastCodeCompany();
+        }
+
+        public void GetTotalByCompany(Int64 company_id)
+        {
+            clientAccountData.GetTotalByCompany(company_id);
+        }
+
+        public DataTable GetClientsByCompany(Int64 company_id)
+        {
+            DataTable TableClients = new DataTable();
+            TableClients = clientAccountData.GetClientsByCompany(company_id);
+            return TableClients;
         }
     }
 }

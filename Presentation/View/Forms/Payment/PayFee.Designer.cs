@@ -46,7 +46,7 @@ namespace Presentation.View.Forms.Payment
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lbl_balance = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.lbl_type_payment = new System.Windows.Forms.Label();
+            this.lbl_invoice_payment = new System.Windows.Forms.Label();
             this.lbl_fee = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -235,7 +235,7 @@ namespace Presentation.View.Forms.Payment
             // 
             this.groupBox2.Controls.Add(this.lbl_balance);
             this.groupBox2.Controls.Add(this.label15);
-            this.groupBox2.Controls.Add(this.lbl_type_payment);
+            this.groupBox2.Controls.Add(this.lbl_invoice_payment);
             this.groupBox2.Controls.Add(this.lbl_fee);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.label9);
@@ -267,15 +267,15 @@ namespace Presentation.View.Forms.Payment
             this.label15.TabIndex = 36;
             this.label15.Text = "Saldo: ";
             // 
-            // lbl_type_payment
+            // lbl_invoice_payment
             // 
-            this.lbl_type_payment.AutoSize = true;
-            this.lbl_type_payment.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_type_payment.Location = new System.Drawing.Point(144, 88);
-            this.lbl_type_payment.Name = "lbl_type_payment";
-            this.lbl_type_payment.Size = new System.Drawing.Size(36, 17);
-            this.lbl_type_payment.TabIndex = 35;
-            this.lbl_type_payment.Text = "0000";
+            this.lbl_invoice_payment.AutoSize = true;
+            this.lbl_invoice_payment.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_invoice_payment.Location = new System.Drawing.Point(144, 88);
+            this.lbl_invoice_payment.Name = "lbl_invoice_payment";
+            this.lbl_invoice_payment.Size = new System.Drawing.Size(36, 17);
+            this.lbl_invoice_payment.TabIndex = 35;
+            this.lbl_invoice_payment.Text = "0000";
             // 
             // lbl_fee
             // 
@@ -293,9 +293,9 @@ namespace Presentation.View.Forms.Payment
             this.label11.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(6, 88);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(98, 17);
+            this.label11.Size = new System.Drawing.Size(106, 17);
             this.label11.TabIndex = 34;
-            this.label11.Text = "Tipo de pago: ";
+            this.label11.Text = "Total facturado:";
             // 
             // label9
             // 
@@ -449,7 +449,7 @@ namespace Presentation.View.Forms.Payment
         public System.Windows.Forms.Label lbl_invoice;
         public System.Windows.Forms.Label lbl_company_name;
         public System.Windows.Forms.Label lbl_balance;
-        public System.Windows.Forms.Label lbl_type_payment;
+        public System.Windows.Forms.Label lbl_invoice_payment;
         public System.Windows.Forms.Label lbl_fee;
         public System.Windows.Forms.Label lbl_error;
         public System.Windows.Forms.TextBox txt_invoice_id;

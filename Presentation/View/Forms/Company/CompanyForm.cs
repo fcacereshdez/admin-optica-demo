@@ -27,7 +27,7 @@ namespace Presentation.View.Forms.Company
         private void SelectAllCompanies()
         {
             dgv_companies.DataSource = companyController.SelectAllCompanies();
-            //dgv_companies.Columns[0].Width = 30;
+            // dgv_companies.Columns[0].Width = 30;
             dgv_companies.Columns[1].Width = 225;
             dgv_companies.Columns[2].Width = 75;
             dgv_companies.Columns[3].Width = 90;
@@ -97,6 +97,18 @@ namespace Presentation.View.Forms.Company
         private void pcb_close_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btn_company_report_Click(object sender, EventArgs e)
+        {
+            companyController.GetTotalByCompany(Convert.ToInt64(dgv_companies.SelectedRows[0].Cells[0].Value));
+            CompanyReportBySelected companyReportBySelected = new CompanyReportBySelected();
+            companyReportBySelected.dgv_clients_by_company.DataSource = companyController.GetClientsByCompany(Convert.ToInt64(dgv_companies.SelectedRows[0].Cells[0].Value));
+            companyReportBySelected.lbl_company.Text = Common.Models.Company.full_name;
+            companyReportBySelected.lbl_invoices.Text = Common.Models.Company.invoices.ToString();
+            companyReportBySelected.lbl_total_clients.Text = Common.Models.Company.total_clients.ToString();
+            companyReportBySelected.lbl_sales_total.Text = "$" + Common.Models.Company.total_invoice.ToString();
+            companyReportBySelected.ShowDialog();
         }
     }
 }

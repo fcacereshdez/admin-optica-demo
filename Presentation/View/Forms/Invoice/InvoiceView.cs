@@ -45,7 +45,7 @@ namespace Presentation.View.Forms.Invoice
                 payFee.lbl_date_invoice.Text = ClientAccount.invoice_date.ToString();
                 payFee.lbl_fee.Text = "$" + ClientAccount.fee.ToString();
                 payFee.lbl_balance.Text = "$" + ClientAccount.balance.ToString();
-                payFee.lbl_type_payment.Text = "Próximamente";
+                payFee.lbl_invoice_payment.Text = "$" + ClientAccount.invoice_total.ToString();
                 payFee.txt_invoice_id.Text = ClientAccount.id_client_account.ToString();
                 payFee.ShowDialog();
                 this.Close();

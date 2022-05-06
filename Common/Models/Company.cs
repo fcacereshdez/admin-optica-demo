@@ -17,6 +17,9 @@ namespace Common.Models
         public static string address;
         public static string nit;
         public static string iva;
+        public static Int32 total_clients;
+        public static decimal total_invoice;
+        public static Int32 invoices;
         public static string attendance_fullname;
         public static string attendance_role;
         public static DateTime created_at;
