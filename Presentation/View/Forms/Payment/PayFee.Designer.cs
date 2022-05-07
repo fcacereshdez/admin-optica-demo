@@ -44,26 +44,34 @@ namespace Presentation.View.Forms.Payment
             this.lbl_company_name = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lbl_payment_pending = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.lbl_balance = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.lbl_invoice_payment = new System.Windows.Forms.Label();
             this.lbl_fee = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txt_amount = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.btn_pay = new System.Windows.Forms.Button();
             this.btn_cancel = new System.Windows.Forms.Button();
             this.txt_invoice_id = new System.Windows.Forms.TextBox();
             this.lbl_error = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.txt_ref_bank = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cmb_bank = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cmb_method_payment = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.pnl_top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_close_payment)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_exit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_minus)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_top
@@ -139,7 +147,7 @@ namespace Presentation.View.Forms.Payment
             // 
             this.lbl_client_name.AutoSize = true;
             this.lbl_client_name.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_client_name.Location = new System.Drawing.Point(133, 30);
+            this.lbl_client_name.Location = new System.Drawing.Point(217, 30);
             this.lbl_client_name.Name = "lbl_client_name";
             this.lbl_client_name.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lbl_client_name.Size = new System.Drawing.Size(120, 17);
@@ -169,7 +177,7 @@ namespace Presentation.View.Forms.Payment
             // 
             this.lbl_date_invoice.AutoSize = true;
             this.lbl_date_invoice.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_date_invoice.Location = new System.Drawing.Point(179, 108);
+            this.lbl_date_invoice.Location = new System.Drawing.Point(233, 108);
             this.lbl_date_invoice.Name = "lbl_date_invoice";
             this.lbl_date_invoice.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lbl_date_invoice.Size = new System.Drawing.Size(74, 17);
@@ -191,7 +199,7 @@ namespace Presentation.View.Forms.Payment
             // 
             this.lbl_invoice.AutoSize = true;
             this.lbl_invoice.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_invoice.Location = new System.Drawing.Point(217, 82);
+            this.lbl_invoice.Location = new System.Drawing.Point(252, 82);
             this.lbl_invoice.Name = "lbl_invoice";
             this.lbl_invoice.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lbl_invoice.Size = new System.Drawing.Size(36, 17);
@@ -213,7 +221,7 @@ namespace Presentation.View.Forms.Payment
             // 
             this.lbl_company_name.AutoSize = true;
             this.lbl_company_name.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_company_name.Location = new System.Drawing.Point(108, 56);
+            this.lbl_company_name.Location = new System.Drawing.Point(204, 56);
             this.lbl_company_name.Name = "lbl_company_name";
             this.lbl_company_name.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lbl_company_name.Size = new System.Drawing.Size(145, 17);
@@ -233,6 +241,8 @@ namespace Presentation.View.Forms.Payment
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.lbl_payment_pending);
+            this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.lbl_balance);
             this.groupBox2.Controls.Add(this.label15);
             this.groupBox2.Controls.Add(this.lbl_invoice_payment);
@@ -242,10 +252,30 @@ namespace Presentation.View.Forms.Payment
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(14, 182);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(272, 125);
+            this.groupBox2.Size = new System.Drawing.Size(272, 168);
             this.groupBox2.TabIndex = 28;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Detalles de la cuenta";
+            // 
+            // lbl_payment_pending
+            // 
+            this.lbl_payment_pending.AutoSize = true;
+            this.lbl_payment_pending.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_payment_pending.Location = new System.Drawing.Point(144, 115);
+            this.lbl_payment_pending.Name = "lbl_payment_pending";
+            this.lbl_payment_pending.Size = new System.Drawing.Size(36, 17);
+            this.lbl_payment_pending.TabIndex = 39;
+            this.lbl_payment_pending.Text = "0000";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(7, 115);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(128, 17);
+            this.label4.TabIndex = 38;
+            this.label4.Text = "Pendiente de pago:";
             // 
             // lbl_balance
             // 
@@ -307,30 +337,18 @@ namespace Presentation.View.Forms.Payment
             this.label9.TabIndex = 33;
             this.label9.Text = "Couta: ";
             // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.txt_amount);
-            this.groupBox3.Controls.Add(this.label21);
-            this.groupBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(292, 182);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(213, 78);
-            this.groupBox3.TabIndex = 38;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Abono a cuenta";
-            // 
             // txt_amount
             // 
-            this.txt_amount.Location = new System.Drawing.Point(60, 31);
+            this.txt_amount.Location = new System.Drawing.Point(90, 137);
             this.txt_amount.Name = "txt_amount";
-            this.txt_amount.Size = new System.Drawing.Size(144, 25);
+            this.txt_amount.Size = new System.Drawing.Size(117, 25);
             this.txt_amount.TabIndex = 34;
             // 
             // label21
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(7, 34);
+            this.label21.Location = new System.Drawing.Point(8, 140);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(57, 17);
             this.label21.TabIndex = 33;
@@ -343,7 +361,7 @@ namespace Presentation.View.Forms.Payment
             this.btn_pay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_pay.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_pay.ForeColor = System.Drawing.Color.White;
-            this.btn_pay.Location = new System.Drawing.Point(264, 330);
+            this.btn_pay.Location = new System.Drawing.Point(264, 400);
             this.btn_pay.Name = "btn_pay";
             this.btn_pay.Size = new System.Drawing.Size(255, 46);
             this.btn_pay.TabIndex = 39;
@@ -358,7 +376,7 @@ namespace Presentation.View.Forms.Payment
             this.btn_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cancel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cancel.ForeColor = System.Drawing.Color.Black;
-            this.btn_cancel.Location = new System.Drawing.Point(0, 330);
+            this.btn_cancel.Location = new System.Drawing.Point(0, 400);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(265, 46);
             this.btn_cancel.TabIndex = 40;
@@ -368,9 +386,9 @@ namespace Presentation.View.Forms.Payment
             // 
             // txt_invoice_id
             // 
-            this.txt_invoice_id.Location = new System.Drawing.Point(361, 282);
+            this.txt_invoice_id.Location = new System.Drawing.Point(421, 360);
             this.txt_invoice_id.Name = "txt_invoice_id";
-            this.txt_invoice_id.Size = new System.Drawing.Size(144, 25);
+            this.txt_invoice_id.Size = new System.Drawing.Size(86, 25);
             this.txt_invoice_id.TabIndex = 35;
             this.txt_invoice_id.Visible = false;
             // 
@@ -379,25 +397,96 @@ namespace Presentation.View.Forms.Payment
             this.lbl_error.AutoSize = true;
             this.lbl_error.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_error.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lbl_error.Location = new System.Drawing.Point(292, 263);
+            this.lbl_error.Location = new System.Drawing.Point(14, 363);
             this.lbl_error.Name = "lbl_error";
             this.lbl_error.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lbl_error.Size = new System.Drawing.Size(11, 17);
+            this.lbl_error.Size = new System.Drawing.Size(57, 17);
             this.lbl_error.TabIndex = 33;
-            this.lbl_error.Text = ".";
+            this.lbl_error.Text = "lbl_error";
             this.lbl_error.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.txt_ref_bank);
+            this.groupBox4.Controls.Add(this.label8);
+            this.groupBox4.Controls.Add(this.cmb_bank);
+            this.groupBox4.Controls.Add(this.label6);
+            this.groupBox4.Controls.Add(this.cmb_method_payment);
+            this.groupBox4.Controls.Add(this.label1);
+            this.groupBox4.Controls.Add(this.txt_amount);
+            this.groupBox4.Controls.Add(this.label21);
+            this.groupBox4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Location = new System.Drawing.Point(294, 182);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(213, 168);
+            this.groupBox4.TabIndex = 39;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Información del abono";
+            // 
+            // txt_ref_bank
+            // 
+            this.txt_ref_bank.Location = new System.Drawing.Point(90, 104);
+            this.txt_ref_bank.Name = "txt_ref_bank";
+            this.txt_ref_bank.Size = new System.Drawing.Size(117, 25);
+            this.txt_ref_bank.TabIndex = 40;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(8, 107);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(76, 17);
+            this.label8.TabIndex = 39;
+            this.label8.Text = "Referencia:";
+            // 
+            // cmb_bank
+            // 
+            this.cmb_bank.FormattingEnabled = true;
+            this.cmb_bank.Location = new System.Drawing.Point(78, 68);
+            this.cmb_bank.Name = "cmb_bank";
+            this.cmb_bank.Size = new System.Drawing.Size(127, 25);
+            this.cmb_bank.TabIndex = 38;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(8, 71);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(53, 17);
+            this.label6.TabIndex = 37;
+            this.label6.Text = "Banco: ";
+            // 
+            // cmb_method_payment
+            // 
+            this.cmb_method_payment.FormattingEnabled = true;
+            this.cmb_method_payment.Location = new System.Drawing.Point(78, 31);
+            this.cmb_method_payment.Name = "cmb_method_payment";
+            this.cmb_method_payment.Size = new System.Drawing.Size(127, 25);
+            this.cmb_method_payment.TabIndex = 36;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(8, 34);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 17);
+            this.label1.TabIndex = 35;
+            this.label1.Text = "Método: ";
             // 
             // PayFee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(519, 376);
-            this.Controls.Add(this.lbl_error);
+            this.ClientSize = new System.Drawing.Size(519, 446);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.txt_invoice_id);
+            this.Controls.Add(this.lbl_error);
             this.Controls.Add(this.btn_cancel);
             this.Controls.Add(this.btn_pay);
-            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pnl_top);
@@ -416,8 +505,8 @@ namespace Presentation.View.Forms.Payment
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -439,7 +528,6 @@ namespace Presentation.View.Forms.Payment
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox txt_amount;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Button btn_pay;
@@ -453,5 +541,14 @@ namespace Presentation.View.Forms.Payment
         public System.Windows.Forms.Label lbl_fee;
         public System.Windows.Forms.Label lbl_error;
         public System.Windows.Forms.TextBox txt_invoice_id;
+        public System.Windows.Forms.Label lbl_payment_pending;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.TextBox txt_ref_bank;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox cmb_bank;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cmb_method_payment;
+        private System.Windows.Forms.Label label1;
     }
 }

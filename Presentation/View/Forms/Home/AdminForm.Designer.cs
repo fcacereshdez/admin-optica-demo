@@ -34,38 +34,38 @@ namespace Presentation.View.Forms.Home
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.pnl_clients = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lbl_client_count = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.pnl_sales_day = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.pnl_charges = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnl_shipping = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pnl_clients.SuspendLayout();
-            this.pnl_sales_day.SuspendLayout();
-            this.pnl_charges.SuspendLayout();
-            this.pnl_shipping.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.pnl_sales_day.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.pnl_charges.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnl_shipping.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_clients
             // 
             this.pnl_clients.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(134)))), ((int)(((byte)(14)))));
-            this.pnl_clients.Controls.Add(this.label5);
+            this.pnl_clients.Controls.Add(this.lbl_client_count);
             this.pnl_clients.Controls.Add(this.pictureBox3);
             this.pnl_clients.Controls.Add(this.label6);
             this.pnl_clients.Location = new System.Drawing.Point(34, 53);
@@ -73,16 +73,26 @@ namespace Presentation.View.Forms.Home
             this.pnl_clients.Size = new System.Drawing.Size(181, 97);
             this.pnl_clients.TabIndex = 0;
             // 
-            // label5
+            // lbl_client_count
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(10, 37);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(33, 37);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "0";
+            this.lbl_client_count.AutoSize = true;
+            this.lbl_client_count.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_client_count.ForeColor = System.Drawing.Color.White;
+            this.lbl_client_count.Location = new System.Drawing.Point(10, 37);
+            this.lbl_client_count.Name = "lbl_client_count";
+            this.lbl_client_count.Size = new System.Drawing.Size(33, 37);
+            this.lbl_client_count.TabIndex = 8;
+            this.lbl_client_count.Text = "0";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Presentation.Properties.Resources.business_and_finance;
+            this.pictureBox3.Location = new System.Drawing.Point(118, 29);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(57, 45);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 6;
+            this.pictureBox3.TabStop = false;
             // 
             // label6
             // 
@@ -117,6 +127,16 @@ namespace Presentation.View.Forms.Home
             this.label7.Size = new System.Drawing.Size(33, 37);
             this.label7.TabIndex = 11;
             this.label7.Text = "0";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::Presentation.Properties.Resources.discount;
+            this.pictureBox4.Location = new System.Drawing.Point(117, 29);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(57, 45);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 9;
+            this.pictureBox4.TabStop = false;
             // 
             // label9
             // 
@@ -173,6 +193,16 @@ namespace Presentation.View.Forms.Home
             this.label1.TabIndex = 1;
             this.label1.Text = "Pagos del día";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Presentation.Properties.Resources.save_money;
+            this.pictureBox1.Location = new System.Drawing.Point(119, 29);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(57, 45);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // pnl_shipping
             // 
             this.pnl_shipping.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(29)))), ((int)(((byte)(26)))));
@@ -194,6 +224,16 @@ namespace Presentation.View.Forms.Home
             this.label3.Size = new System.Drawing.Size(33, 37);
             this.label3.TabIndex = 5;
             this.label3.Text = "0";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Presentation.Properties.Resources.delivery_truck;
+            this.pictureBox2.Location = new System.Drawing.Point(117, 29);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(57, 45);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
             // 
             // label4
             // 
@@ -239,46 +279,6 @@ namespace Presentation.View.Forms.Home
             this.chart1.Text = "chart1";
             this.chart1.Click += new System.EventHandler(this.chart1_Click);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Presentation.Properties.Resources.delivery_truck;
-            this.pictureBox2.Location = new System.Drawing.Point(117, 29);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(57, 45);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::Presentation.Properties.Resources.discount;
-            this.pictureBox4.Location = new System.Drawing.Point(117, 29);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(57, 45);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 9;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Presentation.Properties.Resources.save_money;
-            this.pictureBox1.Location = new System.Drawing.Point(119, 29);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(57, 45);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Presentation.Properties.Resources.business_and_finance;
-            this.pictureBox3.Location = new System.Drawing.Point(118, 29);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(57, 45);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 6;
-            this.pictureBox3.TabStop = false;
-            // 
             // AdminForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -297,17 +297,17 @@ namespace Presentation.View.Forms.Home
             this.Text = "Inicio";
             this.pnl_clients.ResumeLayout(false);
             this.pnl_clients.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.pnl_sales_day.ResumeLayout(false);
             this.pnl_sales_day.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.pnl_charges.ResumeLayout(false);
             this.pnl_charges.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnl_shipping.ResumeLayout(false);
             this.pnl_shipping.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -325,7 +325,7 @@ namespace Presentation.View.Forms.Home
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lbl_client_count;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;

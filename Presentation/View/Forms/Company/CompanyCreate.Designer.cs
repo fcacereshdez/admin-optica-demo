@@ -96,7 +96,7 @@ namespace Presentation.View.Forms.Company
             // pcb_close_create_user
             // 
             this.pcb_close_create_user.Image = global::Presentation.Properties.Resources.close;
-            this.pcb_close_create_user.Location = new System.Drawing.Point(520, 4);
+            this.pcb_close_create_user.Location = new System.Drawing.Point(521, 2);
             this.pcb_close_create_user.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pcb_close_create_user.Name = "pcb_close_create_user";
             this.pcb_close_create_user.Size = new System.Drawing.Size(25, 25);

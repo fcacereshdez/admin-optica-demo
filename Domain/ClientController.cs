@@ -56,9 +56,9 @@ namespace Domain
             clientAccountData.GetClientAccountById(invoice_id);
         }
 
-        public void PayInovice(string amount, string invoice)
+        public void PayInovice(string payment_method, string amount, string bank, string reference, string invoice)
         {
-            clientAccountData.PayInovice(Convert.ToDecimal(amount), DateTime.Now.ToString("yyyy-MM-dd"), 1, DateTime.Now.ToString("yyyy-MM-dd"), Convert.ToInt64(invoice));
+            clientAccountData.PayInovice(Convert.ToInt64(payment_method), Convert.ToDecimal(amount), DateTime.Now.ToString("yyyy-MM-dd"), 1, DateTime.Now.ToString("yyyy-MM-dd"), Convert.ToInt64(bank), reference, Convert.ToInt64(invoice));
         }
     }
 }

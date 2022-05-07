@@ -16,6 +16,7 @@ using System.Net;
 using Presentation.View.Forms.Company;
 using Presentation.View.Forms.Client;
 using Presentation.View.Forms.About;
+using Presentation.View.Forms;
 
 namespace Presentation
 {
@@ -163,7 +164,7 @@ namespace Presentation
 
         private void btn_reports_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Este servicio no ha sido habilitado", "Informes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            ShowForm(new SelectorForms());
         }
 
         private void btn_shipping_Click(object sender, EventArgs e)

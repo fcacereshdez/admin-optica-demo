@@ -283,6 +283,16 @@ namespace Presentation.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_cliente_de_empresa_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-cliente-de-empresa-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_crear_nuevo_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-crear-nuevo-24", resourceCulture);
@@ -363,6 +373,16 @@ namespace Presentation.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_factura_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-factura-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_google_code_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-google-code-24", resourceCulture);
@@ -396,6 +416,16 @@ namespace Presentation.Properties {
         internal static System.Drawing.Bitmap icons8_laboratory_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-laboratory-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_libro_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-libro-24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

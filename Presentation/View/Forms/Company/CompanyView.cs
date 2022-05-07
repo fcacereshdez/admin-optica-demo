@@ -34,10 +34,14 @@ namespace Presentation.View.Forms.Company
 
         private void btn_edit_company_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            this.Close();
+            Close();
             CompanyEdit companyEdit = new CompanyEdit();
             companyEdit.ShowDialog();
+        }
+
+        private void pcb_close_edit_company_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

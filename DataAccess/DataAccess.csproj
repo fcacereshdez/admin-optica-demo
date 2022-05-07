@@ -9,9 +9,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DataAccess</RootNamespace>
     <AssemblyName>DataAccess</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -43,9 +44,11 @@
   <ItemGroup>
     <Compile Include="Data\ClientAccountData.cs" />
     <Compile Include="Data\ClientData.cs" />
+    <Compile Include="Data\CommonData.cs" />
     <Compile Include="Data\CompanyData.cs" />
     <Compile Include="Database\DBConnection.cs" />
     <Compile Include="Data\ProviderData.cs" />
+    <Compile Include="Data\ReportsData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Data\UserData.cs" />
   </ItemGroup>

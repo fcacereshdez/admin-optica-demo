@@ -1,4 +1,5 @@
-﻿using Common.Models;
+﻿using Common.Cache;
+using Common.Models;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -58,6 +59,28 @@ namespace DataAccess.Data
                             Client.address = reader.GetString(9);
                             Client.notes = reader.GetString(10);
                             Client.company_id = reader.GetInt64(11);
+                        }
+                    }
+                }
+            }
+        }
+
+        public void CountClients()
+        {
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                using (var cmd = new SqlCommand())
+                {
+                    cmd.Connection = conn;
+                    cmd.CommandText = "CountClients";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            ClientCache.countClients = reader.GetInt32(0);
                         }
                     }
                 }

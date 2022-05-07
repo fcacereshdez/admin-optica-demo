@@ -64,7 +64,7 @@ namespace DataAccess.Data
             }
         }
 
-        public void PayInovice(decimal amount, string date, Int64 processed_by, string last_payment, Int64 invoice_id)
+        public void PayInovice(Int64 payment_method, decimal amount, string date, Int64 processed_by, string last_payment, Int64 bank, string reference, Int64 invoice_id)
         {
             using (var conn = GetConnection())
             {
@@ -74,11 +74,14 @@ namespace DataAccess.Data
                     cmd.Connection = conn;
                     cmd.CommandText = "PayInvoice";
                     cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@payment_method", payment_method);
                     cmd.Parameters.AddWithValue("@amount", amount);
                     cmd.Parameters.AddWithValue("@date", date);
                     cmd.Parameters.AddWithValue("@processed_by", processed_by);
                     cmd.Parameters.AddWithValue("@last_payment", last_payment);
                     cmd.Parameters.AddWithValue("@invoice", invoice_id);
+                    cmd.Parameters.AddWithValue("@bank", bank);
+                    cmd.Parameters.AddWithValue("@reference", reference);
                     cmd.ExecuteNonQuery();
                     conn.Close();
                 }

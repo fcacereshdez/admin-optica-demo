@@ -186,13 +186,14 @@ namespace Presentation.View.Forms.Company
             // pcb_close_edit_company
             // 
             this.pcb_close_edit_company.Image = global::Presentation.Properties.Resources.close;
-            this.pcb_close_edit_company.Location = new System.Drawing.Point(520, 4);
+            this.pcb_close_edit_company.Location = new System.Drawing.Point(520, 2);
             this.pcb_close_edit_company.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pcb_close_edit_company.Name = "pcb_close_edit_company";
             this.pcb_close_edit_company.Size = new System.Drawing.Size(25, 25);
             this.pcb_close_edit_company.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pcb_close_edit_company.TabIndex = 4;
             this.pcb_close_edit_company.TabStop = false;
+            this.pcb_close_edit_company.Click += new System.EventHandler(this.pcb_close_edit_company_Click);
             // 
             // pcb_exit
             // 
