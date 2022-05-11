@@ -29,22 +29,23 @@ namespace Presentation.View.Forms.Client
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CompanySelector));
             this.pnl_top = new System.Windows.Forms.Panel();
+            this.pcb_close_create_client = new System.Windows.Forms.PictureBox();
             this.pcb_close = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txt_search_company = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgv_companies_child = new System.Windows.Forms.DataGridView();
-            this.pcb_close_create_client = new System.Windows.Forms.PictureBox();
             this.pnl_top.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcb_close_create_client)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_close)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_companies_child)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcb_close_create_client)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_top
@@ -59,6 +60,18 @@ namespace Presentation.View.Forms.Client
             this.pnl_top.Size = new System.Drawing.Size(647, 35);
             this.pnl_top.TabIndex = 12;
             this.pnl_top.Visible = false;
+            // 
+            // pcb_close_create_client
+            // 
+            this.pcb_close_create_client.Image = global::Presentation.Properties.Resources.close;
+            this.pcb_close_create_client.Location = new System.Drawing.Point(619, 6);
+            this.pcb_close_create_client.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pcb_close_create_client.Name = "pcb_close_create_client";
+            this.pcb_close_create_client.Size = new System.Drawing.Size(25, 25);
+            this.pcb_close_create_client.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcb_close_create_client.TabIndex = 15;
+            this.pcb_close_create_client.TabStop = false;
+            this.pcb_close_create_client.Click += new System.EventHandler(this.pcb_close_create_client_Click);
             // 
             // pcb_close
             // 
@@ -108,23 +121,23 @@ namespace Presentation.View.Forms.Client
             this.dgv_companies_child.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(241)))));
             this.dgv_companies_child.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_companies_child.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(134)))), ((int)(((byte)(14)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(171)))), ((int)(((byte)(173)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_companies_child.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(134)))), ((int)(((byte)(14)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(171)))), ((int)(((byte)(173)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_companies_child.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_companies_child.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.WindowFrame;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_companies_child.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.WindowFrame;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_companies_child.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_companies_child.EnableHeadersVisualStyles = false;
             this.dgv_companies_child.Location = new System.Drawing.Point(12, 104);
             this.dgv_companies_child.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -132,54 +145,44 @@ namespace Presentation.View.Forms.Client
             this.dgv_companies_child.Name = "dgv_companies_child";
             this.dgv_companies_child.ReadOnly = true;
             this.dgv_companies_child.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(134)))), ((int)(((byte)(14)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.WindowFrame;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_companies_child.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.WindowFrame;
-            this.dgv_companies_child.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(134)))), ((int)(((byte)(14)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.WindowFrame;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_companies_child.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.WindowFrame;
+            this.dgv_companies_child.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_companies_child.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_companies_child.Size = new System.Drawing.Size(617, 345);
             this.dgv_companies_child.TabIndex = 13;
             this.dgv_companies_child.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_companies_CellDoubleClick);
             // 
-            // pcb_close_create_client
-            // 
-            this.pcb_close_create_client.Image = global::Presentation.Properties.Resources.close;
-            this.pcb_close_create_client.Location = new System.Drawing.Point(619, 6);
-            this.pcb_close_create_client.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pcb_close_create_client.Name = "pcb_close_create_client";
-            this.pcb_close_create_client.Size = new System.Drawing.Size(25, 25);
-            this.pcb_close_create_client.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pcb_close_create_client.TabIndex = 15;
-            this.pcb_close_create_client.TabStop = false;
-            this.pcb_close_create_client.Click += new System.EventHandler(this.pcb_close_create_client_Click);
-            // 
             // CompanySelector
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(647, 472);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.dgv_companies_child);
             this.Controls.Add(this.pnl_top);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "CompanySelector";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CompanySelector";
+            this.Text = "Seleccionar empresa";
             this.pnl_top.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pcb_close_create_client)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_close)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_companies_child)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcb_close_create_client)).EndInit();
             this.ResumeLayout(false);
 
         }

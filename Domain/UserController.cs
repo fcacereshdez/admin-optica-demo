@@ -24,6 +24,13 @@ namespace Domain
             return TableUsers;
         }
 
+        public DataTable SearchUser(string user)
+        {
+            DataTable TableUsers = new DataTable();
+            TableUsers = userData.SearchUser(user);
+            return TableUsers;
+        }
+
         public void InsertActionsUser(string description, string computer, string ipaddress, Int64 user_id, string created_at)
         {
             userData.InsertActionsUser(description, computer, ipaddress, user_id, Convert.ToDateTime(created_at));

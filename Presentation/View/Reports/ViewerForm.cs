@@ -19,13 +19,28 @@ namespace Presentation.View.Reports
 
         private void ViewerForm_Load(object sender, EventArgs e)
         {
-
+            Left = Top = 0;
+            Width = Screen.PrimaryScreen.WorkingArea.Width;
+            Height = Screen.PrimaryScreen.WorkingArea.Height;
             this.rv_viewer.RefreshReport();
         }
 
         private void pcb_close_edit_company_Click(object sender, EventArgs e)
         {
+            rv_viewer.Clear();
+            rv_viewer.LocalReport.DataSources.Clear();
             Close();
+        }
+
+        private void pb_maximize_window_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+            {
+                WindowState = FormWindowState.Maximized;
+            }
+            else {
+                WindowState = FormWindowState.Normal;
+            }
         }
     }
 }

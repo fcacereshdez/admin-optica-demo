@@ -28,9 +28,9 @@ namespace Domain
             return TablePaymentMethod;
         }
 
-        public DataSet GetSalesBook()
+        public DataTable GetSalesBook()
         {
-            DataSet DataSetSalesBook = new DataSet();
+            DataTable DataSetSalesBook = new DataTable();
             DataSetSalesBook = reportData.GetSalesBook();
             return DataSetSalesBook;
         }

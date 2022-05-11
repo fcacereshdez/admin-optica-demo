@@ -13,7 +13,11 @@ namespace DataAccess
         private readonly string connectionString;
         public DBConnection()
         {
-            connectionString = "Server=(localdb)\\mssqllocaldb;Database=INTERLENSSV; integrated security=true";
+            string server = "localhost\\SQLEXPRESS", user = "MangoStudios", password = "Frank0089hdez@", database = "INTERLENSSV";
+           // string server = "(localdb)\\mssqllocaldb", database = "INTERLENSSV";
+            connectionString = "Server=" + server + ";User ID=" + user + ";Password=" + password+";Initial Catalog="+database+";Integrated Security=True";
+           // connectionString = "Server=" + server + ";Initial Catalog=" + database + ";Integrated Security=True";
+
         }
         
         protected SqlConnection GetConnection()

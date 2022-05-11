@@ -31,6 +31,26 @@ namespace DataAccess.Data
             }
         }
 
+        public DataTable SearchClient(string client)
+        {
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                using (var cmd = new SqlCommand())
+                {
+                    cmd.Connection = conn;
+                    cmd.CommandText = "SearchClient";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@client", client);
+                    SqlDataReader ReaderClients = cmd.ExecuteReader();
+                    DataTable TableClients = new DataTable();
+                    TableClients.Load(ReaderClients);
+                    conn.Close();
+                    return TableClients;
+                }
+            }
+        }
+
         public void SelectClientById(Int64 client_id)
         {
             using (var conn = GetConnection())
@@ -87,7 +107,7 @@ namespace DataAccess.Data
             }
         }
 
-        public void CreateClient(string name, string lastname, string code, string dui, string nit, string phone, string secondary_phone, string email, string address, string notes, Int64 company_id, DateTime created_at)
+        public void CreateClient(string name, string lastname, string code, string dui, string nit, string phone, string secondary_phone, string email, string address, string notes, Int64 company_id, string dateOfBirth, DateTime created_at)
         {
             using (var conn = GetConnection())
             {
@@ -108,6 +128,7 @@ namespace DataAccess.Data
                     cmd.Parameters.AddWithValue("@address", address);
                     cmd.Parameters.AddWithValue("@notes", notes);
                     cmd.Parameters.AddWithValue("@company_id", company_id);
+                    cmd.Parameters.AddWithValue("@date_of_birth", dateOfBirth);
                     cmd.Parameters.AddWithValue("@created_at", created_at);
                     cmd.ExecuteNonQuery();
                     conn.Close();

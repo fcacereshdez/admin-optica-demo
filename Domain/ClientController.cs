@@ -20,13 +20,19 @@ namespace Domain
             TableClients = clientData.SelectAllClients();
             return TableClients;
         }
+        public DataTable SearchClient(string client)
+        {
+            DataTable TableClients = new DataTable();
+            TableClients = clientData.SearchClient(client);
+            return TableClients;
+        }
         public void SelectClientById(string client_id)
         {
             clientData.SelectClientById(Convert.ToInt64(client_id));
         }
-        public void CreateClient(string name, string lastname, string code, string dui, string nit, string phone, string secondary_phone, string email, string address, string notes, string company_id, string created_at)
+        public void CreateClient(string name, string lastname, string code, string dui, string nit, string phone, string secondary_phone, string email, string address, string notes, string company_id, string dateOfBirth, string created_at)
         {
-            clientData.CreateClient(name, lastname, code, dui, nit, phone, secondary_phone, email, address, notes, Convert.ToInt64(company_id), Convert.ToDateTime(created_at));
+            clientData.CreateClient(name, lastname, code, dui, nit, phone, secondary_phone, email, address, notes, Convert.ToInt64(company_id), dateOfBirth, Convert.ToDateTime(created_at));
         }
 
         public void UpdateClient(string name, string lastname, string dui, string nit, string phone, string secondary_phone, string email, string address, string notes, string updated_at, Int64 client_id)

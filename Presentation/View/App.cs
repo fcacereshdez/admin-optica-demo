@@ -8,15 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
-using Domain;
-using Presentation.View.Forms.Home;
-using Presentation.View.Forms.User;
-using Common.Cache;
 using System.Net;
+using Common.Cache;
+using Domain;
+using Presentation.View.Forms; 
 using Presentation.View.Forms.Company;
 using Presentation.View.Forms.Client;
 using Presentation.View.Forms.About;
-using Presentation.View.Forms;
+using Presentation.View.Forms.Laboratory;
+using Presentation.View.Forms.Product;
+using Presentation.View.Forms.Recipe;
+using Presentation.View.Forms.Home;
+using Presentation.View.Forms.User;
+using Presentation.View.Forms.Invoice;
 
 namespace Presentation
 {
@@ -149,22 +153,22 @@ namespace Presentation
 
         private void btn_labs_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Este servicio no ha sido habilitado", "Laboratorios", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            ShowForm(new LaboratoryForm());
         }
 
         private void btn_recipes_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Este servicio no ha sido habilitado", "Recetas", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            ShowForm(new RecipeForm());
         }
 
         private void btn_products_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Este servicio no ha sido habilitado", "Inventarios", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            ShowForm(new ProductForm());
         }
 
         private void btn_reports_Click(object sender, EventArgs e)
         {
-            ShowForm(new SelectorForms());
+            ShowForm(new SelectorForm());
         }
 
         private void btn_shipping_Click(object sender, EventArgs e)
@@ -175,6 +179,11 @@ namespace Presentation
         private void btn_about_info_Click(object sender, EventArgs e)
         {
             ShowForm(new AboutForm());
+        }
+
+        private void btn_facturation_Click(object sender, EventArgs e)
+        {
+            ShowForm(new InvoiceForm());
         }
     }
 }

@@ -29,6 +29,7 @@ namespace Presentation.View.Forms.Company
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CompanyView));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txt_code = new System.Windows.Forms.TextBox();
@@ -388,10 +389,11 @@ namespace Presentation.View.Forms.Company
             this.Controls.Add(this.groupBox3);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "CompanyView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CompanyView";
+            this.Text = "Ver empresa";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.pnl_top.ResumeLayout(false);

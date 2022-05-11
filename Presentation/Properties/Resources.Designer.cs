@@ -273,6 +273,26 @@ namespace Presentation.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_basculas_en_3d_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-basculas-en-3d-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_categories_25 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-categories-25", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_charts_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-charts-24", resourceCulture);
@@ -383,6 +403,16 @@ namespace Presentation.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_file_invoice_dollar_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-file-invoice-dollar-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_google_code_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-google-code-24", resourceCulture);
@@ -426,6 +456,46 @@ namespace Presentation.Properties {
         internal static System.Drawing.Bitmap icons8_libro_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-libro-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_marca_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-marca-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_marca_241 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-marca-241", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_maximizar_la_ventana_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-maximizar-la-ventana-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_maximizar_la_ventana_24__1_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-maximizar-la-ventana-24 (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

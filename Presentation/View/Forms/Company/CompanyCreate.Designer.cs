@@ -29,6 +29,7 @@ namespace Presentation.View.Forms.Company
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CompanyCreate));
             this.pnl_top = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.pcb_close_create_user = new System.Windows.Forms.PictureBox();
@@ -394,10 +395,11 @@ namespace Presentation.View.Forms.Company
             this.Controls.Add(this.pnl_top);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "CompanyCreate";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CompanyCreate";
+            this.Text = "Crear empresa";
             this.pnl_top.ResumeLayout(false);
             this.pnl_top.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_close_create_user)).EndInit();

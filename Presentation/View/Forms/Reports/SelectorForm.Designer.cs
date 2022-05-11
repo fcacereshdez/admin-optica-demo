@@ -1,7 +1,7 @@
 ﻿
 namespace Presentation.View.Forms
 {
-    partial class SelectorForms
+    partial class SelectorForm
     {
         /// <summary>
         /// Required designer variable.

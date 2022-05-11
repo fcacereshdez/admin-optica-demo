@@ -123,5 +123,15 @@ namespace Presentation.View.Forms.User
                 return false;
             }
         }
+
+        private void btn_report_users_Click(object sender, EventArgs e)
+        {
+            Layout layout = new Layout();
+        }
+
+        private void txt_search_user_TextChanged(object sender, EventArgs e)
+        {
+            dgv_users.DataSource = userController.SearchUser(this.Text);
+        }
     }
 }

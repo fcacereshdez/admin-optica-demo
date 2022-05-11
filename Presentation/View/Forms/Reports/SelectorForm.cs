@@ -1,5 +1,6 @@
 ﻿using Domain;
-using Presentation.DataSets;
+using Microsoft.Reporting.WinForms;
+using Presentation.Datasets;
 using Presentation.View.Reports;
 using System;
 using System.Collections.Generic;
@@ -13,10 +14,10 @@ using System.Windows.Forms;
 
 namespace Presentation.View.Forms
 {
-    public partial class SelectorForms : Form
+    public partial class SelectorForm : Form
     {
         CommonController commonController = new CommonController();
-        public SelectorForms()
+        public SelectorForm()
         {
             InitializeComponent();
         }
@@ -29,9 +30,10 @@ namespace Presentation.View.Forms
         private void btn_book_sales_Click(object sender, EventArgs e)
         {
             ViewerForm viewerForm = new ViewerForm();
+            ReportDataSource rds = new ReportDataSource("ds_sales_book", commonController.GetSalesBook());
             viewerForm.rv_viewer.Clear();
             viewerForm.rv_viewer.LocalReport.ReportPath = @"..\..\View\Reports\SalesBook.rdlc";
-            commonController.GetSalesBook();
+            viewerForm.rv_viewer.LocalReport.DataSources.Add(rds);
             viewerForm.rv_viewer.RefreshReport();
             viewerForm.ShowDialog();
         }

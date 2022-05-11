@@ -29,6 +29,7 @@ namespace Presentation.View.Forms.Client
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientEdit));
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txt_notes_client = new System.Windows.Forms.TextBox();
             this.btn_save_client = new System.Windows.Forms.Button();
@@ -69,7 +70,7 @@ namespace Presentation.View.Forms.Client
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.txt_notes_client);
-            this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.groupBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(522, 38);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(171, 281);
@@ -91,13 +92,13 @@ namespace Presentation.View.Forms.Client
             this.btn_save_client.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
             this.btn_save_client.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
             this.btn_save_client.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_save_client.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_save_client.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_save_client.ForeColor = System.Drawing.Color.White;
             this.btn_save_client.Image = global::Presentation.Properties.Resources.icons8_guardar_24;
             this.btn_save_client.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_save_client.Location = new System.Drawing.Point(570, 330);
+            this.btn_save_client.Location = new System.Drawing.Point(547, 330);
             this.btn_save_client.Name = "btn_save_client";
-            this.btn_save_client.Size = new System.Drawing.Size(123, 30);
+            this.btn_save_client.Size = new System.Drawing.Size(146, 30);
             this.btn_save_client.TabIndex = 35;
             this.btn_save_client.Text = "Actualizar";
             this.btn_save_client.UseVisualStyleBackColor = false;
@@ -113,7 +114,7 @@ namespace Presentation.View.Forms.Client
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.txt_address_client);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(12, 177);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox2.Name = "groupBox2";
@@ -128,7 +129,7 @@ namespace Presentation.View.Forms.Client
             this.txt_email_client.Location = new System.Drawing.Point(328, 100);
             this.txt_email_client.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_email_client.Name = "txt_email_client";
-            this.txt_email_client.Size = new System.Drawing.Size(163, 25);
+            this.txt_email_client.Size = new System.Drawing.Size(163, 23);
             this.txt_email_client.TabIndex = 20;
             // 
             // label7
@@ -136,7 +137,7 @@ namespace Presentation.View.Forms.Client
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(325, 82);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(120, 17);
+            this.label7.Size = new System.Drawing.Size(107, 15);
             this.label7.TabIndex = 19;
             this.label7.Text = "Correo electrónico:";
             // 
@@ -145,7 +146,7 @@ namespace Presentation.View.Forms.Client
             this.txt_secondary_phone_client.Location = new System.Drawing.Point(169, 100);
             this.txt_secondary_phone_client.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_secondary_phone_client.Name = "txt_secondary_phone_client";
-            this.txt_secondary_phone_client.Size = new System.Drawing.Size(153, 25);
+            this.txt_secondary_phone_client.Size = new System.Drawing.Size(153, 23);
             this.txt_secondary_phone_client.TabIndex = 18;
             // 
             // label5
@@ -153,7 +154,7 @@ namespace Presentation.View.Forms.Client
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(166, 82);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(129, 17);
+            this.label5.Size = new System.Drawing.Size(117, 15);
             this.label5.TabIndex = 17;
             this.label5.Text = "Teléfono secundario:";
             // 
@@ -162,7 +163,7 @@ namespace Presentation.View.Forms.Client
             this.txt_phone_client.Location = new System.Drawing.Point(9, 100);
             this.txt_phone_client.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_phone_client.Name = "txt_phone_client";
-            this.txt_phone_client.Size = new System.Drawing.Size(154, 25);
+            this.txt_phone_client.Size = new System.Drawing.Size(154, 23);
             this.txt_phone_client.TabIndex = 16;
             // 
             // label4
@@ -170,7 +171,7 @@ namespace Presentation.View.Forms.Client
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(6, 79);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 17);
+            this.label4.Size = new System.Drawing.Size(56, 15);
             this.label4.TabIndex = 15;
             this.label4.Text = "Teléfono:";
             // 
@@ -179,7 +180,7 @@ namespace Presentation.View.Forms.Client
             this.txt_address_client.Location = new System.Drawing.Point(9, 53);
             this.txt_address_client.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_address_client.Name = "txt_address_client";
-            this.txt_address_client.Size = new System.Drawing.Size(482, 25);
+            this.txt_address_client.Size = new System.Drawing.Size(482, 23);
             this.txt_address_client.TabIndex = 10;
             // 
             // label6
@@ -187,7 +188,7 @@ namespace Presentation.View.Forms.Client
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(6, 32);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(65, 17);
+            this.label6.Size = new System.Drawing.Size(61, 15);
             this.label6.TabIndex = 9;
             this.label6.Text = "Dirección:";
             // 
@@ -201,7 +202,7 @@ namespace Presentation.View.Forms.Client
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txt_name_client);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 38);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
@@ -216,7 +217,7 @@ namespace Presentation.View.Forms.Client
             this.txt_nit_client.Location = new System.Drawing.Point(272, 98);
             this.txt_nit_client.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_nit_client.Name = "txt_nit_client";
-            this.txt_nit_client.Size = new System.Drawing.Size(219, 25);
+            this.txt_nit_client.Size = new System.Drawing.Size(219, 23);
             this.txt_nit_client.TabIndex = 19;
             // 
             // label12
@@ -224,7 +225,7 @@ namespace Presentation.View.Forms.Client
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(269, 81);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(31, 17);
+            this.label12.Size = new System.Drawing.Size(30, 15);
             this.label12.TabIndex = 18;
             this.label12.Text = "NIT:";
             // 
@@ -233,7 +234,7 @@ namespace Presentation.View.Forms.Client
             this.txt_lastname_client.Location = new System.Drawing.Point(272, 48);
             this.txt_lastname_client.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_lastname_client.Name = "txt_lastname_client";
-            this.txt_lastname_client.Size = new System.Drawing.Size(219, 25);
+            this.txt_lastname_client.Size = new System.Drawing.Size(219, 23);
             this.txt_lastname_client.TabIndex = 17;
             // 
             // label3
@@ -241,7 +242,7 @@ namespace Presentation.View.Forms.Client
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(269, 27);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 17);
+            this.label3.Size = new System.Drawing.Size(59, 15);
             this.label3.TabIndex = 16;
             this.label3.Text = "Apellidos:";
             // 
@@ -250,7 +251,7 @@ namespace Presentation.View.Forms.Client
             this.txt_dui_client.Location = new System.Drawing.Point(9, 98);
             this.txt_dui_client.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_dui_client.Name = "txt_dui_client";
-            this.txt_dui_client.Size = new System.Drawing.Size(257, 25);
+            this.txt_dui_client.Size = new System.Drawing.Size(257, 23);
             this.txt_dui_client.TabIndex = 13;
             // 
             // label2
@@ -258,7 +259,7 @@ namespace Presentation.View.Forms.Client
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(6, 81);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(32, 17);
+            this.label2.Size = new System.Drawing.Size(31, 15);
             this.label2.TabIndex = 11;
             this.label2.Text = "DUI:";
             // 
@@ -267,7 +268,7 @@ namespace Presentation.View.Forms.Client
             this.txt_name_client.Location = new System.Drawing.Point(9, 48);
             this.txt_name_client.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_name_client.Name = "txt_name_client";
-            this.txt_name_client.Size = new System.Drawing.Size(257, 25);
+            this.txt_name_client.Size = new System.Drawing.Size(257, 23);
             this.txt_name_client.TabIndex = 10;
             // 
             // label1
@@ -275,7 +276,7 @@ namespace Presentation.View.Forms.Client
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(6, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 17);
+            this.label1.Size = new System.Drawing.Size(59, 15);
             this.label1.TabIndex = 9;
             this.label1.Text = "Nombres:";
             // 
@@ -351,7 +352,7 @@ namespace Presentation.View.Forms.Client
             // 
             // txt_id_client
             // 
-            this.txt_id_client.Location = new System.Drawing.Point(522, 334);
+            this.txt_id_client.Location = new System.Drawing.Point(484, 337);
             this.txt_id_client.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_id_client.Name = "txt_id_client";
             this.txt_id_client.Size = new System.Drawing.Size(32, 20);
@@ -362,6 +363,7 @@ namespace Presentation.View.Forms.Client
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(703, 379);
             this.Controls.Add(this.txt_id_client);
             this.Controls.Add(this.groupBox3);
@@ -371,9 +373,10 @@ namespace Presentation.View.Forms.Client
             this.Controls.Add(this.pnl_top);
             this.Controls.Add(this.lbl_error);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ClientEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ClientEdit";
+            this.Text = "Editar cliente";
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);

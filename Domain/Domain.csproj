@@ -47,7 +47,11 @@
     <Compile Include="ClientController.cs" />
     <Compile Include="CommonController.cs" />
     <Compile Include="CompanyController.cs" />
+    <Compile Include="InvoiceController.cs" />
+    <Compile Include="LaboratoryController.cs" />
+    <Compile Include="ProductController.cs" />
     <Compile Include="ProviderController.cs" />
+    <Compile Include="RecipeController.cs" />
     <Compile Include="UserController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -29,12 +29,13 @@ namespace Presentation.View.Forms.Client
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientForm));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txt_search_company = new System.Windows.Forms.TextBox();
+            this.txt_search_client = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgv_clients = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -54,7 +55,7 @@ namespace Presentation.View.Forms.Client
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.txt_search_company);
+            this.groupBox2.Controls.Add(this.txt_search_client);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Location = new System.Drawing.Point(201, 33);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -64,13 +65,14 @@ namespace Presentation.View.Forms.Client
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
             // 
-            // txt_search_company
+            // txt_search_client
             // 
-            this.txt_search_company.Location = new System.Drawing.Point(71, 19);
-            this.txt_search_company.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txt_search_company.Name = "txt_search_company";
-            this.txt_search_company.Size = new System.Drawing.Size(540, 25);
-            this.txt_search_company.TabIndex = 1;
+            this.txt_search_client.Location = new System.Drawing.Point(71, 19);
+            this.txt_search_client.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txt_search_client.Name = "txt_search_client";
+            this.txt_search_client.Size = new System.Drawing.Size(540, 25);
+            this.txt_search_client.TabIndex = 1;
+            this.txt_search_client.TextChanged += new System.EventHandler(this.txt_search_client_TextChanged);
             // 
             // label1
             // 
@@ -92,23 +94,23 @@ namespace Presentation.View.Forms.Client
             this.dgv_clients.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(241)))));
             this.dgv_clients.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_clients.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(134)))), ((int)(((byte)(14)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(171)))), ((int)(((byte)(173)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_clients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(134)))), ((int)(((byte)(14)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(171)))), ((int)(((byte)(173)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_clients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_clients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.WindowFrame;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_clients.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.WindowFrame;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_clients.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_clients.EnableHeadersVisualStyles = false;
             this.dgv_clients.Location = new System.Drawing.Point(201, 95);
             this.dgv_clients.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
@@ -116,19 +118,19 @@ namespace Presentation.View.Forms.Client
             this.dgv_clients.Name = "dgv_clients";
             this.dgv_clients.ReadOnly = true;
             this.dgv_clients.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(134)))), ((int)(((byte)(14)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.WindowFrame;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_clients.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.WindowFrame;
-            this.dgv_clients.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(134)))), ((int)(((byte)(14)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.WindowFrame;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_clients.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.WindowFrame;
+            this.dgv_clients.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_clients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_clients.Size = new System.Drawing.Size(617, 345);
+            this.dgv_clients.Size = new System.Drawing.Size(617, 401);
             this.dgv_clients.TabIndex = 10;
             // 
             // groupBox1
@@ -271,6 +273,7 @@ namespace Presentation.View.Forms.Client
             this.btn_client_report.TabIndex = 4;
             this.btn_client_report.Text = "Reportes";
             this.btn_client_report.UseVisualStyleBackColor = false;
+            this.btn_client_report.Click += new System.EventHandler(this.btn_client_report_Click);
             // 
             // btn_pay_fee
             // 
@@ -295,13 +298,14 @@ namespace Presentation.View.Forms.Client
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(849, 453);
+            this.ClientSize = new System.Drawing.Size(850, 510);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.dgv_clients);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ClientForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -318,7 +322,7 @@ namespace Presentation.View.Forms.Client
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox txt_search_company;
+        private System.Windows.Forms.TextBox txt_search_client;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.DataGridView dgv_clients;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -328,7 +332,7 @@ namespace Presentation.View.Forms.Client
         private System.Windows.Forms.Button btn_delete_client;
         private System.Windows.Forms.Button btn_edit_client;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button btn_client_report;
         private System.Windows.Forms.Button btn_pay_fee;
+        public System.Windows.Forms.Button btn_client_report;
     }
 }

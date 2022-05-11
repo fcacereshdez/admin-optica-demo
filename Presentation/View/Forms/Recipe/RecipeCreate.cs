@@ -16,5 +16,21 @@ namespace Presentation.View.Forms.Recipe
         {
             InitializeComponent();
         }
+
+        private void pcb_close_create_recipe_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RecipeCreate_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

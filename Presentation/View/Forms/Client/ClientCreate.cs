@@ -64,7 +64,7 @@ namespace Presentation.View.Forms.Client
             {
                 lbl_error.Visible = false;
 
-                clientController.CreateClient(txt_name_client.Text, txt_lastname_client.Text, txt_code_client.Text, txt_dui_client.Text, txt_nit_client.Text, txt_phone_client.Text, txt_secondary_phone_client.Text, txt_email_client.Text, txt_address_client.Text, txt_notes_client.Text, txt_company_client.Text, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+                clientController.CreateClient(txt_name_client.Text, txt_lastname_client.Text, txt_code_client.Text, txt_dui_client.Text, txt_nit_client.Text, txt_phone_client.Text, txt_secondary_phone_client.Text, txt_email_client.Text, txt_address_client.Text, txt_notes_client.Text, txt_company_client.Text, dtp_date.Value.ToString("yyyy-MM-dd"), DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
 
                 UserController userController = new UserController();
                 userController.InsertActionsUser("Creó un cliente con código: " + txt_code_client.Text, Environment.MachineName, "127.0.0.1", UserCache.user_id, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));

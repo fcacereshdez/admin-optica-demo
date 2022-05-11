@@ -33,6 +33,7 @@ namespace Presentation.View.Forms.Company
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CompanyReportBySelected));
             this.pnl_top = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.pcb_close_create_client = new System.Windows.Forms.PictureBox();
@@ -285,10 +286,11 @@ namespace Presentation.View.Forms.Company
             this.Controls.Add(this.pnl_top);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "CompanyReportBySelected";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CompanyReportBySelected";
+            this.Text = "Informe por empresa";
             this.pnl_top.ResumeLayout(false);
             this.pnl_top.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_close_create_client)).EndInit();

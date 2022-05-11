@@ -99,5 +99,15 @@ namespace Presentation.View.Forms.Client
                 MessageBox.Show("Debe seleccionar un registro de la tabla para modificar", "Aviso");
             }
         }
+
+        private void btn_client_report_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_search_client_TextChanged(object sender, EventArgs e)
+        {
+            dgv_clients.DataSource = clientController.SearchClient(Text);
+        }
     }
 }

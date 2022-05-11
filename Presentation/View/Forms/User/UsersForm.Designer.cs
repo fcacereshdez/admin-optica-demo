@@ -29,10 +29,10 @@ namespace Presentation.View.Forms.User
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgv_users = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btn_create_user = new System.Windows.Forms.Button();
@@ -40,10 +40,10 @@ namespace Presentation.View.Forms.User
             this.btn_edit_user = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btn_report_users = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.txt_search_company = new System.Windows.Forms.TextBox();
+            this.txt_search_user = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_users)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -61,23 +61,23 @@ namespace Presentation.View.Forms.User
             this.dgv_users.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(241)))));
             this.dgv_users.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_users.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(134)))), ((int)(((byte)(14)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(171)))), ((int)(((byte)(173)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_users.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(134)))), ((int)(((byte)(14)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(171)))), ((int)(((byte)(173)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_users.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_users.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.WindowFrame;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_users.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.WindowFrame;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_users.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_users.EnableHeadersVisualStyles = false;
             this.dgv_users.Location = new System.Drawing.Point(201, 95);
             this.dgv_users.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -85,17 +85,17 @@ namespace Presentation.View.Forms.User
             this.dgv_users.Name = "dgv_users";
             this.dgv_users.ReadOnly = true;
             this.dgv_users.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(134)))), ((int)(((byte)(14)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.WindowFrame;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_users.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.WindowFrame;
-            this.dgv_users.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(134)))), ((int)(((byte)(14)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.WindowFrame;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_users.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.WindowFrame;
+            this.dgv_users.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_users.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_users.Size = new System.Drawing.Size(617, 345);
             this.dgv_users.TabIndex = 0;
@@ -173,7 +173,7 @@ namespace Presentation.View.Forms.User
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Controls.Add(this.button5);
+            this.groupBox2.Controls.Add(this.btn_report_users);
             this.groupBox2.Controls.Add(this.button8);
             this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -203,21 +203,22 @@ namespace Presentation.View.Forms.User
             this.button1.Text = "Auditoría";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // btn_report_users
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Image = global::Presentation.Properties.Resources.icons8_exportación_de_base_de_datos_24;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(18, 115);
-            this.button5.Name = "button5";
-            this.button5.Padding = new System.Windows.Forms.Padding(15, 0, 5, 0);
-            this.button5.Size = new System.Drawing.Size(143, 30);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Exportar";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btn_report_users.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.btn_report_users.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.btn_report_users.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_report_users.ForeColor = System.Drawing.Color.White;
+            this.btn_report_users.Image = global::Presentation.Properties.Resources.icons8_exportación_de_base_de_datos_24;
+            this.btn_report_users.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_report_users.Location = new System.Drawing.Point(18, 115);
+            this.btn_report_users.Name = "btn_report_users";
+            this.btn_report_users.Padding = new System.Windows.Forms.Padding(15, 0, 5, 0);
+            this.btn_report_users.Size = new System.Drawing.Size(143, 30);
+            this.btn_report_users.TabIndex = 4;
+            this.btn_report_users.Text = "Exportar";
+            this.btn_report_users.UseVisualStyleBackColor = false;
+            this.btn_report_users.Click += new System.EventHandler(this.btn_report_users_Click);
             // 
             // button8
             // 
@@ -237,7 +238,7 @@ namespace Presentation.View.Forms.User
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.txt_search_company);
+            this.groupBox3.Controls.Add(this.txt_search_user);
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Location = new System.Drawing.Point(201, 33);
             this.groupBox3.Name = "groupBox3";
@@ -245,12 +246,13 @@ namespace Presentation.View.Forms.User
             this.groupBox3.TabIndex = 9;
             this.groupBox3.TabStop = false;
             // 
-            // txt_search_company
+            // txt_search_user
             // 
-            this.txt_search_company.Location = new System.Drawing.Point(61, 18);
-            this.txt_search_company.Name = "txt_search_company";
-            this.txt_search_company.Size = new System.Drawing.Size(550, 25);
-            this.txt_search_company.TabIndex = 1;
+            this.txt_search_user.Location = new System.Drawing.Point(61, 18);
+            this.txt_search_user.Name = "txt_search_user";
+            this.txt_search_user.Size = new System.Drawing.Size(550, 25);
+            this.txt_search_user.TabIndex = 1;
+            this.txt_search_user.TextChanged += new System.EventHandler(this.txt_search_user_TextChanged);
             // 
             // label1
             // 
@@ -267,7 +269,7 @@ namespace Presentation.View.Forms.User
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(849, 453);
+            this.ClientSize = new System.Drawing.Size(850, 455);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -293,13 +295,13 @@ namespace Presentation.View.Forms.User
         private System.Windows.Forms.Button btn_create_user;
         private System.Windows.Forms.Button btn_user_delete;
         private System.Windows.Forms.Button btn_edit_user;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button8;
         public System.Windows.Forms.DataGridView dgv_users;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox txt_search_company;
+        private System.Windows.Forms.TextBox txt_search_user;
         private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Button btn_report_users;
     }
 }

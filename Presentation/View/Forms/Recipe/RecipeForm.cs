@@ -16,5 +16,11 @@ namespace Presentation.View.Forms.Recipe
         {
             InitializeComponent();
         }
+
+        private void btn_create_recipe_Click(object sender, EventArgs e)
+        {
+            RecipeCreate recipeCreate = new RecipeCreate();
+            recipeCreate.ShowDialog();
+        }
     }
 }

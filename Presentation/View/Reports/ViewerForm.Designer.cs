@@ -31,10 +31,10 @@ namespace Presentation.View.Reports
         {
             this.pnl_top = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
+            this.rv_viewer = new Microsoft.Reporting.WinForms.ReportViewer();
             this.pcb_close_edit_company = new System.Windows.Forms.PictureBox();
             this.pcb_exit = new System.Windows.Forms.PictureBox();
             this.pcb_minus = new System.Windows.Forms.PictureBox();
-            this.rv_viewer = new Microsoft.Reporting.WinForms.ReportViewer();
             this.pnl_top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_close_edit_company)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_exit)).BeginInit();
@@ -43,12 +43,13 @@ namespace Presentation.View.Reports
             // 
             // pnl_top
             // 
+            this.pnl_top.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnl_top.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(29)))), ((int)(((byte)(26)))));
             this.pnl_top.Controls.Add(this.label10);
             this.pnl_top.Controls.Add(this.pcb_close_edit_company);
             this.pnl_top.Controls.Add(this.pcb_exit);
             this.pnl_top.Controls.Add(this.pcb_minus);
-            this.pnl_top.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_top.Location = new System.Drawing.Point(0, 0);
             this.pnl_top.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.pnl_top.Name = "pnl_top";
@@ -66,8 +67,20 @@ namespace Presentation.View.Reports
             this.label10.TabIndex = 6;
             this.label10.Text = "Visor de reportes";
             // 
+            // rv_viewer
+            // 
+            this.rv_viewer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.rv_viewer.Location = new System.Drawing.Point(12, 37);
+            this.rv_viewer.Name = "rv_viewer";
+            this.rv_viewer.ServerReport.BearerToken = null;
+            this.rv_viewer.Size = new System.Drawing.Size(776, 401);
+            this.rv_viewer.TabIndex = 25;
+            // 
             // pcb_close_edit_company
             // 
+            this.pcb_close_edit_company.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pcb_close_edit_company.Image = global::Presentation.Properties.Resources.close;
             this.pcb_close_edit_company.Location = new System.Drawing.Point(767, 2);
             this.pcb_close_edit_company.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -99,14 +112,6 @@ namespace Presentation.View.Reports
             this.pcb_minus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pcb_minus.TabIndex = 2;
             this.pcb_minus.TabStop = false;
-            // 
-            // rv_viewer
-            // 
-            this.rv_viewer.Location = new System.Drawing.Point(12, 37);
-            this.rv_viewer.Name = "rv_viewer";
-            this.rv_viewer.ServerReport.BearerToken = null;
-            this.rv_viewer.Size = new System.Drawing.Size(776, 401);
-            this.rv_viewer.TabIndex = 25;
             // 
             // ViewerForm
             // 

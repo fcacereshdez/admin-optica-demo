@@ -110,5 +110,15 @@ namespace Presentation.View.Forms.Company
             companyReportBySelected.lbl_sales_total.Text = "$" + Common.Models.Company.total_invoice.ToString();
             companyReportBySelected.ShowDialog();
         }
+
+        private void btn_report_companies_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txt_search_company_TextChanged(object sender, EventArgs e)
+        {
+            dgv_companies.DataSource = companyController.SearchCompany(txt_search_company.Text);
+        }
     }
 }

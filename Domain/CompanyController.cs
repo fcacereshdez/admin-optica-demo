@@ -20,6 +20,12 @@ namespace Domain
             TableCompanies = companyData.SelectAllCompanies();
             return TableCompanies;
         }
+        public DataTable SearchCompany(string company)
+        {
+            DataTable TableCompanies = new DataTable();
+            TableCompanies = companyData.SearchCompany(company);
+            return TableCompanies;
+        }
         public void SelectCompanyById(string company_id)
         {
             companyData.SelectCompanyById(Convert.ToInt64(company_id));

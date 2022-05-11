@@ -29,6 +29,7 @@ namespace Presentation.View.Forms.Company
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CompanyEdit));
             this.lbl_error = new System.Windows.Forms.Label();
             this.txt_attendance_role = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -52,11 +53,11 @@ namespace Presentation.View.Forms.Company
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pnl_top = new System.Windows.Forms.Panel();
-            this.btn_edit_company = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
             this.pcb_close_edit_company = new System.Windows.Forms.PictureBox();
             this.pcb_exit = new System.Windows.Forms.PictureBox();
             this.pcb_minus = new System.Windows.Forms.PictureBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.btn_edit_company = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -295,22 +296,16 @@ namespace Presentation.View.Forms.Company
             this.pnl_top.Size = new System.Drawing.Size(553, 29);
             this.pnl_top.TabIndex = 23;
             // 
-            // btn_edit_company
+            // label10
             // 
-            this.btn_edit_company.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
-            this.btn_edit_company.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
-            this.btn_edit_company.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_edit_company.ForeColor = System.Drawing.Color.White;
-            this.btn_edit_company.Image = global::Presentation.Properties.Resources.icons8_guardar_24;
-            this.btn_edit_company.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_edit_company.Location = new System.Drawing.Point(419, 396);
-            this.btn_edit_company.Name = "btn_edit_company";
-            this.btn_edit_company.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btn_edit_company.Size = new System.Drawing.Size(123, 30);
-            this.btn_edit_company.TabIndex = 28;
-            this.btn_edit_company.Text = "Guardar";
-            this.btn_edit_company.UseVisualStyleBackColor = false;
-            this.btn_edit_company.Click += new System.EventHandler(this.btn_edit_company_Click);
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(12, 4);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(125, 17);
+            this.label10.TabIndex = 6;
+            this.label10.Text = "Editor de empresas";
             // 
             // pcb_close_edit_company
             // 
@@ -346,16 +341,22 @@ namespace Presentation.View.Forms.Company
             this.pcb_minus.TabIndex = 2;
             this.pcb_minus.TabStop = false;
             // 
-            // label10
+            // btn_edit_company
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(12, 4);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(125, 17);
-            this.label10.TabIndex = 6;
-            this.label10.Text = "Editor de empresas";
+            this.btn_edit_company.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.btn_edit_company.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.btn_edit_company.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_edit_company.ForeColor = System.Drawing.Color.White;
+            this.btn_edit_company.Image = global::Presentation.Properties.Resources.icons8_guardar_24;
+            this.btn_edit_company.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_edit_company.Location = new System.Drawing.Point(419, 396);
+            this.btn_edit_company.Name = "btn_edit_company";
+            this.btn_edit_company.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btn_edit_company.Size = new System.Drawing.Size(123, 30);
+            this.btn_edit_company.TabIndex = 28;
+            this.btn_edit_company.Text = "Guardar";
+            this.btn_edit_company.UseVisualStyleBackColor = false;
+            this.btn_edit_company.Click += new System.EventHandler(this.btn_edit_company_Click);
             // 
             // CompanyEdit
             // 
@@ -371,10 +372,11 @@ namespace Presentation.View.Forms.Company
             this.Controls.Add(this.pnl_top);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "CompanyEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CompanyEdit";
+            this.Text = "Editar empresa";
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);

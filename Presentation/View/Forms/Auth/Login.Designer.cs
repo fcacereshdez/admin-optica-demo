@@ -29,7 +29,9 @@ namespace Presentation.View.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.pnl_left = new System.Windows.Forms.Panel();
+            this.lbl_version_login = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbl_msg_error = new System.Windows.Forms.Label();
@@ -40,7 +42,6 @@ namespace Presentation.View.Forms
             this.label2 = new System.Windows.Forms.Label();
             this.txt_password = new System.Windows.Forms.TextBox();
             this.txt_user = new System.Windows.Forms.TextBox();
-            this.lbl_version_login = new System.Windows.Forms.Label();
             this.pnl_left.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnl_right.SuspendLayout();
@@ -58,6 +59,16 @@ namespace Presentation.View.Forms
             this.pnl_left.Name = "pnl_left";
             this.pnl_left.Size = new System.Drawing.Size(419, 361);
             this.pnl_left.TabIndex = 0;
+            // 
+            // lbl_version_login
+            // 
+            this.lbl_version_login.AutoSize = true;
+            this.lbl_version_login.ForeColor = System.Drawing.Color.Gray;
+            this.lbl_version_login.Location = new System.Drawing.Point(132, 335);
+            this.lbl_version_login.Name = "lbl_version_login";
+            this.lbl_version_login.Size = new System.Drawing.Size(11, 17);
+            this.lbl_version_login.TabIndex = 8;
+            this.lbl_version_login.Text = ".";
             // 
             // label1
             // 
@@ -168,16 +179,6 @@ namespace Presentation.View.Forms
             this.txt_user.Size = new System.Drawing.Size(224, 25);
             this.txt_user.TabIndex = 1;
             // 
-            // lbl_version_login
-            // 
-            this.lbl_version_login.AutoSize = true;
-            this.lbl_version_login.ForeColor = System.Drawing.Color.Gray;
-            this.lbl_version_login.Location = new System.Drawing.Point(132, 335);
-            this.lbl_version_login.Name = "lbl_version_login";
-            this.lbl_version_login.Size = new System.Drawing.Size(11, 17);
-            this.lbl_version_login.TabIndex = 8;
-            this.lbl_version_login.Text = ".";
-            // 
             // Login
             // 
             this.AcceptButton = this.btn_login;
@@ -188,10 +189,11 @@ namespace Presentation.View.Forms
             this.Controls.Add(this.pnl_left);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Auth";
+            this.Text = "Iniciar sesión";
             this.pnl_left.ResumeLayout(false);
             this.pnl_left.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

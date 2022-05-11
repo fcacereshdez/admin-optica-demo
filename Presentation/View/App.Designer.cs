@@ -30,7 +30,9 @@ namespace Presentation
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Layout));
             this.pnl_menu = new System.Windows.Forms.Panel();
+            this.btn_facturation = new System.Windows.Forms.Button();
             this.btn_about_info = new System.Windows.Forms.Button();
             this.btn_reports = new System.Windows.Forms.Button();
             this.btn_products = new System.Windows.Forms.Button();
@@ -77,6 +79,7 @@ namespace Presentation
             // pnl_menu
             // 
             this.pnl_menu.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnl_menu.Controls.Add(this.btn_facturation);
             this.pnl_menu.Controls.Add(this.btn_about_info);
             this.pnl_menu.Controls.Add(this.btn_reports);
             this.pnl_menu.Controls.Add(this.btn_products);
@@ -91,8 +94,23 @@ namespace Presentation
             this.pnl_menu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnl_menu.Location = new System.Drawing.Point(0, 32);
             this.pnl_menu.Name = "pnl_menu";
-            this.pnl_menu.Size = new System.Drawing.Size(205, 536);
+            this.pnl_menu.Size = new System.Drawing.Size(203, 586);
             this.pnl_menu.TabIndex = 0;
+            // 
+            // btn_facturation
+            // 
+            this.btn_facturation.FlatAppearance.BorderSize = 0;
+            this.btn_facturation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_facturation.Image = global::Presentation.Properties.Resources.icons8_file_invoice_dollar_24;
+            this.btn_facturation.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_facturation.Location = new System.Drawing.Point(2, 302);
+            this.btn_facturation.Name = "btn_facturation";
+            this.btn_facturation.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
+            this.btn_facturation.Size = new System.Drawing.Size(200, 41);
+            this.btn_facturation.TabIndex = 11;
+            this.btn_facturation.Text = "Facturación";
+            this.btn_facturation.UseVisualStyleBackColor = true;
+            this.btn_facturation.Click += new System.EventHandler(this.btn_facturation_Click);
             // 
             // btn_about_info
             // 
@@ -100,7 +118,7 @@ namespace Presentation
             this.btn_about_info.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_about_info.Image = global::Presentation.Properties.Resources.icons8_google_code_24__1_;
             this.btn_about_info.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_about_info.Location = new System.Drawing.Point(2, 490);
+            this.btn_about_info.Location = new System.Drawing.Point(2, 536);
             this.btn_about_info.Name = "btn_about_info";
             this.btn_about_info.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
             this.btn_about_info.Size = new System.Drawing.Size(200, 41);
@@ -115,7 +133,7 @@ namespace Presentation
             this.btn_reports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_reports.Image = global::Presentation.Properties.Resources.icons8_charts_24;
             this.btn_reports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_reports.Location = new System.Drawing.Point(3, 349);
+            this.btn_reports.Location = new System.Drawing.Point(3, 395);
             this.btn_reports.Name = "btn_reports";
             this.btn_reports.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
             this.btn_reports.Size = new System.Drawing.Size(200, 41);
@@ -126,12 +144,11 @@ namespace Presentation
             // 
             // btn_products
             // 
-            this.btn_products.Enabled = false;
             this.btn_products.FlatAppearance.BorderSize = 0;
             this.btn_products.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_products.Image = global::Presentation.Properties.Resources.icons8_producto_24;
             this.btn_products.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_products.Location = new System.Drawing.Point(2, 302);
+            this.btn_products.Location = new System.Drawing.Point(2, 348);
             this.btn_products.Name = "btn_products";
             this.btn_products.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
             this.btn_products.Size = new System.Drawing.Size(200, 41);
@@ -147,7 +164,7 @@ namespace Presentation
             this.btn_shipping.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_shipping.Image = global::Presentation.Properties.Resources.icons8_shipping_24;
             this.btn_shipping.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_shipping.Location = new System.Drawing.Point(3, 396);
+            this.btn_shipping.Location = new System.Drawing.Point(3, 442);
             this.btn_shipping.Name = "btn_shipping";
             this.btn_shipping.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
             this.btn_shipping.Size = new System.Drawing.Size(200, 41);
@@ -162,7 +179,7 @@ namespace Presentation
             this.btn_users.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_users.Image = global::Presentation.Properties.Resources.customer1;
             this.btn_users.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_users.Location = new System.Drawing.Point(2, 443);
+            this.btn_users.Location = new System.Drawing.Point(2, 489);
             this.btn_users.Name = "btn_users";
             this.btn_users.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
             this.btn_users.Size = new System.Drawing.Size(200, 41);
@@ -173,7 +190,6 @@ namespace Presentation
             // 
             // btn_recipes
             // 
-            this.btn_recipes.Enabled = false;
             this.btn_recipes.FlatAppearance.BorderSize = 0;
             this.btn_recipes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_recipes.Image = global::Presentation.Properties.Resources.icons8_documentos_24;
@@ -212,7 +228,7 @@ namespace Presentation
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(205, 60);
+            this.panel1.Size = new System.Drawing.Size(203, 60);
             this.panel1.TabIndex = 4;
             // 
             // pcb_logout
@@ -259,7 +275,6 @@ namespace Presentation
             // 
             // btn_labs
             // 
-            this.btn_labs.Enabled = false;
             this.btn_labs.FlatAppearance.BorderSize = 0;
             this.btn_labs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_labs.Image = global::Presentation.Properties.Resources.icons8_laboratory_24;
@@ -313,14 +328,14 @@ namespace Presentation
             this.pnl_top.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_top.Location = new System.Drawing.Point(0, 0);
             this.pnl_top.Name = "pnl_top";
-            this.pnl_top.Size = new System.Drawing.Size(1049, 32);
+            this.pnl_top.Size = new System.Drawing.Size(1058, 32);
             this.pnl_top.TabIndex = 1;
             this.pnl_top.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnl_top_MouseDown);
             // 
             // pcb_exit
             // 
             this.pcb_exit.Image = global::Presentation.Properties.Resources.close;
-            this.pcb_exit.Location = new System.Drawing.Point(1021, 4);
+            this.pcb_exit.Location = new System.Drawing.Point(1029, 4);
             this.pcb_exit.Name = "pcb_exit";
             this.pcb_exit.Size = new System.Drawing.Size(25, 25);
             this.pcb_exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -331,7 +346,7 @@ namespace Presentation
             // pcb_minus
             // 
             this.pcb_minus.Image = global::Presentation.Properties.Resources.minus;
-            this.pcb_minus.Location = new System.Drawing.Point(990, 4);
+            this.pcb_minus.Location = new System.Drawing.Point(998, 4);
             this.pcb_minus.Name = "pcb_minus";
             this.pcb_minus.Size = new System.Drawing.Size(25, 25);
             this.pcb_minus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -369,9 +384,9 @@ namespace Presentation
             this.pnl_bottom.Controls.Add(this.lbl_version_sw);
             this.pnl_bottom.Controls.Add(this.lbl_name_pc);
             this.pnl_bottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnl_bottom.Location = new System.Drawing.Point(0, 568);
+            this.pnl_bottom.Location = new System.Drawing.Point(0, 618);
             this.pnl_bottom.Name = "pnl_bottom";
-            this.pnl_bottom.Size = new System.Drawing.Size(1049, 19);
+            this.pnl_bottom.Size = new System.Drawing.Size(1058, 19);
             this.pnl_bottom.TabIndex = 2;
             // 
             // lbl_version_sw
@@ -379,7 +394,7 @@ namespace Presentation
             this.lbl_version_sw.AutoSize = true;
             this.lbl_version_sw.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_version_sw.ForeColor = System.Drawing.Color.Black;
-            this.lbl_version_sw.Location = new System.Drawing.Point(998, 3);
+            this.lbl_version_sw.Location = new System.Drawing.Point(1009, 3);
             this.lbl_version_sw.Name = "lbl_version_sw";
             this.lbl_version_sw.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lbl_version_sw.Size = new System.Drawing.Size(46, 13);
@@ -404,15 +419,15 @@ namespace Presentation
             this.pnl_layout.BackColor = System.Drawing.Color.White;
             this.pnl_layout.Controls.Add(this.pcb_logo);
             this.pnl_layout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_layout.Location = new System.Drawing.Point(205, 32);
+            this.pnl_layout.Location = new System.Drawing.Point(203, 32);
             this.pnl_layout.Name = "pnl_layout";
-            this.pnl_layout.Size = new System.Drawing.Size(844, 536);
+            this.pnl_layout.Size = new System.Drawing.Size(855, 586);
             this.pnl_layout.TabIndex = 3;
             // 
             // pcb_logo
             // 
             this.pcb_logo.Image = global::Presentation.Properties.Resources.logo_horizontal;
-            this.pcb_logo.Location = new System.Drawing.Point(143, 208);
+            this.pcb_logo.Location = new System.Drawing.Point(174, 255);
             this.pcb_logo.Name = "pcb_logo";
             this.pcb_logo.Size = new System.Drawing.Size(569, 60);
             this.pcb_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -425,15 +440,15 @@ namespace Presentation
             this.pnl_name_view.Controls.Add(this.pcb_close_form);
             this.pnl_name_view.Controls.Add(this.lbl_form_name);
             this.pnl_name_view.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnl_name_view.Location = new System.Drawing.Point(205, 32);
+            this.pnl_name_view.Location = new System.Drawing.Point(203, 32);
             this.pnl_name_view.Name = "pnl_name_view";
-            this.pnl_name_view.Size = new System.Drawing.Size(844, 26);
+            this.pnl_name_view.Size = new System.Drawing.Size(855, 26);
             this.pnl_name_view.TabIndex = 4;
             // 
             // pcb_close_form
             // 
             this.pcb_close_form.Image = global::Presentation.Properties.Resources.close_eyes;
-            this.pcb_close_form.Location = new System.Drawing.Point(821, 3);
+            this.pcb_close_form.Location = new System.Drawing.Point(828, 3);
             this.pcb_close_form.Name = "pcb_close_form";
             this.pcb_close_form.Size = new System.Drawing.Size(20, 20);
             this.pcb_close_form.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -460,7 +475,7 @@ namespace Presentation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1049, 587);
+            this.ClientSize = new System.Drawing.Size(1058, 637);
             this.Controls.Add(this.pnl_name_view);
             this.Controls.Add(this.pnl_layout);
             this.Controls.Add(this.pnl_menu);
@@ -468,10 +483,11 @@ namespace Presentation
             this.Controls.Add(this.pnl_top);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Layout";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "App";
+            this.Text = "Inicio";
             this.pnl_menu.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -524,6 +540,7 @@ namespace Presentation
         private System.Windows.Forms.Button btn_shipping;
         private System.Windows.Forms.Button btn_reports;
         private System.Windows.Forms.Button btn_about_info;
+        private System.Windows.Forms.Button btn_facturation;
     }
 }
 

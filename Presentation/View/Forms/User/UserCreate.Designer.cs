@@ -29,6 +29,7 @@ namespace Presentation.View.Forms.User
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserCreate));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txt_email = new System.Windows.Forms.TextBox();
             this.txt_phone = new System.Windows.Forms.TextBox();
@@ -47,12 +48,12 @@ namespace Presentation.View.Forms.User
             this.txt_name = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pnl_top = new System.Windows.Forms.Panel();
-            this.lbl_error = new System.Windows.Forms.Label();
-            this.btn_save_user = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
             this.pcb_close_edit_user = new System.Windows.Forms.PictureBox();
             this.pcb_exit = new System.Windows.Forms.PictureBox();
             this.pcb_minus = new System.Windows.Forms.PictureBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lbl_error = new System.Windows.Forms.Label();
+            this.btn_save_user = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.pnl_top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_close_edit_user)).BeginInit();
@@ -229,34 +230,16 @@ namespace Presentation.View.Forms.User
             this.pnl_top.Size = new System.Drawing.Size(509, 29);
             this.pnl_top.TabIndex = 6;
             // 
-            // lbl_error
+            // label10
             // 
-            this.lbl_error.AutoSize = true;
-            this.lbl_error.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_error.ForeColor = System.Drawing.Color.DarkRed;
-            this.lbl_error.Location = new System.Drawing.Point(12, 229);
-            this.lbl_error.Name = "lbl_error";
-            this.lbl_error.Size = new System.Drawing.Size(10, 13);
-            this.lbl_error.TabIndex = 9;
-            this.lbl_error.Text = ".";
-            this.lbl_error.Visible = false;
-            // 
-            // btn_save_user
-            // 
-            this.btn_save_user.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
-            this.btn_save_user.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
-            this.btn_save_user.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_save_user.ForeColor = System.Drawing.Color.White;
-            this.btn_save_user.Image = global::Presentation.Properties.Resources.icons8_guardar_24;
-            this.btn_save_user.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_save_user.Location = new System.Drawing.Point(372, 228);
-            this.btn_save_user.Name = "btn_save_user";
-            this.btn_save_user.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btn_save_user.Size = new System.Drawing.Size(123, 30);
-            this.btn_save_user.TabIndex = 8;
-            this.btn_save_user.Text = "Guardar";
-            this.btn_save_user.UseVisualStyleBackColor = false;
-            this.btn_save_user.Click += new System.EventHandler(this.btn_save_user_Click);
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(9, 4);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(130, 17);
+            this.label10.TabIndex = 10;
+            this.label10.Text = "Creador de usuarios";
             // 
             // pcb_close_edit_user
             // 
@@ -291,16 +274,34 @@ namespace Presentation.View.Forms.User
             this.pcb_minus.TabIndex = 2;
             this.pcb_minus.TabStop = false;
             // 
-            // label10
+            // lbl_error
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(9, 4);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(130, 17);
-            this.label10.TabIndex = 10;
-            this.label10.Text = "Creador de usuarios";
+            this.lbl_error.AutoSize = true;
+            this.lbl_error.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_error.ForeColor = System.Drawing.Color.DarkRed;
+            this.lbl_error.Location = new System.Drawing.Point(12, 229);
+            this.lbl_error.Name = "lbl_error";
+            this.lbl_error.Size = new System.Drawing.Size(10, 13);
+            this.lbl_error.TabIndex = 9;
+            this.lbl_error.Text = ".";
+            this.lbl_error.Visible = false;
+            // 
+            // btn_save_user
+            // 
+            this.btn_save_user.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.btn_save_user.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.btn_save_user.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_save_user.ForeColor = System.Drawing.Color.White;
+            this.btn_save_user.Image = global::Presentation.Properties.Resources.icons8_guardar_24;
+            this.btn_save_user.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_save_user.Location = new System.Drawing.Point(372, 228);
+            this.btn_save_user.Name = "btn_save_user";
+            this.btn_save_user.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btn_save_user.Size = new System.Drawing.Size(123, 30);
+            this.btn_save_user.TabIndex = 8;
+            this.btn_save_user.Text = "Guardar";
+            this.btn_save_user.UseVisualStyleBackColor = false;
+            this.btn_save_user.Click += new System.EventHandler(this.btn_save_user_Click);
             // 
             // UserCreate
             // 
@@ -314,10 +315,11 @@ namespace Presentation.View.Forms.User
             this.Controls.Add(this.pnl_top);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "UserCreate";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "UserCreate";
+            this.Text = "Crear usuario";
             this.Load += new System.EventHandler(this.UserCreate_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

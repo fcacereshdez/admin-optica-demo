@@ -29,7 +29,12 @@ namespace Presentation.View.Forms.User
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserEdit));
             this.pnl_top = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.pcb_close_edit_user = new System.Windows.Forms.PictureBox();
+            this.pcb_exit = new System.Windows.Forms.PictureBox();
+            this.pcb_minus = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txt_email = new System.Windows.Forms.TextBox();
             this.txt_phone = new System.Windows.Forms.TextBox();
@@ -48,15 +53,11 @@ namespace Presentation.View.Forms.User
             this.txt_name = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_edit_user = new System.Windows.Forms.Button();
-            this.pcb_close_edit_user = new System.Windows.Forms.PictureBox();
-            this.pcb_exit = new System.Windows.Forms.PictureBox();
-            this.pcb_minus = new System.Windows.Forms.PictureBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.pnl_top.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_close_edit_user)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_exit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_minus)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_top
@@ -72,6 +73,50 @@ namespace Presentation.View.Forms.User
             this.pnl_top.Name = "pnl_top";
             this.pnl_top.Size = new System.Drawing.Size(509, 29);
             this.pnl_top.TabIndex = 2;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(9, 4);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(118, 17);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "Editor de usuarios";
+            // 
+            // pcb_close_edit_user
+            // 
+            this.pcb_close_edit_user.Image = global::Presentation.Properties.Resources.close;
+            this.pcb_close_edit_user.Location = new System.Drawing.Point(470, 2);
+            this.pcb_close_edit_user.Name = "pcb_close_edit_user";
+            this.pcb_close_edit_user.Size = new System.Drawing.Size(25, 25);
+            this.pcb_close_edit_user.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcb_close_edit_user.TabIndex = 4;
+            this.pcb_close_edit_user.TabStop = false;
+            this.pcb_close_edit_user.Click += new System.EventHandler(this.pcb_close_edit_user_Click);
+            // 
+            // pcb_exit
+            // 
+            this.pcb_exit.Image = global::Presentation.Properties.Resources.close;
+            this.pcb_exit.Location = new System.Drawing.Point(1191, 5);
+            this.pcb_exit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pcb_exit.Name = "pcb_exit";
+            this.pcb_exit.Size = new System.Drawing.Size(29, 33);
+            this.pcb_exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcb_exit.TabIndex = 3;
+            this.pcb_exit.TabStop = false;
+            // 
+            // pcb_minus
+            // 
+            this.pcb_minus.Image = global::Presentation.Properties.Resources.minus;
+            this.pcb_minus.Location = new System.Drawing.Point(1155, 5);
+            this.pcb_minus.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pcb_minus.Name = "pcb_minus";
+            this.pcb_minus.Size = new System.Drawing.Size(29, 33);
+            this.pcb_minus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcb_minus.TabIndex = 2;
+            this.pcb_minus.TabStop = false;
             // 
             // groupBox1
             // 
@@ -247,50 +292,6 @@ namespace Presentation.View.Forms.User
             this.btn_edit_user.UseVisualStyleBackColor = false;
             this.btn_edit_user.Click += new System.EventHandler(this.btn_edit_user_Click);
             // 
-            // pcb_close_edit_user
-            // 
-            this.pcb_close_edit_user.Image = global::Presentation.Properties.Resources.close;
-            this.pcb_close_edit_user.Location = new System.Drawing.Point(470, 2);
-            this.pcb_close_edit_user.Name = "pcb_close_edit_user";
-            this.pcb_close_edit_user.Size = new System.Drawing.Size(25, 25);
-            this.pcb_close_edit_user.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pcb_close_edit_user.TabIndex = 4;
-            this.pcb_close_edit_user.TabStop = false;
-            this.pcb_close_edit_user.Click += new System.EventHandler(this.pcb_close_edit_user_Click);
-            // 
-            // pcb_exit
-            // 
-            this.pcb_exit.Image = global::Presentation.Properties.Resources.close;
-            this.pcb_exit.Location = new System.Drawing.Point(1191, 5);
-            this.pcb_exit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pcb_exit.Name = "pcb_exit";
-            this.pcb_exit.Size = new System.Drawing.Size(29, 33);
-            this.pcb_exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pcb_exit.TabIndex = 3;
-            this.pcb_exit.TabStop = false;
-            // 
-            // pcb_minus
-            // 
-            this.pcb_minus.Image = global::Presentation.Properties.Resources.minus;
-            this.pcb_minus.Location = new System.Drawing.Point(1155, 5);
-            this.pcb_minus.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pcb_minus.Name = "pcb_minus";
-            this.pcb_minus.Size = new System.Drawing.Size(29, 33);
-            this.pcb_minus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pcb_minus.TabIndex = 2;
-            this.pcb_minus.TabStop = false;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(9, 4);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(118, 17);
-            this.label10.TabIndex = 11;
-            this.label10.Text = "Editor de usuarios";
-            // 
             // UserEdit
             // 
             this.AcceptButton = this.btn_edit_user;
@@ -303,18 +304,19 @@ namespace Presentation.View.Forms.User
             this.Controls.Add(this.pnl_top);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "UserEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "UserEdit";
+            this.Text = "Editar usuario";
             this.Load += new System.EventHandler(this.UserEdit_Load);
             this.pnl_top.ResumeLayout(false);
             this.pnl_top.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_close_edit_user)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_exit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_minus)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }

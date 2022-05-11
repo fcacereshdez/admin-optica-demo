@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace Presentation.DataSets {
+namespace Presentation.Datasets {
     
     
     /// <summary>
@@ -853,7 +853,7 @@ namespace Presentation.DataSets {
         }
     }
 }
-namespace Presentation.DataSets.SalesBookTableAdapters {
+namespace Presentation.Datasets.SalesBookTableAdapters {
     
     
     /// <summary>

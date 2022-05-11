@@ -31,6 +31,26 @@ namespace DataAccess
             }
         }
 
+        public DataTable SearchCompany(string company)
+        {
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                using (var cmd = new SqlCommand())
+                {
+                    cmd.Connection = conn;
+                    cmd.CommandText = "SearchCompanies";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@company", company);
+                    SqlDataReader ReaderCompanies = cmd.ExecuteReader();
+                    DataTable TableCompanies = new DataTable();
+                    TableCompanies.Load(ReaderCompanies);
+                    conn.Close();
+                    return TableCompanies;
+                }
+            }
+        }
+
         public void SelectCompanyById(Int64 company_id)
         {
             using (var conn = GetConnection())

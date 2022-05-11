@@ -10,7 +10,7 @@ namespace DataAccess.Data
 {
     public class ReportsData : DBConnection
     {
-        public DataSet GetSalesBook()
+        public DataTable GetSalesBook()
         {
             using (var conn = GetConnection())
             {
@@ -20,15 +20,14 @@ namespace DataAccess.Data
                     cmd.Connection = conn;
                     cmd.CommandText = "GetSalesBook";
                     cmd.CommandType = CommandType.StoredProcedure;
-
-                    DataSet ds = new DataSet("ds_sales_book");
-                    SqlDataAdapter da = new SqlDataAdapter();
-                    da.SelectCommand = cmd;
-                    da.Fill(ds);
+                    SqlDataReader ReaderSales = cmd.ExecuteReader();
+                    DataTable TableSales = new DataTable();
+                    TableSales.Load(ReaderSales);
                     conn.Close();
-                    return ds;
+                    return TableSales;
                 }
             }
+
         }
     }
 }

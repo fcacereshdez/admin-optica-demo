@@ -64,6 +64,26 @@ namespace DataAccess
             }
         }
 
+        public DataTable SearchUser(string user)
+        {
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                using (var cmd = new SqlCommand())
+                {
+                    cmd.Connection = conn;
+                    cmd.CommandText = "SearchUser";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@user", user);
+                    SqlDataReader ReaderUsers = cmd.ExecuteReader();
+                    DataTable TableUsers = new DataTable();
+                    TableUsers.Load(ReaderUsers);
+                    conn.Close();
+                    return TableUsers;
+                }
+            }
+        }
+
         public void InsertActionsUser(string description, string computer, string ipaddress, Int64 user_id, DateTime created_at)
         {
             using (var conn = GetConnection())

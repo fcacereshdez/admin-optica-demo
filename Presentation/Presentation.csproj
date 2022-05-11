@@ -7,13 +7,13 @@
     <ProjectGuid>{B8FD4845-C35D-41AA-A82F-30FFEB66BD4A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Presentation</RootNamespace>
-    <AssemblyName>Presentation</AssemblyName>
+    <AssemblyName>SIGOP</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <TargetFrameworkProfile />
-    <PublishUrl>C:\Users\Francisco\Downloads\Prueba2\</PublishUrl>
+    <PublishUrl>C:\Users\Francisco\Documents\Mango Studios\Clientes\Interlenssv\Proyectos\Desktop\Compilaciones\SIGOP\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -27,8 +27,8 @@
     <TargetCulture>es</TargetCulture>
     <ProductName>Sistema de Gestión para Ópticas</ProductName>
     <PublisherName>Mango Studios</PublisherName>
-    <ApplicationRevision>1</ApplicationRevision>
-    <ApplicationVersion>2.1.1.%2a</ApplicationVersion>
+    <ApplicationRevision>7</ApplicationRevision>
+    <ApplicationVersion>2.5.2.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -68,6 +68,9 @@
   <PropertyGroup>
     <SignManifests>true</SignManifests>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\interlenssv_icon-removebg-preview.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
@@ -87,6 +90,7 @@
     <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
@@ -101,12 +105,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataSets\SalesBook.Designer.cs">
+    <Compile Include="Datasets\SalesBook.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SalesBook.xsd</DependentUpon>
     </Compile>
-    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Vendor\SqlServerTypes\Loader.cs" />
     <Compile Include="View\App.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,12 +135,6 @@
     </Compile>
     <Compile Include="View\Forms\Client\ClientEdit.Designer.cs">
       <DependentUpon>ClientEdit.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\Forms\Client\ClientView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Forms\Client\ClientView.Designer.cs">
-      <DependentUpon>ClientView.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Forms\Auth\Login.cs">
       <SubType>Form</SubType>
@@ -199,17 +202,65 @@
     <Compile Include="View\Forms\Home\SellerForm.Designer.cs">
       <DependentUpon>SellerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Forms\Invoice\ClientSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Invoice\ClientSelector.Designer.cs">
+      <DependentUpon>ClientSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\Invoice\InvoiceCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Invoice\InvoiceCreate.Designer.cs">
+      <DependentUpon>InvoiceCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\Invoice\InvoiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Invoice\InvoiceForm.Designer.cs">
+      <DependentUpon>InvoiceForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Forms\Invoice\InvoiceView.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\Forms\Invoice\InvoiceView.Designer.cs">
       <DependentUpon>InvoiceView.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Forms\Laboratory\LaboratoryCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Laboratory\LaboratoryCreate.Designer.cs">
+      <DependentUpon>LaboratoryCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\Laboratory\LaboratoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Laboratory\LaboratoryForm.Designer.cs">
+      <DependentUpon>LaboratoryForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Forms\Payment\PayFee.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\Forms\Payment\PayFee.Designer.cs">
       <DependentUpon>PayFee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\Product\BrandsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Product\BrandsForm.Designer.cs">
+      <DependentUpon>BrandsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\Product\CategoriesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Product\CategoriesForm.Designer.cs">
+      <DependentUpon>CategoriesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\Product\ModelsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Product\ModelsForm.Designer.cs">
+      <DependentUpon>ModelsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Forms\Product\ProductCreate.cs">
       <SubType>Form</SubType>
@@ -331,12 +382,6 @@
     <Compile Include="View\Forms\User\UsersForm.Designer.cs">
       <DependentUpon>UsersForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Forms\User\UserView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Forms\User\UserView.Designer.cs">
-      <DependentUpon>UserView.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\Reports\ViewerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -345,14 +390,9 @@
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="View\App.resx">
       <DependentUpon>App.cs</DependentUpon>
     </EmbeddedResource>
@@ -370,9 +410,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\Client\ClientForm.resx">
       <DependentUpon>ClientForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Forms\Client\ClientView.resx">
-      <DependentUpon>ClientView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\Client\CompanySelector.resx">
       <DependentUpon>CompanySelector.cs</DependentUpon>
@@ -395,11 +432,44 @@
     <EmbeddedResource Include="View\Forms\Home\AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Invoice\ClientSelector.resx">
+      <DependentUpon>ClientSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Invoice\InvoiceCreate.resx">
+      <DependentUpon>InvoiceCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Invoice\InvoiceForm.resx">
+      <DependentUpon>InvoiceForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\Invoice\InvoiceView.resx">
       <DependentUpon>InvoiceView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Laboratory\LaboratoryCreate.resx">
+      <DependentUpon>LaboratoryCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Laboratory\LaboratoryForm.resx">
+      <DependentUpon>LaboratoryForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\Payment\PayFee.resx">
       <DependentUpon>PayFee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Product\BrandsForm.resx">
+      <DependentUpon>BrandsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Product\CategoriesForm.resx">
+      <DependentUpon>CategoriesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Product\ModelsForm.resx">
+      <DependentUpon>ModelsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Product\ProductCreate.resx">
+      <DependentUpon>ProductCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Product\ProductForm.resx">
+      <DependentUpon>ProductForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Recipe\RecipeCreate.resx">
+      <DependentUpon>RecipeCreate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\Recipe\RecipeForm.resx">
       <DependentUpon>RecipeForm.cs</DependentUpon>
@@ -433,15 +503,15 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="DataSets\SalesBook.xsc">
+    <None Include="Datasets\SalesBook.xsc">
       <DependentUpon>SalesBook.xsd</DependentUpon>
     </None>
-    <None Include="DataSets\SalesBook.xsd">
+    <None Include="Datasets\SalesBook.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>SalesBook.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="DataSets\SalesBook.xss">
+    <None Include="Datasets\SalesBook.xss">
       <DependentUpon>SalesBook.xsd</DependentUpon>
     </None>
   </ItemGroup>
@@ -684,17 +754,25 @@
     <None Include="Resources\icons8-google-code-24 %281%29.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="SqlServerTypes\readme.htm" />
-    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+    <None Include="Resources\icons8-maximizar-la-ventana-24.png" />
+    <None Include="Resources\icons8-maximizar-la-ventana-24 %281%29.png" />
+    <None Include="Resources\icons8-file-invoice-dollar-24.png" />
+    <Content Include="Resources\interlenssv_icon-removebg-preview.ico" />
+    <None Include="Resources\icons8-marca-24.png" />
+    <None Include="Resources\icons8-basculas-en-3d-24.png" />
+    <None Include="Resources\icons8-marca-241.png" />
+    <None Include="Resources\icons8-categories-25.png" />
+    <Content Include="Vendor\SqlServerTypes\readme.htm" />
+    <Content Include="Vendor\SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+    <Content Include="Vendor\SqlServerTypes\x64\SqlServerSpatial140.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+    <Content Include="Vendor\SqlServerTypes\x86\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+    <Content Include="Vendor\SqlServerTypes\x86\SqlServerSpatial140.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
