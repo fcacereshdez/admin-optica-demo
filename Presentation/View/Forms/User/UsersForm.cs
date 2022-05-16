@@ -131,7 +131,7 @@ namespace Presentation.View.Forms.User
 
         private void txt_search_user_TextChanged(object sender, EventArgs e)
         {
-            dgv_users.DataSource = userController.SearchUser(this.Text);
+            dgv_users.DataSource = userController.SearchUser(txt_search_user.Text);
         }
     }
 }

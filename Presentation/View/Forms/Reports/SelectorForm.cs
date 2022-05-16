@@ -17,6 +17,7 @@ namespace Presentation.View.Forms
     public partial class SelectorForm : Form
     {
         CommonController commonController = new CommonController();
+        string PATH = AppDomain.CurrentDomain.BaseDirectory;
         public SelectorForm()
         {
             InitializeComponent();
@@ -32,7 +33,7 @@ namespace Presentation.View.Forms
             ViewerForm viewerForm = new ViewerForm();
             ReportDataSource rds = new ReportDataSource("ds_sales_book", commonController.GetSalesBook());
             viewerForm.rv_viewer.Clear();
-            viewerForm.rv_viewer.LocalReport.ReportPath = @"..\..\View\Reports\SalesBook.rdlc";
+            viewerForm.rv_viewer.LocalReport.ReportPath = PATH + @"..\..\View\Reports\SalesBook.rdlc";
             viewerForm.rv_viewer.LocalReport.DataSources.Add(rds);
             viewerForm.rv_viewer.RefreshReport();
             viewerForm.ShowDialog();

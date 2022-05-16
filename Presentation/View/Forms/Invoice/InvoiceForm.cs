@@ -30,5 +30,10 @@ namespace Presentation.View.Forms.Invoice
             InvoiceCreate invoiceCreate = new InvoiceCreate();
             invoiceCreate.ShowDialog();
         }
+
+        private void txt_search_company_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

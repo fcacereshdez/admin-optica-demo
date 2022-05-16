@@ -1,11 +1,10 @@
-﻿using Presentation.View.Forms;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Presentation
+namespace Installer
 {
     static class Program
     {
@@ -17,8 +16,7 @@ namespace Presentation
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-             Application.Run(new Login());
-           // Application.Run(new Installer.InstallerApp());
+            Application.Run(new AppInstaller());
         }
     }
 }

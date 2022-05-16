@@ -107,7 +107,7 @@ namespace Presentation.View.Forms.Client
 
         private void txt_search_client_TextChanged(object sender, EventArgs e)
         {
-            dgv_clients.DataSource = clientController.SearchClient(Text);
+            dgv_clients.DataSource = clientController.SearchClient(txt_search_client.Text);
         }
     }
 }

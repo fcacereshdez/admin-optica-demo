@@ -1,18 +1,17 @@
-﻿using System.Resources;
-using System.Reflection;
+﻿using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // La información general de un ensamblado se controla mediante el siguiente 
 // conjunto de atributos. Cambie estos valores de atributo para modificar la información
 // asociada con un ensamblado.
-[assembly: AssemblyTitle("Interlenssv")]
-[assembly: AssemblyDescription("Sistema de Gestión para Ópticas | Interlens S.A. de C.V.")]
+[assembly: AssemblyTitle("Installer")]
+[assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Mango Studios")]
-[assembly: AssemblyProduct("Interlenssv")]
-[assembly: AssemblyCopyright("Copyright © 2022")]
-[assembly: AssemblyTrademark("Mango Studios")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("Installer")]
+[assembly: AssemblyCopyright("Copyright ©  2022")]
+[assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
 // Si establece ComVisible en false, los tipos de este ensamblado no estarán visibles 
@@ -21,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // El siguiente GUID sirve como id. de typelib si este proyecto se expone a COM.
-[assembly: Guid("b8fd4845-c35d-41aa-a82f-30ffeb66bd4a")]
+[assembly: Guid("a62e94ff-1c4c-49d1-87c8-566b4b00caa3")]
 
 // La información de versión de un ensamblado consta de los cuatro valores siguientes:
 //
@@ -33,6 +32,5 @@ using System.Runtime.InteropServices;
 // Puede especificar todos los valores o usar los valores predeterminados de número de compilación y de revisión
 // utilizando el carácter "*", como se muestra a continuación:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("3.1.0.0")]
-[assembly: AssemblyFileVersion("11.0.0.0")]
-[assembly: NeutralResourcesLanguage("es-SV")]
+[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyFileVersion("1.0.0.0")]

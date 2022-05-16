@@ -13,10 +13,24 @@ namespace DataAccess
         private readonly string connectionString;
         public DBConnection()
         {
-            string server = "localhost\\SQLEXPRESS", user = "MangoStudios", password = "Frank0089hdez@", database = "INTERLENSSV";
-           // string server = "(localdb)\\mssqllocaldb", database = "INTERLENSSV";
-            connectionString = "Server=" + server + ";User ID=" + user + ";Password=" + password+";Initial Catalog="+database+";Integrated Security=True";
-           // connectionString = "Server=" + server + ";Initial Catalog=" + database + ";Integrated Security=True";
+            bool DEVELOPMENT_MODE = true;
+            string server, user, password, database;
+
+            if (DEVELOPMENT_MODE == true)
+            {
+                server = "localhost\\SQLEXPRESS";
+                user = "MangoStudios";
+                password = "Frank0089hdez@";
+                database = "INTERLENSSV";
+            }
+            else
+            {
+                server = "WILFREDO";
+                user = "InterlenssvNetwork";
+                password = "Frank0089hdez@";
+                database = "INTERLENSSV";
+            }
+            connectionString = "Server=" + server + ";User ID=" + user + ";Password=" + password+";Initial Catalog="+database+";Integrated Security=False";
 
         }
         

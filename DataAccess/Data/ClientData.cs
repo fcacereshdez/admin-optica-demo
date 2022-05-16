@@ -75,10 +75,10 @@ namespace DataAccess.Data
                             Client.nit = reader.GetString(5);
                             Client.phone = reader.GetString(6);
                             Client.secondary_phone = reader.GetString(7);
-                            Client.email = reader.GetString(8);
-                            Client.address = reader.GetString(9);
-                            Client.notes = reader.GetString(10);
-                            Client.company_id = reader.GetInt64(11);
+                            Client.email = reader.GetString(9);
+                            Client.address = reader.GetString(10);
+                            Client.notes = reader.GetString(11);
+                            Client.company_id = reader.GetInt64(12);
                         }
                     }
                 }

@@ -41,6 +41,7 @@ namespace Presentation
         {
             lbl_name_pc.Text = Environment.MachineName;
             lbl_version_sw.Text = "v" + System.Reflection.Assembly.GetEntryAssembly().GetName().Version.ToString();
+
         }
         private void LoadUserData()
         {
