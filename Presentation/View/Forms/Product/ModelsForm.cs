@@ -1,4 +1,5 @@
-﻿using Domain;
+﻿using Common.Cache;
+using Domain;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -36,6 +37,7 @@ namespace Presentation.View.Forms.Product
             {
                 productController.EditModel(txt_model_name.Text, txt_model_id.Text);
                 MessageBox.Show("Actualizado correctamente.");
+                InsertAction("creó un modelo.");
                 txt_model_name.Clear();
                 txt_action.Clear();
                 SelectAllModels();
@@ -50,6 +52,7 @@ namespace Presentation.View.Forms.Product
                 {
                     productController.CreateModel(txt_model_name.Text);
                     MessageBox.Show("Guardado correctamente.");
+                    InsertAction("creó un modelo.");
                     txt_model_name.Clear();
                     SelectAllModels();
                 }
@@ -74,6 +77,12 @@ namespace Presentation.View.Forms.Product
             {
                 MessageBox.Show("Debe seleccionar una marca antes de continuar.");
             }
+        }
+
+        private void InsertAction(string action)
+        {
+            UserController userController = new UserController();
+            userController.InsertActionsUser(UserCache.name + " " + UserCache.lastname + " " + action, Environment.MachineName, "127.0.0.1", UserCache.user_id, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
         }
     }
 }

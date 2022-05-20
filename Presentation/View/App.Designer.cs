@@ -49,6 +49,7 @@ namespace Presentation
             this.btn_clients = new System.Windows.Forms.Button();
             this.btn_dashboard = new System.Windows.Forms.Button();
             this.pnl_top = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.pcb_exit = new System.Windows.Forms.PictureBox();
             this.pcb_minus = new System.Windows.Forms.PictureBox();
             this.lbl_time = new System.Windows.Forms.Label();
@@ -321,6 +322,7 @@ namespace Presentation
             // pnl_top
             // 
             this.pnl_top.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(29)))), ((int)(((byte)(26)))));
+            this.pnl_top.Controls.Add(this.label1);
             this.pnl_top.Controls.Add(this.pcb_exit);
             this.pnl_top.Controls.Add(this.pcb_minus);
             this.pnl_top.Controls.Add(this.lbl_time);
@@ -331,6 +333,17 @@ namespace Presentation
             this.pnl_top.Size = new System.Drawing.Size(1058, 32);
             this.pnl_top.TabIndex = 1;
             this.pnl_top.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnl_top_MouseDown);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(142)))), ((int)(((byte)(4)))));
+            this.label1.Location = new System.Drawing.Point(947, 6);
+            this.label1.Name = "label1";
+            this.label1.Padding = new System.Windows.Forms.Padding(2);
+            this.label1.Size = new System.Drawing.Size(45, 21);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Alpha";
             // 
             // pcb_exit
             // 
@@ -541,6 +554,7 @@ namespace Presentation
         private System.Windows.Forms.Button btn_reports;
         private System.Windows.Forms.Button btn_about_info;
         private System.Windows.Forms.Button btn_facturation;
+        private System.Windows.Forms.Label label1;
     }
 }
 

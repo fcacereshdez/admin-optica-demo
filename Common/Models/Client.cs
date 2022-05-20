@@ -11,6 +11,7 @@ namespace Common.Models
         public static Int64 client_id;
         public static string name;
         public static string lastname;
+        public static int age;
         public static string code;
         public static string dui;
         public static string nit;

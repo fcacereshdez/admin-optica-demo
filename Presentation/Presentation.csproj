@@ -7,13 +7,13 @@
     <ProjectGuid>{B8FD4845-C35D-41AA-A82F-30FFEB66BD4A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Presentation</RootNamespace>
-    <AssemblyName>SIGOP</AssemblyName>
+    <AssemblyName>INTERLENSSV</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <TargetFrameworkProfile />
-    <PublishUrl>C:\SIGOP\</PublishUrl>
+    <PublishUrl>C:\Users\Francisco\Documents\Mango Studios\Clientes\Interlenssv\Proyectos\Desktop\Compilaciones\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Unc</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
@@ -23,15 +23,15 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <InstallUrl>\\Wilfredo\sigop\</InstallUrl>
-    <UpdateUrl>\\DESKTOP-6867HH5\Repository\</UpdateUrl>
+    <InstallUrl>\\WILFREDO\sigop\</InstallUrl>
+    <UpdateUrl>\\WILFREDO\sigop\</UpdateUrl>
     <SupportUrl>https://www.themangostudios.com</SupportUrl>
     <TargetCulture>es</TargetCulture>
     <ProductName>Sistema de Gestión para Ópticas</ProductName>
     <PublisherName>Mango Studios</PublisherName>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>13</ApplicationRevision>
-    <ApplicationVersion>3.0.0.%2a</ApplicationVersion>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>5.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -271,47 +271,29 @@
     <Compile Include="View\Forms\Product\ProductCreate.Designer.cs">
       <DependentUpon>ProductCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Forms\Product\ProductEdit.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Forms\Product\ProductEdit.Designer.cs">
-      <DependentUpon>ProductEdit.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\Forms\Product\ProductForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\Forms\Product\ProductForm.Designer.cs">
       <DependentUpon>ProductForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Forms\Product\ProductView.cs">
+    <Compile Include="View\Forms\Recipe\ClientsSelector.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Forms\Product\ProductView.Designer.cs">
-      <DependentUpon>ProductView.cs</DependentUpon>
+    <Compile Include="View\Forms\Recipe\ClientsSelector.Designer.cs">
+      <DependentUpon>ClientsSelector.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Forms\Provider\ProviderCreate.cs">
+    <Compile Include="View\Forms\Recipe\LaboratoriesSelector.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Forms\Provider\ProviderCreate.Designer.cs">
-      <DependentUpon>ProviderCreate.cs</DependentUpon>
+    <Compile Include="View\Forms\Recipe\LaboratoriesSelector.Designer.cs">
+      <DependentUpon>LaboratoriesSelector.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Forms\Provider\ProviderEdit.cs">
+    <Compile Include="View\Forms\Recipe\ProductsSelector.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Forms\Provider\ProviderEdit.Designer.cs">
-      <DependentUpon>ProviderEdit.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\Forms\Provider\ProviderForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Forms\Provider\ProviderForm.Designer.cs">
-      <DependentUpon>ProviderForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\Forms\Provider\ProviderView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Forms\Provider\ProviderView.Designer.cs">
-      <DependentUpon>ProviderView.cs</DependentUpon>
+    <Compile Include="View\Forms\Recipe\ProductsSelector.Designer.cs">
+      <DependentUpon>ProductsSelector.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Forms\Recipe\RecipeCreate.cs">
       <SubType>Form</SubType>
@@ -319,23 +301,17 @@
     <Compile Include="View\Forms\Recipe\RecipeCreate.Designer.cs">
       <DependentUpon>RecipeCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Forms\Recipe\RecipeEdit.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Forms\Recipe\RecipeEdit.Designer.cs">
-      <DependentUpon>RecipeEdit.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\Forms\Recipe\RecipeForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\Forms\Recipe\RecipeForm.Designer.cs">
       <DependentUpon>RecipeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Forms\Recipe\RecipeView.cs">
+    <Compile Include="View\Forms\Recipe\UsersSelector.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Forms\Recipe\RecipeView.Designer.cs">
-      <DependentUpon>RecipeView.cs</DependentUpon>
+    <Compile Include="View\Forms\Recipe\UsersSelector.Designer.cs">
+      <DependentUpon>UsersSelector.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Forms\Reports\SelectorForm.cs">
       <SubType>Form</SubType>
@@ -471,11 +447,23 @@
     <EmbeddedResource Include="View\Forms\Product\ProductForm.resx">
       <DependentUpon>ProductForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Recipe\ClientsSelector.resx">
+      <DependentUpon>ClientsSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Recipe\LaboratoriesSelector.resx">
+      <DependentUpon>LaboratoriesSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Recipe\ProductsSelector.resx">
+      <DependentUpon>ProductsSelector.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\Recipe\RecipeCreate.resx">
       <DependentUpon>RecipeCreate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\Recipe\RecipeForm.resx">
       <DependentUpon>RecipeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Recipe\UsersSelector.resx">
+      <DependentUpon>UsersSelector.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\Reports\SelectorForm.resx">
       <DependentUpon>SelectorForm.cs</DependentUpon>

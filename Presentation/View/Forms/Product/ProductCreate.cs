@@ -1,4 +1,5 @@
-﻿using Domain;
+﻿using Common.Cache;
+using Domain;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -50,17 +51,33 @@ namespace Presentation.View.Forms.Product
             {
                 lbl_error.Text = "El producto debe contener al menos un valor 0";
             }
-            else
+            else if(txt_price_cost.Text == "")
             {
-                productController.CreateProduct(txt_product.Text, txt_quantity.Text, txt_notes.Text, txt_color.Text, cb_category.SelectedValue.ToString(), cb_model.SelectedValue.ToString(), cb_brand.SelectedValue.ToString());
+                lbl_error.Text = "El producto debe contener un precio de costo";
+            }else if(txt_price_sale.Text == "")
+            {
+                lbl_error.Text = "El producto debe contener al menos un precio de venta";
+            }else if (txt_code_product.Text == "")
+            {
+                lbl_error.Text = "El producto debe contener un código";
+            }else
+            {
+                productController.CreateProduct(txt_product.Text, txt_quantity.Text, txt_notes.Text, txt_color.Text, txt_code_product.Text, txt_price_cost.Text, txt_price_sale.Text, cb_category.SelectedValue.ToString(), cb_model.SelectedValue.ToString(), cb_brand.SelectedValue.ToString());
                 txt_product.Clear();
                 txt_quantity.Clear();
                 txt_notes.Clear();
                 txt_color.Clear();
                 txt_product.Focus();
+                InsertAction("creó un producto.");
                 MessageBox.Show("Producto registrado correctamente.");
                 Close();
             }
+        }
+
+        private void InsertAction(string action)
+        {
+            UserController userController = new UserController();
+            userController.InsertActionsUser(UserCache.name + " " + UserCache.lastname + " " + action, Environment.MachineName, "127.0.0.1", UserCache.user_id, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
         }
     }
 }

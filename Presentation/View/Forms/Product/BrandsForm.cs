@@ -1,4 +1,5 @@
-﻿using Domain;
+﻿using Common.Cache;
+using Domain;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -36,6 +37,7 @@ namespace Presentation.View.Forms.Product
             {
                 productController.EditBrand(txt_brand_name.Text, txt_brand_id.Text);
                 MessageBox.Show("Actualizado con éxito.");
+                InsertAction("actualizó una marca.");
                 txt_brand_name.Clear();
                 txt_action.Clear();
                 SelectAllBrands();
@@ -50,6 +52,7 @@ namespace Presentation.View.Forms.Product
                 {
                     productController.CreateBrand(txt_brand_name.Text);
                     MessageBox.Show("Guardado con éxito.");
+                    InsertAction("creó una marca.");
                     txt_brand_name.Clear();
                     SelectAllBrands();
                 }
@@ -68,12 +71,18 @@ namespace Presentation.View.Forms.Product
             if (dgv_brands.SelectedRows.Count > 0)
             {
                 productController.DeleteBrand(dgv_brands.SelectedRows[0].Cells[0].Value.ToString());
+                InsertAction("eliminó una marca.");
                 SelectAllBrands();
             }
             else
             {
                 MessageBox.Show("Debe seleccionar una marca antes de continuar.");
             }
+        }
+        private void InsertAction(string action)
+        {
+            UserController userController = new UserController();
+            userController.InsertActionsUser(UserCache.name + " " + UserCache.lastname + " " + action, Environment.MachineName, "127.0.0.1", UserCache.user_id, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
         }
     }
 }

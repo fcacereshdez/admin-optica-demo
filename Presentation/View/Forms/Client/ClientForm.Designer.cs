@@ -44,13 +44,10 @@ namespace Presentation.View.Forms.Client
             this.btn_create_client = new System.Windows.Forms.Button();
             this.btn_delete_client = new System.Windows.Forms.Button();
             this.btn_edit_client = new System.Windows.Forms.Button();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btn_client_report = new System.Windows.Forms.Button();
             this.btn_pay_fee = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_clients)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -136,6 +133,7 @@ namespace Presentation.View.Forms.Client
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.btn_pay_fee);
             this.groupBox1.Controls.Add(this.btn_view_client);
             this.groupBox1.Controls.Add(this.btn_export_clients);
             this.groupBox1.Controls.Add(this.btn_create_client);
@@ -148,7 +146,7 @@ namespace Presentation.View.Forms.Client
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.groupBox1.Size = new System.Drawing.Size(177, 228);
+            this.groupBox1.Size = new System.Drawing.Size(177, 275);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Funciones";
@@ -186,6 +184,7 @@ namespace Presentation.View.Forms.Client
             this.btn_export_clients.TabIndex = 4;
             this.btn_export_clients.Text = "Exportar";
             this.btn_export_clients.UseVisualStyleBackColor = false;
+            this.btn_export_clients.Click += new System.EventHandler(this.btn_export_clients_Click);
             // 
             // btn_create_client
             // 
@@ -240,41 +239,6 @@ namespace Presentation.View.Forms.Client
             this.btn_edit_client.UseVisualStyleBackColor = false;
             this.btn_edit_client.Click += new System.EventHandler(this.btn_edit_client_Click);
             // 
-            // groupBox3
-            // 
-            this.groupBox3.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox3.Controls.Add(this.btn_client_report);
-            this.groupBox3.Controls.Add(this.btn_pay_fee);
-            this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.groupBox3.Location = new System.Drawing.Point(18, 324);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.groupBox3.Size = new System.Drawing.Size(177, 116);
-            this.groupBox3.TabIndex = 10;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Comunes";
-            // 
-            // btn_client_report
-            // 
-            this.btn_client_report.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
-            this.btn_client_report.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
-            this.btn_client_report.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_client_report.ForeColor = System.Drawing.Color.White;
-            this.btn_client_report.Image = global::Presentation.Properties.Resources.icons8_script_de_informes_de_gráficos_24;
-            this.btn_client_report.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_client_report.Location = new System.Drawing.Point(18, 65);
-            this.btn_client_report.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btn_client_report.Name = "btn_client_report";
-            this.btn_client_report.Padding = new System.Windows.Forms.Padding(17, 0, 6, 0);
-            this.btn_client_report.Size = new System.Drawing.Size(143, 30);
-            this.btn_client_report.TabIndex = 4;
-            this.btn_client_report.Text = "Reportes";
-            this.btn_client_report.UseVisualStyleBackColor = false;
-            this.btn_client_report.Click += new System.EventHandler(this.btn_client_report_Click);
-            // 
             // btn_pay_fee
             // 
             this.btn_pay_fee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
@@ -283,7 +247,7 @@ namespace Presentation.View.Forms.Client
             this.btn_pay_fee.ForeColor = System.Drawing.Color.White;
             this.btn_pay_fee.Image = global::Presentation.Properties.Resources.icons8_reembolso_24;
             this.btn_pay_fee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_pay_fee.Location = new System.Drawing.Point(18, 27);
+            this.btn_pay_fee.Location = new System.Drawing.Point(18, 220);
             this.btn_pay_fee.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_pay_fee.Name = "btn_pay_fee";
             this.btn_pay_fee.Padding = new System.Windows.Forms.Padding(17, 0, 6, 0);
@@ -299,7 +263,6 @@ namespace Presentation.View.Forms.Client
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(850, 510);
-            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.dgv_clients);
             this.Controls.Add(this.groupBox1);
@@ -314,7 +277,6 @@ namespace Presentation.View.Forms.Client
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_clients)).EndInit();
             this.groupBox1.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -331,8 +293,6 @@ namespace Presentation.View.Forms.Client
         private System.Windows.Forms.Button btn_create_client;
         private System.Windows.Forms.Button btn_delete_client;
         private System.Windows.Forms.Button btn_edit_client;
-        private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button btn_pay_fee;
-        public System.Windows.Forms.Button btn_client_report;
     }
 }

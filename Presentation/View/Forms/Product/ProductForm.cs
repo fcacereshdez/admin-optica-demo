@@ -1,4 +1,5 @@
-﻿using Domain;
+﻿using Common.Cache;
+using Domain;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,6 +19,7 @@ namespace Presentation.View.Forms.Product
         {
             InitializeComponent();
             SelectAllProducts();
+            InsertAction("está en el gestor de productos.");
         }
 
         private void SelectAllProducts()
@@ -57,6 +59,11 @@ namespace Presentation.View.Forms.Product
         private void ProductCreate_FormClosed(object sender, FormClosedEventArgs e)
         {
             SelectAllProducts();
+        }
+        private void InsertAction(string action)
+        {
+            UserController userController = new UserController();
+            userController.InsertActionsUser(UserCache.name + " " + UserCache.lastname + " " + action, Environment.MachineName, "127.0.0.1", UserCache.user_id, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
         }
 
     }

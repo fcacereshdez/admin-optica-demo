@@ -29,7 +29,7 @@ namespace Presentation.View.Forms.User
         {
             UserController userController = new UserController();
             userController.UpdateUser(txt_name.Text, txt_lastname.Text, txt_username.Text, txt_password.Text, txt_email.Text, txt_phone.Text, cb_role.SelectedValue.ToString(), cb_status.SelectedValue.ToString(), Users.user_id, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
-            userController.InsertActionsUser("Modificó un usuario con idetificado como: " + txt_username.Text, Environment.MachineName, "127.0.0.1", UserCache.user_id, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+            userController.InsertActionsUser(UserCache.name + " " + UserCache.lastname + " modificó un usuario con idetificado como: " + txt_username.Text, Environment.MachineName, "127.0.0.1", UserCache.user_id, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
             MessageBox.Show("Registro actualizado", "Procesado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
         }
@@ -58,3 +58,4 @@ namespace Presentation.View.Forms.User
         }
     }
 }
+

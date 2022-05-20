@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Common.Cache;
+using Domain;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +21,13 @@ namespace Presentation.View.Forms.About
 
         private void AboutForm_Load(object sender, EventArgs e)
         {
+            LoadAction();
+        }
 
+        private void LoadAction()
+        {
+            UserController userController = new UserController();
+            userController.InsertActionsUser(UserCache.name + " " + UserCache.lastname + " revisó la información del sistema", Environment.MachineName, "127.0.0.1", UserCache.user_id, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
         }
     }
 }

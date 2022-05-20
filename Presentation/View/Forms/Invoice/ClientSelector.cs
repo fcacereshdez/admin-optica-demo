@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Common.Cache;
 using Domain;
 using Presentation.View.Forms.Invoice;
 
@@ -18,6 +19,7 @@ namespace Presentation.View.Forms.Client
         {
             InitializeComponent();
             SelectAllClients();
+            InsertAction("está seleccionando un cliente desde el creador de facturas.");
         }
 
         ClientController clientController = new ClientController();
@@ -43,6 +45,12 @@ namespace Presentation.View.Forms.Client
         private void pcb_close_create_client_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void InsertAction(string action)
+        {
+            UserController userController = new UserController();
+            userController.InsertActionsUser(UserCache.name + " " + UserCache.lastname + " " + action, Environment.MachineName, "127.0.0.1", UserCache.user_id, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Domain;
+﻿using Common.Cache;
+using Domain;
 using Microsoft.Reporting.WinForms;
 using Presentation.Datasets;
 using Presentation.View.Reports;
@@ -7,6 +8,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,10 +19,11 @@ namespace Presentation.View.Forms
     public partial class SelectorForm : Form
     {
         CommonController commonController = new CommonController();
-        string PATH = AppDomain.CurrentDomain.BaseDirectory;
+       
         public SelectorForm()
         {
             InitializeComponent();
+            InsertAction("está en el gestor de informes.");
         }
 
         private void pcb_close_edit_company_Click(object sender, EventArgs e)
@@ -30,13 +33,21 @@ namespace Presentation.View.Forms
 
         private void btn_book_sales_Click(object sender, EventArgs e)
         {
+            string exeFolder = Application.StartupPath;
+            string reportPath = Path.Combine(exeFolder, @"..\..\View\Reports\");
             ViewerForm viewerForm = new ViewerForm();
             ReportDataSource rds = new ReportDataSource("ds_sales_book", commonController.GetSalesBook());
             viewerForm.rv_viewer.Clear();
-            viewerForm.rv_viewer.LocalReport.ReportPath = PATH + @"..\..\View\Reports\SalesBook.rdlc";
+            viewerForm.rv_viewer.LocalReport.ReportPath = reportPath + "SalesBook.rdlc";
             viewerForm.rv_viewer.LocalReport.DataSources.Add(rds);
             viewerForm.rv_viewer.RefreshReport();
             viewerForm.ShowDialog();
+        }
+
+        private void InsertAction(string action)
+        {
+            UserController userController = new UserController();
+            userController.InsertActionsUser(UserCache.name + " " + UserCache.lastname + " " + action, Environment.MachineName, "127.0.0.1", UserCache.user_id, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
         }
     }
 }

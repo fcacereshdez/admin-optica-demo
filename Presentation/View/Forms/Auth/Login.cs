@@ -82,7 +82,7 @@ namespace Presentation.View.Forms
         private void LoginActionUser()
         {
             UserController userController = new UserController();
-            userController.InsertActionsUser("Inició sesión", Environment.MachineName, "127.0.0.1", UserCache.user_id, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+            userController.InsertActionsUser(UserCache.name + " " + UserCache.lastname + " inició sesión", Environment.MachineName, "127.0.0.1", UserCache.user_id, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
         }
 
         private void UpdateLastLoginUser()

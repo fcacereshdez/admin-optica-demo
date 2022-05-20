@@ -1,4 +1,5 @@
-﻿using Domain;
+﻿using Common.Cache;
+using Domain;
 using Presentation.View.Forms.Invoice;
 using System;
 using System.Collections.Generic;
@@ -44,6 +45,7 @@ namespace Presentation.View.Forms.Payment
             {
                 clientController.PayInovice(cmb_method_payment.SelectedValue.ToString() ,txt_amount.Text, cmb_bank.SelectedValue.ToString(), txt_ref_bank.Text, txt_invoice_id.Text);
                 MessageBox.Show("Abono aplicado", "Abonos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                InsertAction("abonó " + txt_amount.Text + " al cliente " + lbl_client_name.Text + " en la factura " + lbl_invoice.Text);
                 this.Close();
             }
         }
@@ -57,6 +59,12 @@ namespace Presentation.View.Forms.Payment
             cmb_method_payment.DisplayMember = "payment_method";
             cmb_method_payment.ValueMember = "payment_method_id";
             cmb_method_payment.SelectedValue = 1;
+        }
+
+        private void InsertAction(string action)
+        {
+            UserController userController = new UserController();
+            userController.InsertActionsUser(UserCache.name + " " + UserCache.lastname + " " + action, Environment.MachineName, "127.0.0.1", UserCache.user_id, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
         }
 
     }

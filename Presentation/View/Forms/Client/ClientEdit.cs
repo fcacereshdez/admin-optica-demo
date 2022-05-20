@@ -1,4 +1,5 @@
-﻿using Domain;
+﻿using Common.Cache;
+using Domain;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,7 +30,13 @@ namespace Presentation.View.Forms.Client
         {
          clientController.UpdateClient(txt_name_client.Text, txt_lastname_client.Text, txt_dui_client.Text, txt_nit_client.Text, txt_phone_client.Text, txt_secondary_phone_client.Text, txt_email_client.Text, txt_address_client.Text, txt_notes_client.Text, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), Convert.ToInt64(txt_id_client.Text));
          MessageBox.Show("Registro actualizado", "Procesado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-         this.Close();
+         UserUpdated();
+        }
+
+        private void UserUpdated()
+        {
+            UserController userController = new UserController();
+            userController.InsertActionsUser(UserCache.name + " " + UserCache.lastname + " actualizó a un cliente.", Environment.MachineName, "127.0.0.1", UserCache.user_id, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Domain;
+﻿using Common.Cache;
+using Domain;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,6 +19,7 @@ namespace Presentation.View.Forms.Invoice
         {
             InitializeComponent();
             SelectAllInvoice();
+            InsertAction("está en el gestor de facturas.");
         }
 
         private void SelectAllInvoice()
@@ -34,6 +36,12 @@ namespace Presentation.View.Forms.Invoice
         private void txt_search_company_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void InsertAction(string action)
+        {
+            UserController userController = new UserController();
+            userController.InsertActionsUser(UserCache.name + " " + UserCache.lastname + " " + action, Environment.MachineName, "127.0.0.1", UserCache.user_id, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
         }
     }
 }

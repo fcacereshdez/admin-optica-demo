@@ -41,7 +41,7 @@ namespace Presentation.View.Forms.User
         private void LoadUsersActionUser()
         {
             UserController userController = new UserController();
-            userController.InsertActionsUser("Ingresó al gestor de usuarios", Environment.MachineName, "127.0.0.1", UserCache.user_id, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+            userController.InsertActionsUser(UserCache.name + " " + UserCache.lastname + " ingresó al gestor de usuarios", Environment.MachineName, "127.0.0.1", UserCache.user_id, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
         }
 
 

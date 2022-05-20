@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Common.Cache;
 using Domain;
 
 namespace Presentation.View.Forms.Client
@@ -17,6 +18,7 @@ namespace Presentation.View.Forms.Client
         {
             InitializeComponent();
             SelectAllCompanies();
+            InsertAction("está seleccionando una empresa desde el creador de clientes.");
         }
 
         CompanyController companyController = new CompanyController();
@@ -25,6 +27,7 @@ namespace Presentation.View.Forms.Client
             ClientCreate clientCreate = ((ClientCreate)(Owner));
             clientCreate.txt_company_client_view.Text = dgv_companies_child.CurrentRow.Cells[1].Value.ToString();
             clientCreate.txt_company_client.Text = dgv_companies_child.CurrentRow.Cells[0].Value.ToString();
+            InsertAction("seleccionó una empresa para asignarlo a un cliente");
             Close();
         }
 
@@ -42,6 +45,12 @@ namespace Presentation.View.Forms.Client
         private void pcb_close_create_client_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void InsertAction(string action)
+        {
+            UserController userController = new UserController();
+            userController.InsertActionsUser(UserCache.name + " " + UserCache.lastname + " " + action, Environment.MachineName, "127.0.0.1", UserCache.user_id, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
         }
     }
 }

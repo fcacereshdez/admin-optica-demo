@@ -11,6 +11,7 @@ using Domain;
 using Common.Models;
 using Presentation.View.Forms.Payment;
 using Presentation.View.Forms.Invoice;
+using Common.Cache;
 
 namespace Presentation.View.Forms.Client
 {
@@ -21,6 +22,7 @@ namespace Presentation.View.Forms.Client
         {
             InitializeComponent();
             SelectAllClients();
+            ClientsLoaded();
         }
 
         private void ClientCreate_FormClosed(object sender, FormClosedEventArgs e)
@@ -108,6 +110,17 @@ namespace Presentation.View.Forms.Client
         private void txt_search_client_TextChanged(object sender, EventArgs e)
         {
             dgv_clients.DataSource = clientController.SearchClient(txt_search_client.Text);
+        }
+
+        private void btn_export_clients_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Estámos trabajando en esta función. Intenta en la próxima actualización", "Aviso");
+        }
+
+        private void ClientsLoaded()
+        {
+            UserController userController = new UserController();
+            userController.InsertActionsUser(UserCache.name + " " + UserCache.lastname + " ingresó al gestor de clientes", Environment.MachineName, "127.0.0.1", UserCache.user_id, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
         }
     }
 }

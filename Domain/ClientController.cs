@@ -66,5 +66,10 @@ namespace Domain
         {
             clientAccountData.PayInovice(Convert.ToInt64(payment_method), Convert.ToDecimal(amount), DateTime.Now.ToString("yyyy-MM-dd"), 1, DateTime.Now.ToString("yyyy-MM-dd"), Convert.ToInt64(bank), reference, Convert.ToInt64(invoice));
         }
+
+        public void CountClients()
+        {
+            clientData.CountClients();
+        }
     }
 }

@@ -51,6 +51,12 @@ namespace Presentation.View.Forms.Product
             this.label7 = new System.Windows.Forms.Label();
             this.btn_save_product = new System.Windows.Forms.Button();
             this.lbl_error = new System.Windows.Forms.Label();
+            this.txt_price_cost = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txt_price_sale = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txt_code_product = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.pnl_top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_close_product)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_exit)).BeginInit();
@@ -196,7 +202,7 @@ namespace Presentation.View.Forms.Product
             // 
             this.txt_quantity.Location = new System.Drawing.Point(77, 128);
             this.txt_quantity.Name = "txt_quantity";
-            this.txt_quantity.Size = new System.Drawing.Size(54, 23);
+            this.txt_quantity.Size = new System.Drawing.Size(67, 23);
             this.txt_quantity.TabIndex = 92;
             // 
             // txt_color
@@ -217,15 +223,16 @@ namespace Presentation.View.Forms.Product
             // 
             // txt_notes
             // 
-            this.txt_notes.Location = new System.Drawing.Point(331, 131);
+            this.txt_notes.Location = new System.Drawing.Point(75, 201);
+            this.txt_notes.Multiline = true;
             this.txt_notes.Name = "txt_notes";
-            this.txt_notes.Size = new System.Drawing.Size(122, 23);
+            this.txt_notes.Size = new System.Drawing.Size(381, 46);
             this.txt_notes.TabIndex = 96;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(287, 134);
+            this.label7.Location = new System.Drawing.Point(12, 201);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(41, 15);
             this.label7.TabIndex = 95;
@@ -240,7 +247,7 @@ namespace Presentation.View.Forms.Product
             this.btn_save_product.ForeColor = System.Drawing.Color.White;
             this.btn_save_product.Image = global::Presentation.Properties.Resources.icons8_guardar_24;
             this.btn_save_product.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_save_product.Location = new System.Drawing.Point(318, 181);
+            this.btn_save_product.Location = new System.Drawing.Point(321, 262);
             this.btn_save_product.Name = "btn_save_product";
             this.btn_save_product.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btn_save_product.Size = new System.Drawing.Size(135, 30);
@@ -252,19 +259,73 @@ namespace Presentation.View.Forms.Product
             // lbl_error
             // 
             this.lbl_error.AutoSize = true;
-            this.lbl_error.Location = new System.Drawing.Point(14, 190);
+            this.lbl_error.Location = new System.Drawing.Point(12, 271);
             this.lbl_error.Name = "lbl_error";
             this.lbl_error.Size = new System.Drawing.Size(10, 15);
             this.lbl_error.TabIndex = 98;
             this.lbl_error.Text = ".";
             this.lbl_error.Visible = false;
             // 
+            // txt_price_cost
+            // 
+            this.txt_price_cost.Location = new System.Drawing.Point(373, 131);
+            this.txt_price_cost.Name = "txt_price_cost";
+            this.txt_price_cost.Size = new System.Drawing.Size(80, 23);
+            this.txt_price_cost.TabIndex = 100;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(276, 134);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(91, 15);
+            this.label8.TabIndex = 99;
+            this.label8.Text = "Precio de costo:";
+            // 
+            // txt_price_sale
+            // 
+            this.txt_price_sale.Location = new System.Drawing.Point(373, 163);
+            this.txt_price_sale.Name = "txt_price_sale";
+            this.txt_price_sale.Size = new System.Drawing.Size(80, 23);
+            this.txt_price_sale.TabIndex = 102;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(276, 166);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(91, 15);
+            this.label9.TabIndex = 101;
+            this.label9.Text = "Precio de venta:";
+            // 
+            // txt_code_product
+            // 
+            this.txt_code_product.Location = new System.Drawing.Point(77, 160);
+            this.txt_code_product.Name = "txt_code_product";
+            this.txt_code_product.Size = new System.Drawing.Size(193, 23);
+            this.txt_code_product.TabIndex = 104;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(12, 163);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(48, 15);
+            this.label10.TabIndex = 103;
+            this.label10.Text = "Código:";
+            // 
             // ProductCreate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(468, 233);
+            this.ClientSize = new System.Drawing.Size(468, 304);
+            this.Controls.Add(this.txt_code_product);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.txt_price_sale);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.txt_price_cost);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.lbl_error);
             this.Controls.Add(this.btn_save_product);
             this.Controls.Add(this.txt_notes);
@@ -288,7 +349,6 @@ namespace Presentation.View.Forms.Product
             this.Name = "ProductCreate";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Crear producto";
-//            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ProductCreate_FormClosed);
             this.pnl_top.ResumeLayout(false);
             this.pnl_top.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_close_product)).EndInit();
@@ -322,5 +382,11 @@ namespace Presentation.View.Forms.Product
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btn_save_product;
         private System.Windows.Forms.Label lbl_error;
+        private System.Windows.Forms.TextBox txt_price_cost;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txt_price_sale;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txt_code_product;
+        private System.Windows.Forms.Label label10;
     }
 }

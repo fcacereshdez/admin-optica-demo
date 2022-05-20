@@ -29,7 +29,7 @@ namespace DataAccess.Data
             }
         }
 
-        public void CreateProduct(string product_name, int product_quantity, string product_description, string product_color, Int64 category_id, Int64 model_id, Int64 brand_id, string created_at)
+        public void CreateProduct(string product_name, int product_quantity, string product_description, string product_color, string code_product, double price_cost, double price_sale, Int64 category_id, Int64 model_id, Int64 brand_id, string created_at)
         {
             using (var conn = GetConnection())
             {
@@ -43,6 +43,9 @@ namespace DataAccess.Data
                     cmd.Parameters.AddWithValue("@product_quantity", product_quantity);
                     cmd.Parameters.AddWithValue("@product_description", product_description);
                     cmd.Parameters.AddWithValue("@product_color", product_color);
+                    cmd.Parameters.AddWithValue("@product_code", code_product);
+                    cmd.Parameters.AddWithValue("@product_cost_price", price_cost);
+                    cmd.Parameters.AddWithValue("@product_sale_price", price_sale);
                     cmd.Parameters.AddWithValue("@category_id", category_id);
                     cmd.Parameters.AddWithValue("@model_id", model_id);
                     cmd.Parameters.AddWithValue("@brand_id", brand_id);
@@ -143,6 +146,27 @@ namespace DataAccess.Data
                 }
             }
         }
+
+        public DataTable SelectProductsByCategoryId(Int64 category_id)
+        {
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                using (var cmd = new SqlCommand())
+                {
+                    cmd.Connection = conn;
+                    cmd.CommandText = "SelectProductsByCategoryId";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@category_id", category_id);
+                    SqlDataReader ReaderProducts = cmd.ExecuteReader();
+                    DataTable TableProducts = new DataTable();
+                    TableProducts.Load(ReaderProducts);
+                    conn.Close();
+                    return TableProducts;
+                }
+            }
+        }
+
 
         public void CreateCategory(string category)
         {

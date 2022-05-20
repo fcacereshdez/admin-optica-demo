@@ -17,15 +17,21 @@ namespace Domain
             TableProducts = productData.SelectAllProducts();
             return TableProducts;
         }
-        public void CreateProduct(string product_name, string product_quantity, string product_description, string product_color, string category_id, string model_id, string brand_id)
+        public void CreateProduct(string product_name, string product_quantity, string product_description, string product_color, string product_code, string price_cost, string price_sale, string category_id, string model_id, string brand_id)
         {
-            productData.CreateProduct(product_name, Convert.ToInt32(product_quantity), product_description, product_color, Convert.ToInt64(category_id), Convert.ToInt64(model_id), Convert.ToInt64(brand_id), DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+            productData.CreateProduct(product_name, Convert.ToInt32(product_quantity), product_description, product_color, product_code, Convert.ToDouble(price_cost), Convert.ToDouble(price_sale), Convert.ToInt64(category_id), Convert.ToInt64(model_id), Convert.ToInt64(brand_id), DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
         }
         public DataTable SelectAllBrands()
         {
             DataTable TableBrands = new DataTable();
             TableBrands = productData.SelectAllBrands();
             return TableBrands;
+        }
+        public DataTable SelectProductsByCategoryId(string category_id)
+        {
+            DataTable TableProducts = new DataTable();
+            TableProducts = productData.SelectProductsByCategoryId(Convert.ToInt64(category_id));
+            return TableProducts;
         }
         public void CreateBrand(string brand)
         {

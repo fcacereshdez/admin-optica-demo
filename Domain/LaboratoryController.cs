@@ -11,7 +11,7 @@ namespace Domain
     public class LaboratoryController 
     {
         LaboratoryData laboratoryData = new LaboratoryData();
-        public DataTable SelectAllCompanies()
+        public DataTable SelectAllLaboratories()
         {
             DataTable TableLaboratories = new DataTable();
             TableLaboratories = laboratoryData.SelectAllLaboratories();

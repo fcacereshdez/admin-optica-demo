@@ -35,6 +35,7 @@ namespace Presentation.View.Forms.Client
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientSelector));
             this.pnl_top = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
             this.pcb_close_create_client = new System.Windows.Forms.PictureBox();
             this.pcb_close = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -51,6 +52,7 @@ namespace Presentation.View.Forms.Client
             // pnl_top
             // 
             this.pnl_top.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(29)))), ((int)(((byte)(26)))));
+            this.pnl_top.Controls.Add(this.label10);
             this.pnl_top.Controls.Add(this.pcb_close_create_client);
             this.pnl_top.Controls.Add(this.pcb_close);
             this.pnl_top.Dock = System.Windows.Forms.DockStyle.Top;
@@ -59,7 +61,17 @@ namespace Presentation.View.Forms.Client
             this.pnl_top.Name = "pnl_top";
             this.pnl_top.Size = new System.Drawing.Size(647, 35);
             this.pnl_top.TabIndex = 12;
-            this.pnl_top.Visible = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(12, 9);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(124, 17);
+            this.label10.TabIndex = 15;
+            this.label10.Text = "Selector de clientes";
             // 
             // pcb_close_create_client
             // 
@@ -178,6 +190,7 @@ namespace Presentation.View.Forms.Client
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Seleccionar empresa";
             this.pnl_top.ResumeLayout(false);
+            this.pnl_top.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_close_create_client)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_close)).EndInit();
             this.groupBox2.ResumeLayout(false);
@@ -196,5 +209,6 @@ namespace Presentation.View.Forms.Client
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.DataGridView dgv_clients_child;
         private System.Windows.Forms.PictureBox pcb_close_create_client;
+        private System.Windows.Forms.Label label10;
     }
 }

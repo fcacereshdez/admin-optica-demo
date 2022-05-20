@@ -57,7 +57,12 @@ namespace Domain
             TableRoles = userData.SelectAllRoles();
             return TableRoles;
         }
-
+        public DataTable SelectUsersByRoleId(string role_id)
+        {
+            DataTable TableUsers = new DataTable();
+            TableUsers = userData.SelectUsersByRoleId(Convert.ToInt64(role_id));
+            return TableUsers;
+        }
         public DataTable SelectAllstatus()
         {
             DataTable TableStatus = new DataTable();

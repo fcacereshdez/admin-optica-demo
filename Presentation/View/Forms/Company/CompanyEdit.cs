@@ -19,6 +19,7 @@ namespace Presentation.View.Forms.Company
         {
             InitializeComponent();
             LoadEditorData();
+            InsertAction("está editando una empresa con código " + Common.Models.Company.code);
         }
 
         private void pcb_close_edit_company_Click(object sender, EventArgs e)
@@ -87,6 +88,11 @@ namespace Presentation.View.Forms.Company
                 MessageBox.Show("Registro actualizado con éxito.", "Procesado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
+        }
+        private void InsertAction(string action)
+        {
+            UserController userController = new UserController();
+            userController.InsertActionsUser(UserCache.name + " " + UserCache.lastname + " " + action, Environment.MachineName, "127.0.0.1", UserCache.user_id, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
         }
     }
 }

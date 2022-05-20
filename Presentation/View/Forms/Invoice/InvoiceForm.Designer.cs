@@ -34,9 +34,6 @@ namespace Presentation.View.Forms.Invoice
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InvoiceForm));
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btn_resume_companies = new System.Windows.Forms.Button();
-            this.btn_reports_companies = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txt_search_company = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -45,60 +42,10 @@ namespace Presentation.View.Forms.Invoice
             this.btn_user_delete = new System.Windows.Forms.Button();
             this.btn_edit_user = new System.Windows.Forms.Button();
             this.dgv_invoices = new System.Windows.Forms.DataGridView();
-            this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_invoices)).BeginInit();
             this.SuspendLayout();
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox2.Controls.Add(this.btn_resume_companies);
-            this.groupBox2.Controls.Add(this.btn_reports_companies);
-            this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.groupBox2.Location = new System.Drawing.Point(25, 229);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox2.Size = new System.Drawing.Size(177, 105);
-            this.groupBox2.TabIndex = 16;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Comunes";
-            // 
-            // btn_resume_companies
-            // 
-            this.btn_resume_companies.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
-            this.btn_resume_companies.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
-            this.btn_resume_companies.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_resume_companies.ForeColor = System.Drawing.Color.White;
-            this.btn_resume_companies.Image = global::Presentation.Properties.Resources.icons8_asignación_entregado_24__1_;
-            this.btn_resume_companies.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_resume_companies.Location = new System.Drawing.Point(15, 61);
-            this.btn_resume_companies.Name = "btn_resume_companies";
-            this.btn_resume_companies.Padding = new System.Windows.Forms.Padding(15, 0, 5, 0);
-            this.btn_resume_companies.Size = new System.Drawing.Size(143, 30);
-            this.btn_resume_companies.TabIndex = 6;
-            this.btn_resume_companies.Text = "Exportar";
-            this.btn_resume_companies.UseVisualStyleBackColor = false;
-            // 
-            // btn_reports_companies
-            // 
-            this.btn_reports_companies.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
-            this.btn_reports_companies.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
-            this.btn_reports_companies.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_reports_companies.ForeColor = System.Drawing.Color.White;
-            this.btn_reports_companies.Image = global::Presentation.Properties.Resources.icons8_asignación_entregado_24__1_;
-            this.btn_reports_companies.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_reports_companies.Location = new System.Drawing.Point(15, 25);
-            this.btn_reports_companies.Name = "btn_reports_companies";
-            this.btn_reports_companies.Padding = new System.Windows.Forms.Padding(15, 0, 5, 0);
-            this.btn_reports_companies.Size = new System.Drawing.Size(143, 30);
-            this.btn_reports_companies.TabIndex = 5;
-            this.btn_reports_companies.Text = "Exportar";
-            this.btn_reports_companies.UseVisualStyleBackColor = false;
             // 
             // groupBox3
             // 
@@ -250,7 +197,6 @@ namespace Presentation.View.Forms.Invoice
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(850, 510);
-            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgv_invoices);
@@ -260,7 +206,6 @@ namespace Presentation.View.Forms.Invoice
             this.Name = "InvoiceForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Facturas";
-            this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -270,10 +215,6 @@ namespace Presentation.View.Forms.Invoice
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox groupBox2;
-        public System.Windows.Forms.Button btn_resume_companies;
-        private System.Windows.Forms.Button btn_reports_companies;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox txt_search_company;
         private System.Windows.Forms.Label label1;

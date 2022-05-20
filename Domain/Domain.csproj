@@ -50,7 +50,6 @@
     <Compile Include="InvoiceController.cs" />
     <Compile Include="LaboratoryController.cs" />
     <Compile Include="ProductController.cs" />
-    <Compile Include="ProviderController.cs" />
     <Compile Include="RecipeController.cs" />
     <Compile Include="UserController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

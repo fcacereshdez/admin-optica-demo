@@ -63,7 +63,7 @@ namespace Presentation.View.Forms.Company
         private void InsertActionUser()
         {
             UserController userController = new UserController();
-            userController.InsertActionsUser("Accedió a la gestión de empresas", Environment.MachineName, "127.0.0.1", UserCache.user_id, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+            userController.InsertActionsUser(UserCache.name + " " + UserCache.lastname + " accedió a la gestión de empresas", Environment.MachineName, "127.0.0.1", UserCache.user_id, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
         }
 
         private void btn_delete_company_Click(object sender, EventArgs e)

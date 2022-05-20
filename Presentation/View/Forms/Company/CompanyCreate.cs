@@ -20,6 +20,7 @@ namespace Presentation.View.Forms.Company
         {
             InitializeComponent();
             SelectLastCodeCompany();
+            InsertAction("está creando una empresa.");
         }
 
         private void btn_save_company_Click(object sender, EventArgs e)
@@ -81,6 +82,12 @@ namespace Presentation.View.Forms.Company
         private void pcb_close_create_user_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void InsertAction(string action)
+        {
+            UserController userController = new UserController();
+            userController.InsertActionsUser(UserCache.name + " " + UserCache.lastname + " " + action, Environment.MachineName, "127.0.0.1", UserCache.user_id, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
         }
     }
 }

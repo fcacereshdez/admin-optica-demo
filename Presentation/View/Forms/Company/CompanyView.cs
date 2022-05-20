@@ -1,4 +1,6 @@
-﻿using Common.Models;
+﻿using Common.Cache;
+using Common.Models;
+using Domain;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +19,7 @@ namespace Presentation.View.Forms.Company
         {
             InitializeComponent();
             LoadViewData();
+            InsertAction("está revisando el perfil de una empresa.");
         }
         private void LoadViewData()
         {
@@ -42,6 +45,12 @@ namespace Presentation.View.Forms.Company
         private void pcb_close_edit_company_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void InsertAction(string action)
+        {
+            UserController userController = new UserController();
+            userController.InsertActionsUser(UserCache.name + " " + UserCache.lastname + " " + action, Environment.MachineName, "127.0.0.1", UserCache.user_id, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
         }
     }
 }

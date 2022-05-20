@@ -1,4 +1,5 @@
-﻿using Domain;
+﻿using Common.Cache;
+using Domain;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -43,6 +44,7 @@ namespace Presentation.View.Forms.Product
             {
                 productController.EditCategory(txt_category_name.Text, txt_category_id.Text);
                 MessageBox.Show("Actualizado correctamente.");
+                InsertAction("actualizó una categoría.");
                 txt_category_name.Clear();
                 txt_action.Clear();
                 SelectAllCategories();
@@ -57,6 +59,7 @@ namespace Presentation.View.Forms.Product
                 {
                     productController.CreateCategory(txt_category_name.Text);
                     MessageBox.Show("Guardado correctamente.");
+                    InsertAction("creó una categoría.");
                     txt_category_name.Clear();
                     SelectAllCategories();
                 }
@@ -68,12 +71,19 @@ namespace Presentation.View.Forms.Product
             if (dgv_categories.SelectedRows.Count > 0)
             {
                 productController.DeleteCategory(dgv_categories.SelectedRows[0].Cells[0].Value.ToString());
+                InsertAction("eliminó una categoría.");
                 SelectAllCategories();
             }
             else
             {
                 MessageBox.Show("Debe seleccionar una categoría antes de continuar.");
             }
+        }
+
+        private void InsertAction(string action)
+        {
+            UserController userController = new UserController();
+            userController.InsertActionsUser(UserCache.name + " " + UserCache.lastname + " " + action, Environment.MachineName, "127.0.0.1", UserCache.user_id, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
         }
     }
 }

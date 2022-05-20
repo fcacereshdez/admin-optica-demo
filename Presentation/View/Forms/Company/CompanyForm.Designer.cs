@@ -43,13 +43,9 @@ namespace Presentation.View.Forms.Company
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txt_search_company = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btn_report_companies = new System.Windows.Forms.Button();
-            this.btn_company_resume = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_companies)).BeginInit();
             this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -222,7 +218,6 @@ namespace Presentation.View.Forms.Company
             this.txt_search_company.Size = new System.Drawing.Size(550, 25);
             this.txt_search_company.TabIndex = 1;
             this.txt_search_company.TextChanged += new System.EventHandler(this.txt_search_company_TextChanged);
-//            this.txt_search_company.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_search_company_KeyUp);
             // 
             // label1
             // 
@@ -234,66 +229,12 @@ namespace Presentation.View.Forms.Company
             this.label1.TabIndex = 0;
             this.label1.Text = "Buscar:";
             // 
-            // groupBox3
-            // 
-            this.groupBox3.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox3.Controls.Add(this.btn_report_companies);
-            this.groupBox3.Controls.Add(this.btn_company_resume);
-            this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.groupBox3.Location = new System.Drawing.Point(18, 316);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.groupBox3.Size = new System.Drawing.Size(177, 106);
-            this.groupBox3.TabIndex = 11;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Comunes";
-            // 
-            // btn_report_companies
-            // 
-            this.btn_report_companies.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
-            this.btn_report_companies.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
-            this.btn_report_companies.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_report_companies.ForeColor = System.Drawing.Color.White;
-            this.btn_report_companies.Image = global::Presentation.Properties.Resources.icons8_script_de_informes_de_gráficos_241;
-            this.btn_report_companies.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_report_companies.Location = new System.Drawing.Point(18, 65);
-            this.btn_report_companies.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btn_report_companies.Name = "btn_report_companies";
-            this.btn_report_companies.Padding = new System.Windows.Forms.Padding(17, 0, 6, 0);
-            this.btn_report_companies.Size = new System.Drawing.Size(143, 30);
-            this.btn_report_companies.TabIndex = 5;
-            this.btn_report_companies.Text = "Reportes";
-            this.btn_report_companies.UseVisualStyleBackColor = false;
-            this.btn_report_companies.Click += new System.EventHandler(this.btn_report_companies_Click);
-            // 
-            // btn_company_resume
-            // 
-            this.btn_company_resume.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
-            this.btn_company_resume.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
-            this.btn_company_resume.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_company_resume.ForeColor = System.Drawing.Color.White;
-            this.btn_company_resume.Image = global::Presentation.Properties.Resources.icons8_script_de_informes_de_gráficos_241;
-            this.btn_company_resume.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_company_resume.Location = new System.Drawing.Point(18, 27);
-            this.btn_company_resume.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btn_company_resume.Name = "btn_company_resume";
-            this.btn_company_resume.Padding = new System.Windows.Forms.Padding(17, 0, 6, 0);
-            this.btn_company_resume.Size = new System.Drawing.Size(143, 30);
-            this.btn_company_resume.TabIndex = 4;
-            this.btn_company_resume.Text = "Reportes";
-            this.btn_company_resume.UseVisualStyleBackColor = false;
-            this.btn_company_resume.Click += new System.EventHandler(this.btn_company_report_Click);
-            // 
             // CompanyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(850, 510);
-            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.dgv_companies);
             this.Controls.Add(this.groupBox1);
@@ -307,7 +248,6 @@ namespace Presentation.View.Forms.Company
             ((System.ComponentModel.ISupportInitialize)(this.dgv_companies)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -323,8 +263,5 @@ namespace Presentation.View.Forms.Company
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txt_search_company;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox3;
-        public System.Windows.Forms.Button btn_company_resume;
-        public System.Windows.Forms.Button btn_report_companies;
     }
 }

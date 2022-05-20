@@ -103,7 +103,7 @@ namespace Presentation
         private void LogoutUsersActionUser()
         {
             UserController userController = new UserController();
-            userController.InsertActionsUser("Cerró sesión", Environment.MachineName, "127.0.0.1", UserCache.user_id, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+            userController.InsertActionsUser(UserCache.name + " " + UserCache.lastname + " cerró sesión", Environment.MachineName, "127.0.0.1", UserCache.user_id, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
         }
 
         private void pcb_close_form_Click(object sender, EventArgs e)

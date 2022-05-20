@@ -241,6 +241,26 @@ namespace DataAccess
             }
         }
 
+        public DataTable SelectUsersByRoleId(Int64 role_id)
+        {
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                using (var cmd = new SqlCommand())
+                {
+                    cmd.Connection = conn;
+                    cmd.CommandText = "SelectUsersByRoleId";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@role_id", role_id);
+                    SqlDataReader ReaderUsers = cmd.ExecuteReader();
+                    DataTable TableUsers = new DataTable();
+                    TableUsers.Load(ReaderUsers);
+                    conn.Close();
+                    return TableUsers;
+                }
+            }
+        }
+
         public DataTable SelectAllStatus()
         {
             using (var conn = GetConnection())

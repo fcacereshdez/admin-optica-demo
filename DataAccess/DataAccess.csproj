@@ -50,7 +50,6 @@
     <Compile Include="Data\InvoiceData.cs" />
     <Compile Include="Data\LaboratoryData.cs" />
     <Compile Include="Data\ProductData.cs" />
-    <Compile Include="Data\ProviderData.cs" />
     <Compile Include="Data\RecipeData.cs" />
     <Compile Include="Data\ReportsData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

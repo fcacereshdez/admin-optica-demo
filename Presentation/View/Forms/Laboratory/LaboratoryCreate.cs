@@ -1,4 +1,5 @@
-﻿using Domain;
+﻿using Common.Cache;
+using Domain;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +18,7 @@ namespace Presentation.View.Forms.Laboratory
         public LaboratoryCreate()
         {
             InitializeComponent();
+            InsertAction("creó un laboratorio.");
         }
 
         private void btn_save_laboratory_Click(object sender, EventArgs e)
@@ -47,6 +49,12 @@ namespace Presentation.View.Forms.Laboratory
         private void pcb_close_laboratory_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void InsertAction(string action)
+        {
+            UserController userController = new UserController();
+            userController.InsertActionsUser(UserCache.name + " " + UserCache.lastname + " " + action, Environment.MachineName, "127.0.0.1", UserCache.user_id, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
         }
     }
 }
