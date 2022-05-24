@@ -22,6 +22,8 @@ using Presentation.View.Forms.Home;
 using Presentation.View.Forms.User;
 using Presentation.View.Forms.Invoice;
 
+// añadir ajustes en la interfaz inicial
+
 namespace Presentation
 {
     public partial class Layout : Form
@@ -35,6 +37,7 @@ namespace Presentation
             InitializeComponent();
             LoadSystemInfo();
             LoadUserData();
+            PolicyFunctionsForUsers(UserCache.slug_role);
         }
 
         private void LoadSystemInfo()
@@ -185,6 +188,53 @@ namespace Presentation
         private void btn_facturation_Click(object sender, EventArgs e)
         {
             ShowForm(new InvoiceForm());
+        }
+
+        private void PolicyFunctionsForUsers(string slug_role)
+        {
+
+            if (slug_role == "superadmin" || slug_role == "admin")
+            {
+                btn_dashboard.Enabled = true;
+                btn_clients.Enabled = true;
+                btn_companies.Enabled = true;
+                btn_labs.Enabled = true;
+                btn_recipes.Enabled = true;
+                btn_facturation.Enabled = true;
+                btn_products.Enabled = true;
+                btn_reports.Enabled = true;
+                btn_shipping.Enabled = true;
+                btn_users.Enabled = true;
+                btn_about_info.Enabled = true;
+            }
+            else if (slug_role == "seller" || slug_role == "seller-optometryst" || slug_role == "optometryst")
+            {
+                btn_dashboard.Enabled = false;
+                btn_clients.Enabled = true;
+                btn_companies.Enabled = true;
+                btn_labs.Enabled = false;
+                btn_recipes.Enabled = true;
+                btn_facturation.Enabled = false;
+                btn_products.Enabled = false;
+                btn_reports.Enabled = false;
+                btn_shipping.Enabled = false;
+                btn_users.Enabled = false;
+                btn_about_info.Enabled = true;
+            }
+            else
+            {
+                btn_dashboard.Enabled = false;
+                btn_clients.Enabled = false;
+                btn_companies.Enabled = false;
+                btn_labs.Enabled = false;
+                btn_recipes.Enabled = false;
+                btn_facturation.Enabled = false;
+                btn_products.Enabled = false;
+                btn_reports.Enabled = false;
+                btn_shipping.Enabled = false;
+                btn_users.Enabled = false;
+                btn_about_info.Enabled = true;
+            }
         }
     }
 }

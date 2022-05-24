@@ -32,15 +32,5 @@ namespace Presentation.View.Reports
             Close();
         }
 
-        private void pb_maximize_window_Click(object sender, EventArgs e)
-        {
-            if (WindowState == FormWindowState.Normal)
-            {
-                WindowState = FormWindowState.Maximized;
-            }
-            else {
-                WindowState = FormWindowState.Normal;
-            }
-        }
     }
 }

@@ -37,9 +37,21 @@ namespace Presentation.View.Forms.Company
 
         private void btn_create_company_Click(object sender, EventArgs e)
         {
-            CompanyCreate companyCreate = new CompanyCreate();
-            companyCreate.FormClosed += new FormClosedEventHandler(CompanyCreate_FormClosed);
-            companyCreate.ShowDialog();
+            try
+            {
+                CompanyCreate companyCreate = new CompanyCreate();
+                companyCreate.FormClosed += new FormClosedEventHandler(CompanyCreate_FormClosed);
+                companyCreate.ShowDialog();
+            }
+            catch (Exception errCompanies)
+            {
+                MessageBox.Show("Ocurrió un error al intentar ejecutar esto. " +
+                    "\n\nEl error se produjo en: " + errCompanies.Source +
+                    "\n\nDetalles: " + errCompanies.Message +
+                    "\n\nAcciones: " + "Notificar al programador.",
+                    "Error", MessageBoxButtons.OK, 
+                    MessageBoxIcon.Error); ;
+            }
         }
 
         private void CompanyCreate_FormClosed(object sender, FormClosedEventArgs e)
@@ -49,10 +61,22 @@ namespace Presentation.View.Forms.Company
 
         private void btn_edit_company_Click(object sender, EventArgs e)
         {
-            companyController.SelectCompanyById(dgv_companies.SelectedRows[0].Cells[0].Value.ToString());
-            CompanyEdit companyEdit = new CompanyEdit();
-            companyEdit.FormClosed += new FormClosedEventHandler(CompanyEdit_FormClosed);
-            companyEdit.ShowDialog();
+            try
+            {
+                companyController.SelectCompanyById(dgv_companies.SelectedRows[0].Cells[0].Value.ToString());
+                CompanyEdit companyEdit = new CompanyEdit();
+                companyEdit.FormClosed += new FormClosedEventHandler(CompanyEdit_FormClosed);
+                companyEdit.ShowDialog();
+            }
+            catch (Exception errCompanies)
+            {
+                MessageBox.Show("Ocurrió un error al intentar ejecutar esto. " +
+                    "\n\nEl error se produjo en: " + errCompanies.Source +
+                    "\n\nDetalles: " + errCompanies.Message +
+                    "\n\nAcciones: " + "Notificar al programador.",
+                    "Error", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error); ;
+            }
         }
 
         private void CompanyEdit_FormClosed(object sender, FormClosedEventArgs e)
@@ -79,9 +103,9 @@ namespace Presentation.View.Forms.Company
                     userController.InsertActionsUser("Eliminió una empresa", Environment.MachineName, "127.0.0.1", UserCache.user_id, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
                     SelectAllCompanies();
                 }
-                catch (Exception exception)
+                catch (Exception errCompanies)
                 {
-                    MessageBox.Show("Error MSSQLSERVER (0x000001): " + exception.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Error MSSQLSERVER (0x000001): " + errCompanies.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }

@@ -50,6 +50,8 @@ namespace Presentation.View.Forms.Client
             this.btn_save_client = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dtp_date = new System.Windows.Forms.DateTimePicker();
+            this.label8 = new System.Windows.Forms.Label();
             this.btn_search_company = new System.Windows.Forms.Button();
             this.txt_company_client_view = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -63,8 +65,6 @@ namespace Presentation.View.Forms.Client
             this.txt_company_client = new System.Windows.Forms.TextBox();
             this.txt_notes_client = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.dtp_date = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_close_create_client)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_exit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_minus)).BeginInit();
@@ -199,6 +199,7 @@ namespace Presentation.View.Forms.Client
             // 
             // pcb_close_create_client
             // 
+            this.pcb_close_create_client.Image = global::Presentation.Properties.Resources.close;
             this.pcb_close_create_client.Location = new System.Drawing.Point(753, 2);
             this.pcb_close_create_client.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pcb_close_create_client.Name = "pcb_close_create_client";
@@ -235,6 +236,7 @@ namespace Presentation.View.Forms.Client
             this.btn_save_client.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_save_client.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_save_client.ForeColor = System.Drawing.Color.White;
+            this.btn_save_client.Image = global::Presentation.Properties.Resources.icons8_guardar_24;
             this.btn_save_client.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_save_client.Location = new System.Drawing.Point(631, 337);
             this.btn_save_client.Name = "btn_save_client";
@@ -291,6 +293,23 @@ namespace Presentation.View.Forms.Client
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Información de la empresa";
+            // 
+            // dtp_date
+            // 
+            this.dtp_date.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_date.Location = new System.Drawing.Point(587, 48);
+            this.dtp_date.Name = "dtp_date";
+            this.dtp_date.Size = new System.Drawing.Size(159, 23);
+            this.dtp_date.TabIndex = 24;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(584, 27);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(120, 15);
+            this.label8.TabIndex = 23;
+            this.label8.Text = "Fecha de nacimiento:";
             // 
             // btn_search_company
             // 
@@ -423,23 +442,6 @@ namespace Presentation.View.Forms.Client
             this.groupBox3.TabIndex = 29;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Observaciones";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(584, 27);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(120, 15);
-            this.label8.TabIndex = 23;
-            this.label8.Text = "Fecha de nacimiento:";
-            // 
-            // dtp_date
-            // 
-            this.dtp_date.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_date.Location = new System.Drawing.Point(587, 48);
-            this.dtp_date.Name = "dtp_date";
-            this.dtp_date.Size = new System.Drawing.Size(159, 23);
-            this.dtp_date.TabIndex = 24;
             // 
             // ClientCreate
             // 

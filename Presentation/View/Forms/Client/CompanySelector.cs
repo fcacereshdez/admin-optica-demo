@@ -52,5 +52,10 @@ namespace Presentation.View.Forms.Client
             UserController userController = new UserController();
             userController.InsertActionsUser(UserCache.name + " " + UserCache.lastname + " " + action, Environment.MachineName, "127.0.0.1", UserCache.user_id, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
         }
+
+        private void txt_search_company_TextChanged(object sender, EventArgs e)
+        {
+            dgv_companies_child.DataSource = companyController.SearchCompany(txt_search_company.Text);
+        }
     }
 }

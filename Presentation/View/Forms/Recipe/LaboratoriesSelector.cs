@@ -33,5 +33,17 @@ namespace Presentation.View.Forms.Recipe
             recipeCreate.txt_laboratory_id.Text = dgv_laboratories.SelectedRows[0].Cells[0].Value.ToString();
             Close();
         }
+
+        private void pcb_close_create_client_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void txt_search_laboratories_TextChanged(object sender, EventArgs e)
+        {
+            dgv_laboratories.DataSource = laboratoryController.SearchLaboratory(txt_search_laboratories.Text);
+            dgv_laboratories.Columns[0].Width = 25;
+            dgv_laboratories.Columns[1].Width = 170;
+        }
     }
 }

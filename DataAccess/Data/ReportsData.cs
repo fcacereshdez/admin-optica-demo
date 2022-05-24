@@ -29,5 +29,25 @@ namespace DataAccess.Data
             }
 
         }
+        public DataTable GetAuditAllUsers()
+        {
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                using (var cmd = new SqlCommand())
+                {
+                    cmd.Connection = conn;
+                    cmd.CommandText = "AuditAllUsers";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    SqlDataReader ReaderActions = cmd.ExecuteReader();
+                    DataTable TableUsers = new DataTable();
+                    TableUsers.Load(ReaderActions);
+                    conn.Close();
+                    return TableUsers;
+                }
+            }
+
+        }
+
     }
 }

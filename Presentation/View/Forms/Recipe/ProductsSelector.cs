@@ -28,6 +28,8 @@ namespace Presentation.View.Forms.Recipe
         private void btn_search_ring_Click(object sender, EventArgs e)
         {
            dgv_products.DataSource = productController.SelectProductsByCategoryId(cmb_categories.SelectedValue.ToString());
+            dgv_products.Columns[0].Width = 25;
+            dgv_products.Columns[1].Width = 170;
         }
 
         private void LoadData()
@@ -50,6 +52,18 @@ namespace Presentation.View.Forms.Recipe
                 recipeCreate.txt_glasses_id.Text = dgv_products.SelectedRows[0].Cells[0].Value.ToString();
             }
             Close();
+        }
+
+        private void pcb_close_create_client_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void txt_product_search_TextChanged(object sender, EventArgs e)
+        {
+          dgv_products.DataSource = productController.SearchProduct(txt_product_search.Text);
+            dgv_products.Columns[0].Width = 25;
+            dgv_products.Columns[1].Width = 170;
         }
     }
 }

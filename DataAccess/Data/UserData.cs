@@ -34,6 +34,7 @@ namespace DataAccess
                             UserCache.email = reader.GetString(3);
                             UserCache.password = reader.GetString(4);
                             UserCache.role = reader.GetString(5);
+                            UserCache.slug_role = reader.GetString(6);
                         }
                         return true;
                     }

@@ -174,7 +174,7 @@ namespace DataAccess
                             Company.full_name = reader.GetString(1);
                             Company.code = reader.GetString(2);
                             Company.phone = reader.GetString(3);
-                            Company.secondary_phone = reader.GetString(4);
+                            Company.secondary_phone = reader.GetString(4); // Corregir valores NULL
                             Company.email = reader.GetString(5);
                             Company.address = reader.GetString(6);
                             Company.nit = reader.GetString(7);

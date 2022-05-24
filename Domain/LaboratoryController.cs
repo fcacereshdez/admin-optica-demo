@@ -22,5 +22,12 @@ namespace Domain
         {
             laboratoryData.CreateLaboratory(laboratory_name, laboratory_phone, laboratory_address, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
         }
+
+        public DataTable SearchLaboratory(string laboratory)
+        {
+            DataTable TableLaboratories = new DataTable();
+            TableLaboratories = laboratoryData.SearchLaboratory(laboratory);
+            return TableLaboratories;
+        }
     }
 }

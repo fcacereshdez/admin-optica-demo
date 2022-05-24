@@ -48,5 +48,25 @@ namespace DataAccess.Data
                 }
             }
         }
+
+        public DataTable SearchLaboratory(string laboratory)
+        {
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                using (var cmd = new SqlCommand())
+                {
+                    cmd.Connection = conn;
+                    cmd.CommandText = "SearchLaboratory";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@laboratory", laboratory);
+                    SqlDataReader ReaderLaboratories = cmd.ExecuteReader();
+                    DataTable TableLaboratories = new DataTable();
+                    TableLaboratories.Load(ReaderLaboratories);
+                    conn.Close();
+                    return TableLaboratories;
+                }
+            }
+        }
     }
 }

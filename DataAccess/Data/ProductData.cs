@@ -293,5 +293,25 @@ namespace DataAccess.Data
             }
         }
 
+        public DataTable SearchProduct(string product)
+        {
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                using (var cmd = new SqlCommand())
+                {
+                    cmd.Connection = conn;
+                    cmd.CommandText = "SearchProduct";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@product", product);
+                    SqlDataReader ReaderProducts = cmd.ExecuteReader();
+                    DataTable TableProducts = new DataTable();
+                    TableProducts.Load(ReaderProducts);
+                    conn.Close();
+                    return TableProducts;
+                }
+            }
+        }
+
     }
 }

@@ -35,6 +35,13 @@ namespace Domain
             return DataSetSalesBook;
         }
 
+        public DataTable GetAuditAllUsers()
+        {
+            DataTable DataSetAuditAllUsers = new DataTable();
+            DataSetAuditAllUsers = reportData.GetAuditAllUsers();
+            return DataSetAuditAllUsers;
+        }
+
         public void CountClients()
         {
             clientData.CountClients();

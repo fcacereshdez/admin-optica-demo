@@ -22,15 +22,16 @@
     <UpdateIntervalUnits>Days</UpdateIntervalUnits>
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
-    <MapFileExtensions>true</MapFileExtensions>
+    <MapFileExtensions>false</MapFileExtensions>
     <InstallUrl>\\WILFREDO\sigop\</InstallUrl>
     <UpdateUrl>\\WILFREDO\sigop\</UpdateUrl>
     <SupportUrl>https://www.themangostudios.com</SupportUrl>
     <TargetCulture>es</TargetCulture>
-    <ProductName>Sistema de Gestión para Ópticas</ProductName>
+    <ProductName>Interlenssv</ProductName>
     <PublisherName>Mango Studios</PublisherName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationRevision>11</ApplicationRevision>
     <ApplicationVersion>5.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -74,6 +75,12 @@
   <PropertyGroup>
     <ApplicationIcon>Resources\interlenssv_icon-removebg-preview.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
@@ -108,6 +115,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Datasets\AuditAllUsers.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AuditAllUsers.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Datasets\SalesBook.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -478,12 +490,26 @@
       <DependentUpon>UsersForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Reports\PendingByCompany.rdlc" />
-    <EmbeddedResource Include="View\Reports\SalesBook.rdlc" />
+    <EmbeddedResource Include="View\Reports\SalesBook.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Reports\SalesByOptometrist.rdlc" />
     <EmbeddedResource Include="View\Reports\SalesBySeller.rdlc" />
+    <EmbeddedResource Include="View\Reports\UserGeneralAudit.rdlc" />
     <EmbeddedResource Include="View\Reports\ViewerForm.resx">
       <DependentUpon>ViewerForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Datasets\AuditAllUsers.xsc">
+      <DependentUpon>AuditAllUsers.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\AuditAllUsers.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AuditAllUsers.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Datasets\AuditAllUsers.xss">
+      <DependentUpon>AuditAllUsers.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -527,11 +553,6 @@
     <None Include="Resources\empresa.png" />
   </ItemGroup>
   <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
-      <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 y x64%29</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
       <Visible>False</Visible>
       <ProductName>.NET Framework 3.5 SP1</ProductName>
@@ -748,6 +769,7 @@
     <None Include="Resources\icons8-maximizar-la-ventana-24.png" />
     <None Include="Resources\icons8-maximizar-la-ventana-24 %281%29.png" />
     <None Include="Resources\icons8-file-invoice-dollar-24.png" />
+    <None Include="Resources\icons8-chevron-derecha-en-círculo-24.png" />
     <Content Include="Resources\interlenssv_icon-removebg-preview.ico" />
     <None Include="Resources\icons8-marca-24.png" />
     <None Include="Resources\icons8-basculas-en-3d-24.png" />

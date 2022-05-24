@@ -189,6 +189,7 @@ namespace Presentation.View.Forms.Recipe
             this.pcb_close_create_client.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pcb_close_create_client.TabIndex = 15;
             this.pcb_close_create_client.TabStop = false;
+            this.pcb_close_create_client.Click += new System.EventHandler(this.pcb_close_create_client_Click);
             // 
             // pcb_close
             // 

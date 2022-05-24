@@ -29,17 +29,19 @@ namespace Presentation.View.Forms.Recipe
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnl_top = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tb_recipe = new System.Windows.Forms.TabControl();
+            this.tp_clients = new System.Windows.Forms.TabPage();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.dgv_recipes = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dtp_date = new System.Windows.Forms.DateTimePicker();
             this.lbl_client_age = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.lbl_phone_client = new System.Windows.Forms.Label();
@@ -52,8 +54,12 @@ namespace Presentation.View.Forms.Recipe
             this.label2 = new System.Windows.Forms.Label();
             this.lbl_client_name = new System.Windows.Forms.Label();
             this.txt_recipe_number = new System.Windows.Forms.TextBox();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tp_tests = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.cb_process = new System.Windows.Forms.CheckBox();
+            this.cb_ar = new System.Windows.Forms.CheckBox();
+            this.txt_glasses_id = new System.Windows.Forms.TextBox();
+            this.txt_ring_id = new System.Windows.Forms.TextBox();
             this.rb_aa = new System.Windows.Forms.RadioButton();
             this.rb_sa = new System.Windows.Forms.RadioButton();
             this.rb_comp = new System.Windows.Forms.RadioButton();
@@ -114,7 +120,7 @@ namespace Presentation.View.Forms.Recipe
             this.txt_esf_od = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tp_health = new System.Windows.Forms.TabPage();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.txt_retinoscopy = new System.Windows.Forms.TextBox();
             this.label42 = new System.Windows.Forms.Label();
@@ -137,8 +143,10 @@ namespace Presentation.View.Forms.Recipe
             this.cb_diabetes = new System.Windows.Forms.CheckBox();
             this.cb_cataract = new System.Windows.Forms.CheckBox();
             this.cb_hypertension = new System.Windows.Forms.CheckBox();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tp_others = new System.Windows.Forms.TabPage();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.txt_seller_id = new System.Windows.Forms.TextBox();
+            this.txt_id_optometryst = new System.Windows.Forms.TextBox();
             this.btn_seller_search = new System.Windows.Forms.Button();
             this.txt_seller = new System.Windows.Forms.TextBox();
             this.label48 = new System.Windows.Forms.Label();
@@ -146,6 +154,7 @@ namespace Presentation.View.Forms.Recipe
             this.txt_optometryst = new System.Windows.Forms.TextBox();
             this.label51 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.txt_laboratory_id = new System.Windows.Forms.TextBox();
             this.dtp_delivery = new System.Windows.Forms.DateTimePicker();
             this.label33 = new System.Windows.Forms.Label();
             this.dtp_admission = new System.Windows.Forms.DateTimePicker();
@@ -164,33 +173,26 @@ namespace Presentation.View.Forms.Recipe
             this.label43 = new System.Windows.Forms.Label();
             this.txt_invoice_laboratory = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
-            this.txt_laboratory_id = new System.Windows.Forms.TextBox();
-            this.txt_id_optometryst = new System.Windows.Forms.TextBox();
-            this.txt_seller_id = new System.Windows.Forms.TextBox();
-            this.dtp_date = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txt_ring_id = new System.Windows.Forms.TextBox();
-            this.txt_glasses_id = new System.Windows.Forms.TextBox();
-            this.cb_ar = new System.Windows.Forms.CheckBox();
-            this.cb_process = new System.Windows.Forms.CheckBox();
+            this.btn_next = new System.Windows.Forms.Button();
             this.btn_save_recipe = new System.Windows.Forms.Button();
             this.pcb_close_create_recipe = new System.Windows.Forms.PictureBox();
             this.pcb_exit = new System.Windows.Forms.PictureBox();
             this.pcb_minus = new System.Windows.Forms.PictureBox();
+            this.lbl_errors = new System.Windows.Forms.Label();
             this.pnl_top.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.tb_recipe.SuspendLayout();
+            this.tp_clients.SuspendLayout();
             this.groupBox9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_recipes)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            this.tp_tests.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
+            this.tp_health.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
-            this.tabPage4.SuspendLayout();
+            this.tp_others.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox8.SuspendLayout();
@@ -224,29 +226,29 @@ namespace Presentation.View.Forms.Recipe
             this.label10.TabIndex = 6;
             this.label10.Text = "Recetas";
             // 
-            // tabControl1
+            // tb_recipe
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Location = new System.Drawing.Point(12, 37);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(775, 415);
-            this.tabControl1.TabIndex = 34;
+            this.tb_recipe.Controls.Add(this.tp_clients);
+            this.tb_recipe.Controls.Add(this.tp_tests);
+            this.tb_recipe.Controls.Add(this.tp_health);
+            this.tb_recipe.Controls.Add(this.tp_others);
+            this.tb_recipe.Location = new System.Drawing.Point(12, 37);
+            this.tb_recipe.Name = "tb_recipe";
+            this.tb_recipe.SelectedIndex = 0;
+            this.tb_recipe.Size = new System.Drawing.Size(775, 415);
+            this.tb_recipe.TabIndex = 34;
             // 
-            // tabPage1
+            // tp_clients
             // 
-            this.tabPage1.Controls.Add(this.groupBox9);
-            this.tabPage1.Controls.Add(this.groupBox1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 24);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(767, 387);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Cliente";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tp_clients.Controls.Add(this.groupBox9);
+            this.tp_clients.Controls.Add(this.groupBox1);
+            this.tp_clients.Location = new System.Drawing.Point(4, 24);
+            this.tp_clients.Name = "tp_clients";
+            this.tp_clients.Padding = new System.Windows.Forms.Padding(3);
+            this.tp_clients.Size = new System.Drawing.Size(767, 387);
+            this.tp_clients.TabIndex = 0;
+            this.tp_clients.Text = "Cliente";
+            this.tp_clients.UseVisualStyleBackColor = true;
             // 
             // groupBox9
             // 
@@ -269,23 +271,23 @@ namespace Presentation.View.Forms.Recipe
             this.dgv_recipes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(241)))));
             this.dgv_recipes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_recipes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(134)))), ((int)(((byte)(14)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(171)))), ((int)(((byte)(173)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_recipes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(134)))), ((int)(((byte)(14)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(171)))), ((int)(((byte)(173)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_recipes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgv_recipes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.WindowFrame;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_recipes.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.WindowFrame;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_recipes.DefaultCellStyle = dataGridViewCellStyle10;
             this.dgv_recipes.EnableHeadersVisualStyles = false;
             this.dgv_recipes.Location = new System.Drawing.Point(9, 23);
             this.dgv_recipes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -293,17 +295,17 @@ namespace Presentation.View.Forms.Recipe
             this.dgv_recipes.Name = "dgv_recipes";
             this.dgv_recipes.ReadOnly = true;
             this.dgv_recipes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(134)))), ((int)(((byte)(14)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.WindowFrame;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_recipes.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.WindowFrame;
-            this.dgv_recipes.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(134)))), ((int)(((byte)(14)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.WindowFrame;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_recipes.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.WindowFrame;
+            this.dgv_recipes.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.dgv_recipes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_recipes.Size = new System.Drawing.Size(733, 167);
             this.dgv_recipes.TabIndex = 11;
@@ -331,6 +333,25 @@ namespace Presentation.View.Forms.Recipe
             this.groupBox1.TabIndex = 44;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Información básica";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(579, 101);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(41, 15);
+            this.label3.TabIndex = 52;
+            this.label3.Text = "Fecha:";
+            // 
+            // dtp_date
+            // 
+            this.dtp_date.CustomFormat = "yyyy-MM-dd";
+            this.dtp_date.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtp_date.Location = new System.Drawing.Point(626, 95);
+            this.dtp_date.Name = "dtp_date";
+            this.dtp_date.Size = new System.Drawing.Size(116, 23);
+            this.dtp_date.TabIndex = 51;
             // 
             // lbl_client_age
             // 
@@ -453,18 +474,18 @@ namespace Presentation.View.Forms.Recipe
             this.txt_recipe_number.Size = new System.Drawing.Size(57, 23);
             this.txt_recipe_number.TabIndex = 40;
             // 
-            // tabPage2
+            // tp_tests
             // 
-            this.tabPage2.Controls.Add(this.groupBox4);
-            this.tabPage2.Controls.Add(this.groupBox3);
-            this.tabPage2.Controls.Add(this.groupBox2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 24);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(767, 387);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Examen";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tp_tests.Controls.Add(this.groupBox4);
+            this.tp_tests.Controls.Add(this.groupBox3);
+            this.tp_tests.Controls.Add(this.groupBox2);
+            this.tp_tests.Location = new System.Drawing.Point(4, 24);
+            this.tp_tests.Name = "tp_tests";
+            this.tp_tests.Padding = new System.Windows.Forms.Padding(3);
+            this.tp_tests.Size = new System.Drawing.Size(767, 387);
+            this.tp_tests.TabIndex = 1;
+            this.tp_tests.Text = "Examen";
+            this.tp_tests.UseVisualStyleBackColor = true;
             // 
             // groupBox4
             // 
@@ -492,6 +513,44 @@ namespace Presentation.View.Forms.Recipe
             this.groupBox4.TabIndex = 49;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Información de los lentes";
+            // 
+            // cb_process
+            // 
+            this.cb_process.AutoSize = true;
+            this.cb_process.Location = new System.Drawing.Point(427, 109);
+            this.cb_process.Name = "cb_process";
+            this.cb_process.Size = new System.Drawing.Size(68, 19);
+            this.cb_process.TabIndex = 100;
+            this.cb_process.Text = "Proceso";
+            this.cb_process.UseVisualStyleBackColor = true;
+            // 
+            // cb_ar
+            // 
+            this.cb_ar.AutoSize = true;
+            this.cb_ar.Location = new System.Drawing.Point(374, 109);
+            this.cb_ar.Name = "cb_ar";
+            this.cb_ar.Size = new System.Drawing.Size(41, 19);
+            this.cb_ar.TabIndex = 99;
+            this.cb_ar.Text = "AR";
+            this.cb_ar.UseVisualStyleBackColor = true;
+            // 
+            // txt_glasses_id
+            // 
+            this.txt_glasses_id.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_glasses_id.Location = new System.Drawing.Point(646, 61);
+            this.txt_glasses_id.Name = "txt_glasses_id";
+            this.txt_glasses_id.Size = new System.Drawing.Size(96, 23);
+            this.txt_glasses_id.TabIndex = 98;
+            this.txt_glasses_id.Visible = false;
+            // 
+            // txt_ring_id
+            // 
+            this.txt_ring_id.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_ring_id.Location = new System.Drawing.Point(646, 27);
+            this.txt_ring_id.Name = "txt_ring_id";
+            this.txt_ring_id.Size = new System.Drawing.Size(96, 23);
+            this.txt_ring_id.TabIndex = 97;
+            this.txt_ring_id.Visible = false;
             // 
             // rb_aa
             // 
@@ -551,6 +610,7 @@ namespace Presentation.View.Forms.Recipe
             this.txt_quantity.Name = "txt_quantity";
             this.txt_quantity.Size = new System.Drawing.Size(57, 23);
             this.txt_quantity.TabIndex = 91;
+            this.txt_quantity.Text = "0";
             // 
             // label36
             // 
@@ -577,9 +637,11 @@ namespace Presentation.View.Forms.Recipe
             // 
             // txt_glasses_name
             // 
+            this.txt_glasses_name.Enabled = false;
             this.txt_glasses_name.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_glasses_name.Location = new System.Drawing.Point(56, 61);
             this.txt_glasses_name.Name = "txt_glasses_name";
+            this.txt_glasses_name.ReadOnly = true;
             this.txt_glasses_name.Size = new System.Drawing.Size(170, 23);
             this.txt_glasses_name.TabIndex = 65;
             // 
@@ -608,9 +670,11 @@ namespace Presentation.View.Forms.Recipe
             // 
             // txt_ring_name
             // 
+            this.txt_ring_name.Enabled = false;
             this.txt_ring_name.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_ring_name.Location = new System.Drawing.Point(41, 27);
             this.txt_ring_name.Name = "txt_ring_name";
+            this.txt_ring_name.ReadOnly = true;
             this.txt_ring_name.Size = new System.Drawing.Size(185, 23);
             this.txt_ring_name.TabIndex = 62;
             // 
@@ -1073,17 +1137,17 @@ namespace Presentation.View.Forms.Recipe
             this.label30.TabIndex = 37;
             this.label30.Text = "OI";
             // 
-            // tabPage3
+            // tp_health
             // 
-            this.tabPage3.Controls.Add(this.groupBox7);
-            this.tabPage3.Controls.Add(this.groupBox6);
-            this.tabPage3.Location = new System.Drawing.Point(4, 24);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(767, 387);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Antecedentes de Salud";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.tp_health.Controls.Add(this.groupBox7);
+            this.tp_health.Controls.Add(this.groupBox6);
+            this.tp_health.Location = new System.Drawing.Point(4, 24);
+            this.tp_health.Name = "tp_health";
+            this.tp_health.Padding = new System.Windows.Forms.Padding(3);
+            this.tp_health.Size = new System.Drawing.Size(767, 387);
+            this.tp_health.TabIndex = 2;
+            this.tp_health.Text = "Antecedentes de Salud";
+            this.tp_health.UseVisualStyleBackColor = true;
             // 
             // groupBox7
             // 
@@ -1310,18 +1374,18 @@ namespace Presentation.View.Forms.Recipe
             this.cb_hypertension.Text = "Hipertensión";
             this.cb_hypertension.UseVisualStyleBackColor = true;
             // 
-            // tabPage4
+            // tp_others
             // 
-            this.tabPage4.Controls.Add(this.groupBox10);
-            this.tabPage4.Controls.Add(this.groupBox5);
-            this.tabPage4.Controls.Add(this.groupBox8);
-            this.tabPage4.Location = new System.Drawing.Point(4, 24);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(767, 387);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Otros";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.tp_others.Controls.Add(this.groupBox10);
+            this.tp_others.Controls.Add(this.groupBox5);
+            this.tp_others.Controls.Add(this.groupBox8);
+            this.tp_others.Location = new System.Drawing.Point(4, 24);
+            this.tp_others.Name = "tp_others";
+            this.tp_others.Padding = new System.Windows.Forms.Padding(3);
+            this.tp_others.Size = new System.Drawing.Size(767, 387);
+            this.tp_others.TabIndex = 3;
+            this.tp_others.Text = "Otros";
+            this.tp_others.UseVisualStyleBackColor = true;
             // 
             // groupBox10
             // 
@@ -1341,6 +1405,24 @@ namespace Presentation.View.Forms.Recipe
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Información de la venta";
             // 
+            // txt_seller_id
+            // 
+            this.txt_seller_id.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_seller_id.Location = new System.Drawing.Point(572, 57);
+            this.txt_seller_id.Name = "txt_seller_id";
+            this.txt_seller_id.Size = new System.Drawing.Size(87, 23);
+            this.txt_seller_id.TabIndex = 76;
+            this.txt_seller_id.Visible = false;
+            // 
+            // txt_id_optometryst
+            // 
+            this.txt_id_optometryst.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_id_optometryst.Location = new System.Drawing.Point(572, 22);
+            this.txt_id_optometryst.Name = "txt_id_optometryst";
+            this.txt_id_optometryst.Size = new System.Drawing.Size(87, 23);
+            this.txt_id_optometryst.TabIndex = 75;
+            this.txt_id_optometryst.Visible = false;
+            // 
             // btn_seller_search
             // 
             this.btn_seller_search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(142)))), ((int)(((byte)(4)))));
@@ -1357,9 +1439,11 @@ namespace Presentation.View.Forms.Recipe
             // 
             // txt_seller
             // 
+            this.txt_seller.Enabled = false;
             this.txt_seller.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_seller.Location = new System.Drawing.Point(82, 57);
             this.txt_seller.Name = "txt_seller";
+            this.txt_seller.ReadOnly = true;
             this.txt_seller.Size = new System.Drawing.Size(379, 23);
             this.txt_seller.TabIndex = 70;
             // 
@@ -1388,9 +1472,11 @@ namespace Presentation.View.Forms.Recipe
             // 
             // txt_optometryst
             // 
+            this.txt_optometryst.Enabled = false;
             this.txt_optometryst.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_optometryst.Location = new System.Drawing.Point(82, 22);
             this.txt_optometryst.Name = "txt_optometryst";
+            this.txt_optometryst.ReadOnly = true;
             this.txt_optometryst.Size = new System.Drawing.Size(379, 23);
             this.txt_optometryst.TabIndex = 68;
             // 
@@ -1422,6 +1508,15 @@ namespace Presentation.View.Forms.Recipe
             this.groupBox5.TabIndex = 75;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Información varia";
+            // 
+            // txt_laboratory_id
+            // 
+            this.txt_laboratory_id.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_laboratory_id.Location = new System.Drawing.Point(573, 22);
+            this.txt_laboratory_id.Name = "txt_laboratory_id";
+            this.txt_laboratory_id.Size = new System.Drawing.Size(87, 23);
+            this.txt_laboratory_id.TabIndex = 74;
+            this.txt_laboratory_id.Visible = false;
             // 
             // dtp_delivery
             // 
@@ -1493,9 +1588,11 @@ namespace Presentation.View.Forms.Recipe
             // 
             // txt_laboratory_name
             // 
+            this.txt_laboratory_name.Enabled = false;
             this.txt_laboratory_name.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_laboratory_name.Location = new System.Drawing.Point(82, 22);
             this.txt_laboratory_name.Name = "txt_laboratory_name";
+            this.txt_laboratory_name.ReadOnly = true;
             this.txt_laboratory_name.Size = new System.Drawing.Size(379, 23);
             this.txt_laboratory_name.TabIndex = 68;
             // 
@@ -1595,89 +1692,23 @@ namespace Presentation.View.Forms.Recipe
             this.label31.TabIndex = 36;
             this.label31.Text = "Factura";
             // 
-            // txt_laboratory_id
+            // btn_next
             // 
-            this.txt_laboratory_id.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_laboratory_id.Location = new System.Drawing.Point(573, 22);
-            this.txt_laboratory_id.Name = "txt_laboratory_id";
-            this.txt_laboratory_id.Size = new System.Drawing.Size(87, 23);
-            this.txt_laboratory_id.TabIndex = 74;
-            this.txt_laboratory_id.Visible = false;
-            // 
-            // txt_id_optometryst
-            // 
-            this.txt_id_optometryst.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_id_optometryst.Location = new System.Drawing.Point(572, 22);
-            this.txt_id_optometryst.Name = "txt_id_optometryst";
-            this.txt_id_optometryst.Size = new System.Drawing.Size(87, 23);
-            this.txt_id_optometryst.TabIndex = 75;
-            this.txt_id_optometryst.Visible = false;
-            // 
-            // txt_seller_id
-            // 
-            this.txt_seller_id.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_seller_id.Location = new System.Drawing.Point(572, 57);
-            this.txt_seller_id.Name = "txt_seller_id";
-            this.txt_seller_id.Size = new System.Drawing.Size(87, 23);
-            this.txt_seller_id.TabIndex = 76;
-            this.txt_seller_id.Visible = false;
-            // 
-            // dtp_date
-            // 
-            this.dtp_date.CustomFormat = "yyyy-MM-dd";
-            this.dtp_date.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_date.Location = new System.Drawing.Point(626, 95);
-            this.dtp_date.Name = "dtp_date";
-            this.dtp_date.Size = new System.Drawing.Size(116, 23);
-            this.dtp_date.TabIndex = 51;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(579, 101);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 15);
-            this.label3.TabIndex = 52;
-            this.label3.Text = "Fecha:";
-            // 
-            // txt_ring_id
-            // 
-            this.txt_ring_id.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_ring_id.Location = new System.Drawing.Point(646, 27);
-            this.txt_ring_id.Name = "txt_ring_id";
-            this.txt_ring_id.Size = new System.Drawing.Size(96, 23);
-            this.txt_ring_id.TabIndex = 97;
-            this.txt_ring_id.Visible = false;
-            // 
-            // txt_glasses_id
-            // 
-            this.txt_glasses_id.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_glasses_id.Location = new System.Drawing.Point(646, 61);
-            this.txt_glasses_id.Name = "txt_glasses_id";
-            this.txt_glasses_id.Size = new System.Drawing.Size(96, 23);
-            this.txt_glasses_id.TabIndex = 98;
-            this.txt_glasses_id.Visible = false;
-            // 
-            // cb_ar
-            // 
-            this.cb_ar.AutoSize = true;
-            this.cb_ar.Location = new System.Drawing.Point(374, 109);
-            this.cb_ar.Name = "cb_ar";
-            this.cb_ar.Size = new System.Drawing.Size(41, 19);
-            this.cb_ar.TabIndex = 99;
-            this.cb_ar.Text = "AR";
-            this.cb_ar.UseVisualStyleBackColor = true;
-            // 
-            // cb_process
-            // 
-            this.cb_process.AutoSize = true;
-            this.cb_process.Location = new System.Drawing.Point(427, 109);
-            this.cb_process.Name = "cb_process";
-            this.cb_process.Size = new System.Drawing.Size(68, 19);
-            this.cb_process.TabIndex = 100;
-            this.cb_process.Text = "Proceso";
-            this.cb_process.UseVisualStyleBackColor = true;
+            this.btn_next.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.btn_next.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.btn_next.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_next.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_next.ForeColor = System.Drawing.Color.White;
+            this.btn_next.Image = global::Presentation.Properties.Resources.icons8_chevron_derecha_en_círculo_24;
+            this.btn_next.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_next.Location = new System.Drawing.Point(455, 458);
+            this.btn_next.Name = "btn_next";
+            this.btn_next.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btn_next.Size = new System.Drawing.Size(160, 30);
+            this.btn_next.TabIndex = 36;
+            this.btn_next.Text = "Siguiente";
+            this.btn_next.UseVisualStyleBackColor = false;
+            this.btn_next.Click += new System.EventHandler(this.btn_next_Click);
             // 
             // btn_save_recipe
             // 
@@ -1695,6 +1726,7 @@ namespace Presentation.View.Forms.Recipe
             this.btn_save_recipe.TabIndex = 35;
             this.btn_save_recipe.Text = "Guardar receta";
             this.btn_save_recipe.UseVisualStyleBackColor = false;
+            this.btn_save_recipe.Visible = false;
             this.btn_save_recipe.Click += new System.EventHandler(this.btn_save_recipe_Click);
             // 
             // pcb_close_create_recipe
@@ -1731,14 +1763,27 @@ namespace Presentation.View.Forms.Recipe
             this.pcb_minus.TabIndex = 2;
             this.pcb_minus.TabStop = false;
             // 
+            // lbl_errors
+            // 
+            this.lbl_errors.AutoSize = true;
+            this.lbl_errors.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_errors.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbl_errors.Location = new System.Drawing.Point(28, 466);
+            this.lbl_errors.Name = "lbl_errors";
+            this.lbl_errors.Size = new System.Drawing.Size(10, 15);
+            this.lbl_errors.TabIndex = 53;
+            this.lbl_errors.Text = ".";
+            // 
             // RecipeCreate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(799, 499);
+            this.Controls.Add(this.lbl_errors);
+            this.Controls.Add(this.btn_next);
             this.Controls.Add(this.btn_save_recipe);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.tb_recipe);
             this.Controls.Add(this.pnl_top);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -1748,25 +1793,25 @@ namespace Presentation.View.Forms.Recipe
             this.Load += new System.EventHandler(this.RecipeCreate_Load);
             this.pnl_top.ResumeLayout(false);
             this.pnl_top.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
+            this.tb_recipe.ResumeLayout(false);
+            this.tp_clients.ResumeLayout(false);
             this.groupBox9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_recipes)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
+            this.tp_tests.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.tabPage3.ResumeLayout(false);
+            this.tp_health.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
-            this.tabPage4.ResumeLayout(false);
+            this.tp_others.ResumeLayout(false);
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
             this.groupBox5.ResumeLayout(false);
@@ -1777,6 +1822,7 @@ namespace Presentation.View.Forms.Recipe
             ((System.ComponentModel.ISupportInitialize)(this.pcb_exit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_minus)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1787,14 +1833,14 @@ namespace Presentation.View.Forms.Recipe
         private System.Windows.Forms.PictureBox pcb_close_create_recipe;
         private System.Windows.Forms.PictureBox pcb_exit;
         private System.Windows.Forms.PictureBox pcb_minus;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabControl tb_recipe;
+        private System.Windows.Forms.TabPage tp_clients;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tp_tests;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label36;
@@ -1840,7 +1886,7 @@ namespace Presentation.View.Forms.Recipe
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage tp_health;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.Label label41;
@@ -1848,7 +1894,7 @@ namespace Presentation.View.Forms.Recipe
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TabPage tp_others;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label32;
@@ -1926,5 +1972,7 @@ namespace Presentation.View.Forms.Recipe
         public System.Windows.Forms.TextBox txt_value_invoice_laboratory;
         public System.Windows.Forms.TextBox txt_date_laboratory;
         public System.Windows.Forms.TextBox txt_invoice_laboratory;
+        private System.Windows.Forms.Button btn_next;
+        public System.Windows.Forms.Label lbl_errors;
     }
 }

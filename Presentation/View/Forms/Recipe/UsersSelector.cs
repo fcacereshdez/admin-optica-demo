@@ -46,5 +46,10 @@ namespace Presentation.View.Forms.Recipe
         {
             dgv_users.DataSource = userController.SelectUsersByRoleId(cmb_roles.SelectedValue.ToString());
         }
+
+        private void pcb_close_create_client_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

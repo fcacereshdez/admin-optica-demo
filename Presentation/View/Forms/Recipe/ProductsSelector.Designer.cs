@@ -36,19 +36,21 @@ namespace Presentation.View.Forms.Recipe
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductsSelector));
             this.dgv_products = new System.Windows.Forms.DataGridView();
             this.pnl_top = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pcb_close_create_client = new System.Windows.Forms.PictureBox();
+            this.pcb_close = new System.Windows.Forms.PictureBox();
             this.cmb_categories = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btn_search_ring = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.txt_search = new System.Windows.Forms.TextBox();
-            this.pcb_close_create_client = new System.Windows.Forms.PictureBox();
-            this.pcb_close = new System.Windows.Forms.PictureBox();
+            this.btn_search_ring = new System.Windows.Forms.Button();
+            this.txt_product_search = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_products)).BeginInit();
             this.pnl_top.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_close_create_client)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_close)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgv_products
@@ -114,6 +116,40 @@ namespace Presentation.View.Forms.Recipe
             this.pnl_top.Size = new System.Drawing.Size(645, 35);
             this.pnl_top.TabIndex = 15;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(18, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(123, 15);
+            this.label2.TabIndex = 49;
+            this.label2.Text = "Selector de Productos";
+            // 
+            // pcb_close_create_client
+            // 
+            this.pcb_close_create_client.Image = global::Presentation.Properties.Resources.close;
+            this.pcb_close_create_client.Location = new System.Drawing.Point(604, 6);
+            this.pcb_close_create_client.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pcb_close_create_client.Name = "pcb_close_create_client";
+            this.pcb_close_create_client.Size = new System.Drawing.Size(25, 25);
+            this.pcb_close_create_client.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcb_close_create_client.TabIndex = 15;
+            this.pcb_close_create_client.TabStop = false;
+            this.pcb_close_create_client.Click += new System.EventHandler(this.pcb_close_create_client_Click);
+            // 
+            // pcb_close
+            // 
+            this.pcb_close.Image = global::Presentation.Properties.Resources.close;
+            this.pcb_close.Location = new System.Drawing.Point(958, 3);
+            this.pcb_close.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.pcb_close.Name = "pcb_close";
+            this.pcb_close.Size = new System.Drawing.Size(29, 33);
+            this.pcb_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcb_close.TabIndex = 5;
+            this.pcb_close.TabStop = false;
+            // 
             // cmb_categories
             // 
             this.cmb_categories.FormattingEnabled = true;
@@ -134,6 +170,8 @@ namespace Presentation.View.Forms.Recipe
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.txt_product_search);
             this.groupBox1.Controls.Add(this.txt_search);
             this.groupBox1.Controls.Add(this.btn_search_ring);
             this.groupBox1.Controls.Add(this.cmb_categories);
@@ -145,6 +183,14 @@ namespace Presentation.View.Forms.Recipe
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtros";
+            // 
+            // txt_search
+            // 
+            this.txt_search.Location = new System.Drawing.Point(511, 37);
+            this.txt_search.Name = "txt_search";
+            this.txt_search.Size = new System.Drawing.Size(100, 23);
+            this.txt_search.TabIndex = 49;
+            this.txt_search.Visible = false;
             // 
             // btn_search_ring
             // 
@@ -160,46 +206,23 @@ namespace Presentation.View.Forms.Recipe
             this.btn_search_ring.UseVisualStyleBackColor = false;
             this.btn_search_ring.Click += new System.EventHandler(this.btn_search_ring_Click);
             // 
-            // label2
+            // txt_product_search
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(18, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(123, 15);
-            this.label2.TabIndex = 49;
-            this.label2.Text = "Selector de Productos";
+            this.txt_product_search.Location = new System.Drawing.Point(260, 39);
+            this.txt_product_search.Name = "txt_product_search";
+            this.txt_product_search.Size = new System.Drawing.Size(245, 23);
+            this.txt_product_search.TabIndex = 50;
+            this.txt_product_search.TextChanged += new System.EventHandler(this.txt_product_search_TextChanged);
             // 
-            // txt_search
+            // label3
             // 
-            this.txt_search.Location = new System.Drawing.Point(511, 37);
-            this.txt_search.Name = "txt_search";
-            this.txt_search.Size = new System.Drawing.Size(100, 23);
-            this.txt_search.TabIndex = 49;
-            this.txt_search.Visible = false;
-            // 
-            // pcb_close_create_client
-            // 
-            this.pcb_close_create_client.Image = global::Presentation.Properties.Resources.close;
-            this.pcb_close_create_client.Location = new System.Drawing.Point(619, 6);
-            this.pcb_close_create_client.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pcb_close_create_client.Name = "pcb_close_create_client";
-            this.pcb_close_create_client.Size = new System.Drawing.Size(25, 25);
-            this.pcb_close_create_client.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pcb_close_create_client.TabIndex = 15;
-            this.pcb_close_create_client.TabStop = false;
-            // 
-            // pcb_close
-            // 
-            this.pcb_close.Image = global::Presentation.Properties.Resources.close;
-            this.pcb_close.Location = new System.Drawing.Point(958, 3);
-            this.pcb_close.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.pcb_close.Name = "pcb_close";
-            this.pcb_close.Size = new System.Drawing.Size(29, 33);
-            this.pcb_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pcb_close.TabIndex = 5;
-            this.pcb_close.TabStop = false;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(257, 21);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(95, 15);
+            this.label3.TabIndex = 51;
+            this.label3.Text = "Búsqueda rápida";
             // 
             // ProductsSelector
             // 
@@ -219,10 +242,10 @@ namespace Presentation.View.Forms.Recipe
             ((System.ComponentModel.ISupportInitialize)(this.dgv_products)).EndInit();
             this.pnl_top.ResumeLayout(false);
             this.pnl_top.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_close_create_client)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_close)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -238,5 +261,7 @@ namespace Presentation.View.Forms.Recipe
         private System.Windows.Forms.Button btn_search_ring;
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.TextBox txt_search;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txt_product_search;
     }
 }

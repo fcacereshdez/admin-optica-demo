@@ -14,6 +14,7 @@ namespace Common.Cache
         public static string password { get; set; }
         public static string email { get; set; }
         public static string role { get; set; }
+        public static string slug_role { get; set; }
 
     }
 }

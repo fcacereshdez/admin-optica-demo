@@ -160,7 +160,6 @@ namespace Presentation
             // 
             // btn_shipping
             // 
-            this.btn_shipping.Enabled = false;
             this.btn_shipping.FlatAppearance.BorderSize = 0;
             this.btn_shipping.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_shipping.Image = global::Presentation.Properties.Resources.icons8_shipping_24;
@@ -535,10 +534,6 @@ namespace Presentation
         private System.Windows.Forms.PictureBox pcb_minus;
         private System.Windows.Forms.Timer tmr_layout;
         private System.Windows.Forms.Label lbl_form_name;
-        private System.Windows.Forms.Button btn_users;
-        private System.Windows.Forms.Button btn_labs;
-        private System.Windows.Forms.Button btn_clients;
-        private System.Windows.Forms.Button btn_dashboard;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pcb_logout;
         private System.Windows.Forms.Label lbl_role_name;
@@ -547,14 +542,18 @@ namespace Presentation
         private System.Windows.Forms.PictureBox pcb_logo;
         private System.Windows.Forms.Label lbl_version_sw;
         private System.Windows.Forms.PictureBox pcb_close_form;
-        private System.Windows.Forms.Button btn_companies;
-        private System.Windows.Forms.Button btn_products;
-        private System.Windows.Forms.Button btn_recipes;
-        private System.Windows.Forms.Button btn_shipping;
-        private System.Windows.Forms.Button btn_reports;
-        private System.Windows.Forms.Button btn_about_info;
-        private System.Windows.Forms.Button btn_facturation;
         private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Button btn_users;
+        public System.Windows.Forms.Button btn_labs;
+        public System.Windows.Forms.Button btn_clients;
+        public System.Windows.Forms.Button btn_dashboard;
+        public System.Windows.Forms.Button btn_companies;
+        public System.Windows.Forms.Button btn_products;
+        public System.Windows.Forms.Button btn_recipes;
+        public System.Windows.Forms.Button btn_shipping;
+        public System.Windows.Forms.Button btn_reports;
+        public System.Windows.Forms.Button btn_about_info;
+        public System.Windows.Forms.Button btn_facturation;
     }
 }
 

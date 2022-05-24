@@ -33,14 +33,13 @@ namespace Presentation.View.Forms
 
         private void btn_book_sales_Click(object sender, EventArgs e)
         {
-            string exeFolder = Application.StartupPath;
-            string reportPath = Path.Combine(exeFolder, @"..\..\View\Reports\");
             ViewerForm viewerForm = new ViewerForm();
             ReportDataSource rds = new ReportDataSource("ds_sales_book", commonController.GetSalesBook());
-            viewerForm.rv_viewer.Clear();
-            viewerForm.rv_viewer.LocalReport.ReportPath = reportPath + "SalesBook.rdlc";
+            viewerForm.rv_viewer.Reset();
+            viewerForm.rv_viewer.ProcessingMode = ProcessingMode.Local;
+            viewerForm.rv_viewer.LocalReport.ReportEmbeddedResource = "Presentation.View.Reports.SalesBook.rdlc";
             viewerForm.rv_viewer.LocalReport.DataSources.Add(rds);
-            viewerForm.rv_viewer.RefreshReport();
+            InsertAction("generó un libro de ventas.");
             viewerForm.ShowDialog();
         }
 
@@ -48,6 +47,18 @@ namespace Presentation.View.Forms
         {
             UserController userController = new UserController();
             userController.InsertActionsUser(UserCache.name + " " + UserCache.lastname + " " + action, Environment.MachineName, "127.0.0.1", UserCache.user_id, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+        }
+
+        private void btn_audit_actions_users_Click(object sender, EventArgs e)
+        {
+            ViewerForm viewerForm = new ViewerForm();
+            ReportDataSource rds = new ReportDataSource("ds_audit_all_users", commonController.GetAuditAllUsers());
+            viewerForm.rv_viewer.Reset();
+            viewerForm.rv_viewer.ProcessingMode = ProcessingMode.Local;
+            viewerForm.rv_viewer.LocalReport.ReportEmbeddedResource = "Presentation.View.Reports.UserGeneralAudit.rdlc";
+            viewerForm.rv_viewer.LocalReport.DataSources.Add(rds);
+            InsertAction("generó una auditoría de todos los usuarios.");
+            viewerForm.ShowDialog();
         }
     }
 }

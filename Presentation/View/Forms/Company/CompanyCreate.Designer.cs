@@ -372,10 +372,10 @@ namespace Presentation.View.Forms.Company
             this.btn_save_company.ForeColor = System.Drawing.Color.White;
             this.btn_save_company.Image = global::Presentation.Properties.Resources.icons8_guardar_24;
             this.btn_save_company.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_save_company.Location = new System.Drawing.Point(419, 421);
+            this.btn_save_company.Location = new System.Drawing.Point(406, 421);
             this.btn_save_company.Name = "btn_save_company";
             this.btn_save_company.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btn_save_company.Size = new System.Drawing.Size(123, 30);
+            this.btn_save_company.Size = new System.Drawing.Size(136, 30);
             this.btn_save_company.TabIndex = 22;
             this.btn_save_company.Text = "Guardar";
             this.btn_save_company.UseVisualStyleBackColor = false;
@@ -386,6 +386,7 @@ namespace Presentation.View.Forms.Company
             this.AcceptButton = this.btn_save_company;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(553, 462);
             this.Controls.Add(this.lbl_error);
             this.Controls.Add(this.btn_save_company);

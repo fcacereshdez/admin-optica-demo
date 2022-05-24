@@ -30,7 +30,7 @@ namespace Presentation.View.Forms.Recipe
 
         private void RecipeCreate_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void InsertAction(string action)
@@ -87,7 +87,34 @@ namespace Presentation.View.Forms.Recipe
 
         private void btn_save_recipe_Click(object sender, EventArgs e)
         {
-            recipeController.CreateRecipe(
+            if (txt_id_client.Text == "")
+            {
+                lbl_errors.Text = "No has seleccionado ningun {cliente}.";
+            } else if (txt_ring_id.Text == "")
+            {
+                lbl_errors.Text = "No has seleccionado ningun {aro}.";
+            }
+            else if (txt_glasses_id.Text == "")
+            {
+                lbl_errors.Text = "No has seleccionado ningun {lente}.";
+            }
+            else if (txt_laboratory_id.Text == "")
+            {
+                lbl_errors.Text = "No has seleccionado ningun {laboratorio}.";
+            }
+            else if (txt_id_optometryst.Text == "")
+            {
+                lbl_errors.Text = "No has seleccionado ningun {optómetra}.";
+            }
+            else if (txt_seller_id.Text == "")
+            {
+                lbl_errors.Text = "No has seleccionado ningun {vendedor}.";
+            }
+            else
+            {
+                try
+                {
+                    recipeController.CreateRecipe(
                 txt_recipe_number.Text,
                 dtp_date.Value.ToString(),
                 txt_esf_od.Text,
@@ -136,9 +163,32 @@ namespace Presentation.View.Forms.Recipe
                 txt_value_invoice_laboratory.Text,
                 txt_laboratory_notes_invoice.Text
                 );
-            MessageBox.Show("Se ha creado una receta con éxito.");
-            Close();
+                    MessageBox.Show("Se ha creado una receta con éxito.");
+                    Close();
+                }
+                catch (Exception errRecipe)
+                {
+
+                    MessageBox.Show("Encontramos algunos problemas. \n\n Detalles: \n\n 1. " + errRecipe.Message + "\n\n Acciones: Notificar al programador.", "Error detectado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+                
         }
 
+        private void btn_next_Click(object sender, EventArgs e)
+        {
+            if (tb_recipe.SelectedTab == tp_clients)
+            {
+                tb_recipe.SelectTab(tp_tests);
+            }else if (tb_recipe.SelectedTab == tp_tests)
+            {
+                tb_recipe.SelectTab(tp_health);
+            }else if (tb_recipe.SelectedTab == tp_health)
+            {
+                tb_recipe.SelectTab(tp_others);
+                btn_save_recipe.Visible = true;
+            }
+        }
     }
 }

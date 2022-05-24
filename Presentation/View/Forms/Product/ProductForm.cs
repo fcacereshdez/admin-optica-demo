@@ -24,7 +24,9 @@ namespace Presentation.View.Forms.Product
 
         private void SelectAllProducts()
         {
-             dgv_products.DataSource = productController.SelectAllProducts();
+            dgv_products.DataSource = productController.SelectAllProducts();
+            dgv_products.Columns[0].Width = 25;
+            dgv_products.Columns[1].Width = 170;
         }
 
         private void btn_report_products_Click(object sender, EventArgs e)

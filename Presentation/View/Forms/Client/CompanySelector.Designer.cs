@@ -35,17 +35,17 @@ namespace Presentation.View.Forms.Client
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CompanySelector));
             this.pnl_top = new System.Windows.Forms.Panel();
+            this.pcb_close_create_client = new System.Windows.Forms.PictureBox();
+            this.pcb_close = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txt_search_company = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgv_companies_child = new System.Windows.Forms.DataGridView();
-            this.pcb_close_create_client = new System.Windows.Forms.PictureBox();
-            this.pcb_close = new System.Windows.Forms.PictureBox();
             this.pnl_top.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_companies_child)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_close_create_client)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_close)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_companies_child)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_top
@@ -59,6 +59,29 @@ namespace Presentation.View.Forms.Client
             this.pnl_top.Name = "pnl_top";
             this.pnl_top.Size = new System.Drawing.Size(647, 35);
             this.pnl_top.TabIndex = 12;
+            // 
+            // pcb_close_create_client
+            // 
+            this.pcb_close_create_client.Image = global::Presentation.Properties.Resources.close;
+            this.pcb_close_create_client.Location = new System.Drawing.Point(619, 6);
+            this.pcb_close_create_client.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pcb_close_create_client.Name = "pcb_close_create_client";
+            this.pcb_close_create_client.Size = new System.Drawing.Size(25, 25);
+            this.pcb_close_create_client.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcb_close_create_client.TabIndex = 15;
+            this.pcb_close_create_client.TabStop = false;
+            this.pcb_close_create_client.Click += new System.EventHandler(this.pcb_close_create_client_Click);
+            // 
+            // pcb_close
+            // 
+            this.pcb_close.Image = global::Presentation.Properties.Resources.close;
+            this.pcb_close.Location = new System.Drawing.Point(958, 3);
+            this.pcb_close.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.pcb_close.Name = "pcb_close";
+            this.pcb_close.Size = new System.Drawing.Size(29, 33);
+            this.pcb_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcb_close.TabIndex = 5;
+            this.pcb_close.TabStop = false;
             // 
             // groupBox2
             // 
@@ -76,6 +99,7 @@ namespace Presentation.View.Forms.Client
             this.txt_search_company.Name = "txt_search_company";
             this.txt_search_company.Size = new System.Drawing.Size(550, 25);
             this.txt_search_company.TabIndex = 1;
+            this.txt_search_company.TextChanged += new System.EventHandler(this.txt_search_company_TextChanged);
             // 
             // label1
             // 
@@ -137,29 +161,6 @@ namespace Presentation.View.Forms.Client
             this.dgv_companies_child.TabIndex = 13;
             this.dgv_companies_child.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_companies_CellDoubleClick);
             // 
-            // pcb_close_create_client
-            // 
-            this.pcb_close_create_client.Image = global::Presentation.Properties.Resources.close;
-            this.pcb_close_create_client.Location = new System.Drawing.Point(619, 6);
-            this.pcb_close_create_client.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pcb_close_create_client.Name = "pcb_close_create_client";
-            this.pcb_close_create_client.Size = new System.Drawing.Size(25, 25);
-            this.pcb_close_create_client.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pcb_close_create_client.TabIndex = 15;
-            this.pcb_close_create_client.TabStop = false;
-            this.pcb_close_create_client.Click += new System.EventHandler(this.pcb_close_create_client_Click);
-            // 
-            // pcb_close
-            // 
-            this.pcb_close.Image = global::Presentation.Properties.Resources.close;
-            this.pcb_close.Location = new System.Drawing.Point(958, 3);
-            this.pcb_close.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.pcb_close.Name = "pcb_close";
-            this.pcb_close.Size = new System.Drawing.Size(29, 33);
-            this.pcb_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pcb_close.TabIndex = 5;
-            this.pcb_close.TabStop = false;
-            // 
             // CompanySelector
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -177,11 +178,11 @@ namespace Presentation.View.Forms.Client
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Seleccionar empresa";
             this.pnl_top.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pcb_close_create_client)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcb_close)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_companies_child)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcb_close_create_client)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcb_close)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -42,7 +42,6 @@ namespace Presentation.View.Forms
                         layoutMain.Show();
                         layoutMain.FormClosed += Logout;
                         this.Hide();
-                        lbl_version_login.Text = validateLogin.ToString();
                     }
                     else
                     {

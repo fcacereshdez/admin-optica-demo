@@ -83,5 +83,11 @@ namespace Domain
         {
             productData.DeleteModel(Convert.ToInt64(model_id));
         }
+        public DataTable SearchProduct(string product)
+        {
+            DataTable TableProducts  = new DataTable();
+            TableProducts = productData.SearchProduct(product);
+            return TableProducts;
+        }
     }
 }

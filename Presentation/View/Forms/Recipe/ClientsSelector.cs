@@ -36,7 +36,18 @@ namespace Presentation.View.Forms.Recipe
         private void SelectAllClients()
         {
             dgv_clients_child.DataSource = clientController.SelectAllClients();
+            dgv_clients_child.Columns[0].Width = 25;
+            dgv_clients_child.Columns[1].Width = 170;
         }
 
+        private void pcb_close_create_client_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void txt_search_client_TextChanged(object sender, EventArgs e)
+        {
+            dgv_clients_child.DataSource = clientController.SearchClient(txt_search_client.Text);
+        }
     }
 }

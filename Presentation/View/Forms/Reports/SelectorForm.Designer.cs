@@ -35,7 +35,9 @@ namespace Presentation.View.Forms
             this.btn_invoice_by_companies = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btn_audit_actions_users = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -102,13 +104,14 @@ namespace Presentation.View.Forms
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btn_audit_actions_users);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(310, 150);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(250, 136);
             this.groupBox2.TabIndex = 32;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "No disponible";
+            this.groupBox2.Text = "Auditorías";
             // 
             // groupBox3
             // 
@@ -120,7 +123,24 @@ namespace Presentation.View.Forms
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "No disponible";
             // 
-            // SelectorForms
+            // btn_audit_actions_users
+            // 
+            this.btn_audit_actions_users.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.btn_audit_actions_users.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.btn_audit_actions_users.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_audit_actions_users.ForeColor = System.Drawing.Color.White;
+            this.btn_audit_actions_users.Image = global::Presentation.Properties.Resources.icons8_factura_24;
+            this.btn_audit_actions_users.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_audit_actions_users.Location = new System.Drawing.Point(7, 24);
+            this.btn_audit_actions_users.Name = "btn_audit_actions_users";
+            this.btn_audit_actions_users.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btn_audit_actions_users.Size = new System.Drawing.Size(237, 30);
+            this.btn_audit_actions_users.TabIndex = 32;
+            this.btn_audit_actions_users.Text = "Acciones de usuarios";
+            this.btn_audit_actions_users.UseVisualStyleBackColor = false;
+            this.btn_audit_actions_users.Click += new System.EventHandler(this.btn_audit_actions_users_Click);
+            // 
+            // SelectorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -132,10 +152,11 @@ namespace Presentation.View.Forms
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "SelectorForms";
+            this.Name = "SelectorForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reports";
             this.groupBox1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -147,5 +168,6 @@ namespace Presentation.View.Forms
         private System.Windows.Forms.Button btn_book_sales;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button btn_audit_actions_users;
     }
 }

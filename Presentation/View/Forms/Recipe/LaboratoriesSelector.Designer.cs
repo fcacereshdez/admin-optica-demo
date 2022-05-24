@@ -39,10 +39,14 @@ namespace Presentation.View.Forms.Recipe
             this.label2 = new System.Windows.Forms.Label();
             this.pcb_close_create_client = new System.Windows.Forms.PictureBox();
             this.pcb_close = new System.Windows.Forms.PictureBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txt_search_laboratories = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_laboratories)).BeginInit();
             this.pnl_top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_close_create_client)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_close)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgv_laboratories
@@ -73,7 +77,7 @@ namespace Presentation.View.Forms.Recipe
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv_laboratories.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_laboratories.EnableHeadersVisualStyles = false;
-            this.dgv_laboratories.Location = new System.Drawing.Point(12, 43);
+            this.dgv_laboratories.Location = new System.Drawing.Point(12, 98);
             this.dgv_laboratories.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgv_laboratories.MultiSelect = false;
             this.dgv_laboratories.Name = "dgv_laboratories";
@@ -91,7 +95,7 @@ namespace Presentation.View.Forms.Recipe
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.WindowFrame;
             this.dgv_laboratories.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_laboratories.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_laboratories.Size = new System.Drawing.Size(617, 345);
+            this.dgv_laboratories.Size = new System.Drawing.Size(617, 290);
             this.dgv_laboratories.TabIndex = 21;
             this.dgv_laboratories.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_laboratories_CellDoubleClick);
             // 
@@ -122,13 +126,14 @@ namespace Presentation.View.Forms.Recipe
             // pcb_close_create_client
             // 
             this.pcb_close_create_client.Image = global::Presentation.Properties.Resources.close;
-            this.pcb_close_create_client.Location = new System.Drawing.Point(619, 6);
+            this.pcb_close_create_client.Location = new System.Drawing.Point(604, 6);
             this.pcb_close_create_client.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pcb_close_create_client.Name = "pcb_close_create_client";
             this.pcb_close_create_client.Size = new System.Drawing.Size(25, 25);
             this.pcb_close_create_client.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pcb_close_create_client.TabIndex = 15;
             this.pcb_close_create_client.TabStop = false;
+            this.pcb_close_create_client.Click += new System.EventHandler(this.pcb_close_create_client_Click);
             // 
             // pcb_close
             // 
@@ -141,12 +146,41 @@ namespace Presentation.View.Forms.Recipe
             this.pcb_close.TabIndex = 5;
             this.pcb_close.TabStop = false;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.txt_search_laboratories);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Location = new System.Drawing.Point(12, 38);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(617, 55);
+            this.groupBox2.TabIndex = 22;
+            this.groupBox2.TabStop = false;
+            // 
+            // txt_search_laboratories
+            // 
+            this.txt_search_laboratories.Location = new System.Drawing.Point(61, 18);
+            this.txt_search_laboratories.Name = "txt_search_laboratories";
+            this.txt_search_laboratories.Size = new System.Drawing.Size(550, 20);
+            this.txt_search_laboratories.TabIndex = 1;
+            this.txt_search_laboratories.TextChanged += new System.EventHandler(this.txt_search_laboratories_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(6, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(52, 17);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Buscar:";
+            // 
             // LaboratoriesSelector
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(645, 407);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.dgv_laboratories);
             this.Controls.Add(this.pnl_top);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -159,6 +193,8 @@ namespace Presentation.View.Forms.Recipe
             this.pnl_top.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_close_create_client)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_close)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -169,5 +205,8 @@ namespace Presentation.View.Forms.Recipe
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pcb_close_create_client;
         private System.Windows.Forms.PictureBox pcb_close;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox txt_search_laboratories;
+        private System.Windows.Forms.Label label1;
     }
 }

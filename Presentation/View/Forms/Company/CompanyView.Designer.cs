@@ -368,10 +368,10 @@ namespace Presentation.View.Forms.Company
             this.btn_edit_company.ForeColor = System.Drawing.Color.White;
             this.btn_edit_company.Image = global::Presentation.Properties.Resources.icons8_guardar_24;
             this.btn_edit_company.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_edit_company.Location = new System.Drawing.Point(419, 432);
+            this.btn_edit_company.Location = new System.Drawing.Point(395, 432);
             this.btn_edit_company.Name = "btn_edit_company";
             this.btn_edit_company.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btn_edit_company.Size = new System.Drawing.Size(123, 30);
+            this.btn_edit_company.Size = new System.Drawing.Size(147, 30);
             this.btn_edit_company.TabIndex = 29;
             this.btn_edit_company.Text = "Modificar";
             this.btn_edit_company.UseVisualStyleBackColor = false;
