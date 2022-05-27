@@ -37,6 +37,13 @@ namespace Presentation.View.Forms.Recipe
         private void SelectAllRecipes()
         {
             dgv_recipes.DataSource = recipeController.SelectAllRecipes();
+            dgv_recipes.Columns[5].Visible = false;
+            dgv_recipes.Columns[6].Visible = false;
+            dgv_recipes.Columns[7].Visible = false;
+            dgv_recipes.Columns[8].Visible = false;
+            dgv_recipes.Columns[9].Visible = false;
+            dgv_recipes.Columns[10].Visible = false;
+            dgv_recipes.Columns[11].Visible = false;
         }
 
         private void btn_edit_recipe_Click(object sender, EventArgs e)

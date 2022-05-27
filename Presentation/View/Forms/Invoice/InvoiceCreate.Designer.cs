@@ -35,54 +35,65 @@ namespace Presentation.View.Forms.Invoice
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InvoiceCreate));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txt_recipe_id = new System.Windows.Forms.TextBox();
+            this.txt_postpone = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txt_first_payment = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.rb_montly = new System.Windows.Forms.RadioButton();
+            this.rb_biweekly = new System.Windows.Forms.RadioButton();
+            this.txt_fee = new System.Windows.Forms.TextBox();
+            this.txt_n_fee = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmb_payment_method = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtp_invoice = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
-            this.txt_client_id = new System.Windows.Forms.TextBox();
             this.lbl_client_name = new System.Windows.Forms.Label();
             this.btn_search_client = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txt_optometryst = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txt_manager_id = new System.Windows.Forms.TextBox();
+            this.txt_optometryst_id = new System.Windows.Forms.TextBox();
+            this.txt_seller_id = new System.Windows.Forms.TextBox();
+            this.btn_search_gestor = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txt_manager = new System.Windows.Forms.TextBox();
             this.btn_search_seller = new System.Windows.Forms.Button();
             this.btn_search_optometryst = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txt_seller = new System.Windows.Forms.TextBox();
             this.dgv_products = new System.Windows.Forms.DataGridView();
-            this.txt_sub_total = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.pnl_top = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
-            this.pcb_close_create_invoice = new System.Windows.Forms.PictureBox();
-            this.pcb_exit = new System.Windows.Forms.PictureBox();
-            this.pcb_minus = new System.Windows.Forms.PictureBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.btn_save_company = new System.Windows.Forms.Button();
             this.cl_id_product = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cl_cod_product = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cl_name_product = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cl_cant_product = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cl_priceUnit_product = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cl_subtotal_product = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txt_sub_total = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txt_with_discount = new System.Windows.Forms.TextBox();
+            this.txt_discount = new System.Windows.Forms.TextBox();
+            this.txt_total = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.pnl_top = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txt_notes = new System.Windows.Forms.TextBox();
+            this.lbl_error = new System.Windows.Forms.Label();
+            this.txt_n_recipe = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.btn_add_element = new System.Windows.Forms.Button();
+            this.btn_remove_element = new System.Windows.Forms.Button();
+            this.btn_save_invoice = new System.Windows.Forms.Button();
+            this.pcb_close_create_invoice = new System.Windows.Forms.PictureBox();
+            this.pcb_exit = new System.Windows.Forms.PictureBox();
+            this.pcb_minus = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_products)).BeginInit();
@@ -94,22 +105,24 @@ namespace Presentation.View.Forms.Invoice
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.txt_n_recipe);
+            this.groupBox1.Controls.Add(this.label17);
+            this.groupBox1.Controls.Add(this.txt_recipe_id);
+            this.groupBox1.Controls.Add(this.txt_postpone);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.txt_first_payment);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.rb_montly);
+            this.groupBox1.Controls.Add(this.rb_biweekly);
+            this.groupBox1.Controls.Add(this.txt_fee);
+            this.groupBox1.Controls.Add(this.txt_n_fee);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.cmb_payment_method);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.dtp_invoice);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txt_client_id);
             this.groupBox1.Controls.Add(this.lbl_client_name);
             this.groupBox1.Controls.Add(this.btn_search_client);
             this.groupBox1.Controls.Add(this.label1);
@@ -120,78 +133,87 @@ namespace Presentation.View.Forms.Invoice
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Información del Cliente";
             // 
-            // textBox4
+            // txt_recipe_id
             // 
-            this.textBox4.Location = new System.Drawing.Point(420, 87);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(80, 23);
-            this.textBox4.TabIndex = 67;
+            this.txt_recipe_id.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_recipe_id.Location = new System.Drawing.Point(487, 52);
+            this.txt_recipe_id.Name = "txt_recipe_id";
+            this.txt_recipe_id.Size = new System.Drawing.Size(57, 23);
+            this.txt_recipe_id.TabIndex = 68;
+            this.txt_recipe_id.Visible = false;
+            // 
+            // txt_postpone
+            // 
+            this.txt_postpone.Location = new System.Drawing.Point(638, 93);
+            this.txt_postpone.Name = "txt_postpone";
+            this.txt_postpone.Size = new System.Drawing.Size(77, 23);
+            this.txt_postpone.TabIndex = 67;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(365, 90);
+            this.label9.Location = new System.Drawing.Point(583, 96);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(50, 15);
             this.label9.TabIndex = 66;
             this.label9.Text = "Aplazar:";
             // 
-            // textBox3
+            // txt_first_payment
             // 
-            this.textBox3.Location = new System.Drawing.Point(412, 25);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(88, 23);
-            this.textBox3.TabIndex = 65;
+            this.txt_first_payment.Location = new System.Drawing.Point(439, 93);
+            this.txt_first_payment.Name = "txt_first_payment";
+            this.txt_first_payment.Size = new System.Drawing.Size(87, 23);
+            this.txt_first_payment.TabIndex = 65;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(365, 28);
+            this.label6.Location = new System.Drawing.Point(392, 96);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(41, 15);
             this.label6.TabIndex = 64;
             this.label6.Text = "Prima:";
             // 
-            // radioButton2
+            // rb_montly
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(187, 116);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(70, 19);
-            this.radioButton2.TabIndex = 63;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Mensual";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rb_montly.AutoSize = true;
+            this.rb_montly.Location = new System.Drawing.Point(208, 115);
+            this.rb_montly.Name = "rb_montly";
+            this.rb_montly.Size = new System.Drawing.Size(70, 19);
+            this.rb_montly.TabIndex = 63;
+            this.rb_montly.TabStop = true;
+            this.rb_montly.Text = "Mensual";
+            this.rb_montly.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rb_biweekly
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(102, 116);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(79, 19);
-            this.radioButton1.TabIndex = 62;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Quincenal";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rb_biweekly.AutoSize = true;
+            this.rb_biweekly.Location = new System.Drawing.Point(123, 115);
+            this.rb_biweekly.Name = "rb_biweekly";
+            this.rb_biweekly.Size = new System.Drawing.Size(79, 19);
+            this.rb_biweekly.TabIndex = 62;
+            this.rb_biweekly.TabStop = true;
+            this.rb_biweekly.Text = "Quincenal";
+            this.rb_biweekly.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // txt_fee
             // 
-            this.textBox2.Location = new System.Drawing.Point(612, 54);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(77, 23);
-            this.textBox2.TabIndex = 61;
+            this.txt_fee.Location = new System.Drawing.Point(638, 122);
+            this.txt_fee.Name = "txt_fee";
+            this.txt_fee.Size = new System.Drawing.Size(77, 23);
+            this.txt_fee.TabIndex = 61;
             // 
-            // textBox1
+            // txt_n_fee
             // 
-            this.textBox1.Location = new System.Drawing.Point(454, 54);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(46, 23);
-            this.textBox1.TabIndex = 60;
+            this.txt_n_fee.Location = new System.Drawing.Point(480, 122);
+            this.txt_n_fee.Name = "txt_n_fee";
+            this.txt_n_fee.Size = new System.Drawing.Size(46, 23);
+            this.txt_n_fee.TabIndex = 60;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(507, 57);
+            this.label5.Location = new System.Drawing.Point(533, 125);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(99, 15);
             this.label5.TabIndex = 59;
@@ -200,28 +222,28 @@ namespace Presentation.View.Forms.Invoice
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(364, 57);
+            this.label3.Location = new System.Drawing.Point(390, 127);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(84, 15);
             this.label3.TabIndex = 58;
             this.label3.Text = "No. de Coutas:";
             // 
-            // comboBox1
+            // cmb_payment_method
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(61, 83);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(107, 23);
-            this.comboBox1.TabIndex = 57;
+            this.cmb_payment_method.FormattingEnabled = true;
+            this.cmb_payment_method.Location = new System.Drawing.Point(110, 83);
+            this.cmb_payment_method.Name = "cmb_payment_method";
+            this.cmb_payment_method.Size = new System.Drawing.Size(168, 23);
+            this.cmb_payment_method.TabIndex = 57;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(5, 117);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(90, 15);
+            this.label8.Size = new System.Drawing.Size(118, 15);
             this.label8.TabIndex = 55;
-            this.label8.Text = "Forma de Pago:";
+            this.label8.Text = "Recurrencia de pago:";
             // 
             // label7
             // 
@@ -232,32 +254,23 @@ namespace Presentation.View.Forms.Invoice
             this.label7.TabIndex = 54;
             this.label7.Text = "Fecha:";
             // 
-            // dateTimePicker1
+            // dtp_invoice
             // 
-            this.dateTimePicker1.CustomFormat = "yyyy-MM-dd";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(61, 22);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(107, 23);
-            this.dateTimePicker1.TabIndex = 53;
+            this.dtp_invoice.CustomFormat = "yyyy-MM-dd";
+            this.dtp_invoice.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtp_invoice.Location = new System.Drawing.Point(61, 22);
+            this.dtp_invoice.Name = "dtp_invoice";
+            this.dtp_invoice.Size = new System.Drawing.Size(107, 23);
+            this.dtp_invoice.TabIndex = 53;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(6, 86);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(37, 15);
+            this.label4.Size = new System.Drawing.Size(98, 15);
             this.label4.TabIndex = 49;
-            this.label4.Text = "Pago:";
-            // 
-            // txt_client_id
-            // 
-            this.txt_client_id.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_client_id.Location = new System.Drawing.Point(658, 83);
-            this.txt_client_id.Name = "txt_client_id";
-            this.txt_client_id.Size = new System.Drawing.Size(57, 23);
-            this.txt_client_id.TabIndex = 48;
-            this.txt_client_id.Visible = false;
+            this.label4.Text = "Método de pago:";
             // 
             // lbl_client_name
             // 
@@ -276,9 +289,9 @@ namespace Presentation.View.Forms.Invoice
             this.btn_search_client.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(142)))), ((int)(((byte)(4)))));
             this.btn_search_client.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_search_client.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_search_client.Location = new System.Drawing.Point(599, 111);
+            this.btn_search_client.Location = new System.Drawing.Point(549, 50);
             this.btn_search_client.Name = "btn_search_client";
-            this.btn_search_client.Size = new System.Drawing.Size(116, 27);
+            this.btn_search_client.Size = new System.Drawing.Size(166, 27);
             this.btn_search_client.TabIndex = 47;
             this.btn_search_client.Text = "Buscar receta";
             this.btn_search_client.UseVisualStyleBackColor = false;
@@ -293,12 +306,13 @@ namespace Presentation.View.Forms.Invoice
             this.label1.TabIndex = 0;
             this.label1.Text = "Cliente:";
             // 
-            // textBox5
+            // txt_optometryst
             // 
-            this.textBox5.Location = new System.Drawing.Point(80, 27);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(162, 23);
-            this.textBox5.TabIndex = 69;
+            this.txt_optometryst.Location = new System.Drawing.Point(80, 27);
+            this.txt_optometryst.Name = "txt_optometryst";
+            this.txt_optometryst.ReadOnly = true;
+            this.txt_optometryst.Size = new System.Drawing.Size(198, 23);
+            this.txt_optometryst.TabIndex = 69;
             // 
             // label10
             // 
@@ -311,18 +325,82 @@ namespace Presentation.View.Forms.Invoice
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txt_manager_id);
+            this.groupBox2.Controls.Add(this.txt_optometryst_id);
+            this.groupBox2.Controls.Add(this.txt_seller_id);
+            this.groupBox2.Controls.Add(this.btn_search_gestor);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.txt_manager);
             this.groupBox2.Controls.Add(this.btn_search_seller);
             this.groupBox2.Controls.Add(this.btn_search_optometryst);
             this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.textBox6);
+            this.groupBox2.Controls.Add(this.txt_seller);
             this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.textBox5);
+            this.groupBox2.Controls.Add(this.txt_optometryst);
             this.groupBox2.Location = new System.Drawing.Point(12, 200);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(730, 63);
+            this.groupBox2.Size = new System.Drawing.Size(730, 102);
             this.groupBox2.TabIndex = 70;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Información de la venta";
+            // 
+            // txt_manager_id
+            // 
+            this.txt_manager_id.Location = new System.Drawing.Point(643, 68);
+            this.txt_manager_id.Name = "txt_manager_id";
+            this.txt_manager_id.ReadOnly = true;
+            this.txt_manager_id.Size = new System.Drawing.Size(72, 23);
+            this.txt_manager_id.TabIndex = 78;
+            this.txt_manager_id.Visible = false;
+            // 
+            // txt_optometryst_id
+            // 
+            this.txt_optometryst_id.Location = new System.Drawing.Point(487, 68);
+            this.txt_optometryst_id.Name = "txt_optometryst_id";
+            this.txt_optometryst_id.ReadOnly = true;
+            this.txt_optometryst_id.Size = new System.Drawing.Size(72, 23);
+            this.txt_optometryst_id.TabIndex = 77;
+            this.txt_optometryst_id.Visible = false;
+            // 
+            // txt_seller_id
+            // 
+            this.txt_seller_id.Location = new System.Drawing.Point(565, 68);
+            this.txt_seller_id.Name = "txt_seller_id";
+            this.txt_seller_id.ReadOnly = true;
+            this.txt_seller_id.Size = new System.Drawing.Size(72, 23);
+            this.txt_seller_id.TabIndex = 76;
+            this.txt_seller_id.Visible = false;
+            // 
+            // btn_search_gestor
+            // 
+            this.btn_search_gestor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(142)))), ((int)(((byte)(4)))));
+            this.btn_search_gestor.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(142)))), ((int)(((byte)(4)))));
+            this.btn_search_gestor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_search_gestor.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_search_gestor.Location = new System.Drawing.Point(636, 25);
+            this.btn_search_gestor.Name = "btn_search_gestor";
+            this.btn_search_gestor.Size = new System.Drawing.Size(79, 27);
+            this.btn_search_gestor.TabIndex = 75;
+            this.btn_search_gestor.Text = "Buscar";
+            this.btn_search_gestor.UseVisualStyleBackColor = false;
+            this.btn_search_gestor.Click += new System.EventHandler(this.btn_search_gestor_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(409, 30);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 15);
+            this.label2.TabIndex = 73;
+            this.label2.Text = "Gestor:";
+            // 
+            // txt_manager
+            // 
+            this.txt_manager.Location = new System.Drawing.Point(467, 27);
+            this.txt_manager.Name = "txt_manager";
+            this.txt_manager.ReadOnly = true;
+            this.txt_manager.Size = new System.Drawing.Size(163, 23);
+            this.txt_manager.TabIndex = 74;
             // 
             // btn_search_seller
             // 
@@ -330,12 +408,13 @@ namespace Presentation.View.Forms.Invoice
             this.btn_search_seller.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(142)))), ((int)(((byte)(4)))));
             this.btn_search_seller.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_search_seller.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_search_seller.Location = new System.Drawing.Point(636, 25);
+            this.btn_search_seller.Location = new System.Drawing.Point(284, 68);
             this.btn_search_seller.Name = "btn_search_seller";
             this.btn_search_seller.Size = new System.Drawing.Size(79, 27);
             this.btn_search_seller.TabIndex = 72;
             this.btn_search_seller.Text = "Buscar";
             this.btn_search_seller.UseVisualStyleBackColor = false;
+            this.btn_search_seller.Click += new System.EventHandler(this.btn_search_seller_Click);
             // 
             // btn_search_optometryst
             // 
@@ -343,31 +422,34 @@ namespace Presentation.View.Forms.Invoice
             this.btn_search_optometryst.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(142)))), ((int)(((byte)(4)))));
             this.btn_search_optometryst.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_search_optometryst.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_search_optometryst.Location = new System.Drawing.Point(248, 25);
+            this.btn_search_optometryst.Location = new System.Drawing.Point(284, 23);
             this.btn_search_optometryst.Name = "btn_search_optometryst";
             this.btn_search_optometryst.Size = new System.Drawing.Size(79, 27);
             this.btn_search_optometryst.TabIndex = 68;
             this.btn_search_optometryst.Text = "Buscar";
             this.btn_search_optometryst.UseVisualStyleBackColor = false;
+            this.btn_search_optometryst.Click += new System.EventHandler(this.btn_search_optometryst_Click);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(367, 30);
+            this.label11.Location = new System.Drawing.Point(7, 71);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(45, 15);
             this.label11.TabIndex = 70;
             this.label11.Text = "Asesor:";
             // 
-            // textBox6
+            // txt_seller
             // 
-            this.textBox6.Location = new System.Drawing.Point(412, 27);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(218, 23);
-            this.textBox6.TabIndex = 71;
+            this.txt_seller.Location = new System.Drawing.Point(80, 68);
+            this.txt_seller.Name = "txt_seller";
+            this.txt_seller.ReadOnly = true;
+            this.txt_seller.Size = new System.Drawing.Size(198, 23);
+            this.txt_seller.TabIndex = 71;
             // 
             // dgv_products
             // 
+            this.dgv_products.AllowUserToAddRows = false;
             this.dgv_products.AllowUserToResizeColumns = false;
             this.dgv_products.AllowUserToResizeRows = false;
             this.dgv_products.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(241)))));
@@ -398,11 +480,10 @@ namespace Presentation.View.Forms.Invoice
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv_products.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_products.EnableHeadersVisualStyles = false;
-            this.dgv_products.Location = new System.Drawing.Point(12, 270);
+            this.dgv_products.Location = new System.Drawing.Point(12, 309);
             this.dgv_products.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgv_products.MultiSelect = false;
             this.dgv_products.Name = "dgv_products";
-            this.dgv_products.ReadOnly = true;
             this.dgv_products.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(134)))), ((int)(((byte)(14)))));
@@ -416,22 +497,62 @@ namespace Presentation.View.Forms.Invoice
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.WindowFrame;
             this.dgv_products.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_products.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_products.Size = new System.Drawing.Size(730, 132);
+            this.dgv_products.Size = new System.Drawing.Size(730, 93);
             this.dgv_products.TabIndex = 71;
+            this.dgv_products.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_products_CellEndEdit);
+            // 
+            // cl_id_product
+            // 
+            this.cl_id_product.HeaderText = "ID";
+            this.cl_id_product.Name = "cl_id_product";
+            this.cl_id_product.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.cl_id_product.Visible = false;
+            this.cl_id_product.Width = 50;
+            // 
+            // cl_cod_product
+            // 
+            this.cl_cod_product.HeaderText = "CODIGO";
+            this.cl_cod_product.Name = "cl_cod_product";
+            this.cl_cod_product.Width = 85;
+            // 
+            // cl_name_product
+            // 
+            this.cl_name_product.HeaderText = "ARTICULO";
+            this.cl_name_product.Name = "cl_name_product";
+            this.cl_name_product.Width = 309;
+            // 
+            // cl_cant_product
+            // 
+            this.cl_cant_product.HeaderText = "CANT";
+            this.cl_cant_product.Name = "cl_cant_product";
+            this.cl_cant_product.Width = 45;
+            // 
+            // cl_priceUnit_product
+            // 
+            this.cl_priceUnit_product.HeaderText = "PREC. UNIT.";
+            this.cl_priceUnit_product.Name = "cl_priceUnit_product";
+            this.cl_priceUnit_product.Width = 125;
+            // 
+            // cl_subtotal_product
+            // 
+            this.cl_subtotal_product.HeaderText = "SUB-TOTAL";
+            this.cl_subtotal_product.Name = "cl_subtotal_product";
+            this.cl_subtotal_product.Width = 125;
             // 
             // txt_sub_total
             // 
             this.txt_sub_total.Enabled = false;
-            this.txt_sub_total.Location = new System.Drawing.Point(624, 409);
+            this.txt_sub_total.Location = new System.Drawing.Point(624, 458);
             this.txt_sub_total.Name = "txt_sub_total";
             this.txt_sub_total.ReadOnly = true;
             this.txt_sub_total.Size = new System.Drawing.Size(118, 23);
             this.txt_sub_total.TabIndex = 72;
+            this.txt_sub_total.Text = "$0.00";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(558, 414);
+            this.label12.Location = new System.Drawing.Point(558, 463);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(60, 15);
             this.label12.TabIndex = 68;
@@ -440,41 +561,44 @@ namespace Presentation.View.Forms.Invoice
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(476, 443);
+            this.label13.Location = new System.Drawing.Point(458, 493);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(67, 15);
+            this.label13.Size = new System.Drawing.Size(85, 15);
             this.label13.TabIndex = 73;
-            this.label13.Text = "Descuento:";
+            this.label13.Text = "Descuento(%):";
             // 
-            // textBox8
+            // txt_with_discount
             // 
-            this.textBox8.Enabled = false;
-            this.textBox8.Location = new System.Drawing.Point(624, 438);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.ReadOnly = true;
-            this.textBox8.Size = new System.Drawing.Size(118, 23);
-            this.textBox8.TabIndex = 74;
+            this.txt_with_discount.Enabled = false;
+            this.txt_with_discount.Location = new System.Drawing.Point(624, 487);
+            this.txt_with_discount.Name = "txt_with_discount";
+            this.txt_with_discount.ReadOnly = true;
+            this.txt_with_discount.Size = new System.Drawing.Size(118, 23);
+            this.txt_with_discount.TabIndex = 74;
+            this.txt_with_discount.Text = "$0.00";
             // 
-            // textBox9
+            // txt_discount
             // 
-            this.textBox9.Location = new System.Drawing.Point(549, 438);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(69, 23);
-            this.textBox9.TabIndex = 75;
+            this.txt_discount.Location = new System.Drawing.Point(549, 487);
+            this.txt_discount.Name = "txt_discount";
+            this.txt_discount.Size = new System.Drawing.Size(69, 23);
+            this.txt_discount.TabIndex = 75;
+            this.txt_discount.TextChanged += new System.EventHandler(this.txt_discount_TextChanged);
             // 
-            // textBox10
+            // txt_total
             // 
-            this.textBox10.Enabled = false;
-            this.textBox10.Location = new System.Drawing.Point(624, 467);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.ReadOnly = true;
-            this.textBox10.Size = new System.Drawing.Size(118, 23);
-            this.textBox10.TabIndex = 77;
+            this.txt_total.Enabled = false;
+            this.txt_total.Location = new System.Drawing.Point(624, 516);
+            this.txt_total.Name = "txt_total";
+            this.txt_total.ReadOnly = true;
+            this.txt_total.Size = new System.Drawing.Size(118, 23);
+            this.txt_total.TabIndex = 77;
+            this.txt_total.Text = "$0.00";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(582, 475);
+            this.label14.Location = new System.Drawing.Point(582, 524);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(36, 15);
             this.label14.TabIndex = 76;
@@ -504,6 +628,97 @@ namespace Presentation.View.Forms.Invoice
             this.label15.Size = new System.Drawing.Size(127, 17);
             this.label15.TabIndex = 6;
             this.label15.Text = "Creador de facturas";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(18, 466);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(41, 15);
+            this.label16.TabIndex = 68;
+            this.label16.Text = "Notas:";
+            // 
+            // txt_notes
+            // 
+            this.txt_notes.Location = new System.Drawing.Point(65, 466);
+            this.txt_notes.Multiline = true;
+            this.txt_notes.Name = "txt_notes";
+            this.txt_notes.Size = new System.Drawing.Size(380, 73);
+            this.txt_notes.TabIndex = 68;
+            // 
+            // lbl_error
+            // 
+            this.lbl_error.AutoSize = true;
+            this.lbl_error.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbl_error.Location = new System.Drawing.Point(19, 514);
+            this.lbl_error.Name = "lbl_error";
+            this.lbl_error.Size = new System.Drawing.Size(10, 15);
+            this.lbl_error.TabIndex = 80;
+            this.lbl_error.Text = ".";
+            // 
+            // txt_n_recipe
+            // 
+            this.txt_n_recipe.Location = new System.Drawing.Point(638, 22);
+            this.txt_n_recipe.Name = "txt_n_recipe";
+            this.txt_n_recipe.Size = new System.Drawing.Size(77, 23);
+            this.txt_n_recipe.TabIndex = 70;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(546, 27);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(87, 15);
+            this.label17.TabIndex = 69;
+            this.label17.Text = "No. de Factura:";
+            // 
+            // btn_add_element
+            // 
+            this.btn_add_element.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.btn_add_element.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.btn_add_element.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_add_element.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_add_element.ForeColor = System.Drawing.Color.White;
+            this.btn_add_element.Location = new System.Drawing.Point(12, 409);
+            this.btn_add_element.Name = "btn_add_element";
+            this.btn_add_element.Size = new System.Drawing.Size(138, 27);
+            this.btn_add_element.TabIndex = 79;
+            this.btn_add_element.Text = "+ Añadir elemento";
+            this.btn_add_element.UseVisualStyleBackColor = false;
+            this.btn_add_element.Click += new System.EventHandler(this.btn_add_element_Click);
+            // 
+            // btn_remove_element
+            // 
+            this.btn_remove_element.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.btn_remove_element.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.btn_remove_element.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_remove_element.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_remove_element.ForeColor = System.Drawing.Color.White;
+            this.btn_remove_element.Location = new System.Drawing.Point(156, 409);
+            this.btn_remove_element.Name = "btn_remove_element";
+            this.btn_remove_element.Size = new System.Drawing.Size(166, 27);
+            this.btn_remove_element.TabIndex = 81;
+            this.btn_remove_element.Text = "+ Eliminar elemento";
+            this.btn_remove_element.UseVisualStyleBackColor = false;
+            this.btn_remove_element.Click += new System.EventHandler(this.btn_remove_element_Click);
+            // 
+            // btn_save_invoice
+            // 
+            this.btn_save_invoice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.btn_save_invoice.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.btn_save_invoice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_save_invoice.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_save_invoice.ForeColor = System.Drawing.Color.White;
+            this.btn_save_invoice.Image = global::Presentation.Properties.Resources.icons8_guardar_24;
+            this.btn_save_invoice.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_save_invoice.Location = new System.Drawing.Point(549, 555);
+            this.btn_save_invoice.Name = "btn_save_invoice";
+            this.btn_save_invoice.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btn_save_invoice.Size = new System.Drawing.Size(193, 30);
+            this.btn_save_invoice.TabIndex = 79;
+            this.btn_save_invoice.Text = "Guardar factura";
+            this.btn_save_invoice.UseVisualStyleBackColor = false;
+            this.btn_save_invoice.Click += new System.EventHandler(this.btn_save_invoice_Click);
             // 
             // pcb_close_create_invoice
             // 
@@ -539,99 +754,24 @@ namespace Presentation.View.Forms.Invoice
             this.pcb_minus.TabIndex = 2;
             this.pcb_minus.TabStop = false;
             // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(18, 417);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(41, 15);
-            this.label16.TabIndex = 68;
-            this.label16.Text = "Notas:";
-            // 
-            // textBox11
-            // 
-            this.textBox11.Location = new System.Drawing.Point(65, 417);
-            this.textBox11.Multiline = true;
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(380, 119);
-            this.textBox11.TabIndex = 68;
-            // 
-            // btn_save_company
-            // 
-            this.btn_save_company.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
-            this.btn_save_company.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
-            this.btn_save_company.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_save_company.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_save_company.ForeColor = System.Drawing.Color.White;
-            this.btn_save_company.Image = global::Presentation.Properties.Resources.icons8_guardar_24;
-            this.btn_save_company.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_save_company.Location = new System.Drawing.Point(619, 506);
-            this.btn_save_company.Name = "btn_save_company";
-            this.btn_save_company.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btn_save_company.Size = new System.Drawing.Size(123, 30);
-            this.btn_save_company.TabIndex = 79;
-            this.btn_save_company.Text = "Guardar";
-            this.btn_save_company.UseVisualStyleBackColor = false;
-            // 
-            // cl_id_product
-            // 
-            this.cl_id_product.HeaderText = "ID";
-            this.cl_id_product.Name = "cl_id_product";
-            this.cl_id_product.ReadOnly = true;
-            this.cl_id_product.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.cl_id_product.Visible = false;
-            this.cl_id_product.Width = 50;
-            // 
-            // cl_cod_product
-            // 
-            this.cl_cod_product.HeaderText = "CODIGO";
-            this.cl_cod_product.Name = "cl_cod_product";
-            this.cl_cod_product.ReadOnly = true;
-            this.cl_cod_product.Width = 85;
-            // 
-            // cl_name_product
-            // 
-            this.cl_name_product.HeaderText = "ARTICULO";
-            this.cl_name_product.Name = "cl_name_product";
-            this.cl_name_product.ReadOnly = true;
-            this.cl_name_product.Width = 309;
-            // 
-            // cl_cant_product
-            // 
-            this.cl_cant_product.HeaderText = "CANT";
-            this.cl_cant_product.Name = "cl_cant_product";
-            this.cl_cant_product.ReadOnly = true;
-            this.cl_cant_product.Width = 45;
-            // 
-            // cl_priceUnit_product
-            // 
-            this.cl_priceUnit_product.HeaderText = "PREC. UNIT.";
-            this.cl_priceUnit_product.Name = "cl_priceUnit_product";
-            this.cl_priceUnit_product.ReadOnly = true;
-            this.cl_priceUnit_product.Width = 125;
-            // 
-            // cl_subtotal_product
-            // 
-            this.cl_subtotal_product.HeaderText = "SUB-TOTAL";
-            this.cl_subtotal_product.Name = "cl_subtotal_product";
-            this.cl_subtotal_product.ReadOnly = true;
-            this.cl_subtotal_product.Width = 125;
-            // 
             // InvoiceCreate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(752, 548);
-            this.Controls.Add(this.btn_save_company);
-            this.Controls.Add(this.textBox11);
+            this.ClientSize = new System.Drawing.Size(752, 595);
+            this.Controls.Add(this.btn_remove_element);
+            this.Controls.Add(this.btn_add_element);
+            this.Controls.Add(this.lbl_error);
+            this.Controls.Add(this.btn_save_invoice);
+            this.Controls.Add(this.txt_notes);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.pnl_top);
-            this.Controls.Add(this.textBox10);
+            this.Controls.Add(this.txt_total);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.txt_discount);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.txt_with_discount);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.txt_sub_total);
             this.Controls.Add(this.dgv_products);
@@ -662,36 +802,34 @@ namespace Presentation.View.Forms.Invoice
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txt_postpone;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txt_first_payment;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.RadioButton rb_montly;
+        private System.Windows.Forms.RadioButton rb_biweekly;
+        private System.Windows.Forms.TextBox txt_fee;
+        private System.Windows.Forms.TextBox txt_n_fee;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmb_payment_method;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtp_invoice;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btn_search_client;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btn_search_seller;
         private System.Windows.Forms.Button btn_search_optometryst;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox6;
         public System.Windows.Forms.DataGridView dgv_products;
         private System.Windows.Forms.TextBox txt_sub_total;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txt_with_discount;
+        private System.Windows.Forms.TextBox txt_discount;
+        private System.Windows.Forms.TextBox txt_total;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Panel pnl_top;
         private System.Windows.Forms.Label label15;
@@ -699,15 +837,28 @@ namespace Presentation.View.Forms.Invoice
         private System.Windows.Forms.PictureBox pcb_exit;
         private System.Windows.Forms.PictureBox pcb_minus;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.Button btn_save_company;
+        private System.Windows.Forms.TextBox txt_notes;
+        private System.Windows.Forms.Button btn_save_invoice;
         public System.Windows.Forms.Label lbl_client_name;
-        public System.Windows.Forms.TextBox txt_client_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn cl_id_product;
         private System.Windows.Forms.DataGridViewTextBoxColumn cl_cod_product;
         private System.Windows.Forms.DataGridViewTextBoxColumn cl_name_product;
         private System.Windows.Forms.DataGridViewTextBoxColumn cl_cant_product;
         private System.Windows.Forms.DataGridViewTextBoxColumn cl_priceUnit_product;
         private System.Windows.Forms.DataGridViewTextBoxColumn cl_subtotal_product;
+        private System.Windows.Forms.Button btn_search_gestor;
+        private System.Windows.Forms.Label label2;
+        public System.Windows.Forms.TextBox txt_manager_id;
+        public System.Windows.Forms.TextBox txt_optometryst_id;
+        public System.Windows.Forms.TextBox txt_seller_id;
+        public System.Windows.Forms.TextBox txt_optometryst;
+        public System.Windows.Forms.TextBox txt_seller;
+        public System.Windows.Forms.TextBox txt_manager;
+        private System.Windows.Forms.Label lbl_error;
+        public System.Windows.Forms.TextBox txt_recipe_id;
+        private System.Windows.Forms.TextBox txt_n_recipe;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Button btn_add_element;
+        private System.Windows.Forms.Button btn_remove_element;
     }
 }

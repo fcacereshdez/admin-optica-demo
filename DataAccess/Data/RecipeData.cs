@@ -50,6 +50,8 @@ namespace DataAccess.Data
             }
         }
 
+
+
         public void SelectRecipeById(Int64 recipe_id)
         {
             using (var conn = GetConnection())
@@ -131,7 +133,12 @@ namespace DataAccess.Data
 
         public void CreateRecipe(
 string number_recipe, DateTime date_recipe, string esf_od,
-string esf_oi, string cil_od, string cil_oi, string eje_od, string eje_oi, string adic_od, string adic_oi, string lensometry_notes, 
+string esf_oi, string cil_od, string cil_oi, string eje_od, string eje_oi, string adic_od, string adic_oi,
+string esf_od_recipe, string esf_oi_recipe, string cil_od_recipe, string cil_oi_recipe, string eje_od_recipe,
+string eje_oi_recipe, string adic_od_recipe, string adic_oi_recipe, string altob_od_recipe, string altob_oi_recipe,
+string altpu_od_recipe, string altpu_oi_recipe, string dplej_od_recipe, string dplej_oi_recipe, string dpcer_od_recipe,
+string dpcer_oi_recipe, string base_od_recipe, string base_oi_recipe,
+string lensometry_notes, 
 Int64 ring_id, Int64 glasses_id, bool comp, bool sa, bool aa,
 bool ar, bool process, int quantity, string value, bool hypertension, bool diabetes, bool cataract, bool pterigion, bool irritation,
 bool sleepiness, bool burning, bool headache, bool itch, bool tearing, string eye_movementes, string ophthalmoscopy, string eye_adnexa,
@@ -159,6 +166,24 @@ Int64 client_id, Int32 age, string invoice_laboratory , string date_invoice_labo
                     cmd.Parameters.AddWithValue("@eje_oi", eje_oi);
                     cmd.Parameters.AddWithValue("@adic_od", adic_od);
                     cmd.Parameters.AddWithValue("@adic_oi", adic_oi);
+                    cmd.Parameters.AddWithValue("@esf_od_recipe", esf_od_recipe);
+                    cmd.Parameters.AddWithValue("@esf_oi_recipe", esf_oi_recipe);
+                    cmd.Parameters.AddWithValue("@cil_od_recipe", cil_od_recipe);
+                    cmd.Parameters.AddWithValue("@cil_oi_recipe", cil_oi_recipe);
+                    cmd.Parameters.AddWithValue("@eje_od_recipe", eje_od_recipe);
+                    cmd.Parameters.AddWithValue("@eje_oi_recipe", eje_oi_recipe);
+                    cmd.Parameters.AddWithValue("@adic_od_recipe", adic_od_recipe);
+                    cmd.Parameters.AddWithValue("@adic_oi_recipe", adic_oi_recipe);
+                    cmd.Parameters.AddWithValue("@altob_od_recipe", altob_od_recipe);
+                    cmd.Parameters.AddWithValue("@altob_oi_recipe", altob_oi_recipe);
+                    cmd.Parameters.AddWithValue("@altpu_od_recipe", altpu_od_recipe);
+                    cmd.Parameters.AddWithValue("@altpu_oi_recipe", altpu_oi_recipe);
+                    cmd.Parameters.AddWithValue("@dplej_od_recipe", dplej_od_recipe);
+                    cmd.Parameters.AddWithValue("@dplej_oi_recipe", dplej_oi_recipe);
+                    cmd.Parameters.AddWithValue("@dpcer_od_recipe", dpcer_od_recipe);
+                    cmd.Parameters.AddWithValue("@dpcer_oi_recipe", dpcer_oi_recipe);
+                    cmd.Parameters.AddWithValue("@base_od_recipe", base_od_recipe);
+                    cmd.Parameters.AddWithValue("@base_oi_recipe", base_oi_recipe);
                     cmd.Parameters.AddWithValue("@lensometry_notes", lensometry_notes);
                     cmd.Parameters.AddWithValue("@ring_id", ring_id);
                     cmd.Parameters.AddWithValue("@glasses_id", glasses_id);

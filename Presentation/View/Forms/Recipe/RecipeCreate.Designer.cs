@@ -29,12 +29,15 @@ namespace Presentation.View.Forms.Recipe
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnl_top = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
+            this.pcb_close_create_recipe = new System.Windows.Forms.PictureBox();
+            this.pcb_exit = new System.Windows.Forms.PictureBox();
+            this.pcb_minus = new System.Windows.Forms.PictureBox();
             this.tb_recipe = new System.Windows.Forms.TabControl();
             this.tp_clients = new System.Windows.Forms.TabPage();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
@@ -79,28 +82,28 @@ namespace Presentation.View.Forms.Recipe
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox27 = new System.Windows.Forms.TextBox();
-            this.textBox28 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.textBox21 = new System.Windows.Forms.TextBox();
-            this.textBox22 = new System.Windows.Forms.TextBox();
-            this.textBox23 = new System.Windows.Forms.TextBox();
-            this.textBox24 = new System.Windows.Forms.TextBox();
-            this.textBox25 = new System.Windows.Forms.TextBox();
-            this.textBox26 = new System.Windows.Forms.TextBox();
+            this.txt_base_od_recipe = new System.Windows.Forms.TextBox();
+            this.txt_base_oi_recipe = new System.Windows.Forms.TextBox();
+            this.txt_dplej_oi_recipe = new System.Windows.Forms.TextBox();
+            this.txt_dpcer_od_recipe = new System.Windows.Forms.TextBox();
+            this.txt_dpcer_oi_recipe = new System.Windows.Forms.TextBox();
+            this.txt_dplej_od_recipe = new System.Windows.Forms.TextBox();
+            this.txt_altob_oi_recipe = new System.Windows.Forms.TextBox();
+            this.txt_altpu_od_recipe = new System.Windows.Forms.TextBox();
+            this.txt_altpu_oi_recipe = new System.Windows.Forms.TextBox();
+            this.txt_altob_od_recipe = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.txt_eje_oi_recipe = new System.Windows.Forms.TextBox();
+            this.txt_adic_od_recipe = new System.Windows.Forms.TextBox();
+            this.txt_adic_oi_recipe = new System.Windows.Forms.TextBox();
+            this.txt_eje_od_recipe = new System.Windows.Forms.TextBox();
+            this.txt_esf_oi_recipe = new System.Windows.Forms.TextBox();
+            this.txt_cil_od_recipe = new System.Windows.Forms.TextBox();
+            this.txt_cil_oi_recipe = new System.Windows.Forms.TextBox();
+            this.txt_esf_od_recipe = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -175,11 +178,11 @@ namespace Presentation.View.Forms.Recipe
             this.label31 = new System.Windows.Forms.Label();
             this.btn_next = new System.Windows.Forms.Button();
             this.btn_save_recipe = new System.Windows.Forms.Button();
-            this.pcb_close_create_recipe = new System.Windows.Forms.PictureBox();
-            this.pcb_exit = new System.Windows.Forms.PictureBox();
-            this.pcb_minus = new System.Windows.Forms.PictureBox();
             this.lbl_errors = new System.Windows.Forms.Label();
             this.pnl_top.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcb_close_create_recipe)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcb_exit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcb_minus)).BeginInit();
             this.tb_recipe.SuspendLayout();
             this.tp_clients.SuspendLayout();
             this.groupBox9.SuspendLayout();
@@ -196,9 +199,6 @@ namespace Presentation.View.Forms.Recipe
             this.groupBox10.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcb_close_create_recipe)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcb_exit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcb_minus)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_top
@@ -225,6 +225,40 @@ namespace Presentation.View.Forms.Recipe
             this.label10.Size = new System.Drawing.Size(54, 17);
             this.label10.TabIndex = 6;
             this.label10.Text = "Recetas";
+            // 
+            // pcb_close_create_recipe
+            // 
+            this.pcb_close_create_recipe.Image = global::Presentation.Properties.Resources.close;
+            this.pcb_close_create_recipe.Location = new System.Drawing.Point(756, 2);
+            this.pcb_close_create_recipe.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pcb_close_create_recipe.Name = "pcb_close_create_recipe";
+            this.pcb_close_create_recipe.Size = new System.Drawing.Size(25, 25);
+            this.pcb_close_create_recipe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcb_close_create_recipe.TabIndex = 4;
+            this.pcb_close_create_recipe.TabStop = false;
+            this.pcb_close_create_recipe.Click += new System.EventHandler(this.pcb_close_create_recipe_Click);
+            // 
+            // pcb_exit
+            // 
+            this.pcb_exit.Image = global::Presentation.Properties.Resources.close;
+            this.pcb_exit.Location = new System.Drawing.Point(1389, 7);
+            this.pcb_exit.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.pcb_exit.Name = "pcb_exit";
+            this.pcb_exit.Size = new System.Drawing.Size(34, 43);
+            this.pcb_exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcb_exit.TabIndex = 3;
+            this.pcb_exit.TabStop = false;
+            // 
+            // pcb_minus
+            // 
+            this.pcb_minus.Image = global::Presentation.Properties.Resources.minus;
+            this.pcb_minus.Location = new System.Drawing.Point(1347, 7);
+            this.pcb_minus.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.pcb_minus.Name = "pcb_minus";
+            this.pcb_minus.Size = new System.Drawing.Size(34, 43);
+            this.pcb_minus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcb_minus.TabIndex = 2;
+            this.pcb_minus.TabStop = false;
             // 
             // tb_recipe
             // 
@@ -271,23 +305,23 @@ namespace Presentation.View.Forms.Recipe
             this.dgv_recipes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(241)))));
             this.dgv_recipes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_recipes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(134)))), ((int)(((byte)(14)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(171)))), ((int)(((byte)(173)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_recipes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(134)))), ((int)(((byte)(14)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(171)))), ((int)(((byte)(173)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_recipes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_recipes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.WindowFrame;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_recipes.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.WindowFrame;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_recipes.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_recipes.EnableHeadersVisualStyles = false;
             this.dgv_recipes.Location = new System.Drawing.Point(9, 23);
             this.dgv_recipes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -295,17 +329,17 @@ namespace Presentation.View.Forms.Recipe
             this.dgv_recipes.Name = "dgv_recipes";
             this.dgv_recipes.ReadOnly = true;
             this.dgv_recipes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(134)))), ((int)(((byte)(14)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.WindowFrame;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_recipes.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.WindowFrame;
-            this.dgv_recipes.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(134)))), ((int)(((byte)(14)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.WindowFrame;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_recipes.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.WindowFrame;
+            this.dgv_recipes.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_recipes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_recipes.Size = new System.Drawing.Size(733, 167);
             this.dgv_recipes.TabIndex = 11;
@@ -694,28 +728,28 @@ namespace Presentation.View.Forms.Recipe
             this.groupBox3.Controls.Add(this.label24);
             this.groupBox3.Controls.Add(this.label23);
             this.groupBox3.Controls.Add(this.label8);
-            this.groupBox3.Controls.Add(this.textBox27);
-            this.groupBox3.Controls.Add(this.textBox28);
-            this.groupBox3.Controls.Add(this.textBox11);
-            this.groupBox3.Controls.Add(this.textBox20);
-            this.groupBox3.Controls.Add(this.textBox21);
-            this.groupBox3.Controls.Add(this.textBox22);
-            this.groupBox3.Controls.Add(this.textBox23);
-            this.groupBox3.Controls.Add(this.textBox24);
-            this.groupBox3.Controls.Add(this.textBox25);
-            this.groupBox3.Controls.Add(this.textBox26);
+            this.groupBox3.Controls.Add(this.txt_base_od_recipe);
+            this.groupBox3.Controls.Add(this.txt_base_oi_recipe);
+            this.groupBox3.Controls.Add(this.txt_dplej_oi_recipe);
+            this.groupBox3.Controls.Add(this.txt_dpcer_od_recipe);
+            this.groupBox3.Controls.Add(this.txt_dpcer_oi_recipe);
+            this.groupBox3.Controls.Add(this.txt_dplej_od_recipe);
+            this.groupBox3.Controls.Add(this.txt_altob_oi_recipe);
+            this.groupBox3.Controls.Add(this.txt_altpu_od_recipe);
+            this.groupBox3.Controls.Add(this.txt_altpu_oi_recipe);
+            this.groupBox3.Controls.Add(this.txt_altob_od_recipe);
             this.groupBox3.Controls.Add(this.label17);
             this.groupBox3.Controls.Add(this.label18);
             this.groupBox3.Controls.Add(this.label19);
             this.groupBox3.Controls.Add(this.label20);
-            this.groupBox3.Controls.Add(this.textBox12);
-            this.groupBox3.Controls.Add(this.textBox13);
-            this.groupBox3.Controls.Add(this.textBox14);
-            this.groupBox3.Controls.Add(this.textBox15);
-            this.groupBox3.Controls.Add(this.textBox16);
-            this.groupBox3.Controls.Add(this.textBox17);
-            this.groupBox3.Controls.Add(this.textBox18);
-            this.groupBox3.Controls.Add(this.textBox19);
+            this.groupBox3.Controls.Add(this.txt_eje_oi_recipe);
+            this.groupBox3.Controls.Add(this.txt_adic_od_recipe);
+            this.groupBox3.Controls.Add(this.txt_adic_oi_recipe);
+            this.groupBox3.Controls.Add(this.txt_eje_od_recipe);
+            this.groupBox3.Controls.Add(this.txt_esf_oi_recipe);
+            this.groupBox3.Controls.Add(this.txt_cil_od_recipe);
+            this.groupBox3.Controls.Add(this.txt_cil_oi_recipe);
+            this.groupBox3.Controls.Add(this.txt_esf_od_recipe);
             this.groupBox3.Controls.Add(this.label21);
             this.groupBox3.Controls.Add(this.label22);
             this.groupBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -771,89 +805,89 @@ namespace Presentation.View.Forms.Recipe
             this.label8.TabIndex = 86;
             this.label8.Text = "ALT OB";
             // 
-            // textBox27
+            // txt_base_od_recipe
             // 
-            this.textBox27.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox27.Location = new System.Drawing.Point(547, 45);
-            this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(57, 23);
-            this.textBox27.TabIndex = 85;
+            this.txt_base_od_recipe.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_base_od_recipe.Location = new System.Drawing.Point(547, 45);
+            this.txt_base_od_recipe.Name = "txt_base_od_recipe";
+            this.txt_base_od_recipe.Size = new System.Drawing.Size(57, 23);
+            this.txt_base_od_recipe.TabIndex = 85;
             // 
-            // textBox28
+            // txt_base_oi_recipe
             // 
-            this.textBox28.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox28.Location = new System.Drawing.Point(547, 74);
-            this.textBox28.Name = "textBox28";
-            this.textBox28.Size = new System.Drawing.Size(57, 23);
-            this.textBox28.TabIndex = 84;
+            this.txt_base_oi_recipe.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_base_oi_recipe.Location = new System.Drawing.Point(547, 74);
+            this.txt_base_oi_recipe.Name = "txt_base_oi_recipe";
+            this.txt_base_oi_recipe.Size = new System.Drawing.Size(57, 23);
+            this.txt_base_oi_recipe.TabIndex = 84;
             // 
-            // textBox11
+            // txt_dplej_oi_recipe
             // 
-            this.textBox11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(421, 74);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(57, 23);
-            this.textBox11.TabIndex = 83;
-            this.textBox11.Text = "34";
+            this.txt_dplej_oi_recipe.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_dplej_oi_recipe.Location = new System.Drawing.Point(421, 74);
+            this.txt_dplej_oi_recipe.Name = "txt_dplej_oi_recipe";
+            this.txt_dplej_oi_recipe.Size = new System.Drawing.Size(57, 23);
+            this.txt_dplej_oi_recipe.TabIndex = 83;
+            this.txt_dplej_oi_recipe.Text = "34";
             // 
-            // textBox20
+            // txt_dpcer_od_recipe
             // 
-            this.textBox20.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox20.Location = new System.Drawing.Point(484, 45);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(57, 23);
-            this.textBox20.TabIndex = 82;
+            this.txt_dpcer_od_recipe.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_dpcer_od_recipe.Location = new System.Drawing.Point(484, 45);
+            this.txt_dpcer_od_recipe.Name = "txt_dpcer_od_recipe";
+            this.txt_dpcer_od_recipe.Size = new System.Drawing.Size(57, 23);
+            this.txt_dpcer_od_recipe.TabIndex = 82;
             // 
-            // textBox21
+            // txt_dpcer_oi_recipe
             // 
-            this.textBox21.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox21.Location = new System.Drawing.Point(484, 74);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(57, 23);
-            this.textBox21.TabIndex = 81;
+            this.txt_dpcer_oi_recipe.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_dpcer_oi_recipe.Location = new System.Drawing.Point(484, 74);
+            this.txt_dpcer_oi_recipe.Name = "txt_dpcer_oi_recipe";
+            this.txt_dpcer_oi_recipe.Size = new System.Drawing.Size(57, 23);
+            this.txt_dpcer_oi_recipe.TabIndex = 81;
             // 
-            // textBox22
+            // txt_dplej_od_recipe
             // 
-            this.textBox22.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox22.Location = new System.Drawing.Point(421, 45);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(57, 23);
-            this.textBox22.TabIndex = 80;
-            this.textBox22.Text = "33";
+            this.txt_dplej_od_recipe.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_dplej_od_recipe.Location = new System.Drawing.Point(421, 45);
+            this.txt_dplej_od_recipe.Name = "txt_dplej_od_recipe";
+            this.txt_dplej_od_recipe.Size = new System.Drawing.Size(57, 23);
+            this.txt_dplej_od_recipe.TabIndex = 80;
+            this.txt_dplej_od_recipe.Text = "33";
             // 
-            // textBox23
+            // txt_altob_oi_recipe
             // 
-            this.textBox23.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox23.Location = new System.Drawing.Point(295, 74);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(57, 23);
-            this.textBox23.TabIndex = 79;
-            this.textBox23.Text = "16";
+            this.txt_altob_oi_recipe.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_altob_oi_recipe.Location = new System.Drawing.Point(295, 74);
+            this.txt_altob_oi_recipe.Name = "txt_altob_oi_recipe";
+            this.txt_altob_oi_recipe.Size = new System.Drawing.Size(57, 23);
+            this.txt_altob_oi_recipe.TabIndex = 79;
+            this.txt_altob_oi_recipe.Text = "16";
             // 
-            // textBox24
+            // txt_altpu_od_recipe
             // 
-            this.textBox24.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox24.Location = new System.Drawing.Point(358, 45);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(57, 23);
-            this.textBox24.TabIndex = 78;
+            this.txt_altpu_od_recipe.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_altpu_od_recipe.Location = new System.Drawing.Point(358, 45);
+            this.txt_altpu_od_recipe.Name = "txt_altpu_od_recipe";
+            this.txt_altpu_od_recipe.Size = new System.Drawing.Size(57, 23);
+            this.txt_altpu_od_recipe.TabIndex = 78;
             // 
-            // textBox25
+            // txt_altpu_oi_recipe
             // 
-            this.textBox25.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox25.Location = new System.Drawing.Point(358, 74);
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(57, 23);
-            this.textBox25.TabIndex = 77;
+            this.txt_altpu_oi_recipe.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_altpu_oi_recipe.Location = new System.Drawing.Point(358, 74);
+            this.txt_altpu_oi_recipe.Name = "txt_altpu_oi_recipe";
+            this.txt_altpu_oi_recipe.Size = new System.Drawing.Size(57, 23);
+            this.txt_altpu_oi_recipe.TabIndex = 77;
             // 
-            // textBox26
+            // txt_altob_od_recipe
             // 
-            this.textBox26.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox26.Location = new System.Drawing.Point(295, 45);
-            this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(57, 23);
-            this.textBox26.TabIndex = 76;
-            this.textBox26.Text = "16";
+            this.txt_altob_od_recipe.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_altob_od_recipe.Location = new System.Drawing.Point(295, 45);
+            this.txt_altob_od_recipe.Name = "txt_altob_od_recipe";
+            this.txt_altob_od_recipe.Size = new System.Drawing.Size(57, 23);
+            this.txt_altob_od_recipe.TabIndex = 76;
+            this.txt_altob_od_recipe.Text = "16";
             // 
             // label17
             // 
@@ -891,71 +925,71 @@ namespace Presentation.View.Forms.Recipe
             this.label20.TabIndex = 72;
             this.label20.Text = "ESF";
             // 
-            // textBox12
+            // txt_eje_oi_recipe
             // 
-            this.textBox12.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.Location = new System.Drawing.Point(169, 74);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(57, 23);
-            this.textBox12.TabIndex = 71;
+            this.txt_eje_oi_recipe.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_eje_oi_recipe.Location = new System.Drawing.Point(169, 74);
+            this.txt_eje_oi_recipe.Name = "txt_eje_oi_recipe";
+            this.txt_eje_oi_recipe.Size = new System.Drawing.Size(57, 23);
+            this.txt_eje_oi_recipe.TabIndex = 71;
             // 
-            // textBox13
+            // txt_adic_od_recipe
             // 
-            this.textBox13.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox13.Location = new System.Drawing.Point(232, 45);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(57, 23);
-            this.textBox13.TabIndex = 70;
-            this.textBox13.Text = "+2.50";
+            this.txt_adic_od_recipe.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_adic_od_recipe.Location = new System.Drawing.Point(232, 45);
+            this.txt_adic_od_recipe.Name = "txt_adic_od_recipe";
+            this.txt_adic_od_recipe.Size = new System.Drawing.Size(57, 23);
+            this.txt_adic_od_recipe.TabIndex = 70;
+            this.txt_adic_od_recipe.Text = "+2.50";
             // 
-            // textBox14
+            // txt_adic_oi_recipe
             // 
-            this.textBox14.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox14.Location = new System.Drawing.Point(232, 74);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(57, 23);
-            this.textBox14.TabIndex = 69;
-            this.textBox14.Text = "+2.50";
+            this.txt_adic_oi_recipe.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_adic_oi_recipe.Location = new System.Drawing.Point(232, 74);
+            this.txt_adic_oi_recipe.Name = "txt_adic_oi_recipe";
+            this.txt_adic_oi_recipe.Size = new System.Drawing.Size(57, 23);
+            this.txt_adic_oi_recipe.TabIndex = 69;
+            this.txt_adic_oi_recipe.Text = "+2.50";
             // 
-            // textBox15
+            // txt_eje_od_recipe
             // 
-            this.textBox15.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox15.Location = new System.Drawing.Point(169, 45);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(57, 23);
-            this.textBox15.TabIndex = 68;
+            this.txt_eje_od_recipe.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_eje_od_recipe.Location = new System.Drawing.Point(169, 45);
+            this.txt_eje_od_recipe.Name = "txt_eje_od_recipe";
+            this.txt_eje_od_recipe.Size = new System.Drawing.Size(57, 23);
+            this.txt_eje_od_recipe.TabIndex = 68;
             // 
-            // textBox16
+            // txt_esf_oi_recipe
             // 
-            this.textBox16.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox16.Location = new System.Drawing.Point(43, 74);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(57, 23);
-            this.textBox16.TabIndex = 67;
+            this.txt_esf_oi_recipe.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_esf_oi_recipe.Location = new System.Drawing.Point(43, 74);
+            this.txt_esf_oi_recipe.Name = "txt_esf_oi_recipe";
+            this.txt_esf_oi_recipe.Size = new System.Drawing.Size(57, 23);
+            this.txt_esf_oi_recipe.TabIndex = 67;
             // 
-            // textBox17
+            // txt_cil_od_recipe
             // 
-            this.textBox17.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox17.Location = new System.Drawing.Point(106, 45);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(57, 23);
-            this.textBox17.TabIndex = 66;
+            this.txt_cil_od_recipe.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_cil_od_recipe.Location = new System.Drawing.Point(106, 45);
+            this.txt_cil_od_recipe.Name = "txt_cil_od_recipe";
+            this.txt_cil_od_recipe.Size = new System.Drawing.Size(57, 23);
+            this.txt_cil_od_recipe.TabIndex = 66;
             // 
-            // textBox18
+            // txt_cil_oi_recipe
             // 
-            this.textBox18.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox18.Location = new System.Drawing.Point(106, 74);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(57, 23);
-            this.textBox18.TabIndex = 65;
+            this.txt_cil_oi_recipe.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_cil_oi_recipe.Location = new System.Drawing.Point(106, 74);
+            this.txt_cil_oi_recipe.Name = "txt_cil_oi_recipe";
+            this.txt_cil_oi_recipe.Size = new System.Drawing.Size(57, 23);
+            this.txt_cil_oi_recipe.TabIndex = 65;
             // 
-            // textBox19
+            // txt_esf_od_recipe
             // 
-            this.textBox19.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox19.Location = new System.Drawing.Point(43, 45);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(57, 23);
-            this.textBox19.TabIndex = 64;
+            this.txt_esf_od_recipe.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_esf_od_recipe.Location = new System.Drawing.Point(43, 45);
+            this.txt_esf_od_recipe.Name = "txt_esf_od_recipe";
+            this.txt_esf_od_recipe.Size = new System.Drawing.Size(57, 23);
+            this.txt_esf_od_recipe.TabIndex = 64;
             // 
             // label21
             // 
@@ -1729,40 +1763,6 @@ namespace Presentation.View.Forms.Recipe
             this.btn_save_recipe.Visible = false;
             this.btn_save_recipe.Click += new System.EventHandler(this.btn_save_recipe_Click);
             // 
-            // pcb_close_create_recipe
-            // 
-            this.pcb_close_create_recipe.Image = global::Presentation.Properties.Resources.close;
-            this.pcb_close_create_recipe.Location = new System.Drawing.Point(756, 2);
-            this.pcb_close_create_recipe.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pcb_close_create_recipe.Name = "pcb_close_create_recipe";
-            this.pcb_close_create_recipe.Size = new System.Drawing.Size(25, 25);
-            this.pcb_close_create_recipe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pcb_close_create_recipe.TabIndex = 4;
-            this.pcb_close_create_recipe.TabStop = false;
-            this.pcb_close_create_recipe.Click += new System.EventHandler(this.pcb_close_create_recipe_Click);
-            // 
-            // pcb_exit
-            // 
-            this.pcb_exit.Image = global::Presentation.Properties.Resources.close;
-            this.pcb_exit.Location = new System.Drawing.Point(1389, 7);
-            this.pcb_exit.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.pcb_exit.Name = "pcb_exit";
-            this.pcb_exit.Size = new System.Drawing.Size(34, 43);
-            this.pcb_exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pcb_exit.TabIndex = 3;
-            this.pcb_exit.TabStop = false;
-            // 
-            // pcb_minus
-            // 
-            this.pcb_minus.Image = global::Presentation.Properties.Resources.minus;
-            this.pcb_minus.Location = new System.Drawing.Point(1347, 7);
-            this.pcb_minus.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.pcb_minus.Name = "pcb_minus";
-            this.pcb_minus.Size = new System.Drawing.Size(34, 43);
-            this.pcb_minus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pcb_minus.TabIndex = 2;
-            this.pcb_minus.TabStop = false;
-            // 
             // lbl_errors
             // 
             this.lbl_errors.AutoSize = true;
@@ -1793,6 +1793,9 @@ namespace Presentation.View.Forms.Recipe
             this.Load += new System.EventHandler(this.RecipeCreate_Load);
             this.pnl_top.ResumeLayout(false);
             this.pnl_top.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcb_close_create_recipe)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcb_exit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcb_minus)).EndInit();
             this.tb_recipe.ResumeLayout(false);
             this.tp_clients.ResumeLayout(false);
             this.groupBox9.ResumeLayout(false);
@@ -1818,9 +1821,6 @@ namespace Presentation.View.Forms.Recipe
             this.groupBox5.PerformLayout();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcb_close_create_recipe)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcb_exit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcb_minus)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1854,28 +1854,28 @@ namespace Presentation.View.Forms.Recipe
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox27;
-        private System.Windows.Forms.TextBox textBox28;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox20;
-        private System.Windows.Forms.TextBox textBox21;
-        private System.Windows.Forms.TextBox textBox22;
-        private System.Windows.Forms.TextBox textBox23;
-        private System.Windows.Forms.TextBox textBox24;
-        private System.Windows.Forms.TextBox textBox25;
-        private System.Windows.Forms.TextBox textBox26;
+        private System.Windows.Forms.TextBox txt_base_od_recipe;
+        private System.Windows.Forms.TextBox txt_base_oi_recipe;
+        private System.Windows.Forms.TextBox txt_dplej_oi_recipe;
+        private System.Windows.Forms.TextBox txt_dpcer_od_recipe;
+        private System.Windows.Forms.TextBox txt_dpcer_oi_recipe;
+        private System.Windows.Forms.TextBox txt_dplej_od_recipe;
+        private System.Windows.Forms.TextBox txt_altob_oi_recipe;
+        private System.Windows.Forms.TextBox txt_altpu_od_recipe;
+        private System.Windows.Forms.TextBox txt_altpu_oi_recipe;
+        private System.Windows.Forms.TextBox txt_altob_od_recipe;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.TextBox textBox19;
+        private System.Windows.Forms.TextBox txt_eje_oi_recipe;
+        private System.Windows.Forms.TextBox txt_adic_od_recipe;
+        private System.Windows.Forms.TextBox txt_adic_oi_recipe;
+        private System.Windows.Forms.TextBox txt_eje_od_recipe;
+        private System.Windows.Forms.TextBox txt_esf_oi_recipe;
+        private System.Windows.Forms.TextBox txt_cil_od_recipe;
+        private System.Windows.Forms.TextBox txt_cil_oi_recipe;
+        private System.Windows.Forms.TextBox txt_esf_od_recipe;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.GroupBox groupBox2;

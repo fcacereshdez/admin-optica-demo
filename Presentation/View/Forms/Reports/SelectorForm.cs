@@ -60,5 +60,10 @@ namespace Presentation.View.Forms
             InsertAction("generó una auditoría de todos los usuarios.");
             viewerForm.ShowDialog();
         }
+
+        private void SelectorForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -1,7 +1,6 @@
-﻿
-namespace Presentation.View.Forms.Recipe
+﻿namespace Presentation.View.Forms.Invoice
 {
-    partial class UsersSelector
+    partial class UserSelector
     {
         /// <summary>
         /// Required designer variable.
@@ -33,7 +32,7 @@ namespace Presentation.View.Forms.Recipe
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UsersSelector));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserSelector));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txt_search = new System.Windows.Forms.TextBox();
             this.btn_search_roles = new System.Windows.Forms.Button();
@@ -58,16 +57,16 @@ namespace Presentation.View.Forms.Recipe
             this.groupBox1.Controls.Add(this.cmb_roles);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 49);
+            this.groupBox1.Location = new System.Drawing.Point(12, 42);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(617, 66);
-            this.groupBox1.TabIndex = 22;
+            this.groupBox1.Size = new System.Drawing.Size(528, 66);
+            this.groupBox1.TabIndex = 25;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtros";
             // 
             // txt_search
             // 
-            this.txt_search.Location = new System.Drawing.Point(511, 37);
+            this.txt_search.Location = new System.Drawing.Point(422, 39);
             this.txt_search.Name = "txt_search";
             this.txt_search.Size = new System.Drawing.Size(100, 23);
             this.txt_search.TabIndex = 49;
@@ -133,7 +132,7 @@ namespace Presentation.View.Forms.Recipe
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv_users.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_users.EnableHeadersVisualStyles = false;
-            this.dgv_users.Location = new System.Drawing.Point(12, 122);
+            this.dgv_users.Location = new System.Drawing.Point(12, 111);
             this.dgv_users.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgv_users.MultiSelect = false;
             this.dgv_users.Name = "dgv_users";
@@ -151,9 +150,8 @@ namespace Presentation.View.Forms.Recipe
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.WindowFrame;
             this.dgv_users.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_users.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_users.Size = new System.Drawing.Size(617, 345);
-            this.dgv_users.TabIndex = 21;
-//            this.dgv_users.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_users_CellContentClick);
+            this.dgv_users.Size = new System.Drawing.Size(528, 214);
+            this.dgv_users.TabIndex = 24;
             this.dgv_users.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_users_CellDoubleClick);
             // 
             // pnl_top
@@ -166,8 +164,8 @@ namespace Presentation.View.Forms.Recipe
             this.pnl_top.Location = new System.Drawing.Point(0, 0);
             this.pnl_top.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnl_top.Name = "pnl_top";
-            this.pnl_top.Size = new System.Drawing.Size(645, 35);
-            this.pnl_top.TabIndex = 20;
+            this.pnl_top.Size = new System.Drawing.Size(556, 35);
+            this.pnl_top.TabIndex = 23;
             // 
             // label2
             // 
@@ -183,14 +181,13 @@ namespace Presentation.View.Forms.Recipe
             // pcb_close_create_client
             // 
             this.pcb_close_create_client.Image = global::Presentation.Properties.Resources.close;
-            this.pcb_close_create_client.Location = new System.Drawing.Point(619, 6);
+            this.pcb_close_create_client.Location = new System.Drawing.Point(509, 4);
             this.pcb_close_create_client.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pcb_close_create_client.Name = "pcb_close_create_client";
             this.pcb_close_create_client.Size = new System.Drawing.Size(25, 25);
             this.pcb_close_create_client.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pcb_close_create_client.TabIndex = 15;
             this.pcb_close_create_client.TabStop = false;
-            this.pcb_close_create_client.Click += new System.EventHandler(this.pcb_close_create_client_Click);
             // 
             // pcb_close
             // 
@@ -203,21 +200,22 @@ namespace Presentation.View.Forms.Recipe
             this.pcb_close.TabIndex = 5;
             this.pcb_close.TabStop = false;
             // 
-            // UsersSelector
+            // UserSelector
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(645, 475);
+            this.ClientSize = new System.Drawing.Size(556, 342);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgv_users);
             this.Controls.Add(this.pnl_top);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "UsersSelector";
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.Name = "UserSelector";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Selector de Usuarios";
+            this.Text = "UserSelector";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_users)).EndInit();

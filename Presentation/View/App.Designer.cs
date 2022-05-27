@@ -337,12 +337,12 @@ namespace Presentation
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(142)))), ((int)(((byte)(4)))));
-            this.label1.Location = new System.Drawing.Point(947, 6);
+            this.label1.Location = new System.Drawing.Point(865, 6);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(2);
-            this.label1.Size = new System.Drawing.Size(45, 21);
+            this.label1.Size = new System.Drawing.Size(127, 21);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Alpha";
+            this.label1.Text = "Candidate R5.0.0.15";
             // 
             // pcb_exit
             // 
