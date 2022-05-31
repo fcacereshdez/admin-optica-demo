@@ -27,7 +27,7 @@ namespace Presentation.View.Forms.Recipe
             recipeCreate.lbl_client_name.Text = dgv_clients_child.CurrentRow.Cells[1].Value.ToString();
             recipeCreate.lbl_company_name.Text = dgv_clients_child.CurrentRow.Cells[5].Value.ToString();
             recipeCreate.lbl_phone_client.Text = dgv_clients_child.CurrentRow.Cells[4].Value.ToString();
-            recipeCreate.lbl_client_age.Text = dgv_clients_child.CurrentRow.Cells[6].Value.ToString();
+       //     recipeCreate.lbl_client_age.Text = dgv_clients_child.CurrentRow.Cells[6].Value.ToString(); problema de la edad
             recipeCreate.txt_id_client.Text = dgv_clients_child.CurrentRow.Cells[0].Value.ToString();
             recipeCreate.dgv_recipes.DataSource = recipeController.SelectAllRecipesById(dgv_clients_child.CurrentRow.Cells[0].Value.ToString());
             Close();

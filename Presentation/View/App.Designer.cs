@@ -32,24 +32,23 @@ namespace Presentation
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Layout));
             this.pnl_menu = new System.Windows.Forms.Panel();
-            this.btn_facturation = new System.Windows.Forms.Button();
-            this.btn_about_info = new System.Windows.Forms.Button();
-            this.btn_reports = new System.Windows.Forms.Button();
-            this.btn_products = new System.Windows.Forms.Button();
-            this.btn_shipping = new System.Windows.Forms.Button();
-            this.btn_users = new System.Windows.Forms.Button();
-            this.btn_recipes = new System.Windows.Forms.Button();
-            this.btn_companies = new System.Windows.Forms.Button();
+            this.btn_iva = new System.Windows.Forms.Button();
+            this.btn_banks = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pcb_logout = new System.Windows.Forms.PictureBox();
             this.lbl_role_name = new System.Windows.Forms.Label();
             this.lbl_name_user = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_shipping = new System.Windows.Forms.Button();
+            this.btn_facturation = new System.Windows.Forms.Button();
+            this.btn_reports = new System.Windows.Forms.Button();
+            this.btn_products = new System.Windows.Forms.Button();
+            this.btn_companies = new System.Windows.Forms.Button();
+            this.btn_users = new System.Windows.Forms.Button();
+            this.btn_recipes = new System.Windows.Forms.Button();
             this.btn_labs = new System.Windows.Forms.Button();
             this.btn_clients = new System.Windows.Forms.Button();
-            this.btn_dashboard = new System.Windows.Forms.Button();
             this.pnl_top = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.pcb_exit = new System.Windows.Forms.PictureBox();
             this.pcb_minus = new System.Windows.Forms.PictureBox();
             this.lbl_time = new System.Windows.Forms.Label();
@@ -63,6 +62,7 @@ namespace Presentation
             this.pcb_close_form = new System.Windows.Forms.PictureBox();
             this.lbl_form_name = new System.Windows.Forms.Label();
             this.tmr_layout = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             this.pnl_menu.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_logout)).BeginInit();
@@ -80,143 +80,55 @@ namespace Presentation
             // pnl_menu
             // 
             this.pnl_menu.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnl_menu.Controls.Add(this.btn_iva);
+            this.pnl_menu.Controls.Add(this.btn_banks);
+            this.pnl_menu.Controls.Add(this.panel1);
+            this.pnl_menu.Controls.Add(this.btn_shipping);
             this.pnl_menu.Controls.Add(this.btn_facturation);
-            this.pnl_menu.Controls.Add(this.btn_about_info);
             this.pnl_menu.Controls.Add(this.btn_reports);
             this.pnl_menu.Controls.Add(this.btn_products);
-            this.pnl_menu.Controls.Add(this.btn_shipping);
+            this.pnl_menu.Controls.Add(this.btn_companies);
             this.pnl_menu.Controls.Add(this.btn_users);
             this.pnl_menu.Controls.Add(this.btn_recipes);
-            this.pnl_menu.Controls.Add(this.btn_companies);
-            this.pnl_menu.Controls.Add(this.panel1);
             this.pnl_menu.Controls.Add(this.btn_labs);
             this.pnl_menu.Controls.Add(this.btn_clients);
-            this.pnl_menu.Controls.Add(this.btn_dashboard);
             this.pnl_menu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnl_menu.Location = new System.Drawing.Point(0, 32);
             this.pnl_menu.Name = "pnl_menu";
-            this.pnl_menu.Size = new System.Drawing.Size(203, 586);
+            this.pnl_menu.Size = new System.Drawing.Size(184, 586);
             this.pnl_menu.TabIndex = 0;
             // 
-            // btn_facturation
+            // btn_iva
             // 
-            this.btn_facturation.FlatAppearance.BorderSize = 0;
-            this.btn_facturation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_facturation.Image = global::Presentation.Properties.Resources.icons8_file_invoice_dollar_24;
-            this.btn_facturation.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_facturation.Location = new System.Drawing.Point(2, 302);
-            this.btn_facturation.Name = "btn_facturation";
-            this.btn_facturation.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
-            this.btn_facturation.Size = new System.Drawing.Size(200, 41);
-            this.btn_facturation.TabIndex = 11;
-            this.btn_facturation.Text = "Facturación";
-            this.btn_facturation.UseVisualStyleBackColor = true;
-            this.btn_facturation.Click += new System.EventHandler(this.btn_facturation_Click);
+            this.btn_iva.Enabled = false;
+            this.btn_iva.FlatAppearance.BorderSize = 0;
+            this.btn_iva.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_iva.Image = global::Presentation.Properties.Resources.icons8_company_24;
+            this.btn_iva.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_iva.Location = new System.Drawing.Point(0, 400);
+            this.btn_iva.Name = "btn_iva";
+            this.btn_iva.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
+            this.btn_iva.Size = new System.Drawing.Size(200, 41);
+            this.btn_iva.TabIndex = 13;
+            this.btn_iva.Text = "IVA";
+            this.btn_iva.UseVisualStyleBackColor = true;
+            this.btn_iva.Click += new System.EventHandler(this.btn_iva_Click);
             // 
-            // btn_about_info
+            // btn_banks
             // 
-            this.btn_about_info.FlatAppearance.BorderSize = 0;
-            this.btn_about_info.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_about_info.Image = global::Presentation.Properties.Resources.icons8_google_code_24__1_;
-            this.btn_about_info.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_about_info.Location = new System.Drawing.Point(2, 536);
-            this.btn_about_info.Name = "btn_about_info";
-            this.btn_about_info.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
-            this.btn_about_info.Size = new System.Drawing.Size(200, 41);
-            this.btn_about_info.TabIndex = 10;
-            this.btn_about_info.Text = "Información";
-            this.btn_about_info.UseVisualStyleBackColor = true;
-            this.btn_about_info.Click += new System.EventHandler(this.btn_about_info_Click);
-            // 
-            // btn_reports
-            // 
-            this.btn_reports.FlatAppearance.BorderSize = 0;
-            this.btn_reports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_reports.Image = global::Presentation.Properties.Resources.icons8_charts_24;
-            this.btn_reports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_reports.Location = new System.Drawing.Point(3, 395);
-            this.btn_reports.Name = "btn_reports";
-            this.btn_reports.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
-            this.btn_reports.Size = new System.Drawing.Size(200, 41);
-            this.btn_reports.TabIndex = 9;
-            this.btn_reports.Text = "Informes";
-            this.btn_reports.UseVisualStyleBackColor = true;
-            this.btn_reports.Click += new System.EventHandler(this.btn_reports_Click);
-            // 
-            // btn_products
-            // 
-            this.btn_products.FlatAppearance.BorderSize = 0;
-            this.btn_products.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_products.Image = global::Presentation.Properties.Resources.icons8_producto_24;
-            this.btn_products.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_products.Location = new System.Drawing.Point(2, 348);
-            this.btn_products.Name = "btn_products";
-            this.btn_products.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
-            this.btn_products.Size = new System.Drawing.Size(200, 41);
-            this.btn_products.TabIndex = 8;
-            this.btn_products.Text = "Inventarios";
-            this.btn_products.UseVisualStyleBackColor = true;
-            this.btn_products.Click += new System.EventHandler(this.btn_products_Click);
-            // 
-            // btn_shipping
-            // 
-            this.btn_shipping.FlatAppearance.BorderSize = 0;
-            this.btn_shipping.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_shipping.Image = global::Presentation.Properties.Resources.icons8_shipping_24;
-            this.btn_shipping.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_shipping.Location = new System.Drawing.Point(3, 442);
-            this.btn_shipping.Name = "btn_shipping";
-            this.btn_shipping.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
-            this.btn_shipping.Size = new System.Drawing.Size(200, 41);
-            this.btn_shipping.TabIndex = 6;
-            this.btn_shipping.Text = "Entregas";
-            this.btn_shipping.UseVisualStyleBackColor = true;
-            this.btn_shipping.Click += new System.EventHandler(this.btn_shipping_Click);
-            // 
-            // btn_users
-            // 
-            this.btn_users.FlatAppearance.BorderSize = 0;
-            this.btn_users.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_users.Image = global::Presentation.Properties.Resources.customer1;
-            this.btn_users.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_users.Location = new System.Drawing.Point(2, 489);
-            this.btn_users.Name = "btn_users";
-            this.btn_users.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
-            this.btn_users.Size = new System.Drawing.Size(200, 41);
-            this.btn_users.TabIndex = 3;
-            this.btn_users.Text = "Usuarios";
-            this.btn_users.UseVisualStyleBackColor = true;
-            this.btn_users.Click += new System.EventHandler(this.btn_user_Click);
-            // 
-            // btn_recipes
-            // 
-            this.btn_recipes.FlatAppearance.BorderSize = 0;
-            this.btn_recipes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_recipes.Image = global::Presentation.Properties.Resources.icons8_documentos_24;
-            this.btn_recipes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_recipes.Location = new System.Drawing.Point(3, 255);
-            this.btn_recipes.Name = "btn_recipes";
-            this.btn_recipes.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
-            this.btn_recipes.Size = new System.Drawing.Size(200, 41);
-            this.btn_recipes.TabIndex = 7;
-            this.btn_recipes.Text = "Recetas";
-            this.btn_recipes.UseVisualStyleBackColor = true;
-            this.btn_recipes.Click += new System.EventHandler(this.btn_recipes_Click);
-            // 
-            // btn_companies
-            // 
-            this.btn_companies.FlatAppearance.BorderSize = 0;
-            this.btn_companies.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_companies.Image = global::Presentation.Properties.Resources.icons8_organización_24;
-            this.btn_companies.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_companies.Location = new System.Drawing.Point(3, 160);
-            this.btn_companies.Name = "btn_companies";
-            this.btn_companies.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
-            this.btn_companies.Size = new System.Drawing.Size(200, 41);
-            this.btn_companies.TabIndex = 5;
-            this.btn_companies.Text = "Empresas";
-            this.btn_companies.UseVisualStyleBackColor = true;
-            this.btn_companies.Click += new System.EventHandler(this.btn_companies_Click);
+            this.btn_banks.Enabled = false;
+            this.btn_banks.FlatAppearance.BorderSize = 0;
+            this.btn_banks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_banks.Image = global::Presentation.Properties.Resources.icons8_bank_24__1_;
+            this.btn_banks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_banks.Location = new System.Drawing.Point(0, 353);
+            this.btn_banks.Name = "btn_banks";
+            this.btn_banks.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
+            this.btn_banks.Size = new System.Drawing.Size(200, 41);
+            this.btn_banks.TabIndex = 12;
+            this.btn_banks.Text = "Bancos";
+            this.btn_banks.UseVisualStyleBackColor = true;
+            this.btn_banks.Click += new System.EventHandler(this.btn_banks_Click);
             // 
             // panel1
             // 
@@ -228,13 +140,13 @@ namespace Presentation
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(203, 60);
+            this.panel1.Size = new System.Drawing.Size(184, 60);
             this.panel1.TabIndex = 4;
             // 
             // pcb_logout
             // 
             this.pcb_logout.Image = global::Presentation.Properties.Resources.power_off;
-            this.pcb_logout.Location = new System.Drawing.Point(174, 20);
+            this.pcb_logout.Location = new System.Drawing.Point(158, 24);
             this.pcb_logout.Name = "pcb_logout";
             this.pcb_logout.Size = new System.Drawing.Size(20, 20);
             this.pcb_logout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -273,13 +185,119 @@ namespace Presentation
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // btn_shipping
+            // 
+            this.btn_shipping.Enabled = false;
+            this.btn_shipping.FlatAppearance.BorderSize = 0;
+            this.btn_shipping.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_shipping.Image = global::Presentation.Properties.Resources.icons8_shipping_24;
+            this.btn_shipping.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_shipping.Location = new System.Drawing.Point(0, 447);
+            this.btn_shipping.Name = "btn_shipping";
+            this.btn_shipping.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
+            this.btn_shipping.Size = new System.Drawing.Size(200, 41);
+            this.btn_shipping.TabIndex = 6;
+            this.btn_shipping.Text = "Entregas";
+            this.btn_shipping.UseVisualStyleBackColor = true;
+            this.btn_shipping.Click += new System.EventHandler(this.btn_shipping_Click);
+            // 
+            // btn_facturation
+            // 
+            this.btn_facturation.FlatAppearance.BorderSize = 0;
+            this.btn_facturation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_facturation.Image = global::Presentation.Properties.Resources.icons8_file_invoice_dollar_24;
+            this.btn_facturation.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_facturation.Location = new System.Drawing.Point(0, 259);
+            this.btn_facturation.Name = "btn_facturation";
+            this.btn_facturation.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
+            this.btn_facturation.Size = new System.Drawing.Size(200, 41);
+            this.btn_facturation.TabIndex = 11;
+            this.btn_facturation.Text = "Facturación";
+            this.btn_facturation.UseVisualStyleBackColor = true;
+            this.btn_facturation.Click += new System.EventHandler(this.btn_facturation_Click);
+            // 
+            // btn_reports
+            // 
+            this.btn_reports.FlatAppearance.BorderSize = 0;
+            this.btn_reports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_reports.Image = global::Presentation.Properties.Resources.icons8_charts_24;
+            this.btn_reports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_reports.Location = new System.Drawing.Point(0, 494);
+            this.btn_reports.Name = "btn_reports";
+            this.btn_reports.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
+            this.btn_reports.Size = new System.Drawing.Size(200, 41);
+            this.btn_reports.TabIndex = 9;
+            this.btn_reports.Text = "Informes";
+            this.btn_reports.UseVisualStyleBackColor = true;
+            this.btn_reports.Click += new System.EventHandler(this.btn_reports_Click);
+            // 
+            // btn_products
+            // 
+            this.btn_products.FlatAppearance.BorderSize = 0;
+            this.btn_products.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_products.Image = global::Presentation.Properties.Resources.icons8_producto_24;
+            this.btn_products.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_products.Location = new System.Drawing.Point(0, 306);
+            this.btn_products.Name = "btn_products";
+            this.btn_products.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
+            this.btn_products.Size = new System.Drawing.Size(200, 41);
+            this.btn_products.TabIndex = 8;
+            this.btn_products.Text = "Inventarios";
+            this.btn_products.UseVisualStyleBackColor = true;
+            this.btn_products.Click += new System.EventHandler(this.btn_products_Click);
+            // 
+            // btn_companies
+            // 
+            this.btn_companies.FlatAppearance.BorderSize = 0;
+            this.btn_companies.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_companies.Image = global::Presentation.Properties.Resources.icons8_organización_24;
+            this.btn_companies.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_companies.Location = new System.Drawing.Point(0, 71);
+            this.btn_companies.Name = "btn_companies";
+            this.btn_companies.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
+            this.btn_companies.Size = new System.Drawing.Size(200, 41);
+            this.btn_companies.TabIndex = 5;
+            this.btn_companies.Text = "Empresas";
+            this.btn_companies.UseVisualStyleBackColor = true;
+            this.btn_companies.Click += new System.EventHandler(this.btn_companies_Click);
+            // 
+            // btn_users
+            // 
+            this.btn_users.FlatAppearance.BorderSize = 0;
+            this.btn_users.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_users.Image = global::Presentation.Properties.Resources.customer1;
+            this.btn_users.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_users.Location = new System.Drawing.Point(0, 541);
+            this.btn_users.Name = "btn_users";
+            this.btn_users.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
+            this.btn_users.Size = new System.Drawing.Size(200, 41);
+            this.btn_users.TabIndex = 3;
+            this.btn_users.Text = "Usuarios";
+            this.btn_users.UseVisualStyleBackColor = true;
+            this.btn_users.Click += new System.EventHandler(this.btn_user_Click);
+            // 
+            // btn_recipes
+            // 
+            this.btn_recipes.FlatAppearance.BorderSize = 0;
+            this.btn_recipes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_recipes.Image = global::Presentation.Properties.Resources.icons8_documentos_24;
+            this.btn_recipes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_recipes.Location = new System.Drawing.Point(0, 212);
+            this.btn_recipes.Name = "btn_recipes";
+            this.btn_recipes.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
+            this.btn_recipes.Size = new System.Drawing.Size(200, 41);
+            this.btn_recipes.TabIndex = 7;
+            this.btn_recipes.Text = "Recetas";
+            this.btn_recipes.UseVisualStyleBackColor = true;
+            this.btn_recipes.Click += new System.EventHandler(this.btn_recipes_Click);
+            // 
             // btn_labs
             // 
             this.btn_labs.FlatAppearance.BorderSize = 0;
             this.btn_labs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_labs.Image = global::Presentation.Properties.Resources.icons8_laboratory_24;
             this.btn_labs.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_labs.Location = new System.Drawing.Point(3, 208);
+            this.btn_labs.Location = new System.Drawing.Point(2, 165);
             this.btn_labs.Name = "btn_labs";
             this.btn_labs.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
             this.btn_labs.Size = new System.Drawing.Size(200, 41);
@@ -294,7 +312,7 @@ namespace Presentation
             this.btn_clients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_clients.Image = global::Presentation.Properties.Resources.costumer;
             this.btn_clients.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_clients.Location = new System.Drawing.Point(2, 113);
+            this.btn_clients.Location = new System.Drawing.Point(0, 118);
             this.btn_clients.Name = "btn_clients";
             this.btn_clients.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
             this.btn_clients.Size = new System.Drawing.Size(200, 41);
@@ -302,21 +320,6 @@ namespace Presentation
             this.btn_clients.Text = "Clientes";
             this.btn_clients.UseVisualStyleBackColor = true;
             this.btn_clients.Click += new System.EventHandler(this.btn_clients_Click);
-            // 
-            // btn_dashboard
-            // 
-            this.btn_dashboard.FlatAppearance.BorderSize = 0;
-            this.btn_dashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_dashboard.Image = global::Presentation.Properties.Resources.dashboard;
-            this.btn_dashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_dashboard.Location = new System.Drawing.Point(3, 66);
-            this.btn_dashboard.Name = "btn_dashboard";
-            this.btn_dashboard.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
-            this.btn_dashboard.Size = new System.Drawing.Size(200, 41);
-            this.btn_dashboard.TabIndex = 0;
-            this.btn_dashboard.Text = "Inicio";
-            this.btn_dashboard.UseVisualStyleBackColor = true;
-            this.btn_dashboard.Click += new System.EventHandler(this.btn_dashboard_Click);
             // 
             // pnl_top
             // 
@@ -332,17 +335,6 @@ namespace Presentation
             this.pnl_top.Size = new System.Drawing.Size(1058, 32);
             this.pnl_top.TabIndex = 1;
             this.pnl_top.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnl_top_MouseDown);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(142)))), ((int)(((byte)(4)))));
-            this.label1.Location = new System.Drawing.Point(865, 6);
-            this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(2);
-            this.label1.Size = new System.Drawing.Size(127, 21);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Candidate R5.0.0.15";
             // 
             // pcb_exit
             // 
@@ -431,15 +423,15 @@ namespace Presentation
             this.pnl_layout.BackColor = System.Drawing.Color.White;
             this.pnl_layout.Controls.Add(this.pcb_logo);
             this.pnl_layout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_layout.Location = new System.Drawing.Point(203, 32);
+            this.pnl_layout.Location = new System.Drawing.Point(184, 32);
             this.pnl_layout.Name = "pnl_layout";
-            this.pnl_layout.Size = new System.Drawing.Size(855, 586);
+            this.pnl_layout.Size = new System.Drawing.Size(874, 586);
             this.pnl_layout.TabIndex = 3;
             // 
             // pcb_logo
             // 
             this.pcb_logo.Image = global::Presentation.Properties.Resources.logo_horizontal;
-            this.pcb_logo.Location = new System.Drawing.Point(174, 255);
+            this.pcb_logo.Location = new System.Drawing.Point(171, 240);
             this.pcb_logo.Name = "pcb_logo";
             this.pcb_logo.Size = new System.Drawing.Size(569, 60);
             this.pcb_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -452,15 +444,15 @@ namespace Presentation
             this.pnl_name_view.Controls.Add(this.pcb_close_form);
             this.pnl_name_view.Controls.Add(this.lbl_form_name);
             this.pnl_name_view.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnl_name_view.Location = new System.Drawing.Point(203, 32);
+            this.pnl_name_view.Location = new System.Drawing.Point(184, 32);
             this.pnl_name_view.Name = "pnl_name_view";
-            this.pnl_name_view.Size = new System.Drawing.Size(855, 26);
+            this.pnl_name_view.Size = new System.Drawing.Size(874, 26);
             this.pnl_name_view.TabIndex = 4;
             // 
             // pcb_close_form
             // 
             this.pcb_close_form.Image = global::Presentation.Properties.Resources.close_eyes;
-            this.pcb_close_form.Location = new System.Drawing.Point(828, 3);
+            this.pcb_close_form.Location = new System.Drawing.Point(847, 3);
             this.pcb_close_form.Name = "pcb_close_form";
             this.pcb_close_form.Size = new System.Drawing.Size(20, 20);
             this.pcb_close_form.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -482,6 +474,17 @@ namespace Presentation
             // 
             this.tmr_layout.Enabled = true;
             this.tmr_layout.Tick += new System.EventHandler(this.tmr_layout_Tick);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(142)))), ((int)(((byte)(4)))));
+            this.label1.Location = new System.Drawing.Point(865, 6);
+            this.label1.Name = "label1";
+            this.label1.Padding = new System.Windows.Forms.Padding(2);
+            this.label1.Size = new System.Drawing.Size(120, 21);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Candidate R6.0.0.0";
             // 
             // Layout
             // 
@@ -542,18 +545,18 @@ namespace Presentation
         private System.Windows.Forms.PictureBox pcb_logo;
         private System.Windows.Forms.Label lbl_version_sw;
         private System.Windows.Forms.PictureBox pcb_close_form;
-        private System.Windows.Forms.Label label1;
         public System.Windows.Forms.Button btn_users;
         public System.Windows.Forms.Button btn_labs;
         public System.Windows.Forms.Button btn_clients;
-        public System.Windows.Forms.Button btn_dashboard;
         public System.Windows.Forms.Button btn_companies;
         public System.Windows.Forms.Button btn_products;
         public System.Windows.Forms.Button btn_recipes;
         public System.Windows.Forms.Button btn_shipping;
         public System.Windows.Forms.Button btn_reports;
-        public System.Windows.Forms.Button btn_about_info;
         public System.Windows.Forms.Button btn_facturation;
+        public System.Windows.Forms.Button btn_iva;
+        public System.Windows.Forms.Button btn_banks;
+        private System.Windows.Forms.Label label1;
     }
 }
 

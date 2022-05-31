@@ -23,23 +23,36 @@ namespace Presentation.View.Forms.Company
         }
         private void LoadViewData()
         {
-            txt_fullname.Text = Common.Models.Company.full_name;
-            txt_code.Text = Common.Models.Company.code;
-            txt_nit.Text = Common.Models.Company.nit;
-            txt_iva.Text = Common.Models.Company.iva;
-            txt_address.Text = Common.Models.Company.address;
-            txt_phone.Text = Common.Models.Company.phone;
-            txt_secondary_phone.Text = Common.Models.Company.secondary_phone;
-            txt_email.Text = Common.Models.Company.email;
-            txt_attendance_fullname.Text = Common.Models.Company.attendance_fullname;
-            txt_attendance_role.Text = Common.Models.Company.attendance_role;
+            try
+            {
+                txt_fullname.Text = Common.Models.Company.full_name;
+                txt_code.Text = Common.Models.Company.code;
+                txt_nit.Text = Common.Models.Company.nit;
+                txt_iva.Text = Common.Models.Company.iva;
+                txt_address.Text = Common.Models.Company.address;
+                txt_phone.Text = Common.Models.Company.phone;
+                txt_secondary_phone.Text = Common.Models.Company.secondary_phone;
+                txt_email.Text = Common.Models.Company.email;
+                txt_attendance_fullname.Text = Common.Models.Company.attendance_fullname;
+                txt_attendance_role.Text = Common.Models.Company.attendance_role;
+            }
+            catch (Exception errCompanies)
+            {
+                MessageBox.Show("Ocurrió un error al intentar ejecutar esto.\n\nError: " + errCompanies.Message, "Empresas");
+            }
         }
 
         private void btn_edit_company_Click(object sender, EventArgs e)
         {
-            Close();
-            CompanyEdit companyEdit = new CompanyEdit();
-            companyEdit.ShowDialog();
+            try
+            {
+                CompanyEdit companyEdit = new CompanyEdit();
+                companyEdit.ShowDialog();
+            }
+            catch (Exception errCompanies)
+            {
+                MessageBox.Show("Ocurrió un error al intentar ejecutar esto.\n\nError: " + errCompanies.Message, "Empresas");
+            }
         }
 
         private void pcb_close_edit_company_Click(object sender, EventArgs e)

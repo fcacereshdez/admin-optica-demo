@@ -34,7 +34,7 @@ namespace Presentation.View.Forms.Recipe
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.txt_search_company = new System.Windows.Forms.TextBox();
+            this.txt_search_recipe = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btn_create_recipe = new System.Windows.Forms.Button();
@@ -48,7 +48,7 @@ namespace Presentation.View.Forms.Recipe
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.txt_search_company);
+            this.groupBox3.Controls.Add(this.txt_search_recipe);
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Location = new System.Drawing.Point(208, 18);
             this.groupBox3.Name = "groupBox3";
@@ -56,12 +56,14 @@ namespace Presentation.View.Forms.Recipe
             this.groupBox3.TabIndex = 17;
             this.groupBox3.TabStop = false;
             // 
-            // txt_search_company
+            // txt_search_recipe
             // 
-            this.txt_search_company.Location = new System.Drawing.Point(61, 18);
-            this.txt_search_company.Name = "txt_search_company";
-            this.txt_search_company.Size = new System.Drawing.Size(550, 25);
-            this.txt_search_company.TabIndex = 1;
+            this.txt_search_recipe.Location = new System.Drawing.Point(61, 18);
+            this.txt_search_recipe.Name = "txt_search_recipe";
+            this.txt_search_recipe.Size = new System.Drawing.Size(550, 25);
+            this.txt_search_recipe.TabIndex = 1;
+            this.txt_search_recipe.TextChanged += new System.EventHandler(this.txt_search_recipe_TextChanged);
+        //    this.txt_search_recipe.Validated += new System.EventHandler(this.txt_search_recipe_Validated);
             // 
             // label1
             // 
@@ -216,7 +218,7 @@ namespace Presentation.View.Forms.Recipe
 
         #endregion
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox txt_search_company;
+        private System.Windows.Forms.TextBox txt_search_recipe;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btn_create_recipe;

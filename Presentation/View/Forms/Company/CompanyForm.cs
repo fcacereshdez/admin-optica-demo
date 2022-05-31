@@ -26,13 +26,20 @@ namespace Presentation.View.Forms.Company
 
         private void SelectAllCompanies()
         {
-            dgv_companies.DataSource = companyController.SelectAllCompanies();
-            // dgv_companies.Columns[0].Width = 30;
-            dgv_companies.Columns[1].Width = 225;
-            dgv_companies.Columns[2].Width = 75;
-            dgv_companies.Columns[3].Width = 90;
-            dgv_companies.Columns[4].Width = 130;
-            dgv_companies.Columns[5].Width = 90;
+            try
+            {
+                dgv_companies.DataSource = companyController.SelectAllCompanies();
+                dgv_companies.Columns[0].Width = 35;
+                dgv_companies.Columns[1].Width = 275;
+                dgv_companies.Columns[2].Visible = false;
+                dgv_companies.Columns[3].Width = 85;
+                dgv_companies.Columns[4].Width = 128;
+                dgv_companies.Columns[5].Width = 75;
+            }
+            catch (Exception ECompanies)
+            {
+                MessageBox.Show("Occurió un error mientras intentabamos cargar los datos.\n\nError: " + ECompanies.Message, "Empresas");
+            }
         }
 
         private void btn_create_company_Click(object sender, EventArgs e)
@@ -45,12 +52,7 @@ namespace Presentation.View.Forms.Company
             }
             catch (Exception errCompanies)
             {
-                MessageBox.Show("Ocurrió un error al intentar ejecutar esto. " +
-                    "\n\nEl error se produjo en: " + errCompanies.Source +
-                    "\n\nDetalles: " + errCompanies.Message +
-                    "\n\nAcciones: " + "Notificar al programador.",
-                    "Error", MessageBoxButtons.OK, 
-                    MessageBoxIcon.Error); ;
+                MessageBox.Show("Ocurrió un error al intentar ejecutar esto.\n\nError: "+errCompanies.Message, "Empresas");
             }
         }
 
@@ -70,12 +72,7 @@ namespace Presentation.View.Forms.Company
             }
             catch (Exception errCompanies)
             {
-                MessageBox.Show("Ocurrió un error al intentar ejecutar esto. " +
-                    "\n\nEl error se produjo en: " + errCompanies.Source +
-                    "\n\nDetalles: " + errCompanies.Message +
-                    "\n\nAcciones: " + "Notificar al programador.",
-                    "Error", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error); ;
+                MessageBox.Show("Ocurrió un error al intentar ejecutar esto.\n\nError: " + errCompanies.Message, "Empresas");
             }
         }
 
@@ -105,7 +102,7 @@ namespace Presentation.View.Forms.Company
                 }
                 catch (Exception errCompanies)
                 {
-                    MessageBox.Show("Error MSSQLSERVER (0x000001): " + errCompanies.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Ocurrió un error al intentar ejecutar esto.\n\nError: " + errCompanies.Message, "Empresas");
                 }
 
             }
@@ -113,9 +110,16 @@ namespace Presentation.View.Forms.Company
 
         private void btn_view_company_Click(object sender, EventArgs e)
         {
-            companyController.SelectCompanyById(dgv_companies.SelectedRows[0].Cells[0].Value.ToString());
-            CompanyView companyView  = new CompanyView();
-            companyView.ShowDialog();
+            try
+            {
+                companyController.SelectCompanyById(dgv_companies.SelectedRows[0].Cells[0].Value.ToString());
+                CompanyView companyView = new CompanyView();
+                companyView.ShowDialog();
+            }
+            catch (Exception errCompanies)
+            {
+                MessageBox.Show("Ocurrió un error al intentar ejecutar esto.\n\nError: " + errCompanies.Message, "Empresas");
+            }
         }
 
         private void pcb_close_Click(object sender, EventArgs e)
@@ -125,24 +129,33 @@ namespace Presentation.View.Forms.Company
 
         private void btn_company_report_Click(object sender, EventArgs e)
         {
-            companyController.GetTotalByCompany(Convert.ToInt64(dgv_companies.SelectedRows[0].Cells[0].Value));
-            CompanyReportBySelected companyReportBySelected = new CompanyReportBySelected();
-            companyReportBySelected.dgv_clients_by_company.DataSource = companyController.GetClientsByCompany(Convert.ToInt64(dgv_companies.SelectedRows[0].Cells[0].Value));
-            companyReportBySelected.lbl_company.Text = Common.Models.Company.full_name;
-            companyReportBySelected.lbl_invoices.Text = Common.Models.Company.invoices.ToString();
-            companyReportBySelected.lbl_total_clients.Text = Common.Models.Company.total_clients.ToString();
-            companyReportBySelected.lbl_sales_total.Text = "$" + Common.Models.Company.total_invoice.ToString();
-            companyReportBySelected.ShowDialog();
-        }
-
-        private void btn_report_companies_Click(object sender, EventArgs e)
-        {
-            
+            try
+            {
+                companyController.GetTotalByCompany(Convert.ToInt64(dgv_companies.SelectedRows[0].Cells[0].Value));
+                CompanyReportBySelected companyReportBySelected = new CompanyReportBySelected();
+                companyReportBySelected.dgv_clients_by_company.DataSource = companyController.GetClientsByCompany(Convert.ToInt64(dgv_companies.SelectedRows[0].Cells[0].Value));
+                companyReportBySelected.lbl_company.Text = Common.Models.Company.full_name;
+                companyReportBySelected.lbl_invoices.Text = Common.Models.Company.invoices.ToString();
+                companyReportBySelected.lbl_total_clients.Text = Common.Models.Company.total_clients.ToString();
+                //companyReportBySelected.lbl_sales_total.Text = "$" + Common.Models.Company.total_invoice.ToString();
+                companyReportBySelected.ShowDialog();
+            }
+            catch (Exception errCompanies)
+            {
+                MessageBox.Show("Ocurrió un error al intentar ejecutar esto.\n\nError: " + errCompanies.Message, "Empresas");
+            }    
         }
 
         private void txt_search_company_TextChanged(object sender, EventArgs e)
         {
-            dgv_companies.DataSource = companyController.SearchCompany(txt_search_company.Text);
+            try
+            {
+                dgv_companies.DataSource = companyController.SearchCompany(txt_search_company.Text);
+            }
+            catch (Exception errCompanies)
+            {
+                MessageBox.Show("Ocurrió un error al intentar ejecutar esto.\n\nError: " + errCompanies.Message, "Empresas");
+            }
         }
     }
 }

@@ -40,9 +40,9 @@ namespace Domain
             clientData.UpdateClient(name, lastname, dui, nit, phone, secondary_phone, email, address, notes, Convert.ToDateTime(updated_at), client_id);
         }
 
-        public void DeleteClient(Int64 client_id)
+        public void DeleteClient(string client_id)
         {
-            clientData.DeleteClient(client_id);
+            clientData.DeleteClient(Convert.ToInt64(client_id));
         }
 
         public void SelectLastCodeClient()

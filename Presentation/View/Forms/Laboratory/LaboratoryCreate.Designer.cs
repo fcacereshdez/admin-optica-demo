@@ -31,7 +31,7 @@ namespace Presentation.View.Forms.Laboratory
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LaboratoryCreate));
             this.pnl_top = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
+            this.lbl_form = new System.Windows.Forms.Label();
             this.pcb_close_laboratory = new System.Windows.Forms.PictureBox();
             this.pcb_exit = new System.Windows.Forms.PictureBox();
             this.pcb_minus = new System.Windows.Forms.PictureBox();
@@ -43,6 +43,7 @@ namespace Presentation.View.Forms.Laboratory
             this.txt_address = new System.Windows.Forms.TextBox();
             this.btn_save_laboratory = new System.Windows.Forms.Button();
             this.lbl_error = new System.Windows.Forms.Label();
+            this.txt_id_laboratory = new System.Windows.Forms.TextBox();
             this.pnl_top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_close_laboratory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_exit)).BeginInit();
@@ -52,7 +53,7 @@ namespace Presentation.View.Forms.Laboratory
             // pnl_top
             // 
             this.pnl_top.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(29)))), ((int)(((byte)(26)))));
-            this.pnl_top.Controls.Add(this.label15);
+            this.pnl_top.Controls.Add(this.lbl_form);
             this.pnl_top.Controls.Add(this.pcb_close_laboratory);
             this.pnl_top.Controls.Add(this.pcb_exit);
             this.pnl_top.Controls.Add(this.pcb_minus);
@@ -63,16 +64,16 @@ namespace Presentation.View.Forms.Laboratory
             this.pnl_top.Size = new System.Drawing.Size(526, 29);
             this.pnl_top.TabIndex = 83;
             // 
-            // label15
+            // lbl_form
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(11, 4);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(111, 17);
-            this.label15.TabIndex = 6;
-            this.label15.Text = "Crear laboratorio";
+            this.lbl_form.AutoSize = true;
+            this.lbl_form.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_form.ForeColor = System.Drawing.Color.White;
+            this.lbl_form.Location = new System.Drawing.Point(11, 4);
+            this.lbl_form.Name = "lbl_form";
+            this.lbl_form.Size = new System.Drawing.Size(111, 17);
+            this.lbl_form.TabIndex = 6;
+            this.lbl_form.Text = "Crear laboratorio";
             // 
             // pcb_close_laboratory
             // 
@@ -114,6 +115,7 @@ namespace Presentation.View.Forms.Laboratory
             this.txt_laboratory.Name = "txt_laboratory";
             this.txt_laboratory.Size = new System.Drawing.Size(235, 23);
             this.txt_laboratory.TabIndex = 86;
+            this.txt_laboratory.TextChanged += new System.EventHandler(this.txt_laboratory_TextChanged);
             // 
             // label1
             // 
@@ -130,6 +132,7 @@ namespace Presentation.View.Forms.Laboratory
             this.txt_phone.Name = "txt_phone";
             this.txt_phone.Size = new System.Drawing.Size(129, 23);
             this.txt_phone.TabIndex = 88;
+            this.txt_phone.TextChanged += new System.EventHandler(this.txt_phone_TextChanged);
             // 
             // label2
             // 
@@ -155,6 +158,7 @@ namespace Presentation.View.Forms.Laboratory
             this.txt_address.Name = "txt_address";
             this.txt_address.Size = new System.Drawing.Size(432, 23);
             this.txt_address.TabIndex = 90;
+            this.txt_address.TextChanged += new System.EventHandler(this.txt_address_TextChanged);
             // 
             // btn_save_laboratory
             // 
@@ -184,12 +188,20 @@ namespace Presentation.View.Forms.Laboratory
             this.lbl_error.TabIndex = 99;
             this.lbl_error.Text = ".";
             // 
+            // txt_id_laboratory
+            // 
+            this.txt_id_laboratory.Location = new System.Drawing.Point(308, 119);
+            this.txt_id_laboratory.Name = "txt_id_laboratory";
+            this.txt_id_laboratory.Size = new System.Drawing.Size(73, 23);
+            this.txt_id_laboratory.TabIndex = 100;
+            // 
             // LaboratoryCreate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(526, 156);
+            this.Controls.Add(this.txt_id_laboratory);
             this.Controls.Add(this.lbl_error);
             this.Controls.Add(this.btn_save_laboratory);
             this.Controls.Add(this.txt_address);
@@ -205,6 +217,7 @@ namespace Presentation.View.Forms.Laboratory
             this.Name = "LaboratoryCreate";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Crear laboratorio";
+            this.Load += new System.EventHandler(this.LaboratoryCreate_Load);
             this.pnl_top.ResumeLayout(false);
             this.pnl_top.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_close_laboratory)).EndInit();
@@ -218,17 +231,18 @@ namespace Presentation.View.Forms.Laboratory
         #endregion
 
         private System.Windows.Forms.Panel pnl_top;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.PictureBox pcb_close_laboratory;
         private System.Windows.Forms.PictureBox pcb_exit;
         private System.Windows.Forms.PictureBox pcb_minus;
-        private System.Windows.Forms.TextBox txt_laboratory;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txt_phone;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txt_address;
-        private System.Windows.Forms.Button btn_save_laboratory;
         private System.Windows.Forms.Label lbl_error;
+        public System.Windows.Forms.TextBox txt_id_laboratory;
+        public System.Windows.Forms.TextBox txt_laboratory;
+        public System.Windows.Forms.TextBox txt_phone;
+        public System.Windows.Forms.TextBox txt_address;
+        public System.Windows.Forms.Label lbl_form;
+        public System.Windows.Forms.Button btn_save_laboratory;
     }
 }

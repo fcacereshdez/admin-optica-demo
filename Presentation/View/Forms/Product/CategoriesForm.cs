@@ -70,9 +70,16 @@ namespace Presentation.View.Forms.Product
         {
             if (dgv_categories.SelectedRows.Count > 0)
             {
-                productController.DeleteCategory(dgv_categories.SelectedRows[0].Cells[0].Value.ToString());
-                InsertAction("eliminó una categoría.");
-                SelectAllCategories();
+                try
+                {
+                    productController.DeleteCategory(dgv_categories.SelectedRows[0].Cells[0].Value.ToString());
+                    InsertAction("eliminó una categoría.");
+                    SelectAllCategories();
+                }
+                catch (Exception errCategories)
+                {
+                    MessageBox.Show("Ocurrió un error al intentar realizar esto.\n\nError: " + errCategories.Message, "Categorías");
+                }
             }
             else
             {

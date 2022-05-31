@@ -36,8 +36,6 @@ namespace Presentation.View.Forms.Invoice
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InvoiceCreate));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txt_recipe_id = new System.Windows.Forms.TextBox();
-            this.txt_postpone = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.txt_first_payment = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.rb_montly = new System.Windows.Forms.RadioButton();
@@ -83,17 +81,15 @@ namespace Presentation.View.Forms.Invoice
             this.label14 = new System.Windows.Forms.Label();
             this.pnl_top = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.txt_notes = new System.Windows.Forms.TextBox();
-            this.lbl_error = new System.Windows.Forms.Label();
-            this.txt_n_recipe = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.btn_add_element = new System.Windows.Forms.Button();
-            this.btn_remove_element = new System.Windows.Forms.Button();
-            this.btn_save_invoice = new System.Windows.Forms.Button();
             this.pcb_close_create_invoice = new System.Windows.Forms.PictureBox();
             this.pcb_exit = new System.Windows.Forms.PictureBox();
             this.pcb_minus = new System.Windows.Forms.PictureBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txt_notes = new System.Windows.Forms.TextBox();
+            this.lbl_error = new System.Windows.Forms.Label();
+            this.btn_add_element = new System.Windows.Forms.Button();
+            this.btn_remove_element = new System.Windows.Forms.Button();
+            this.btn_save_invoice = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_products)).BeginInit();
@@ -105,11 +101,7 @@ namespace Presentation.View.Forms.Invoice
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txt_n_recipe);
-            this.groupBox1.Controls.Add(this.label17);
             this.groupBox1.Controls.Add(this.txt_recipe_id);
-            this.groupBox1.Controls.Add(this.txt_postpone);
-            this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.txt_first_payment);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.rb_montly);
@@ -142,33 +134,18 @@ namespace Presentation.View.Forms.Invoice
             this.txt_recipe_id.TabIndex = 68;
             this.txt_recipe_id.Visible = false;
             // 
-            // txt_postpone
-            // 
-            this.txt_postpone.Location = new System.Drawing.Point(638, 93);
-            this.txt_postpone.Name = "txt_postpone";
-            this.txt_postpone.Size = new System.Drawing.Size(77, 23);
-            this.txt_postpone.TabIndex = 67;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(583, 96);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(50, 15);
-            this.label9.TabIndex = 66;
-            this.label9.Text = "Aplazar:";
-            // 
             // txt_first_payment
             // 
-            this.txt_first_payment.Location = new System.Drawing.Point(439, 93);
+            this.txt_first_payment.Location = new System.Drawing.Point(628, 99);
             this.txt_first_payment.Name = "txt_first_payment";
             this.txt_first_payment.Size = new System.Drawing.Size(87, 23);
             this.txt_first_payment.TabIndex = 65;
+            this.txt_first_payment.Text = "0.00";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(392, 96);
+            this.label6.Location = new System.Drawing.Point(581, 102);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(41, 15);
             this.label6.TabIndex = 64;
@@ -629,6 +606,40 @@ namespace Presentation.View.Forms.Invoice
             this.label15.TabIndex = 6;
             this.label15.Text = "Creador de facturas";
             // 
+            // pcb_close_create_invoice
+            // 
+            this.pcb_close_create_invoice.Image = global::Presentation.Properties.Resources.close;
+            this.pcb_close_create_invoice.Location = new System.Drawing.Point(717, 2);
+            this.pcb_close_create_invoice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pcb_close_create_invoice.Name = "pcb_close_create_invoice";
+            this.pcb_close_create_invoice.Size = new System.Drawing.Size(25, 25);
+            this.pcb_close_create_invoice.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcb_close_create_invoice.TabIndex = 4;
+            this.pcb_close_create_invoice.TabStop = false;
+            this.pcb_close_create_invoice.Click += new System.EventHandler(this.pcb_close_create_invoice_Click);
+            // 
+            // pcb_exit
+            // 
+            this.pcb_exit.Image = global::Presentation.Properties.Resources.close;
+            this.pcb_exit.Location = new System.Drawing.Point(1389, 7);
+            this.pcb_exit.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.pcb_exit.Name = "pcb_exit";
+            this.pcb_exit.Size = new System.Drawing.Size(34, 43);
+            this.pcb_exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcb_exit.TabIndex = 3;
+            this.pcb_exit.TabStop = false;
+            // 
+            // pcb_minus
+            // 
+            this.pcb_minus.Image = global::Presentation.Properties.Resources.minus;
+            this.pcb_minus.Location = new System.Drawing.Point(1347, 7);
+            this.pcb_minus.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.pcb_minus.Name = "pcb_minus";
+            this.pcb_minus.Size = new System.Drawing.Size(34, 43);
+            this.pcb_minus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcb_minus.TabIndex = 2;
+            this.pcb_minus.TabStop = false;
+            // 
             // label16
             // 
             this.label16.AutoSize = true;
@@ -655,22 +666,6 @@ namespace Presentation.View.Forms.Invoice
             this.lbl_error.Size = new System.Drawing.Size(10, 15);
             this.lbl_error.TabIndex = 80;
             this.lbl_error.Text = ".";
-            // 
-            // txt_n_recipe
-            // 
-            this.txt_n_recipe.Location = new System.Drawing.Point(638, 22);
-            this.txt_n_recipe.Name = "txt_n_recipe";
-            this.txt_n_recipe.Size = new System.Drawing.Size(77, 23);
-            this.txt_n_recipe.TabIndex = 70;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(546, 27);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(87, 15);
-            this.label17.TabIndex = 69;
-            this.label17.Text = "No. de Factura:";
             // 
             // btn_add_element
             // 
@@ -720,40 +715,6 @@ namespace Presentation.View.Forms.Invoice
             this.btn_save_invoice.UseVisualStyleBackColor = false;
             this.btn_save_invoice.Click += new System.EventHandler(this.btn_save_invoice_Click);
             // 
-            // pcb_close_create_invoice
-            // 
-            this.pcb_close_create_invoice.Image = global::Presentation.Properties.Resources.close;
-            this.pcb_close_create_invoice.Location = new System.Drawing.Point(717, 2);
-            this.pcb_close_create_invoice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pcb_close_create_invoice.Name = "pcb_close_create_invoice";
-            this.pcb_close_create_invoice.Size = new System.Drawing.Size(25, 25);
-            this.pcb_close_create_invoice.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pcb_close_create_invoice.TabIndex = 4;
-            this.pcb_close_create_invoice.TabStop = false;
-            this.pcb_close_create_invoice.Click += new System.EventHandler(this.pcb_close_create_invoice_Click);
-            // 
-            // pcb_exit
-            // 
-            this.pcb_exit.Image = global::Presentation.Properties.Resources.close;
-            this.pcb_exit.Location = new System.Drawing.Point(1389, 7);
-            this.pcb_exit.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.pcb_exit.Name = "pcb_exit";
-            this.pcb_exit.Size = new System.Drawing.Size(34, 43);
-            this.pcb_exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pcb_exit.TabIndex = 3;
-            this.pcb_exit.TabStop = false;
-            // 
-            // pcb_minus
-            // 
-            this.pcb_minus.Image = global::Presentation.Properties.Resources.minus;
-            this.pcb_minus.Location = new System.Drawing.Point(1347, 7);
-            this.pcb_minus.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.pcb_minus.Name = "pcb_minus";
-            this.pcb_minus.Size = new System.Drawing.Size(34, 43);
-            this.pcb_minus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pcb_minus.TabIndex = 2;
-            this.pcb_minus.TabStop = false;
-            // 
             // InvoiceCreate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -802,8 +763,6 @@ namespace Presentation.View.Forms.Invoice
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txt_postpone;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txt_first_payment;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.RadioButton rb_montly;
@@ -856,8 +815,6 @@ namespace Presentation.View.Forms.Invoice
         public System.Windows.Forms.TextBox txt_manager;
         private System.Windows.Forms.Label lbl_error;
         public System.Windows.Forms.TextBox txt_recipe_id;
-        private System.Windows.Forms.TextBox txt_n_recipe;
-        private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button btn_add_element;
         private System.Windows.Forms.Button btn_remove_element;
     }

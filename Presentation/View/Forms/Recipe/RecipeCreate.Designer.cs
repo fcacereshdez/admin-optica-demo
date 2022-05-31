@@ -35,18 +35,15 @@ namespace Presentation.View.Forms.Recipe
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnl_top = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
-            this.pcb_close_create_recipe = new System.Windows.Forms.PictureBox();
-            this.pcb_exit = new System.Windows.Forms.PictureBox();
-            this.pcb_minus = new System.Windows.Forms.PictureBox();
             this.tb_recipe = new System.Windows.Forms.TabControl();
             this.tp_clients = new System.Windows.Forms.TabPage();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.dgv_recipes = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txt_age = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dtp_date = new System.Windows.Forms.DateTimePicker();
-            this.lbl_client_age = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.lbl_phone_client = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txt_id_client = new System.Windows.Forms.TextBox();
@@ -54,9 +51,7 @@ namespace Presentation.View.Forms.Recipe
             this.label15 = new System.Windows.Forms.Label();
             this.btn_search_clients = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.lbl_client_name = new System.Windows.Forms.Label();
-            this.txt_recipe_number = new System.Windows.Forms.TextBox();
             this.tp_tests = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.cb_process = new System.Windows.Forms.CheckBox();
@@ -176,13 +171,15 @@ namespace Presentation.View.Forms.Recipe
             this.label43 = new System.Windows.Forms.Label();
             this.txt_invoice_laboratory = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
+            this.lbl_errors = new System.Windows.Forms.Label();
+            this.txt_method = new System.Windows.Forms.TextBox();
+            this.txt_number_recipe = new System.Windows.Forms.TextBox();
             this.btn_next = new System.Windows.Forms.Button();
             this.btn_save_recipe = new System.Windows.Forms.Button();
-            this.lbl_errors = new System.Windows.Forms.Label();
+            this.pcb_close_create_recipe = new System.Windows.Forms.PictureBox();
+            this.pcb_exit = new System.Windows.Forms.PictureBox();
+            this.pcb_minus = new System.Windows.Forms.PictureBox();
             this.pnl_top.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcb_close_create_recipe)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcb_exit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcb_minus)).BeginInit();
             this.tb_recipe.SuspendLayout();
             this.tp_clients.SuspendLayout();
             this.groupBox9.SuspendLayout();
@@ -199,6 +196,9 @@ namespace Presentation.View.Forms.Recipe
             this.groupBox10.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcb_close_create_recipe)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcb_exit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcb_minus)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_top
@@ -225,40 +225,6 @@ namespace Presentation.View.Forms.Recipe
             this.label10.Size = new System.Drawing.Size(54, 17);
             this.label10.TabIndex = 6;
             this.label10.Text = "Recetas";
-            // 
-            // pcb_close_create_recipe
-            // 
-            this.pcb_close_create_recipe.Image = global::Presentation.Properties.Resources.close;
-            this.pcb_close_create_recipe.Location = new System.Drawing.Point(756, 2);
-            this.pcb_close_create_recipe.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pcb_close_create_recipe.Name = "pcb_close_create_recipe";
-            this.pcb_close_create_recipe.Size = new System.Drawing.Size(25, 25);
-            this.pcb_close_create_recipe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pcb_close_create_recipe.TabIndex = 4;
-            this.pcb_close_create_recipe.TabStop = false;
-            this.pcb_close_create_recipe.Click += new System.EventHandler(this.pcb_close_create_recipe_Click);
-            // 
-            // pcb_exit
-            // 
-            this.pcb_exit.Image = global::Presentation.Properties.Resources.close;
-            this.pcb_exit.Location = new System.Drawing.Point(1389, 7);
-            this.pcb_exit.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.pcb_exit.Name = "pcb_exit";
-            this.pcb_exit.Size = new System.Drawing.Size(34, 43);
-            this.pcb_exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pcb_exit.TabIndex = 3;
-            this.pcb_exit.TabStop = false;
-            // 
-            // pcb_minus
-            // 
-            this.pcb_minus.Image = global::Presentation.Properties.Resources.minus;
-            this.pcb_minus.Location = new System.Drawing.Point(1347, 7);
-            this.pcb_minus.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.pcb_minus.Name = "pcb_minus";
-            this.pcb_minus.Size = new System.Drawing.Size(34, 43);
-            this.pcb_minus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pcb_minus.TabIndex = 2;
-            this.pcb_minus.TabStop = false;
             // 
             // tb_recipe
             // 
@@ -346,10 +312,11 @@ namespace Presentation.View.Forms.Recipe
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txt_number_recipe);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.txt_age);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.dtp_date);
-            this.groupBox1.Controls.Add(this.lbl_client_age);
-            this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.lbl_phone_client);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txt_id_client);
@@ -357,9 +324,7 @@ namespace Presentation.View.Forms.Recipe
             this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Controls.Add(this.btn_search_clients);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.lbl_client_name);
-            this.groupBox1.Controls.Add(this.txt_recipe_number);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(6, 6);
             this.groupBox1.Name = "groupBox1";
@@ -368,11 +333,29 @@ namespace Presentation.View.Forms.Recipe
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Información básica";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(8, 135);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(36, 15);
+            this.label2.TabIndex = 54;
+            this.label2.Text = "Edad:";
+            // 
+            // txt_age
+            // 
+            this.txt_age.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_age.Location = new System.Drawing.Point(70, 130);
+            this.txt_age.Name = "txt_age";
+            this.txt_age.Size = new System.Drawing.Size(124, 23);
+            this.txt_age.TabIndex = 53;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(579, 101);
+            this.label3.Location = new System.Drawing.Point(579, 30);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 15);
             this.label3.TabIndex = 52;
@@ -382,30 +365,10 @@ namespace Presentation.View.Forms.Recipe
             // 
             this.dtp_date.CustomFormat = "yyyy-MM-dd";
             this.dtp_date.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_date.Location = new System.Drawing.Point(626, 95);
+            this.dtp_date.Location = new System.Drawing.Point(626, 24);
             this.dtp_date.Name = "dtp_date";
             this.dtp_date.Size = new System.Drawing.Size(116, 23);
             this.dtp_date.TabIndex = 51;
-            // 
-            // lbl_client_age
-            // 
-            this.lbl_client_age.AutoSize = true;
-            this.lbl_client_age.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_client_age.Location = new System.Drawing.Point(67, 130);
-            this.lbl_client_age.Name = "lbl_client_age";
-            this.lbl_client_age.Size = new System.Drawing.Size(90, 15);
-            this.lbl_client_age.TabIndex = 50;
-            this.lbl_client_age.Text = "Edad del cliente";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(6, 130);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(36, 15);
-            this.label7.TabIndex = 49;
-            this.label7.Text = "Edad:";
             // 
             // lbl_phone_client
             // 
@@ -430,7 +393,7 @@ namespace Presentation.View.Forms.Recipe
             // txt_id_client
             // 
             this.txt_id_client.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_id_client.Location = new System.Drawing.Point(563, 25);
+            this.txt_id_client.Location = new System.Drawing.Point(563, 63);
             this.txt_id_client.Name = "txt_id_client";
             this.txt_id_client.Size = new System.Drawing.Size(57, 23);
             this.txt_id_client.TabIndex = 46;
@@ -462,7 +425,7 @@ namespace Presentation.View.Forms.Recipe
             this.btn_search_clients.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(142)))), ((int)(((byte)(4)))));
             this.btn_search_clients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_search_clients.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_search_clients.Location = new System.Drawing.Point(626, 23);
+            this.btn_search_clients.Location = new System.Drawing.Point(626, 61);
             this.btn_search_clients.Name = "btn_search_clients";
             this.btn_search_clients.Size = new System.Drawing.Size(116, 27);
             this.btn_search_clients.TabIndex = 43;
@@ -480,16 +443,6 @@ namespace Presentation.View.Forms.Recipe
             this.label1.TabIndex = 34;
             this.label1.Text = "Cliente:";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(629, 59);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 15);
-            this.label2.TabIndex = 35;
-            this.label2.Text = "Número:";
-            // 
             // lbl_client_name
             // 
             this.lbl_client_name.AutoSize = true;
@@ -499,14 +452,6 @@ namespace Presentation.View.Forms.Recipe
             this.lbl_client_name.Size = new System.Drawing.Size(108, 15);
             this.lbl_client_name.TabIndex = 39;
             this.lbl_client_name.Text = "Nombre del cliente";
-            // 
-            // txt_recipe_number
-            // 
-            this.txt_recipe_number.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_recipe_number.Location = new System.Drawing.Point(685, 56);
-            this.txt_recipe_number.Name = "txt_recipe_number";
-            this.txt_recipe_number.Size = new System.Drawing.Size(57, 23);
-            this.txt_recipe_number.TabIndex = 40;
             // 
             // tp_tests
             // 
@@ -828,7 +773,6 @@ namespace Presentation.View.Forms.Recipe
             this.txt_dplej_oi_recipe.Name = "txt_dplej_oi_recipe";
             this.txt_dplej_oi_recipe.Size = new System.Drawing.Size(57, 23);
             this.txt_dplej_oi_recipe.TabIndex = 83;
-            this.txt_dplej_oi_recipe.Text = "34";
             // 
             // txt_dpcer_od_recipe
             // 
@@ -853,7 +797,6 @@ namespace Presentation.View.Forms.Recipe
             this.txt_dplej_od_recipe.Name = "txt_dplej_od_recipe";
             this.txt_dplej_od_recipe.Size = new System.Drawing.Size(57, 23);
             this.txt_dplej_od_recipe.TabIndex = 80;
-            this.txt_dplej_od_recipe.Text = "33";
             // 
             // txt_altob_oi_recipe
             // 
@@ -862,7 +805,6 @@ namespace Presentation.View.Forms.Recipe
             this.txt_altob_oi_recipe.Name = "txt_altob_oi_recipe";
             this.txt_altob_oi_recipe.Size = new System.Drawing.Size(57, 23);
             this.txt_altob_oi_recipe.TabIndex = 79;
-            this.txt_altob_oi_recipe.Text = "16";
             // 
             // txt_altpu_od_recipe
             // 
@@ -887,7 +829,6 @@ namespace Presentation.View.Forms.Recipe
             this.txt_altob_od_recipe.Name = "txt_altob_od_recipe";
             this.txt_altob_od_recipe.Size = new System.Drawing.Size(57, 23);
             this.txt_altob_od_recipe.TabIndex = 76;
-            this.txt_altob_od_recipe.Text = "16";
             // 
             // label17
             // 
@@ -940,7 +881,6 @@ namespace Presentation.View.Forms.Recipe
             this.txt_adic_od_recipe.Name = "txt_adic_od_recipe";
             this.txt_adic_od_recipe.Size = new System.Drawing.Size(57, 23);
             this.txt_adic_od_recipe.TabIndex = 70;
-            this.txt_adic_od_recipe.Text = "+2.50";
             // 
             // txt_adic_oi_recipe
             // 
@@ -949,7 +889,6 @@ namespace Presentation.View.Forms.Recipe
             this.txt_adic_oi_recipe.Name = "txt_adic_oi_recipe";
             this.txt_adic_oi_recipe.Size = new System.Drawing.Size(57, 23);
             this.txt_adic_oi_recipe.TabIndex = 69;
-            this.txt_adic_oi_recipe.Text = "+2.50";
             // 
             // txt_eje_od_recipe
             // 
@@ -1726,6 +1665,35 @@ namespace Presentation.View.Forms.Recipe
             this.label31.TabIndex = 36;
             this.label31.Text = "Factura";
             // 
+            // lbl_errors
+            // 
+            this.lbl_errors.AutoSize = true;
+            this.lbl_errors.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_errors.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbl_errors.Location = new System.Drawing.Point(28, 466);
+            this.lbl_errors.Name = "lbl_errors";
+            this.lbl_errors.Size = new System.Drawing.Size(10, 15);
+            this.lbl_errors.TabIndex = 53;
+            this.lbl_errors.Text = ".";
+            // 
+            // txt_method
+            // 
+            this.txt_method.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_method.Location = new System.Drawing.Point(362, 463);
+            this.txt_method.Name = "txt_method";
+            this.txt_method.Size = new System.Drawing.Size(87, 23);
+            this.txt_method.TabIndex = 75;
+            this.txt_method.Visible = false;
+            // 
+            // txt_number_recipe
+            // 
+            this.txt_number_recipe.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_number_recipe.Location = new System.Drawing.Point(680, 94);
+            this.txt_number_recipe.Name = "txt_number_recipe";
+            this.txt_number_recipe.Size = new System.Drawing.Size(62, 23);
+            this.txt_number_recipe.TabIndex = 55;
+            this.txt_number_recipe.Visible = false;
+            // 
             // btn_next
             // 
             this.btn_next.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
@@ -1763,16 +1731,39 @@ namespace Presentation.View.Forms.Recipe
             this.btn_save_recipe.Visible = false;
             this.btn_save_recipe.Click += new System.EventHandler(this.btn_save_recipe_Click);
             // 
-            // lbl_errors
+            // pcb_close_create_recipe
             // 
-            this.lbl_errors.AutoSize = true;
-            this.lbl_errors.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_errors.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lbl_errors.Location = new System.Drawing.Point(28, 466);
-            this.lbl_errors.Name = "lbl_errors";
-            this.lbl_errors.Size = new System.Drawing.Size(10, 15);
-            this.lbl_errors.TabIndex = 53;
-            this.lbl_errors.Text = ".";
+            this.pcb_close_create_recipe.Image = global::Presentation.Properties.Resources.close;
+            this.pcb_close_create_recipe.Location = new System.Drawing.Point(756, 2);
+            this.pcb_close_create_recipe.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pcb_close_create_recipe.Name = "pcb_close_create_recipe";
+            this.pcb_close_create_recipe.Size = new System.Drawing.Size(25, 25);
+            this.pcb_close_create_recipe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcb_close_create_recipe.TabIndex = 4;
+            this.pcb_close_create_recipe.TabStop = false;
+            this.pcb_close_create_recipe.Click += new System.EventHandler(this.pcb_close_create_recipe_Click);
+            // 
+            // pcb_exit
+            // 
+            this.pcb_exit.Image = global::Presentation.Properties.Resources.close;
+            this.pcb_exit.Location = new System.Drawing.Point(1389, 7);
+            this.pcb_exit.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.pcb_exit.Name = "pcb_exit";
+            this.pcb_exit.Size = new System.Drawing.Size(34, 43);
+            this.pcb_exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcb_exit.TabIndex = 3;
+            this.pcb_exit.TabStop = false;
+            // 
+            // pcb_minus
+            // 
+            this.pcb_minus.Image = global::Presentation.Properties.Resources.minus;
+            this.pcb_minus.Location = new System.Drawing.Point(1347, 7);
+            this.pcb_minus.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.pcb_minus.Name = "pcb_minus";
+            this.pcb_minus.Size = new System.Drawing.Size(34, 43);
+            this.pcb_minus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcb_minus.TabIndex = 2;
+            this.pcb_minus.TabStop = false;
             // 
             // RecipeCreate
             // 
@@ -1780,6 +1771,7 @@ namespace Presentation.View.Forms.Recipe
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(799, 499);
+            this.Controls.Add(this.txt_method);
             this.Controls.Add(this.lbl_errors);
             this.Controls.Add(this.btn_next);
             this.Controls.Add(this.btn_save_recipe);
@@ -1793,9 +1785,6 @@ namespace Presentation.View.Forms.Recipe
             this.Load += new System.EventHandler(this.RecipeCreate_Load);
             this.pnl_top.ResumeLayout(false);
             this.pnl_top.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcb_close_create_recipe)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcb_exit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcb_minus)).EndInit();
             this.tb_recipe.ResumeLayout(false);
             this.tp_clients.ResumeLayout(false);
             this.groupBox9.ResumeLayout(false);
@@ -1821,6 +1810,9 @@ namespace Presentation.View.Forms.Recipe
             this.groupBox5.PerformLayout();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcb_close_create_recipe)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcb_exit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcb_minus)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1835,18 +1827,14 @@ namespace Presentation.View.Forms.Recipe
         private System.Windows.Forms.PictureBox pcb_minus;
         private System.Windows.Forms.TabControl tb_recipe;
         private System.Windows.Forms.TabPage tp_clients;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TabPage tp_tests;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Button btn_search_glasses;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Button btn_search_ring;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label26;
@@ -1854,28 +1842,10 @@ namespace Presentation.View.Forms.Recipe
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txt_base_od_recipe;
-        private System.Windows.Forms.TextBox txt_base_oi_recipe;
-        private System.Windows.Forms.TextBox txt_dplej_oi_recipe;
-        private System.Windows.Forms.TextBox txt_dpcer_od_recipe;
-        private System.Windows.Forms.TextBox txt_dpcer_oi_recipe;
-        private System.Windows.Forms.TextBox txt_dplej_od_recipe;
-        private System.Windows.Forms.TextBox txt_altob_oi_recipe;
-        private System.Windows.Forms.TextBox txt_altpu_od_recipe;
-        private System.Windows.Forms.TextBox txt_altpu_oi_recipe;
-        private System.Windows.Forms.TextBox txt_altob_od_recipe;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox txt_eje_oi_recipe;
-        private System.Windows.Forms.TextBox txt_adic_od_recipe;
-        private System.Windows.Forms.TextBox txt_adic_oi_recipe;
-        private System.Windows.Forms.TextBox txt_eje_od_recipe;
-        private System.Windows.Forms.TextBox txt_esf_oi_recipe;
-        private System.Windows.Forms.TextBox txt_cil_od_recipe;
-        private System.Windows.Forms.TextBox txt_cil_oi_recipe;
-        private System.Windows.Forms.TextBox txt_esf_od_recipe;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -1899,7 +1869,6 @@ namespace Presentation.View.Forms.Recipe
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.Button btn_search_laboratory;
         private System.Windows.Forms.Label label47;
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.Label label45;
@@ -1910,12 +1879,9 @@ namespace Presentation.View.Forms.Recipe
         public System.Windows.Forms.DataGridView dgv_recipes;
         private System.Windows.Forms.Button btn_save_recipe;
         private System.Windows.Forms.GroupBox groupBox10;
-        private System.Windows.Forms.Button btn_seller_search;
         private System.Windows.Forms.Label label48;
-        private System.Windows.Forms.Button btn_search_optometryst;
         private System.Windows.Forms.Label label51;
         public System.Windows.Forms.GroupBox groupBox1;
-        public System.Windows.Forms.Label lbl_client_age;
         public System.Windows.Forms.Label lbl_phone_client;
         public System.Windows.Forms.Label lbl_company_name;
         public System.Windows.Forms.Label lbl_client_name;
@@ -1931,7 +1897,6 @@ namespace Presentation.View.Forms.Recipe
         public System.Windows.Forms.TextBox txt_laboratory_id;
         public System.Windows.Forms.TextBox txt_seller_id;
         public System.Windows.Forms.TextBox txt_id_optometryst;
-        public System.Windows.Forms.TextBox txt_recipe_number;
         public System.Windows.Forms.DateTimePicker dtp_date;
         public System.Windows.Forms.Button btn_search_clients;
         public System.Windows.Forms.TextBox txt_lensometry_notes;
@@ -1974,5 +1939,32 @@ namespace Presentation.View.Forms.Recipe
         public System.Windows.Forms.TextBox txt_invoice_laboratory;
         private System.Windows.Forms.Button btn_next;
         public System.Windows.Forms.Label lbl_errors;
+        private System.Windows.Forms.Label label2;
+        public System.Windows.Forms.TextBox txt_age;
+        public System.Windows.Forms.TextBox txt_base_od_recipe;
+        public System.Windows.Forms.TextBox txt_base_oi_recipe;
+        public System.Windows.Forms.TextBox txt_dplej_oi_recipe;
+        public System.Windows.Forms.TextBox txt_dpcer_od_recipe;
+        public System.Windows.Forms.TextBox txt_dpcer_oi_recipe;
+        public System.Windows.Forms.TextBox txt_dplej_od_recipe;
+        public System.Windows.Forms.TextBox txt_altob_oi_recipe;
+        public System.Windows.Forms.TextBox txt_altpu_od_recipe;
+        public System.Windows.Forms.TextBox txt_altpu_oi_recipe;
+        public System.Windows.Forms.TextBox txt_altob_od_recipe;
+        public System.Windows.Forms.TextBox txt_eje_oi_recipe;
+        public System.Windows.Forms.TextBox txt_adic_od_recipe;
+        public System.Windows.Forms.TextBox txt_adic_oi_recipe;
+        public System.Windows.Forms.TextBox txt_eje_od_recipe;
+        public System.Windows.Forms.TextBox txt_esf_oi_recipe;
+        public System.Windows.Forms.TextBox txt_cil_od_recipe;
+        public System.Windows.Forms.TextBox txt_cil_oi_recipe;
+        public System.Windows.Forms.TextBox txt_esf_od_recipe;
+        public System.Windows.Forms.Button btn_search_glasses;
+        public System.Windows.Forms.Button btn_search_ring;
+        public System.Windows.Forms.Button btn_search_laboratory;
+        public System.Windows.Forms.Button btn_seller_search;
+        public System.Windows.Forms.Button btn_search_optometryst;
+        public System.Windows.Forms.TextBox txt_method;
+        public System.Windows.Forms.TextBox txt_number_recipe;
     }
 }

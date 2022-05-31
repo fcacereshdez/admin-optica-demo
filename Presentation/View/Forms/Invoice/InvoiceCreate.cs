@@ -112,11 +112,12 @@ namespace Presentation.View.Forms.Invoice
             }
             txt_sub_total.Text = "$" + Math.Round(subtotal, 2).ToString();
             txt_total.Text = "$" + Math.Round(subtotal, 2).ToString();
+            total = Math.Round(subtotal, 2);
         }
 
         private void FormatDataGridView()
         {
-            dgv_products.Columns["cl_priceUnit_product"].DefaultCellStyle.Format = "c";
+           // dgv_products.Columns["cl_priceUnit_product"].DefaultCellStyle.Format = "c";
             dgv_products.Columns["cl_subtotal_product"].DefaultCellStyle.Format = "c";
         }
 
@@ -129,13 +130,11 @@ namespace Presentation.View.Forms.Invoice
             }else if (rb_biweekly.Checked == false && rb_montly.Checked == false)
             {
                 lbl_error.Text = "Debe elegir una recurrencia de pago";
-            }else if (txt_n_recipe.Text == "")
-            {
-                lbl_error.Text = "Debe indicar el número de factura";
-            }else if (txt_postpone.Text == "")
+            }/* else if (txt_postpone.Text == "")
             {
                 lbl_error.Text = "Debe indicar a los cuantos días debemos aplazarlo.";
-            }else if (txt_n_fee.Text == "")
+            } */
+            else if (txt_n_fee.Text == "")
             {
                 lbl_error.Text = "Debe indicar el número de coutas a generar.";
             }else if (txt_fee.Text == "")
@@ -166,8 +165,6 @@ namespace Presentation.View.Forms.Invoice
                 }
                 try
                 {
-                    invoiceController.InsertInvoice(dtp_invoice.Value.ToString(), txt_n_recipe.Text, txt_optometryst_id.Text, txt_optometryst_id.Text,
-                    recurrency.ToString(), txt_seller_id.Text, txt_manager_id.Text, txt_recipe_id.Text, subtotal.ToString(), discount.ToString(), total.ToString(), txt_n_fee.Text, txt_fee.Text, txt_notes.Text);
 
                     foreach (DataGridViewRow rows in dgv_products.Rows)
                     {
@@ -176,14 +173,15 @@ namespace Presentation.View.Forms.Invoice
                             rows.Cells["cl_priceUnit_product"].Value.ToString(),
                             rows.Cells["cl_subtotal_product"].Value.ToString());
                     }
-
+                    invoiceController.InsertInvoice(txt_first_payment.Text, dtp_invoice.Value.ToString(), "1", txt_optometryst_id.Text,
+                    recurrency.ToString(), txt_seller_id.Text, txt_manager_id.Text, txt_recipe_id.Text, cmb_payment_method.SelectedValue.ToString(), subtotal.ToString(), discount.ToString(), total.ToString(), txt_n_fee.Text, txt_fee.Text, txt_notes.Text);
                     MessageBox.Show("Se ha generado la factura con éxito");
                     Close();
                 }
-                catch (Exception)
+                catch (Exception errInvoice)
                 {
 
-                    MessageBox.Show("Ocurrió un error en la base de datos que no pudimos controlar");
+                    MessageBox.Show("Ocurrió un error al intentar guardar la factura.\n\nError: " +errInvoice.Message, "Facturas");
                 }
             }
         }
@@ -204,6 +202,7 @@ namespace Presentation.View.Forms.Invoice
             {
                 txt_with_discount.Text = "$0.00";
                 txt_total.Text = "$" + Math.Round(subtotal, 2).ToString();
+                total = Math.Round(subtotal, 2);
             }
             else
             {

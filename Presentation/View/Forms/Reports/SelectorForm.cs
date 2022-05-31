@@ -19,7 +19,9 @@ namespace Presentation.View.Forms
     public partial class SelectorForm : Form
     {
         CommonController commonController = new CommonController();
-       
+        ClientController clientController = new ClientController();
+        CompanyController companyController = new CompanyController();
+        ProductController productController = new ProductController();
         public SelectorForm()
         {
             InitializeComponent();
@@ -64,6 +66,66 @@ namespace Presentation.View.Forms
         private void SelectorForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_client_status_all_Click(object sender, EventArgs e)
+        {
+            ViewerForm viewerForm = new ViewerForm();
+            ReportDataSource rds = new ReportDataSource("ds_client_status_all", commonController.GetAccountStatusAllClients());
+            viewerForm.rv_viewer.Reset();
+            viewerForm.rv_viewer.ProcessingMode = ProcessingMode.Local;
+            viewerForm.rv_viewer.LocalReport.ReportEmbeddedResource = "Presentation.View.Reports.AccountStatusAllClients.rdlc";
+            viewerForm.rv_viewer.LocalReport.DataSources.Add(rds);
+            InsertAction("generó un estado de cuenta de todos los clientes.");
+            viewerForm.ShowDialog();
+        }
+
+        private void btn_clients_Click(object sender, EventArgs e)
+        {
+            ViewerForm viewerForm = new ViewerForm();
+            ReportDataSource rds = new ReportDataSource("ds_all_clients", clientController.SelectAllClients());
+            viewerForm.rv_viewer.Reset();
+            viewerForm.rv_viewer.ProcessingMode = ProcessingMode.Local;
+            viewerForm.rv_viewer.LocalReport.ReportEmbeddedResource = "Presentation.View.Reports.AllClients.rdlc";
+            viewerForm.rv_viewer.LocalReport.DataSources.Add(rds);
+            InsertAction("generó un reporte de todos los clientes.");
+            viewerForm.ShowDialog();
+        }
+
+        private void btn_products_Click(object sender, EventArgs e)
+        {
+            ViewerForm viewerForm = new ViewerForm();
+            ReportDataSource rds = new ReportDataSource("ds_all_products", productController.SelectAllProducts());
+            viewerForm.rv_viewer.Reset();
+            viewerForm.rv_viewer.ProcessingMode = ProcessingMode.Local;
+            viewerForm.rv_viewer.LocalReport.ReportEmbeddedResource = "Presentation.View.Reports.AllProducts.rdlc";
+            viewerForm.rv_viewer.LocalReport.DataSources.Add(rds);
+            InsertAction("generó un reporte de todos los productos.");
+            viewerForm.ShowDialog();
+        }
+
+        private void btn_companies_Click(object sender, EventArgs e)
+        {
+            ViewerForm viewerForm = new ViewerForm();
+            ReportDataSource rds = new ReportDataSource("ds_all_companies", companyController.SelectAllCompanies());
+            viewerForm.rv_viewer.Reset();
+            viewerForm.rv_viewer.ProcessingMode = ProcessingMode.Local;
+            viewerForm.rv_viewer.LocalReport.ReportEmbeddedResource = "Presentation.View.Reports.AllCompanies.rdlc";
+            viewerForm.rv_viewer.LocalReport.DataSources.Add(rds);
+            InsertAction("generó un reporte de todas las empresas.");
+            viewerForm.ShowDialog();
+        }
+
+        private void product_movements_Click(object sender, EventArgs e)
+        {
+            ViewerForm viewerForm = new ViewerForm();
+            ReportDataSource rds = new ReportDataSource("ds_product_movements", productController.SelectProductMovements());
+            viewerForm.rv_viewer.Reset();
+            viewerForm.rv_viewer.ProcessingMode = ProcessingMode.Local;
+            viewerForm.rv_viewer.LocalReport.ReportEmbeddedResource = "Presentation.View.Reports.ProductMovements.rdlc";
+            viewerForm.rv_viewer.LocalReport.DataSources.Add(rds);
+            InsertAction("generó un reporte de todos los movimientos de productos.");
+            viewerForm.ShowDialog();
         }
     }
 }

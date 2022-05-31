@@ -36,13 +36,43 @@ namespace Presentation.View.Forms.Laboratory
             }
             else
             {
-                laboratoryController.CreateLaboratory(txt_laboratory.Text, txt_phone.Text, txt_address.Text);
-                MessageBox.Show("Guardado satisfactoriamente");
-                txt_laboratory.Clear();
-                txt_phone.Clear();
-                txt_address.Clear();
-                txt_laboratory.Focus();
-                lbl_error.Visible = false;
+                if (txt_id_laboratory.Text == "")
+                {
+                    try
+                    {
+                        laboratoryController.CreateLaboratory(txt_laboratory.Text, txt_phone.Text, txt_address.Text);
+                        MessageBox.Show("Guardado satisfactoriamente");
+                        txt_laboratory.Clear();
+                        txt_phone.Clear();
+                        txt_address.Clear();
+                        txt_laboratory.Focus();
+                        lbl_error.Visible = false;
+                    }
+                    catch (Exception CLaboratory)
+                    {
+                        MessageBox.Show("No pudimos crear el laboratorio debido a un error. \n\nError: " + CLaboratory.Message, "Laboratorios");
+                    }
+                }
+                else
+                {
+                    try
+                    {
+                        laboratoryController.UpdateLaboratory(txt_laboratory.Text, txt_phone.Text, txt_address.Text, txt_id_laboratory.Text);
+                        MessageBox.Show("Actualizado satisfactoriamente");
+                        txt_laboratory.Clear();
+                        txt_phone.Clear();
+                        txt_address.Clear();
+                        txt_laboratory.Clear();
+                        txt_id_laboratory.Clear();
+                        lbl_form.Text = "Crear laboratorio";
+                        btn_save_laboratory.Text = "Guardar";
+                        lbl_error.Visible = false;
+                    }
+                    catch (Exception CLaboratory)
+                    {
+                        MessageBox.Show("No pudimos actualizar el laboratorio debido a un error. \n\nError: " + CLaboratory.Message, "Laboratorios");
+                    }
+                }
             }
         }
 
@@ -55,6 +85,26 @@ namespace Presentation.View.Forms.Laboratory
         {
             UserController userController = new UserController();
             userController.InsertActionsUser(UserCache.name + " " + UserCache.lastname + " " + action, Environment.MachineName, "127.0.0.1", UserCache.user_id, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+        }
+
+        private void LaboratoryCreate_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_phone_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_laboratory_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_address_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

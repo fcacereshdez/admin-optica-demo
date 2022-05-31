@@ -49,5 +49,25 @@ namespace DataAccess.Data
 
         }
 
+        public DataTable GetAccountStatusAllClients()
+        {
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                using (var cmd = new SqlCommand())
+                {
+                    cmd.Connection = conn;
+                    cmd.CommandText = "AccountStatusAllClients";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    SqlDataReader ReaderClients = cmd.ExecuteReader();
+                    DataTable TableClients = new DataTable();
+                    TableClients.Load(ReaderClients);
+                    conn.Close();
+                    return TableClients;
+                }
+            }
+
+        }
+
     }
 }

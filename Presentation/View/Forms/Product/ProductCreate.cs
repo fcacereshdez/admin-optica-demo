@@ -43,28 +43,64 @@ namespace Presentation.View.Forms.Product
 
         private void btn_save_product_Click(object sender, EventArgs e)
         {
-            if(txt_quantity.Text == "")
+            if (txt_method.Text == "update")
             {
-                lbl_error.Text = "El producto debe contener al menos un valor 0";
+                try
+                {
+                    productController.UpdateProduct(cb_brand.SelectedText + txt_code_product.Text, txt_quantity.Text, txt_notes.Text, txt_color.Text, txt_code_product.Text, txt_price_cost.Text, txt_price_sale.Text, cb_category.SelectedValue.ToString(), cb_model.SelectedValue.ToString(), cb_brand.SelectedValue.ToString());
+                    txt_quantity.Clear();
+                    txt_notes.Clear();
+                    txt_color.Clear();
+                    txt_price_cost.Clear();
+                    txt_price_sale.Clear();
+                    txt_method.Clear();
+                    txt_code_product.Clear();
+                    InsertAction("editó un producto.");
+                    MessageBox.Show("Producto actualizado correctamente.");
+                    lbl_action.Text = "Crear producto";
+                    btn_save_product.Text = "Guardar";
+                    Close();
+                }
+                catch (Exception errProduct)
+                {
+                    MessageBox.Show("Ocurrió un error mientras se ejecutaba esto. \n\nError: " + errProduct.Message, "Productos");
+                }
             }
-            else if(txt_price_cost.Text == "")
+            else
             {
-                lbl_error.Text = "El producto debe contener un precio de costo";
-            }else if(txt_price_sale.Text == "")
-            {
-                lbl_error.Text = "El producto debe contener al menos un precio de venta";
-            }else if (txt_code_product.Text == "")
-            {
-                lbl_error.Text = "El producto debe contener un código";
-            }else
-            {
-                productController.CreateProduct("", txt_quantity.Text, txt_notes.Text, txt_color.Text, txt_code_product.Text, txt_price_cost.Text, txt_price_sale.Text, cb_category.SelectedValue.ToString(), cb_model.SelectedValue.ToString(), cb_brand.SelectedValue.ToString());
-                txt_quantity.Clear();
-                txt_notes.Clear();
-                txt_color.Clear();
-                InsertAction("creó un producto.");
-                MessageBox.Show("Producto registrado correctamente.");
-                Close();
+                if (txt_quantity.Text == "")
+                {
+                    lbl_error.Text = "El producto debe contener al menos un valor 0";
+                }
+                else if (txt_price_cost.Text == "")
+                {
+                    lbl_error.Text = "El producto debe contener un precio de costo";
+                }
+                else if (txt_price_sale.Text == "")
+                {
+                    lbl_error.Text = "El producto debe contener al menos un precio de venta";
+                }
+                else if (txt_code_product.Text == "")
+                {
+                    lbl_error.Text = "El producto debe contener un código";
+                }
+                else
+                {
+                    try
+                    {
+                        productController.CreateProduct(cb_brand.SelectedText + txt_code_product.Text, txt_quantity.Text, txt_notes.Text, txt_color.Text, txt_code_product.Text, txt_price_cost.Text, txt_price_sale.Text, cb_category.SelectedValue.ToString(), cb_model.SelectedValue.ToString(), cb_brand.SelectedValue.ToString());
+                        txt_quantity.Clear();
+                        txt_notes.Clear();
+                        txt_color.Clear();
+                        InsertAction("creó un producto.");
+                        MessageBox.Show("Producto registrado correctamente.");
+                        Close();
+                    }
+                    catch (Exception errProduct)
+                    {
+                        MessageBox.Show("Ocurrió un error mientras se ejecutaba esto. \n\nError: " + errProduct.Message, "Productos");
+                    }
+                }
             }
         }
 

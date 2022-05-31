@@ -31,7 +31,7 @@ namespace Presentation.View.Forms.Product
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductCreate));
             this.pnl_top = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
+            this.lbl_action = new System.Windows.Forms.Label();
             this.pcb_close_product = new System.Windows.Forms.PictureBox();
             this.pcb_exit = new System.Windows.Forms.PictureBox();
             this.pcb_minus = new System.Windows.Forms.PictureBox();
@@ -55,6 +55,7 @@ namespace Presentation.View.Forms.Product
             this.label9 = new System.Windows.Forms.Label();
             this.txt_code_product = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.txt_method = new System.Windows.Forms.TextBox();
             this.pnl_top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_close_product)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_exit)).BeginInit();
@@ -64,7 +65,7 @@ namespace Presentation.View.Forms.Product
             // pnl_top
             // 
             this.pnl_top.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(29)))), ((int)(((byte)(26)))));
-            this.pnl_top.Controls.Add(this.label15);
+            this.pnl_top.Controls.Add(this.lbl_action);
             this.pnl_top.Controls.Add(this.pcb_close_product);
             this.pnl_top.Controls.Add(this.pcb_exit);
             this.pnl_top.Controls.Add(this.pcb_minus);
@@ -75,16 +76,16 @@ namespace Presentation.View.Forms.Product
             this.pnl_top.Size = new System.Drawing.Size(468, 29);
             this.pnl_top.TabIndex = 82;
             // 
-            // label15
+            // lbl_action
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(11, 4);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(100, 17);
-            this.label15.TabIndex = 6;
-            this.label15.Text = "Crear producto";
+            this.lbl_action.AutoSize = true;
+            this.lbl_action.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_action.ForeColor = System.Drawing.Color.White;
+            this.lbl_action.Location = new System.Drawing.Point(11, 4);
+            this.lbl_action.Name = "lbl_action";
+            this.lbl_action.Size = new System.Drawing.Size(100, 17);
+            this.lbl_action.TabIndex = 6;
+            this.lbl_action.Text = "Crear producto";
             // 
             // pcb_close_product
             // 
@@ -254,6 +255,7 @@ namespace Presentation.View.Forms.Product
             this.txt_price_cost.Name = "txt_price_cost";
             this.txt_price_cost.Size = new System.Drawing.Size(80, 23);
             this.txt_price_cost.TabIndex = 100;
+            this.txt_price_cost.Text = "0.00";
             // 
             // label8
             // 
@@ -270,6 +272,7 @@ namespace Presentation.View.Forms.Product
             this.txt_price_sale.Name = "txt_price_sale";
             this.txt_price_sale.Size = new System.Drawing.Size(80, 23);
             this.txt_price_sale.TabIndex = 102;
+            this.txt_price_sale.Text = "0.00";
             // 
             // label9
             // 
@@ -296,12 +299,21 @@ namespace Presentation.View.Forms.Product
             this.label10.TabIndex = 103;
             this.label10.Text = "Código:";
             // 
+            // txt_method
+            // 
+            this.txt_method.Location = new System.Drawing.Point(245, 238);
+            this.txt_method.Name = "txt_method";
+            this.txt_method.Size = new System.Drawing.Size(67, 23);
+            this.txt_method.TabIndex = 105;
+            this.txt_method.Visible = false;
+            // 
             // ProductCreate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(468, 279);
+            this.Controls.Add(this.txt_method);
             this.Controls.Add(this.txt_code_product);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txt_price_sale);
@@ -342,29 +354,30 @@ namespace Presentation.View.Forms.Product
         #endregion
 
         private System.Windows.Forms.Panel pnl_top;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.PictureBox pcb_close_product;
         private System.Windows.Forms.PictureBox pcb_exit;
         private System.Windows.Forms.PictureBox pcb_minus;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cb_brand;
-        private System.Windows.Forms.ComboBox cb_model;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cb_category;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txt_quantity;
-        private System.Windows.Forms.TextBox txt_color;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txt_notes;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button btn_save_product;
         private System.Windows.Forms.Label lbl_error;
-        private System.Windows.Forms.TextBox txt_price_cost;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txt_price_sale;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txt_code_product;
         private System.Windows.Forms.Label label10;
+        public System.Windows.Forms.ComboBox cb_brand;
+        public System.Windows.Forms.ComboBox cb_model;
+        public System.Windows.Forms.ComboBox cb_category;
+        public System.Windows.Forms.TextBox txt_quantity;
+        public System.Windows.Forms.TextBox txt_color;
+        public System.Windows.Forms.TextBox txt_notes;
+        public System.Windows.Forms.TextBox txt_price_cost;
+        public System.Windows.Forms.TextBox txt_price_sale;
+        public System.Windows.Forms.TextBox txt_code_product;
+        public System.Windows.Forms.Label lbl_action;
+        public System.Windows.Forms.Button btn_save_product;
+        public System.Windows.Forms.TextBox txt_method;
     }
 }

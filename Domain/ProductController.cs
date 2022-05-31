@@ -17,6 +17,12 @@ namespace Domain
             TableProducts = productData.SelectAllProducts();
             return TableProducts;
         }
+        public DataTable SelectProductMovements()
+        {
+            DataTable TableProducts = new DataTable();
+            TableProducts = productData.SelectProductMovements();
+            return TableProducts;
+        }
         public void CreateProduct(string product_name, string product_quantity, string product_description, string product_color, string product_code, string price_cost, string price_sale, string category_id, string model_id, string brand_id)
         {
             productData.CreateProduct(product_name, Convert.ToInt32(product_quantity), product_description, product_color, product_code, Convert.ToDouble(price_cost), Convert.ToDouble(price_sale), Convert.ToInt64(category_id), Convert.ToInt64(model_id), Convert.ToInt64(brand_id), DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
@@ -88,6 +94,21 @@ namespace Domain
             DataTable TableProducts  = new DataTable();
             TableProducts = productData.SearchProduct(product);
             return TableProducts;
+        }
+
+        public void SelectProductById(string product_id)
+        {
+            productData.SelectProductsById(Convert.ToInt64(product_id));
+        }
+
+        public void UpdateProduct(string name, string quantity, string description, string color, string code, string cost, string sale, string category, string model, string brand)
+        {
+            productData.UpdateProduct(name, Convert.ToInt32(quantity), description, color, code, Convert.ToDecimal(cost), Convert.ToDecimal(sale), Convert.ToInt64(category), Convert.ToInt64(model), Convert.ToInt64(brand));
+        }
+
+        public void DeleteProduct(string product_id)
+        {
+            productData.DeleteProduct(Convert.ToInt64(product_id));
         }
     }
 }

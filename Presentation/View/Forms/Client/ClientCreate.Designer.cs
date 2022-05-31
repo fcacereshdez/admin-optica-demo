@@ -50,8 +50,6 @@ namespace Presentation.View.Forms.Client
             this.btn_save_client = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dtp_date = new System.Windows.Forms.DateTimePicker();
-            this.label8 = new System.Windows.Forms.Label();
             this.btn_search_company = new System.Windows.Forms.Button();
             this.txt_company_client_view = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -137,7 +135,7 @@ namespace Presentation.View.Forms.Client
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(457, 27);
+            this.label9.Location = new System.Drawing.Point(634, 29);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(48, 15);
             this.label9.TabIndex = 15;
@@ -154,7 +152,7 @@ namespace Presentation.View.Forms.Client
             // txt_code_client
             // 
             this.txt_code_client.BackColor = System.Drawing.Color.White;
-            this.txt_code_client.Location = new System.Drawing.Point(460, 48);
+            this.txt_code_client.Location = new System.Drawing.Point(637, 48);
             this.txt_code_client.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_code_client.Name = "txt_code_client";
             this.txt_code_client.ReadOnly = true;
@@ -174,7 +172,7 @@ namespace Presentation.View.Forms.Client
             this.txt_name_client.Location = new System.Drawing.Point(9, 48);
             this.txt_name_client.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_name_client.Name = "txt_name_client";
-            this.txt_name_client.Size = new System.Drawing.Size(219, 23);
+            this.txt_name_client.Size = new System.Drawing.Size(324, 23);
             this.txt_name_client.TabIndex = 10;
             // 
             // label1
@@ -269,8 +267,6 @@ namespace Presentation.View.Forms.Client
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dtp_date);
-            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.btn_search_company);
             this.groupBox1.Controls.Add(this.txt_company_client_view);
             this.groupBox1.Controls.Add(this.label13);
@@ -293,23 +289,6 @@ namespace Presentation.View.Forms.Client
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Información de la empresa";
-            // 
-            // dtp_date
-            // 
-            this.dtp_date.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_date.Location = new System.Drawing.Point(587, 48);
-            this.dtp_date.Name = "dtp_date";
-            this.dtp_date.Size = new System.Drawing.Size(159, 23);
-            this.dtp_date.TabIndex = 24;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(584, 27);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(120, 15);
-            this.label8.TabIndex = 23;
-            this.label8.Text = "Fecha de nacimiento:";
             // 
             // btn_search_company
             // 
@@ -363,16 +342,16 @@ namespace Presentation.View.Forms.Client
             // 
             // txt_lastname_client
             // 
-            this.txt_lastname_client.Location = new System.Drawing.Point(234, 48);
+            this.txt_lastname_client.Location = new System.Drawing.Point(339, 48);
             this.txt_lastname_client.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_lastname_client.Name = "txt_lastname_client";
-            this.txt_lastname_client.Size = new System.Drawing.Size(219, 23);
+            this.txt_lastname_client.Size = new System.Drawing.Size(292, 23);
             this.txt_lastname_client.TabIndex = 17;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(231, 27);
+            this.label3.Location = new System.Drawing.Point(336, 27);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(59, 15);
             this.label3.TabIndex = 16;
@@ -512,7 +491,5 @@ namespace Presentation.View.Forms.Client
         public System.Windows.Forms.TextBox txt_company_client;
         public System.Windows.Forms.TextBox txt_notes_client;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.DateTimePicker dtp_date;
-        private System.Windows.Forms.Label label8;
     }
 }

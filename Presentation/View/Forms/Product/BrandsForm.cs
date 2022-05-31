@@ -70,9 +70,16 @@ namespace Presentation.View.Forms.Product
         {
             if (dgv_brands.SelectedRows.Count > 0)
             {
-                productController.DeleteBrand(dgv_brands.SelectedRows[0].Cells[0].Value.ToString());
-                InsertAction("eliminó una marca.");
-                SelectAllBrands();
+                try
+                {
+                    productController.DeleteBrand(dgv_brands.SelectedRows[0].Cells[0].Value.ToString());
+                    InsertAction("eliminó una marca.");
+                    SelectAllBrands();
+                }
+                catch (Exception errBrand)
+                {
+                    MessageBox.Show("Ocurrió un error al intentar realizar esto.\n\nError: " + errBrand.Message, "Marcas");
+                }
             }
             else
             {

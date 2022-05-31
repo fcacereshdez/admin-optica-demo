@@ -29,7 +29,7 @@ namespace DataAccess.Data
             }
         }
 
-        public void InsertInvoice(DateTime date, int number, Int64 optometryst_id, int recurrency, Int64 seller_id, Int64 manager_id, Int64 recipe_id, Int64 payment_method, decimal subtotal, decimal discount, decimal total, int n_fee, decimal fee, string notes)
+        public void InsertInvoice(decimal firstpayment, DateTime date, int number, Int64 optometryst_id, int recurrency, Int64 seller_id, Int64 manager_id, Int64 recipe_id, Int64 payment_method, decimal subtotal, decimal discount, decimal total, int n_fee, decimal fee, string notes)
         {
             using (var conn = GetConnection())
             {
@@ -39,6 +39,7 @@ namespace DataAccess.Data
                     cmd.Connection = conn;
                     cmd.CommandText = "InsertInvoice";
                     cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@fistpayment", firstpayment);
                     cmd.Parameters.AddWithValue("@date", date);
                     cmd.Parameters.AddWithValue("@number_invoice", number);
                     cmd.Parameters.AddWithValue("@optometryst_id", optometryst_id);
@@ -74,6 +75,23 @@ namespace DataAccess.Data
                     cmd.Parameters.AddWithValue("@quantity_product", quantity);
                     cmd.Parameters.AddWithValue("@value_product", value);
                     cmd.Parameters.AddWithValue("@total_product", total);
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                }
+            }
+        }
+
+        public void DeleteInvoice(Int64 invoice_id)
+        {
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                using (var cmd = new SqlCommand())
+                {
+                    cmd.Connection = conn;
+                    cmd.CommandText = "DeleteInvoice";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@invoice_id", invoice_id);
                     cmd.ExecuteNonQuery();
                     conn.Close();
                 }

@@ -70,8 +70,15 @@ namespace Presentation.View.Forms.Product
         {
             if (dgv_models.SelectedRows.Count > 0)
             {
-                productController.DeleteBrand(dgv_models.SelectedRows[0].Cells[0].Value.ToString());
-                SelectAllModels();
+                try
+                {
+                    productController.DeleteBrand(dgv_models.SelectedRows[0].Cells[0].Value.ToString());
+                    SelectAllModels();
+                }
+                catch (Exception errModels)
+                {
+                    MessageBox.Show("Ocurrió un error al intentar realizar esto.\n\nError: " + errModels.Message, "Modelos");
+                }
             }
             else
             {

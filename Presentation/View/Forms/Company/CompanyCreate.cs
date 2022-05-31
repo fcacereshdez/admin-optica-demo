@@ -64,19 +64,33 @@ namespace Presentation.View.Forms.Company
             else
             {
                 lbl_error.Visible = false;
-                UserController userController = new UserController();
-                companyController.CreateCompany(txt_fullname.Text, txt_code.Text, txt_phone.Text, txt_secondary_phone.Text, txt_email.Text, txt_address.Text, txt_nit.Text, txt_iva.Text, txt_attendance_fullname.Text, txt_attendance_role.Text, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
-                userController.InsertActionsUser("Creó una empresa con código: " + txt_code.Text, Environment.MachineName, "127.0.0.1", UserCache.user_id, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
-                MessageBox.Show("Registro creado con éxito.", "Procesado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
+                try
+                {
+                    UserController userController = new UserController();
+                    companyController.CreateCompany(txt_fullname.Text, txt_code.Text, txt_phone.Text, txt_secondary_phone.Text, txt_email.Text, txt_address.Text, txt_nit.Text, txt_iva.Text, txt_attendance_fullname.Text, txt_attendance_role.Text, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+                    userController.InsertActionsUser("Creó una empresa con código: " + txt_code.Text, Environment.MachineName, "127.0.0.1", UserCache.user_id, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+                    MessageBox.Show("Registro creado con éxito.", "Procesado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+                catch (Exception iCompanies)
+                {
+                    MessageBox.Show("Ocurrió un error al intentar crear la empresa. \n\nError: " + iCompanies.Message, "Empresas");
+                }
             }
         }
 
         private void SelectLastCodeCompany()
         {
-            companyController.SelectLastCodeCompany();
-            int tmp_company_code = Convert.ToInt32(Common.Models.Company.code) + 1;
-            txt_code.Text = tmp_company_code.ToString();
+            try
+            {
+                companyController.SelectLastCodeCompany();
+                int tmp_company_code = Convert.ToInt32(Common.Models.Company.code) + 1;
+                txt_code.Text = tmp_company_code.ToString();
+            }
+            catch (Exception GCompanies)
+            {
+                MessageBox.Show("Ocurrió un error al intentar generar el código de la empresa nueva. \n\nError: " + GCompanies.Message, "Empresas");
+            }
         }
 
         private void pcb_close_create_user_Click(object sender, EventArgs e)

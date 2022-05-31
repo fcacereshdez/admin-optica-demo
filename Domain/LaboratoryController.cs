@@ -29,5 +29,18 @@ namespace Domain
             TableLaboratories = laboratoryData.SearchLaboratory(laboratory);
             return TableLaboratories;
         }
+        
+        public void SelectLaboratoryById(string laboratory_id)
+        {
+            laboratoryData.SelectLaboratoryById(Convert.ToInt64(laboratory_id));
+        }
+        public void UpdateLaboratory(string name, string phone, string address, string laboratory_id)
+        {
+            laboratoryData.UpdateLaboratory(name, phone, address, Convert.ToInt64(laboratory_id));
+        }
+        public void DeleteLaboratory(string laboratory_id)
+        {
+            laboratoryData.DeleteLaboratory(Convert.ToInt64(laboratory_id));
+        }
     }
 }

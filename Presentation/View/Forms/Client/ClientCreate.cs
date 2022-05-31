@@ -63,13 +63,18 @@ namespace Presentation.View.Forms.Client
             else
             {
                 lbl_error.Visible = false;
-
-                clientController.CreateClient(txt_name_client.Text, txt_lastname_client.Text, txt_code_client.Text, txt_dui_client.Text, txt_nit_client.Text, txt_phone_client.Text, txt_secondary_phone_client.Text, txt_email_client.Text, txt_address_client.Text, txt_notes_client.Text, txt_company_client.Text, dtp_date.Value.ToString("yyyy-MM-dd"), DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
-
-                UserController userController = new UserController();
-                userController.InsertActionsUser(UserCache.name + " " + UserCache.lastname +  " creó un cliente con código: " + txt_code_client.Text, Environment.MachineName, "127.0.0.1", UserCache.user_id, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
-                MessageBox.Show("Registro creado con éxito.", "Procesado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
+                try
+                {
+                    clientController.CreateClient(txt_name_client.Text, txt_lastname_client.Text, txt_code_client.Text, txt_dui_client.Text, txt_nit_client.Text, txt_phone_client.Text, txt_secondary_phone_client.Text, txt_email_client.Text, txt_address_client.Text, txt_notes_client.Text, txt_company_client.Text, "2022-01-01", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+                    UserController userController = new UserController();
+                    userController.InsertActionsUser(UserCache.name + " " + UserCache.lastname + " creó un cliente con código: " + txt_code_client.Text, Environment.MachineName, "127.0.0.1", UserCache.user_id, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+                    MessageBox.Show("Registro creado con éxito.", "Procesado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+                catch (Exception iClients)
+                {
+                    MessageBox.Show("Ocurrió un error al intentar crear el cliente nuevo. \n\nError: " + iClients.Message, "Clientes");
+                }
             }
         }
 

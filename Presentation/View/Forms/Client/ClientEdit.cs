@@ -28,9 +28,16 @@ namespace Presentation.View.Forms.Client
 
         private void btn_save_client_Click(object sender, EventArgs e)
         {
-         clientController.UpdateClient(txt_name_client.Text, txt_lastname_client.Text, txt_dui_client.Text, txt_nit_client.Text, txt_phone_client.Text, txt_secondary_phone_client.Text, txt_email_client.Text, txt_address_client.Text, txt_notes_client.Text, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), Convert.ToInt64(txt_id_client.Text));
-         MessageBox.Show("Registro actualizado", "Procesado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-         UserUpdated();
+            try
+            {
+                clientController.UpdateClient(txt_name_client.Text, txt_lastname_client.Text, txt_dui_client.Text, txt_nit_client.Text, txt_phone_client.Text, txt_secondary_phone_client.Text, txt_email_client.Text, txt_address_client.Text, txt_notes_client.Text, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), Convert.ToInt64(txt_id_client.Text));
+                MessageBox.Show("Registro actualizado", "Procesado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                UserUpdated();
+            }
+            catch (Exception EClients)
+            {
+                MessageBox.Show("Ocurrió un error al intentar editar el cliente seleccionado. \n\nError: " + EClients.Message, "Clientes");
+            }
         }
 
         private void UserUpdated()

@@ -40,8 +40,6 @@ namespace Presentation.View.Forms.Company
             this.pcb_exit = new System.Windows.Forms.PictureBox();
             this.pcb_minus = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lbl_sales_total = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.lbl_total_clients = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lbl_invoices = new System.Windows.Forms.Label();
@@ -120,8 +118,6 @@ namespace Presentation.View.Forms.Company
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.lbl_sales_total);
-            this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.lbl_total_clients);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.lbl_invoices);
@@ -131,30 +127,10 @@ namespace Presentation.View.Forms.Company
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 37);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(304, 235);
+            this.groupBox1.Size = new System.Drawing.Size(304, 129);
             this.groupBox1.TabIndex = 41;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Información general";
-            // 
-            // lbl_sales_total
-            // 
-            this.lbl_sales_total.AutoSize = true;
-            this.lbl_sales_total.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_sales_total.Location = new System.Drawing.Point(188, 122);
-            this.lbl_sales_total.Name = "lbl_sales_total";
-            this.lbl_sales_total.Size = new System.Drawing.Size(36, 17);
-            this.lbl_sales_total.TabIndex = 48;
-            this.lbl_sales_total.Text = "0000";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(6, 122);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(118, 17);
-            this.label7.TabIndex = 47;
-            this.label7.Text = "Ventas generadas:";
             // 
             // lbl_total_clients
             // 
@@ -312,13 +288,11 @@ namespace Presentation.View.Forms.Company
         private System.Windows.Forms.PictureBox pcb_exit;
         private System.Windows.Forms.PictureBox pcb_minus;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
         public System.Windows.Forms.DataGridView dgv_clients_by_company;
-        public System.Windows.Forms.Label lbl_sales_total;
         public System.Windows.Forms.Label lbl_total_clients;
         public System.Windows.Forms.Label lbl_invoices;
         public System.Windows.Forms.Label lbl_company;

@@ -29,15 +29,22 @@ namespace Presentation.View.Forms.Company
 
         private void LoadEditorData()
         {
-            txt_fullname.Text = Common.Models.Company.full_name;
-            txt_nit.Text = Common.Models.Company.nit;
-            txt_iva.Text = Common.Models.Company.iva;
-            txt_address.Text = Common.Models.Company.address;
-            txt_phone.Text = Common.Models.Company.phone;
-            txt_secondary_phone.Text = Common.Models.Company.secondary_phone;
-            txt_email.Text = Common.Models.Company.email;
-            txt_attendance_fullname.Text = Common.Models.Company.attendance_fullname;
-            txt_attendance_role.Text = Common.Models.Company.attendance_role;
+            try
+            {
+                txt_fullname.Text = Common.Models.Company.full_name;
+                txt_nit.Text = Common.Models.Company.nit;
+                txt_iva.Text = Common.Models.Company.iva;
+                txt_address.Text = Common.Models.Company.address;
+                txt_phone.Text = Common.Models.Company.phone;
+                txt_secondary_phone.Text = Common.Models.Company.secondary_phone;
+                txt_email.Text = Common.Models.Company.email;
+                txt_attendance_fullname.Text = Common.Models.Company.attendance_fullname;
+                txt_attendance_role.Text = Common.Models.Company.attendance_role;
+            }
+            catch (Exception iCompanies)
+            {
+                MessageBox.Show("Ocurrió un error mientras intentabamos cargar la información de la empresa. \n\nError: " + iCompanies.Message, "Empresas");
+            }
         }
 
         private void btn_edit_company_Click(object sender, EventArgs e)
@@ -81,12 +88,19 @@ namespace Presentation.View.Forms.Company
             else
             {
                 lbl_error.Visible = false;
-                UserController userController = new UserController();
-                CompanyController companyController = new CompanyController();
-                companyController.UpdateCompany(txt_fullname.Text, txt_phone.Text, txt_secondary_phone.Text, txt_email.Text, txt_address.Text, txt_nit.Text, txt_iva.Text, txt_attendance_fullname.Text, txt_attendance_role.Text, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), Common.Models.Company.company_id);
-                userController.InsertActionsUser("Actualizó una empresa con código: " + Common.Models.Company.code, Environment.MachineName, "127.0.0.1", UserCache.user_id, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
-                MessageBox.Show("Registro actualizado con éxito.", "Procesado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
+                try
+                {
+                    UserController userController = new UserController();
+                    CompanyController companyController = new CompanyController();
+                    companyController.UpdateCompany(txt_fullname.Text, txt_phone.Text, txt_secondary_phone.Text, txt_email.Text, txt_address.Text, txt_nit.Text, txt_iva.Text, txt_attendance_fullname.Text, txt_attendance_role.Text, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), Common.Models.Company.company_id);
+                    userController.InsertActionsUser("Actualizó una empresa con código: " + Common.Models.Company.code, Environment.MachineName, "127.0.0.1", UserCache.user_id, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+                    MessageBox.Show("Registro actualizado con éxito.", "Procesado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+                catch (Exception uCompanies)
+                {
+                    MessageBox.Show("Ocurrió un error al intentar cargar la actualización de datos.\n\nError: " + uCompanies.Message, "Empresas");
+                }
             }
         }
         private void InsertAction(string action)

@@ -31,8 +31,8 @@
     <PublisherName>Mango Studios</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>16</ApplicationRevision>
-    <ApplicationVersion>5.0.0.%2a</ApplicationVersion>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>6.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -115,6 +115,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Datasets\ClientStatusAllClients.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClientStatusAllClients.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Datasets\AuditAllUsers.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -129,6 +134,26 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\SelectAllClients.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SelectAllClients.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\SelectAllCompanies.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SelectAllCompanies.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\SelectAllProducts.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SelectAllProducts.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\SelectProductMovements.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SelectProductMovements.xsd</DependentUpon>
     </Compile>
     <Compile Include="Vendor\SqlServerTypes\Loader.cs" />
     <Compile Include="View\App.cs">
@@ -507,7 +532,12 @@
     <EmbeddedResource Include="View\Forms\User\UsersForm.resx">
       <DependentUpon>UsersForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Reports\AccountStatusAllClients.rdlc" />
+    <EmbeddedResource Include="View\Reports\AllClients.rdlc" />
+    <EmbeddedResource Include="View\Reports\AllCompanies.rdlc" />
+    <EmbeddedResource Include="View\Reports\AllProducts.rdlc" />
     <EmbeddedResource Include="View\Reports\PendingByCompany.rdlc" />
+    <EmbeddedResource Include="View\Reports\ProductMovements.rdlc" />
     <EmbeddedResource Include="View\Reports\SalesBook.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -517,6 +547,17 @@
     <EmbeddedResource Include="View\Reports\ViewerForm.resx">
       <DependentUpon>ViewerForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Datasets\ClientStatusAllClients.xsc">
+      <DependentUpon>ClientStatusAllClients.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\ClientStatusAllClients.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ClientStatusAllClients.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Datasets\ClientStatusAllClients.xss">
+      <DependentUpon>ClientStatusAllClients.xsd</DependentUpon>
+    </None>
     <None Include="Datasets\AuditAllUsers.xsc">
       <DependentUpon>AuditAllUsers.xsd</DependentUpon>
     </None>
@@ -548,6 +589,50 @@
     </None>
     <None Include="Datasets\SalesBook.xss">
       <DependentUpon>SalesBook.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\SelectAllClients.xsc">
+      <DependentUpon>SelectAllClients.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\SelectAllClients.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SelectAllClients.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Datasets\SelectAllClients.xss">
+      <DependentUpon>SelectAllClients.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\SelectAllCompanies.xsc">
+      <DependentUpon>SelectAllCompanies.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\SelectAllCompanies.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SelectAllCompanies.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Datasets\SelectAllCompanies.xss">
+      <DependentUpon>SelectAllCompanies.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\SelectAllProducts.xsc">
+      <DependentUpon>SelectAllProducts.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\SelectAllProducts.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SelectAllProducts.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Datasets\SelectAllProducts.xss">
+      <DependentUpon>SelectAllProducts.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\SelectProductMovements.xsc">
+      <DependentUpon>SelectProductMovements.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\SelectProductMovements.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SelectProductMovements.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Datasets\SelectProductMovements.xss">
+      <DependentUpon>SelectProductMovements.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -788,6 +873,9 @@
     <None Include="Resources\icons8-maximizar-la-ventana-24 %281%29.png" />
     <None Include="Resources\icons8-file-invoice-dollar-24.png" />
     <None Include="Resources\icons8-chevron-derecha-en-círculo-24.png" />
+    <None Include="Resources\icons8-bank-24.png" />
+    <None Include="Resources\icons8-bank-24 %281%29.png" />
+    <None Include="Resources\icons8-company-24.png" />
     <Content Include="Resources\interlenssv_icon-removebg-preview.ico" />
     <None Include="Resources\icons8-marca-24.png" />
     <None Include="Resources\icons8-basculas-en-3d-24.png" />

@@ -64,7 +64,7 @@ namespace Presentation.View.Forms.Product
             this.pnl_top.Location = new System.Drawing.Point(0, 0);
             this.pnl_top.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.pnl_top.Name = "pnl_top";
-            this.pnl_top.Size = new System.Drawing.Size(563, 29);
+            this.pnl_top.Size = new System.Drawing.Size(694, 29);
             this.pnl_top.TabIndex = 81;
             // 
             // label15
@@ -81,7 +81,7 @@ namespace Presentation.View.Forms.Product
             // pcb_close_brands
             // 
             this.pcb_close_brands.Image = global::Presentation.Properties.Resources.close;
-            this.pcb_close_brands.Location = new System.Drawing.Point(530, 3);
+            this.pcb_close_brands.Location = new System.Drawing.Point(657, 4);
             this.pcb_close_brands.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pcb_close_brands.Name = "pcb_close_brands";
             this.pcb_close_brands.Size = new System.Drawing.Size(25, 25);
@@ -193,7 +193,7 @@ namespace Presentation.View.Forms.Product
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.WindowFrame;
             this.dgv_brands.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_brands.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_brands.Size = new System.Drawing.Size(229, 141);
+            this.dgv_brands.Size = new System.Drawing.Size(356, 141);
             this.dgv_brands.TabIndex = 85;
             this.dgv_brands.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_brands_CellDoubleClick);
             // 
@@ -224,7 +224,7 @@ namespace Presentation.View.Forms.Product
             this.btn_delete.ForeColor = System.Drawing.Color.White;
             this.btn_delete.Image = global::Presentation.Properties.Resources.icons8_eliminar_24;
             this.btn_delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_delete.Location = new System.Drawing.Point(420, 187);
+            this.btn_delete.Location = new System.Drawing.Point(547, 186);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btn_delete.Size = new System.Drawing.Size(135, 30);
@@ -238,7 +238,7 @@ namespace Presentation.View.Forms.Product
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(563, 229);
+            this.ClientSize = new System.Drawing.Size(694, 251);
             this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.txt_action);
             this.Controls.Add(this.txt_brand_id);

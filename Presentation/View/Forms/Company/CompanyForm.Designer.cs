@@ -35,7 +35,6 @@ namespace Presentation.View.Forms.Company
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btn_view_company = new System.Windows.Forms.Button();
-            this.btn_export_companies = new System.Windows.Forms.Button();
             this.btn_create_company = new System.Windows.Forms.Button();
             this.btn_delete_company = new System.Windows.Forms.Button();
             this.btn_edit_company = new System.Windows.Forms.Button();
@@ -52,7 +51,6 @@ namespace Presentation.View.Forms.Company
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.btn_view_company);
-            this.groupBox1.Controls.Add(this.btn_export_companies);
             this.groupBox1.Controls.Add(this.btn_create_company);
             this.groupBox1.Controls.Add(this.btn_delete_company);
             this.groupBox1.Controls.Add(this.btn_edit_company);
@@ -63,7 +61,7 @@ namespace Presentation.View.Forms.Company
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(177, 221);
+            this.groupBox1.Size = new System.Drawing.Size(177, 183);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Comunes";
@@ -84,22 +82,6 @@ namespace Presentation.View.Forms.Company
             this.btn_view_company.Text = "Ver";
             this.btn_view_company.UseVisualStyleBackColor = false;
             this.btn_view_company.Click += new System.EventHandler(this.btn_view_company_Click);
-            // 
-            // btn_export_companies
-            // 
-            this.btn_export_companies.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
-            this.btn_export_companies.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
-            this.btn_export_companies.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_export_companies.ForeColor = System.Drawing.Color.White;
-            this.btn_export_companies.Image = global::Presentation.Properties.Resources.icons8_exportación_de_base_de_datos_24;
-            this.btn_export_companies.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_export_companies.Location = new System.Drawing.Point(18, 176);
-            this.btn_export_companies.Name = "btn_export_companies";
-            this.btn_export_companies.Padding = new System.Windows.Forms.Padding(15, 0, 5, 0);
-            this.btn_export_companies.Size = new System.Drawing.Size(143, 30);
-            this.btn_export_companies.TabIndex = 4;
-            this.btn_export_companies.Text = "Exportar";
-            this.btn_export_companies.UseVisualStyleBackColor = false;
             // 
             // btn_create_company
             // 
@@ -198,7 +180,7 @@ namespace Presentation.View.Forms.Company
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.WindowFrame;
             this.dgv_companies.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_companies.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_companies.Size = new System.Drawing.Size(617, 402);
+            this.dgv_companies.Size = new System.Drawing.Size(662, 477);
             this.dgv_companies.TabIndex = 7;
             // 
             // groupBox2
@@ -207,7 +189,7 @@ namespace Presentation.View.Forms.Company
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Location = new System.Drawing.Point(201, 33);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(617, 55);
+            this.groupBox2.Size = new System.Drawing.Size(662, 55);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
             // 
@@ -215,7 +197,7 @@ namespace Presentation.View.Forms.Company
             // 
             this.txt_search_company.Location = new System.Drawing.Point(61, 18);
             this.txt_search_company.Name = "txt_search_company";
-            this.txt_search_company.Size = new System.Drawing.Size(550, 25);
+            this.txt_search_company.Size = new System.Drawing.Size(595, 25);
             this.txt_search_company.TabIndex = 1;
             this.txt_search_company.TextChanged += new System.EventHandler(this.txt_search_company_TextChanged);
             // 
@@ -234,7 +216,7 @@ namespace Presentation.View.Forms.Company
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(850, 510);
+            this.ClientSize = new System.Drawing.Size(875, 585);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.dgv_companies);
             this.Controls.Add(this.groupBox1);
@@ -253,7 +235,6 @@ namespace Presentation.View.Forms.Company
         }
 
         #endregion
-        private System.Windows.Forms.Button btn_export_companies;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btn_create_company;
         private System.Windows.Forms.Button btn_delete_company;

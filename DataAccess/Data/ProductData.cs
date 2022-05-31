@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Common.Models;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -19,6 +20,26 @@ namespace DataAccess.Data
                 {
                     cmd.Connection = conn;
                     cmd.CommandText = "SelectAllProducts";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    SqlDataReader ReaderProducts = cmd.ExecuteReader();
+                    DataTable TableProducts = new DataTable();
+                    TableProducts.Load(ReaderProducts);
+                    conn.Close();
+                    return TableProducts;
+                }
+            }
+        }
+
+
+        public DataTable SelectProductMovements()
+        {
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                using (var cmd = new SqlCommand())
+                {
+                    cmd.Connection = conn;
+                    cmd.CommandText = "ProductsMovements";
                     cmd.CommandType = CommandType.StoredProcedure;
                     SqlDataReader ReaderProducts = cmd.ExecuteReader();
                     DataTable TableProducts = new DataTable();
@@ -313,5 +334,80 @@ namespace DataAccess.Data
             }
         }
 
+        public void SelectProductsById(Int64 product_id)
+        {
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                using (var cmd = new SqlCommand())
+                {
+                    cmd.Connection = conn;
+                    cmd.CommandText = "SelectProductById";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@product_id", product_id);
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            Product.product_id = reader.GetInt64(0);
+                            Product.product_name = reader.GetString(1);
+                            Product.product_quantity = reader.GetInt32(2);
+                            Product.product_notes = reader.GetString(3);
+                            Product.product_color = reader.GetString(4);
+                            Product.product_code = reader.GetString(5);
+                            Product.price_cost = reader.GetDecimal(6);
+                            Product.price_sale = reader.GetDecimal(7);
+                            Product.category_id = reader.GetInt64(8);
+                            Product.model_id = reader.GetInt64(9);
+                            Product.brand_id = reader.GetInt64(10);
+                        }
+                    }
+                }
+            }
+        }
+        public void UpdateProduct(string name, Int32 quantity, string description, string color, string code, decimal cost, decimal sale, Int64 category, Int64 model, Int64 brand)
+        {
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                using (var cmd = new SqlCommand())
+                {
+                    cmd.Connection = conn;
+                    cmd.CommandText = "UpdateProduct";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@name", name);
+                    cmd.Parameters.AddWithValue("@quantity", quantity);
+                    cmd.Parameters.AddWithValue("@description", description);
+                    cmd.Parameters.AddWithValue("@color", color);
+                    cmd.Parameters.AddWithValue("@code", code);
+                    cmd.Parameters.AddWithValue("@cost", cost);
+                    cmd.Parameters.AddWithValue("@sale", sale);
+                    cmd.Parameters.AddWithValue("@category", category);
+                    cmd.Parameters.AddWithValue("@model", model);
+                    cmd.Parameters.AddWithValue("@brand", brand);
+                    cmd.Parameters.AddWithValue("@update", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+                    cmd.Parameters.AddWithValue("@product_id", Product.product_id);
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                }
+            }
+        }
+        public void DeleteProduct(Int64 product_id) 
+        { 
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                using (var cmd = new SqlCommand())
+                {
+                    cmd.Connection = conn;
+                    cmd.CommandText = "DeleteProduct";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@product_id", product_id);
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                }
+            }
+        }
     }
 }

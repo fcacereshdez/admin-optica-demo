@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Common.Models;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -65,6 +66,69 @@ namespace DataAccess.Data
                     TableLaboratories.Load(ReaderLaboratories);
                     conn.Close();
                     return TableLaboratories;
+                }
+            }
+        }
+
+        public void SelectLaboratoryById(Int64 laboratory_id)
+        {
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                using (var cmd = new SqlCommand())
+                {
+                    cmd.Connection = conn;
+                    cmd.CommandText = "SelectLaboratoryById";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@laboratory_id", laboratory_id);
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            Laboratory.laboratory_id = reader.GetInt64(0);
+                            Laboratory.laboratory_name = reader.GetString(1);
+                            Laboratory.laboratory_phone = reader.GetString(2);
+                            Laboratory.laboratory_address = reader.GetString(3);
+                        }
+                    }
+                }
+            }
+        }
+
+        public void UpdateLaboratory(string name, string phone, string address, Int64 laboratory_id)
+        {
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                using (var cmd = new SqlCommand())
+                {
+                    cmd.Connection = conn;
+                    cmd.CommandText = "UpdateLaboratory";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@name", name);
+                    cmd.Parameters.AddWithValue("@phone", phone);
+                    cmd.Parameters.AddWithValue("@address", address);
+                    cmd.Parameters.AddWithValue("@laboratory_id", laboratory_id);
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                }
+            }
+        }
+
+        public void DeleteLaboratory(Int64 laboratory_id)
+        {
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                using (var cmd = new SqlCommand())
+                {
+                    cmd.Connection = conn;
+                    cmd.CommandText = "DeleteLaboratory";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@laboratory_id", laboratory_id);
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
                 }
             }
         }

@@ -43,10 +43,17 @@ namespace Presentation.View.Forms.Payment
             }
             else
             {
-                clientController.PayInovice(cmb_method_payment.SelectedValue.ToString() ,txt_amount.Text, cmb_bank.SelectedValue.ToString(), txt_ref_bank.Text, txt_invoice_id.Text);
-                MessageBox.Show("Abono aplicado", "Abonos", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                InsertAction("abonó " + txt_amount.Text + " al cliente " + lbl_client_name.Text + " en la factura " + lbl_invoice.Text);
-                this.Close();
+                try
+                {
+                    clientController.PayInovice(cmb_method_payment.SelectedValue.ToString(), txt_amount.Text, cmb_bank.SelectedValue.ToString(), txt_ref_bank.Text, txt_invoice_id.Text);
+                    MessageBox.Show("Abono aplicado", "Abonos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    InsertAction("abonó " + txt_amount.Text + " al cliente " + lbl_client_name.Text + " en la factura " + lbl_invoice.Text);
+                    this.Close();
+                }
+                catch (Exception errPayments)
+                {
+                    MessageBox.Show("Ocurrió un error al intentar ejecutar esto.\n\nError: " + errPayments.Message, "Abonos");
+                }
             }
         }
 

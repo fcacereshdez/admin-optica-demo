@@ -34,7 +34,12 @@ namespace Domain
             DataSetSalesBook = reportData.GetSalesBook();
             return DataSetSalesBook;
         }
-
+        public DataTable GetAccountStatusAllClients()
+        {
+            DataTable DataSetAccountStatus = new DataTable();
+            DataSetAccountStatus = reportData.GetAccountStatusAllClients();
+            return DataSetAccountStatus;
+        }
         public DataTable GetAuditAllUsers()
         {
             DataTable DataSetAuditAllUsers = new DataTable();

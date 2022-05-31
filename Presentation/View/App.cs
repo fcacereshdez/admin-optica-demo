@@ -38,6 +38,12 @@ namespace Presentation
             LoadSystemInfo();
             LoadUserData();
             PolicyFunctionsForUsers(UserCache.slug_role);
+
+            pnl_menu.AutoScroll = false;
+            pnl_menu.HorizontalScroll.Enabled = false;
+            pnl_menu.HorizontalScroll.Visible = false;
+            pnl_menu.HorizontalScroll.Maximum = 0;
+            pnl_menu.AutoScroll = true;
         }
 
         private void LoadSystemInfo()
@@ -48,7 +54,9 @@ namespace Presentation
         }
         private void LoadUserData()
         {
-            lbl_name_user.Text = UserCache.name + " " + UserCache.lastname;
+            char[] cutLastname = UserCache.lastname.ToCharArray();
+
+            lbl_name_user.Text = UserCache.name + " " + cutLastname[0] + ".";
             lbl_role_name.Text = UserCache.role;
         }
 
@@ -195,7 +203,7 @@ namespace Presentation
 
             if (slug_role == "superadmin" || slug_role == "admin")
             {
-                btn_dashboard.Enabled = true;
+              //  btn_dashboard.Enabled = true;
                 btn_clients.Enabled = true;
                 btn_companies.Enabled = true;
                 btn_labs.Enabled = true;
@@ -205,11 +213,11 @@ namespace Presentation
                 btn_reports.Enabled = true;
                 btn_shipping.Enabled = true;
                 btn_users.Enabled = true;
-                btn_about_info.Enabled = true;
+                //btn_about_info.Enabled = true;
             }
             else if (slug_role == "seller" || slug_role == "seller-optometryst" || slug_role == "optometryst")
             {
-                btn_dashboard.Enabled = false;
+              //  btn_dashboard.Enabled = false;
                 btn_clients.Enabled = true;
                 btn_companies.Enabled = true;
                 btn_labs.Enabled = false;
@@ -219,11 +227,11 @@ namespace Presentation
                 btn_reports.Enabled = false;
                 btn_shipping.Enabled = false;
                 btn_users.Enabled = false;
-                btn_about_info.Enabled = true;
+               // btn_about_info.Enabled = true;
             }
             else
             {
-                btn_dashboard.Enabled = false;
+             //   btn_dashboard.Enabled = false;
                 btn_clients.Enabled = false;
                 btn_companies.Enabled = false;
                 btn_labs.Enabled = false;
@@ -233,8 +241,18 @@ namespace Presentation
                 btn_reports.Enabled = false;
                 btn_shipping.Enabled = false;
                 btn_users.Enabled = false;
-                btn_about_info.Enabled = true;
+                //btn_about_info.Enabled = true;
             }
+        }
+
+        private void btn_banks_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Gestor de bancos en desarollo");
+        }
+
+        private void btn_iva_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Gestor de IVA en desarollo");
         }
     }
 }
