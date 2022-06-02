@@ -29,7 +29,7 @@ namespace DataAccess.Data
             }
         }
 
-        public void InsertInvoice(decimal firstpayment, DateTime date, int number, Int64 optometryst_id, int recurrency, Int64 seller_id, Int64 manager_id, Int64 recipe_id, Int64 payment_method, decimal subtotal, decimal discount, decimal total, int n_fee, decimal fee, string notes)
+        public void InsertInvoice(decimal firstpayment, DateTime date, int number, Int64 optometryst_id, int recurrency, Int64 seller_id, Int64 manager_id, Int64 recipe_id, Int64 payment_method, decimal subtotal, decimal discount, decimal total, int n_fee, decimal fee, string notes, string fday, string sday)
         {
             using (var conn = GetConnection())
             {
@@ -39,7 +39,7 @@ namespace DataAccess.Data
                     cmd.Connection = conn;
                     cmd.CommandText = "InsertInvoice";
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@fistpayment", firstpayment);
+                    cmd.Parameters.AddWithValue("@firstpayment", firstpayment);
                     cmd.Parameters.AddWithValue("@date", date);
                     cmd.Parameters.AddWithValue("@number_invoice", number);
                     cmd.Parameters.AddWithValue("@optometryst_id", optometryst_id);
@@ -54,6 +54,8 @@ namespace DataAccess.Data
                     cmd.Parameters.AddWithValue("@n_fee", n_fee);
                     cmd.Parameters.AddWithValue("@fee", fee);
                     cmd.Parameters.AddWithValue("@notes", notes);
+                    cmd.Parameters.AddWithValue("@fday", fday);
+                    cmd.Parameters.AddWithValue("@sday", sday);
                     cmd.Parameters.AddWithValue("@created_at", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
                     cmd.ExecuteNonQuery();
                     conn.Close();

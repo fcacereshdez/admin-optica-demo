@@ -31,7 +31,7 @@
     <PublisherName>Mango Studios</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationRevision>3</ApplicationRevision>
     <ApplicationVersion>6.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -169,6 +169,18 @@
     </Compile>
     <Compile Include="View\Forms\About\AboutForm.Designer.cs">
       <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\Claim\ClaimCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Claim\ClaimCreate.Designer.cs">
+      <DependentUpon>ClaimCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\Claim\ClaimForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Claim\ClaimForm.Designer.cs">
+      <DependentUpon>ClaimForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Forms\Client\ClientEdit.cs">
       <SubType>Form</SubType>
@@ -429,6 +441,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\Auth\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Claim\ClaimCreate.resx">
+      <DependentUpon>ClaimCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Claim\ClaimForm.resx">
+      <DependentUpon>ClaimForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\Client\ClientCreate.resx">
       <DependentUpon>ClientCreate.cs</DependentUpon>
@@ -876,6 +894,8 @@
     <None Include="Resources\icons8-bank-24.png" />
     <None Include="Resources\icons8-bank-24 %281%29.png" />
     <None Include="Resources\icons8-company-24.png" />
+    <None Include="Resources\icons8-maximizar-la-ventana-24 %282%29.png" />
+    <None Include="Resources\icons8-reparto-24.png" />
     <Content Include="Resources\interlenssv_icon-removebg-preview.ico" />
     <None Include="Resources\icons8-marca-24.png" />
     <None Include="Resources\icons8-basculas-en-3d-24.png" />

@@ -64,7 +64,7 @@ namespace Presentation.View.Forms.Company
             this.groupBox1.Size = new System.Drawing.Size(177, 183);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Comunes";
+            this.groupBox1.Text = "Funciones";
             // 
             // btn_view_company
             // 
@@ -141,6 +141,9 @@ namespace Presentation.View.Forms.Company
             this.dgv_companies.AllowUserToOrderColumns = true;
             this.dgv_companies.AllowUserToResizeColumns = false;
             this.dgv_companies.AllowUserToResizeRows = false;
+            this.dgv_companies.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_companies.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(241)))));
             this.dgv_companies.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_companies.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -185,6 +188,8 @@ namespace Presentation.View.Forms.Company
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.txt_search_company);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Location = new System.Drawing.Point(201, 33);
@@ -195,6 +200,8 @@ namespace Presentation.View.Forms.Company
             // 
             // txt_search_company
             // 
+            this.txt_search_company.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_search_company.Location = new System.Drawing.Point(61, 18);
             this.txt_search_company.Name = "txt_search_company";
             this.txt_search_company.Size = new System.Drawing.Size(595, 25);

@@ -22,6 +22,18 @@ namespace Common.Models
         public static Int32 invoices;
         public static string attendance_fullname;
         public static string attendance_role;
+        public static string attendance_phone;
+        public static string attendance_email;
+        public static string attendance_fullname1;
+        public static string attendance_role1;
+        public static string attendance_phone1;
+        public static string attendance_email1;
+        public static string attendance_fullname2;
+        public static string attendance_role2;
+        public static string attendance_phone2;
+        public static string attendance_email2;
+        public static string comercial_name;
+        public static string legal_name;
         public static DateTime created_at;
         public static DateTime updated_at;
     }

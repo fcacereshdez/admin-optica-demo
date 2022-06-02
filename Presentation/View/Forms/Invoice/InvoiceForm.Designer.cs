@@ -49,6 +49,8 @@ namespace Presentation.View.Forms.Invoice
             // 
             // groupBox3
             // 
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.txt_search_company);
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Location = new System.Drawing.Point(208, 18);
@@ -59,6 +61,8 @@ namespace Presentation.View.Forms.Invoice
             // 
             // txt_search_company
             // 
+            this.txt_search_company.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_search_company.Location = new System.Drawing.Point(61, 18);
             this.txt_search_company.Name = "txt_search_company";
             this.txt_search_company.Size = new System.Drawing.Size(550, 23);
@@ -151,6 +155,9 @@ namespace Presentation.View.Forms.Invoice
             this.dgv_invoices.AllowUserToOrderColumns = true;
             this.dgv_invoices.AllowUserToResizeColumns = false;
             this.dgv_invoices.AllowUserToResizeRows = false;
+            this.dgv_invoices.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_invoices.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(241)))));
             this.dgv_invoices.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_invoices.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;

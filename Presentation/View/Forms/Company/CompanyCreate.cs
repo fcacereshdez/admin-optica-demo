@@ -67,7 +67,9 @@ namespace Presentation.View.Forms.Company
                 try
                 {
                     UserController userController = new UserController();
-                    companyController.CreateCompany(txt_fullname.Text, txt_code.Text, txt_phone.Text, txt_secondary_phone.Text, txt_email.Text, txt_address.Text, txt_nit.Text, txt_iva.Text, txt_attendance_fullname.Text, txt_attendance_role.Text, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+                    companyController.CreateCompany(txt_fullname.Text, txt_code.Text, txt_phone.Text, txt_secondary_phone.Text, txt_email.Text, txt_address.Text, txt_nit.Text, txt_iva.Text, txt_attendance_fullname.Text, txt_attendance_role.Text, txt_attendance_phone.Text, txt_attendance_email.Text, 
+                       txt_attendance_name2.Text, txt_attendance_role2.Text, txt_attendance_phone2.Text, txt_attendance_email2.Text, 
+                       txt_attendance_name3.Text, txt_attendance_role3.Text, txt_attendance_phone3.Text, txt_attendance_email3.Text, txt_comercial_name.Text, txt_legal_name.Text, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
                     userController.InsertActionsUser("Creó una empresa con código: " + txt_code.Text, Environment.MachineName, "127.0.0.1", UserCache.user_id, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
                     MessageBox.Show("Registro creado con éxito.", "Procesado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();

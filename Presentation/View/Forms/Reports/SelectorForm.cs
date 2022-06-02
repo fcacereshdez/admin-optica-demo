@@ -26,6 +26,7 @@ namespace Presentation.View.Forms
         {
             InitializeComponent();
             InsertAction("está en el gestor de informes.");
+            Dock = DockStyle.Fill;
         }
 
         private void pcb_close_edit_company_Click(object sender, EventArgs e)

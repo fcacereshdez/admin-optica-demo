@@ -23,6 +23,8 @@ namespace Presentation.View.Forms.Client
             InitializeComponent();
             SelectAllClients();
             ClientsLoaded();
+
+            Dock = DockStyle.Fill;
         }
 
         private void ClientCreate_FormClosed(object sender, FormClosedEventArgs e)
@@ -41,12 +43,14 @@ namespace Presentation.View.Forms.Client
             {
                 dgv_clients.DataSource = clientController.SelectAllClients();
                 dgv_clients.ClearSelection();
-                dgv_clients.Columns[0].Width = 25;
-                dgv_clients.Columns[1].Width = 170;
-                dgv_clients.Columns[2].Width = 75;
+                dgv_clients.Columns[0].Visible = false;
+                dgv_clients.Columns[1].Width = 275;
+                dgv_clients.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                dgv_clients.Columns[2].Visible = false;
                 dgv_clients.Columns[3].Width = 90;
-                dgv_clients.Columns[4].Width = 126;
-                dgv_clients.Columns[5].Width = 90;
+                dgv_clients.Columns[4].Visible = false;
+                dgv_clients.Columns[5].Width = 275;
+                dgv_clients.Columns[6].Visible = false;
             }
             catch (Exception LClients)
             {

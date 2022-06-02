@@ -36,6 +36,8 @@ namespace Presentation.View.Forms.Invoice
             dgv_recipe_child.Columns[9].Visible = false;
             dgv_recipe_child.Columns[10].Visible = false;
             dgv_recipe_child.Columns[11].Visible = false;
+            dgv_recipe_child.Columns[12].Visible = false;
+            dgv_recipe_child.Columns[13].Visible = false;
         }
 
         private void dgv_recipe_child_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -46,13 +48,14 @@ namespace Presentation.View.Forms.Invoice
             invoiceCreate.dgv_products.Rows.Add(dgv_recipe_child.SelectedRows[0].Cells[5].Value.ToString(),
                 dgv_recipe_child.SelectedRows[0].Cells[6].Value.ToString(),
                 dgv_recipe_child.SelectedRows[0].Cells[7].Value.ToString(),
-                dgv_recipe_child.SelectedRows[0].Cells[11].Value.ToString(),
-                0.00);
-            invoiceCreate.dgv_products.Rows.Add(dgv_recipe_child.SelectedRows[0].Cells[8].Value.ToString(),
-                dgv_recipe_child.SelectedRows[0].Cells[9].Value.ToString(),
+                dgv_recipe_child.SelectedRows[0].Cells[13].Value.ToString(),
+                dgv_recipe_child.SelectedRows[0].Cells[8].Value.ToString());
+            invoiceCreate.dgv_products.Rows.Add(dgv_recipe_child.SelectedRows[0].Cells[9].Value.ToString(),
                 dgv_recipe_child.SelectedRows[0].Cells[10].Value.ToString(),
                 dgv_recipe_child.SelectedRows[0].Cells[11].Value.ToString(),
-                0.00);
+                dgv_recipe_child.SelectedRows[0].Cells[13].Value.ToString(),
+                dgv_recipe_child.SelectedRows[0].Cells[12].Value.ToString());
+            invoiceCreate.CalculateInvoice();
             Close();
         }
     }

@@ -59,14 +59,14 @@
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 42);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(528, 66);
+            this.groupBox1.Size = new System.Drawing.Size(417, 66);
             this.groupBox1.TabIndex = 25;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtros";
             // 
             // txt_search
             // 
-            this.txt_search.Location = new System.Drawing.Point(422, 39);
+            this.txt_search.Location = new System.Drawing.Point(311, 37);
             this.txt_search.Name = "txt_search";
             this.txt_search.Size = new System.Drawing.Size(100, 23);
             this.txt_search.TabIndex = 49;
@@ -150,7 +150,7 @@
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.WindowFrame;
             this.dgv_users.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_users.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_users.Size = new System.Drawing.Size(528, 214);
+            this.dgv_users.Size = new System.Drawing.Size(417, 214);
             this.dgv_users.TabIndex = 24;
             this.dgv_users.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_users_CellDoubleClick);
             // 
@@ -164,7 +164,7 @@
             this.pnl_top.Location = new System.Drawing.Point(0, 0);
             this.pnl_top.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnl_top.Name = "pnl_top";
-            this.pnl_top.Size = new System.Drawing.Size(556, 35);
+            this.pnl_top.Size = new System.Drawing.Size(441, 35);
             this.pnl_top.TabIndex = 23;
             // 
             // label2
@@ -181,7 +181,7 @@
             // pcb_close_create_client
             // 
             this.pcb_close_create_client.Image = global::Presentation.Properties.Resources.close;
-            this.pcb_close_create_client.Location = new System.Drawing.Point(509, 4);
+            this.pcb_close_create_client.Location = new System.Drawing.Point(404, 6);
             this.pcb_close_create_client.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pcb_close_create_client.Name = "pcb_close_create_client";
             this.pcb_close_create_client.Size = new System.Drawing.Size(25, 25);
@@ -205,7 +205,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(556, 342);
+            this.ClientSize = new System.Drawing.Size(441, 348);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgv_users);
             this.Controls.Add(this.pnl_top);

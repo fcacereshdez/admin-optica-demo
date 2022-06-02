@@ -24,6 +24,7 @@ namespace Presentation.View.Forms.User
         {
             LoadAllUsers();
             LoadUsersActionUser();
+            Dock = DockStyle.Fill;
         }
 
         private void LoadAllUsers()

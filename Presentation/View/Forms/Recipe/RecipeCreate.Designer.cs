@@ -35,11 +35,15 @@ namespace Presentation.View.Forms.Recipe
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnl_top = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
+            this.pcb_close_create_recipe = new System.Windows.Forms.PictureBox();
+            this.pcb_exit = new System.Windows.Forms.PictureBox();
+            this.pcb_minus = new System.Windows.Forms.PictureBox();
             this.tb_recipe = new System.Windows.Forms.TabControl();
             this.tp_clients = new System.Windows.Forms.TabPage();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.dgv_recipes = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_number_recipe = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_age = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -173,13 +177,12 @@ namespace Presentation.View.Forms.Recipe
             this.label31 = new System.Windows.Forms.Label();
             this.lbl_errors = new System.Windows.Forms.Label();
             this.txt_method = new System.Windows.Forms.TextBox();
-            this.txt_number_recipe = new System.Windows.Forms.TextBox();
             this.btn_next = new System.Windows.Forms.Button();
             this.btn_save_recipe = new System.Windows.Forms.Button();
-            this.pcb_close_create_recipe = new System.Windows.Forms.PictureBox();
-            this.pcb_exit = new System.Windows.Forms.PictureBox();
-            this.pcb_minus = new System.Windows.Forms.PictureBox();
             this.pnl_top.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcb_close_create_recipe)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcb_exit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcb_minus)).BeginInit();
             this.tb_recipe.SuspendLayout();
             this.tp_clients.SuspendLayout();
             this.groupBox9.SuspendLayout();
@@ -196,9 +199,6 @@ namespace Presentation.View.Forms.Recipe
             this.groupBox10.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcb_close_create_recipe)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcb_exit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcb_minus)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_top
@@ -225,6 +225,40 @@ namespace Presentation.View.Forms.Recipe
             this.label10.Size = new System.Drawing.Size(54, 17);
             this.label10.TabIndex = 6;
             this.label10.Text = "Recetas";
+            // 
+            // pcb_close_create_recipe
+            // 
+            this.pcb_close_create_recipe.Image = global::Presentation.Properties.Resources.close;
+            this.pcb_close_create_recipe.Location = new System.Drawing.Point(756, 2);
+            this.pcb_close_create_recipe.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pcb_close_create_recipe.Name = "pcb_close_create_recipe";
+            this.pcb_close_create_recipe.Size = new System.Drawing.Size(25, 25);
+            this.pcb_close_create_recipe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcb_close_create_recipe.TabIndex = 4;
+            this.pcb_close_create_recipe.TabStop = false;
+            this.pcb_close_create_recipe.Click += new System.EventHandler(this.pcb_close_create_recipe_Click);
+            // 
+            // pcb_exit
+            // 
+            this.pcb_exit.Image = global::Presentation.Properties.Resources.close;
+            this.pcb_exit.Location = new System.Drawing.Point(1389, 7);
+            this.pcb_exit.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.pcb_exit.Name = "pcb_exit";
+            this.pcb_exit.Size = new System.Drawing.Size(34, 43);
+            this.pcb_exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcb_exit.TabIndex = 3;
+            this.pcb_exit.TabStop = false;
+            // 
+            // pcb_minus
+            // 
+            this.pcb_minus.Image = global::Presentation.Properties.Resources.minus;
+            this.pcb_minus.Location = new System.Drawing.Point(1347, 7);
+            this.pcb_minus.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.pcb_minus.Name = "pcb_minus";
+            this.pcb_minus.Size = new System.Drawing.Size(34, 43);
+            this.pcb_minus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcb_minus.TabIndex = 2;
+            this.pcb_minus.TabStop = false;
             // 
             // tb_recipe
             // 
@@ -333,6 +367,15 @@ namespace Presentation.View.Forms.Recipe
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Información básica";
             // 
+            // txt_number_recipe
+            // 
+            this.txt_number_recipe.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_number_recipe.Location = new System.Drawing.Point(680, 94);
+            this.txt_number_recipe.Name = "txt_number_recipe";
+            this.txt_number_recipe.Size = new System.Drawing.Size(62, 23);
+            this.txt_number_recipe.TabIndex = 55;
+            this.txt_number_recipe.Visible = false;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -349,7 +392,7 @@ namespace Presentation.View.Forms.Recipe
             this.txt_age.Location = new System.Drawing.Point(70, 130);
             this.txt_age.Name = "txt_age";
             this.txt_age.Size = new System.Drawing.Size(124, 23);
-            this.txt_age.TabIndex = 53;
+            this.txt_age.TabIndex = 1;
             // 
             // label3
             // 
@@ -368,7 +411,7 @@ namespace Presentation.View.Forms.Recipe
             this.dtp_date.Location = new System.Drawing.Point(626, 24);
             this.dtp_date.Name = "dtp_date";
             this.dtp_date.Size = new System.Drawing.Size(116, 23);
-            this.dtp_date.TabIndex = 51;
+            this.dtp_date.TabIndex = 2;
             // 
             // lbl_phone_client
             // 
@@ -499,7 +542,7 @@ namespace Presentation.View.Forms.Recipe
             this.cb_process.Location = new System.Drawing.Point(427, 109);
             this.cb_process.Name = "cb_process";
             this.cb_process.Size = new System.Drawing.Size(68, 19);
-            this.cb_process.TabIndex = 100;
+            this.cb_process.TabIndex = 36;
             this.cb_process.Text = "Proceso";
             this.cb_process.UseVisualStyleBackColor = true;
             // 
@@ -509,7 +552,7 @@ namespace Presentation.View.Forms.Recipe
             this.cb_ar.Location = new System.Drawing.Point(374, 109);
             this.cb_ar.Name = "cb_ar";
             this.cb_ar.Size = new System.Drawing.Size(41, 19);
-            this.cb_ar.TabIndex = 99;
+            this.cb_ar.TabIndex = 35;
             this.cb_ar.Text = "AR";
             this.cb_ar.UseVisualStyleBackColor = true;
             // 
@@ -537,7 +580,7 @@ namespace Presentation.View.Forms.Recipe
             this.rb_aa.Location = new System.Drawing.Point(439, 28);
             this.rb_aa.Name = "rb_aa";
             this.rb_aa.Size = new System.Drawing.Size(41, 19);
-            this.rb_aa.TabIndex = 96;
+            this.rb_aa.TabIndex = 34;
             this.rb_aa.TabStop = true;
             this.rb_aa.Text = "AA";
             this.rb_aa.UseVisualStyleBackColor = true;
@@ -548,7 +591,7 @@ namespace Presentation.View.Forms.Recipe
             this.rb_sa.Location = new System.Drawing.Point(391, 28);
             this.rb_sa.Name = "rb_sa";
             this.rb_sa.Size = new System.Drawing.Size(40, 19);
-            this.rb_sa.TabIndex = 95;
+            this.rb_sa.TabIndex = 33;
             this.rb_sa.TabStop = true;
             this.rb_sa.Text = "SA";
             this.rb_sa.UseVisualStyleBackColor = true;
@@ -559,7 +602,7 @@ namespace Presentation.View.Forms.Recipe
             this.rb_comp.Location = new System.Drawing.Point(328, 28);
             this.rb_comp.Name = "rb_comp";
             this.rb_comp.Size = new System.Drawing.Size(57, 19);
-            this.rb_comp.TabIndex = 94;
+            this.rb_comp.TabIndex = 32;
             this.rb_comp.TabStop = true;
             this.rb_comp.Text = "Comp";
             this.rb_comp.UseVisualStyleBackColor = true;
@@ -570,7 +613,7 @@ namespace Presentation.View.Forms.Recipe
             this.txt_value.Location = new System.Drawing.Point(685, 105);
             this.txt_value.Name = "txt_value";
             this.txt_value.Size = new System.Drawing.Size(57, 23);
-            this.txt_value.TabIndex = 93;
+            this.txt_value.TabIndex = 38;
             this.txt_value.Text = "0.00";
             // 
             // label37
@@ -588,7 +631,7 @@ namespace Presentation.View.Forms.Recipe
             this.txt_quantity.Location = new System.Drawing.Point(569, 105);
             this.txt_quantity.Name = "txt_quantity";
             this.txt_quantity.Size = new System.Drawing.Size(57, 23);
-            this.txt_quantity.TabIndex = 91;
+            this.txt_quantity.TabIndex = 37;
             this.txt_quantity.Text = "0";
             // 
             // label36
@@ -609,7 +652,7 @@ namespace Presentation.View.Forms.Recipe
             this.btn_search_glasses.Location = new System.Drawing.Point(232, 58);
             this.btn_search_glasses.Name = "btn_search_glasses";
             this.btn_search_glasses.Size = new System.Drawing.Size(82, 28);
-            this.btn_search_glasses.TabIndex = 63;
+            this.btn_search_glasses.TabIndex = 31;
             this.btn_search_glasses.Text = "Buscar";
             this.btn_search_glasses.UseVisualStyleBackColor = false;
             this.btn_search_glasses.Click += new System.EventHandler(this.btn_search_glasses_Click);
@@ -642,7 +685,7 @@ namespace Presentation.View.Forms.Recipe
             this.btn_search_ring.Location = new System.Drawing.Point(232, 24);
             this.btn_search_ring.Name = "btn_search_ring";
             this.btn_search_ring.Size = new System.Drawing.Size(82, 28);
-            this.btn_search_ring.TabIndex = 47;
+            this.btn_search_ring.TabIndex = 30;
             this.btn_search_ring.Text = "Buscar";
             this.btn_search_ring.UseVisualStyleBackColor = false;
             this.btn_search_ring.Click += new System.EventHandler(this.btn_search_ring_Click);
@@ -756,7 +799,7 @@ namespace Presentation.View.Forms.Recipe
             this.txt_base_od_recipe.Location = new System.Drawing.Point(547, 45);
             this.txt_base_od_recipe.Name = "txt_base_od_recipe";
             this.txt_base_od_recipe.Size = new System.Drawing.Size(57, 23);
-            this.txt_base_od_recipe.TabIndex = 85;
+            this.txt_base_od_recipe.TabIndex = 20;
             // 
             // txt_base_oi_recipe
             // 
@@ -764,7 +807,7 @@ namespace Presentation.View.Forms.Recipe
             this.txt_base_oi_recipe.Location = new System.Drawing.Point(547, 74);
             this.txt_base_oi_recipe.Name = "txt_base_oi_recipe";
             this.txt_base_oi_recipe.Size = new System.Drawing.Size(57, 23);
-            this.txt_base_oi_recipe.TabIndex = 84;
+            this.txt_base_oi_recipe.TabIndex = 29;
             // 
             // txt_dplej_oi_recipe
             // 
@@ -772,7 +815,7 @@ namespace Presentation.View.Forms.Recipe
             this.txt_dplej_oi_recipe.Location = new System.Drawing.Point(421, 74);
             this.txt_dplej_oi_recipe.Name = "txt_dplej_oi_recipe";
             this.txt_dplej_oi_recipe.Size = new System.Drawing.Size(57, 23);
-            this.txt_dplej_oi_recipe.TabIndex = 83;
+            this.txt_dplej_oi_recipe.TabIndex = 27;
             // 
             // txt_dpcer_od_recipe
             // 
@@ -780,7 +823,7 @@ namespace Presentation.View.Forms.Recipe
             this.txt_dpcer_od_recipe.Location = new System.Drawing.Point(484, 45);
             this.txt_dpcer_od_recipe.Name = "txt_dpcer_od_recipe";
             this.txt_dpcer_od_recipe.Size = new System.Drawing.Size(57, 23);
-            this.txt_dpcer_od_recipe.TabIndex = 82;
+            this.txt_dpcer_od_recipe.TabIndex = 19;
             // 
             // txt_dpcer_oi_recipe
             // 
@@ -788,7 +831,7 @@ namespace Presentation.View.Forms.Recipe
             this.txt_dpcer_oi_recipe.Location = new System.Drawing.Point(484, 74);
             this.txt_dpcer_oi_recipe.Name = "txt_dpcer_oi_recipe";
             this.txt_dpcer_oi_recipe.Size = new System.Drawing.Size(57, 23);
-            this.txt_dpcer_oi_recipe.TabIndex = 81;
+            this.txt_dpcer_oi_recipe.TabIndex = 28;
             // 
             // txt_dplej_od_recipe
             // 
@@ -796,7 +839,7 @@ namespace Presentation.View.Forms.Recipe
             this.txt_dplej_od_recipe.Location = new System.Drawing.Point(421, 45);
             this.txt_dplej_od_recipe.Name = "txt_dplej_od_recipe";
             this.txt_dplej_od_recipe.Size = new System.Drawing.Size(57, 23);
-            this.txt_dplej_od_recipe.TabIndex = 80;
+            this.txt_dplej_od_recipe.TabIndex = 18;
             // 
             // txt_altob_oi_recipe
             // 
@@ -804,7 +847,7 @@ namespace Presentation.View.Forms.Recipe
             this.txt_altob_oi_recipe.Location = new System.Drawing.Point(295, 74);
             this.txt_altob_oi_recipe.Name = "txt_altob_oi_recipe";
             this.txt_altob_oi_recipe.Size = new System.Drawing.Size(57, 23);
-            this.txt_altob_oi_recipe.TabIndex = 79;
+            this.txt_altob_oi_recipe.TabIndex = 25;
             // 
             // txt_altpu_od_recipe
             // 
@@ -812,7 +855,7 @@ namespace Presentation.View.Forms.Recipe
             this.txt_altpu_od_recipe.Location = new System.Drawing.Point(358, 45);
             this.txt_altpu_od_recipe.Name = "txt_altpu_od_recipe";
             this.txt_altpu_od_recipe.Size = new System.Drawing.Size(57, 23);
-            this.txt_altpu_od_recipe.TabIndex = 78;
+            this.txt_altpu_od_recipe.TabIndex = 17;
             // 
             // txt_altpu_oi_recipe
             // 
@@ -820,7 +863,7 @@ namespace Presentation.View.Forms.Recipe
             this.txt_altpu_oi_recipe.Location = new System.Drawing.Point(358, 74);
             this.txt_altpu_oi_recipe.Name = "txt_altpu_oi_recipe";
             this.txt_altpu_oi_recipe.Size = new System.Drawing.Size(57, 23);
-            this.txt_altpu_oi_recipe.TabIndex = 77;
+            this.txt_altpu_oi_recipe.TabIndex = 26;
             // 
             // txt_altob_od_recipe
             // 
@@ -828,7 +871,7 @@ namespace Presentation.View.Forms.Recipe
             this.txt_altob_od_recipe.Location = new System.Drawing.Point(295, 45);
             this.txt_altob_od_recipe.Name = "txt_altob_od_recipe";
             this.txt_altob_od_recipe.Size = new System.Drawing.Size(57, 23);
-            this.txt_altob_od_recipe.TabIndex = 76;
+            this.txt_altob_od_recipe.TabIndex = 16;
             // 
             // label17
             // 
@@ -872,7 +915,7 @@ namespace Presentation.View.Forms.Recipe
             this.txt_eje_oi_recipe.Location = new System.Drawing.Point(169, 74);
             this.txt_eje_oi_recipe.Name = "txt_eje_oi_recipe";
             this.txt_eje_oi_recipe.Size = new System.Drawing.Size(57, 23);
-            this.txt_eje_oi_recipe.TabIndex = 71;
+            this.txt_eje_oi_recipe.TabIndex = 23;
             // 
             // txt_adic_od_recipe
             // 
@@ -880,7 +923,7 @@ namespace Presentation.View.Forms.Recipe
             this.txt_adic_od_recipe.Location = new System.Drawing.Point(232, 45);
             this.txt_adic_od_recipe.Name = "txt_adic_od_recipe";
             this.txt_adic_od_recipe.Size = new System.Drawing.Size(57, 23);
-            this.txt_adic_od_recipe.TabIndex = 70;
+            this.txt_adic_od_recipe.TabIndex = 15;
             // 
             // txt_adic_oi_recipe
             // 
@@ -888,7 +931,7 @@ namespace Presentation.View.Forms.Recipe
             this.txt_adic_oi_recipe.Location = new System.Drawing.Point(232, 74);
             this.txt_adic_oi_recipe.Name = "txt_adic_oi_recipe";
             this.txt_adic_oi_recipe.Size = new System.Drawing.Size(57, 23);
-            this.txt_adic_oi_recipe.TabIndex = 69;
+            this.txt_adic_oi_recipe.TabIndex = 24;
             // 
             // txt_eje_od_recipe
             // 
@@ -896,7 +939,7 @@ namespace Presentation.View.Forms.Recipe
             this.txt_eje_od_recipe.Location = new System.Drawing.Point(169, 45);
             this.txt_eje_od_recipe.Name = "txt_eje_od_recipe";
             this.txt_eje_od_recipe.Size = new System.Drawing.Size(57, 23);
-            this.txt_eje_od_recipe.TabIndex = 68;
+            this.txt_eje_od_recipe.TabIndex = 14;
             // 
             // txt_esf_oi_recipe
             // 
@@ -904,7 +947,7 @@ namespace Presentation.View.Forms.Recipe
             this.txt_esf_oi_recipe.Location = new System.Drawing.Point(43, 74);
             this.txt_esf_oi_recipe.Name = "txt_esf_oi_recipe";
             this.txt_esf_oi_recipe.Size = new System.Drawing.Size(57, 23);
-            this.txt_esf_oi_recipe.TabIndex = 67;
+            this.txt_esf_oi_recipe.TabIndex = 21;
             // 
             // txt_cil_od_recipe
             // 
@@ -912,7 +955,7 @@ namespace Presentation.View.Forms.Recipe
             this.txt_cil_od_recipe.Location = new System.Drawing.Point(106, 45);
             this.txt_cil_od_recipe.Name = "txt_cil_od_recipe";
             this.txt_cil_od_recipe.Size = new System.Drawing.Size(57, 23);
-            this.txt_cil_od_recipe.TabIndex = 66;
+            this.txt_cil_od_recipe.TabIndex = 13;
             // 
             // txt_cil_oi_recipe
             // 
@@ -920,7 +963,7 @@ namespace Presentation.View.Forms.Recipe
             this.txt_cil_oi_recipe.Location = new System.Drawing.Point(106, 74);
             this.txt_cil_oi_recipe.Name = "txt_cil_oi_recipe";
             this.txt_cil_oi_recipe.Size = new System.Drawing.Size(57, 23);
-            this.txt_cil_oi_recipe.TabIndex = 65;
+            this.txt_cil_oi_recipe.TabIndex = 22;
             // 
             // txt_esf_od_recipe
             // 
@@ -928,7 +971,7 @@ namespace Presentation.View.Forms.Recipe
             this.txt_esf_od_recipe.Location = new System.Drawing.Point(43, 45);
             this.txt_esf_od_recipe.Name = "txt_esf_od_recipe";
             this.txt_esf_od_recipe.Size = new System.Drawing.Size(57, 23);
-            this.txt_esf_od_recipe.TabIndex = 64;
+            this.txt_esf_od_recipe.TabIndex = 12;
             // 
             // label21
             // 
@@ -981,7 +1024,7 @@ namespace Presentation.View.Forms.Recipe
             this.txt_lensometry_notes.Multiline = true;
             this.txt_lensometry_notes.Name = "txt_lensometry_notes";
             this.txt_lensometry_notes.Size = new System.Drawing.Size(444, 52);
-            this.txt_lensometry_notes.TabIndex = 61;
+            this.txt_lensometry_notes.TabIndex = 11;
             // 
             // label14
             // 
@@ -1034,7 +1077,7 @@ namespace Presentation.View.Forms.Recipe
             this.txt_eje_oi.Location = new System.Drawing.Point(169, 71);
             this.txt_eje_oi.Name = "txt_eje_oi";
             this.txt_eje_oi.Size = new System.Drawing.Size(57, 23);
-            this.txt_eje_oi.TabIndex = 55;
+            this.txt_eje_oi.TabIndex = 9;
             // 
             // txt_adic_od
             // 
@@ -1042,7 +1085,7 @@ namespace Presentation.View.Forms.Recipe
             this.txt_adic_od.Location = new System.Drawing.Point(232, 42);
             this.txt_adic_od.Name = "txt_adic_od";
             this.txt_adic_od.Size = new System.Drawing.Size(57, 23);
-            this.txt_adic_od.TabIndex = 54;
+            this.txt_adic_od.TabIndex = 6;
             // 
             // txt_adic_oi
             // 
@@ -1050,7 +1093,7 @@ namespace Presentation.View.Forms.Recipe
             this.txt_adic_oi.Location = new System.Drawing.Point(232, 71);
             this.txt_adic_oi.Name = "txt_adic_oi";
             this.txt_adic_oi.Size = new System.Drawing.Size(57, 23);
-            this.txt_adic_oi.TabIndex = 53;
+            this.txt_adic_oi.TabIndex = 10;
             // 
             // txt_eje_od
             // 
@@ -1058,7 +1101,7 @@ namespace Presentation.View.Forms.Recipe
             this.txt_eje_od.Location = new System.Drawing.Point(169, 42);
             this.txt_eje_od.Name = "txt_eje_od";
             this.txt_eje_od.Size = new System.Drawing.Size(57, 23);
-            this.txt_eje_od.TabIndex = 52;
+            this.txt_eje_od.TabIndex = 5;
             // 
             // txt_esf_oi
             // 
@@ -1066,7 +1109,7 @@ namespace Presentation.View.Forms.Recipe
             this.txt_esf_oi.Location = new System.Drawing.Point(43, 71);
             this.txt_esf_oi.Name = "txt_esf_oi";
             this.txt_esf_oi.Size = new System.Drawing.Size(57, 23);
-            this.txt_esf_oi.TabIndex = 51;
+            this.txt_esf_oi.TabIndex = 7;
             // 
             // txt_cil_od
             // 
@@ -1074,7 +1117,7 @@ namespace Presentation.View.Forms.Recipe
             this.txt_cil_od.Location = new System.Drawing.Point(106, 42);
             this.txt_cil_od.Name = "txt_cil_od";
             this.txt_cil_od.Size = new System.Drawing.Size(57, 23);
-            this.txt_cil_od.TabIndex = 50;
+            this.txt_cil_od.TabIndex = 4;
             // 
             // txt_cil_oi
             // 
@@ -1082,7 +1125,7 @@ namespace Presentation.View.Forms.Recipe
             this.txt_cil_oi.Location = new System.Drawing.Point(106, 71);
             this.txt_cil_oi.Name = "txt_cil_oi";
             this.txt_cil_oi.Size = new System.Drawing.Size(57, 23);
-            this.txt_cil_oi.TabIndex = 49;
+            this.txt_cil_oi.TabIndex = 8;
             // 
             // txt_esf_od
             // 
@@ -1090,7 +1133,7 @@ namespace Presentation.View.Forms.Recipe
             this.txt_esf_od.Location = new System.Drawing.Point(43, 42);
             this.txt_esf_od.Name = "txt_esf_od";
             this.txt_esf_od.Size = new System.Drawing.Size(57, 23);
-            this.txt_esf_od.TabIndex = 48;
+            this.txt_esf_od.TabIndex = 3;
             // 
             // label27
             // 
@@ -1154,7 +1197,7 @@ namespace Presentation.View.Forms.Recipe
             this.txt_retinoscopy.Location = new System.Drawing.Point(133, 243);
             this.txt_retinoscopy.Name = "txt_retinoscopy";
             this.txt_retinoscopy.Size = new System.Drawing.Size(615, 23);
-            this.txt_retinoscopy.TabIndex = 79;
+            this.txt_retinoscopy.TabIndex = 53;
             // 
             // label42
             // 
@@ -1171,7 +1214,7 @@ namespace Presentation.View.Forms.Recipe
             this.txt_hirsscheberg_test.Location = new System.Drawing.Point(133, 202);
             this.txt_hirsscheberg_test.Name = "txt_hirsscheberg_test";
             this.txt_hirsscheberg_test.Size = new System.Drawing.Size(615, 23);
-            this.txt_hirsscheberg_test.TabIndex = 77;
+            this.txt_hirsscheberg_test.TabIndex = 52;
             // 
             // label41
             // 
@@ -1188,7 +1231,7 @@ namespace Presentation.View.Forms.Recipe
             this.txt_ocular_abnex.Location = new System.Drawing.Point(133, 155);
             this.txt_ocular_abnex.Name = "txt_ocular_abnex";
             this.txt_ocular_abnex.Size = new System.Drawing.Size(615, 23);
-            this.txt_ocular_abnex.TabIndex = 75;
+            this.txt_ocular_abnex.TabIndex = 51;
             // 
             // label40
             // 
@@ -1205,7 +1248,7 @@ namespace Presentation.View.Forms.Recipe
             this.txt_ophtalmoscopy.Location = new System.Drawing.Point(133, 112);
             this.txt_ophtalmoscopy.Name = "txt_ophtalmoscopy";
             this.txt_ophtalmoscopy.Size = new System.Drawing.Size(615, 23);
-            this.txt_ophtalmoscopy.TabIndex = 73;
+            this.txt_ophtalmoscopy.TabIndex = 50;
             // 
             // label39
             // 
@@ -1222,7 +1265,7 @@ namespace Presentation.View.Forms.Recipe
             this.txt_eye_movements.Location = new System.Drawing.Point(133, 76);
             this.txt_eye_movements.Name = "txt_eye_movements";
             this.txt_eye_movements.Size = new System.Drawing.Size(615, 23);
-            this.txt_eye_movements.TabIndex = 62;
+            this.txt_eye_movements.TabIndex = 49;
             // 
             // label38
             // 
@@ -1239,7 +1282,7 @@ namespace Presentation.View.Forms.Recipe
             this.cb_tearing.Location = new System.Drawing.Point(404, 32);
             this.cb_tearing.Name = "cb_tearing";
             this.cb_tearing.Size = new System.Drawing.Size(76, 19);
-            this.cb_tearing.TabIndex = 72;
+            this.cb_tearing.TabIndex = 48;
             this.cb_tearing.Text = "Lagrimeo";
             this.cb_tearing.UseVisualStyleBackColor = true;
             // 
@@ -1249,7 +1292,7 @@ namespace Presentation.View.Forms.Recipe
             this.cb_itch.Location = new System.Drawing.Point(321, 32);
             this.cb_itch.Name = "cb_itch";
             this.cb_itch.Size = new System.Drawing.Size(77, 19);
-            this.cb_itch.TabIndex = 71;
+            this.cb_itch.TabIndex = 47;
             this.cb_itch.Text = "Comezón";
             this.cb_itch.UseVisualStyleBackColor = true;
             // 
@@ -1259,7 +1302,7 @@ namespace Presentation.View.Forms.Recipe
             this.cb_headache.Location = new System.Drawing.Point(246, 32);
             this.cb_headache.Name = "cb_headache";
             this.cb_headache.Size = new System.Drawing.Size(69, 19);
-            this.cb_headache.TabIndex = 70;
+            this.cb_headache.TabIndex = 46;
             this.cb_headache.Text = "Cefaleas";
             this.cb_headache.UseVisualStyleBackColor = true;
             // 
@@ -1269,7 +1312,7 @@ namespace Presentation.View.Forms.Recipe
             this.cb_sleepiness.Location = new System.Drawing.Point(82, 32);
             this.cb_sleepiness.Name = "cb_sleepiness";
             this.cb_sleepiness.Size = new System.Drawing.Size(96, 19);
-            this.cb_sleepiness.TabIndex = 69;
+            this.cb_sleepiness.TabIndex = 44;
             this.cb_sleepiness.Text = "Somnolencia";
             this.cb_sleepiness.UseVisualStyleBackColor = true;
             // 
@@ -1279,7 +1322,7 @@ namespace Presentation.View.Forms.Recipe
             this.cb_burning.Location = new System.Drawing.Point(184, 32);
             this.cb_burning.Name = "cb_burning";
             this.cb_burning.Size = new System.Drawing.Size(56, 19);
-            this.cb_burning.TabIndex = 68;
+            this.cb_burning.TabIndex = 45;
             this.cb_burning.Text = "Ardor";
             this.cb_burning.UseVisualStyleBackColor = true;
             // 
@@ -1289,7 +1332,7 @@ namespace Presentation.View.Forms.Recipe
             this.cb_irritation.Location = new System.Drawing.Point(6, 32);
             this.cb_irritation.Name = "cb_irritation";
             this.cb_irritation.Size = new System.Drawing.Size(74, 19);
-            this.cb_irritation.TabIndex = 67;
+            this.cb_irritation.TabIndex = 43;
             this.cb_irritation.Text = "Irritación";
             this.cb_irritation.UseVisualStyleBackColor = true;
             // 
@@ -1313,7 +1356,7 @@ namespace Presentation.View.Forms.Recipe
             this.cb_pterigion.Location = new System.Drawing.Point(264, 33);
             this.cb_pterigion.Name = "cb_pterigion";
             this.cb_pterigion.Size = new System.Drawing.Size(74, 19);
-            this.cb_pterigion.TabIndex = 70;
+            this.cb_pterigion.TabIndex = 42;
             this.cb_pterigion.Text = "Pterigion";
             this.cb_pterigion.UseVisualStyleBackColor = true;
             // 
@@ -1323,7 +1366,7 @@ namespace Presentation.View.Forms.Recipe
             this.cb_diabetes.Location = new System.Drawing.Point(106, 33);
             this.cb_diabetes.Name = "cb_diabetes";
             this.cb_diabetes.Size = new System.Drawing.Size(72, 19);
-            this.cb_diabetes.TabIndex = 69;
+            this.cb_diabetes.TabIndex = 40;
             this.cb_diabetes.Text = "Diabetes";
             this.cb_diabetes.UseVisualStyleBackColor = true;
             // 
@@ -1333,7 +1376,7 @@ namespace Presentation.View.Forms.Recipe
             this.cb_cataract.Location = new System.Drawing.Point(184, 33);
             this.cb_cataract.Name = "cb_cataract";
             this.cb_cataract.Size = new System.Drawing.Size(74, 19);
-            this.cb_cataract.TabIndex = 68;
+            this.cb_cataract.TabIndex = 41;
             this.cb_cataract.Text = "Cataratas";
             this.cb_cataract.UseVisualStyleBackColor = true;
             // 
@@ -1343,7 +1386,7 @@ namespace Presentation.View.Forms.Recipe
             this.cb_hypertension.Location = new System.Drawing.Point(6, 33);
             this.cb_hypertension.Name = "cb_hypertension";
             this.cb_hypertension.Size = new System.Drawing.Size(94, 19);
-            this.cb_hypertension.TabIndex = 67;
+            this.cb_hypertension.TabIndex = 39;
             this.cb_hypertension.Text = "Hipertensión";
             this.cb_hypertension.UseVisualStyleBackColor = true;
             // 
@@ -1405,7 +1448,7 @@ namespace Presentation.View.Forms.Recipe
             this.btn_seller_search.Location = new System.Drawing.Point(665, 52);
             this.btn_seller_search.Name = "btn_seller_search";
             this.btn_seller_search.Size = new System.Drawing.Size(82, 28);
-            this.btn_seller_search.TabIndex = 71;
+            this.btn_seller_search.TabIndex = 59;
             this.btn_seller_search.Text = "Buscar";
             this.btn_seller_search.UseVisualStyleBackColor = false;
             this.btn_seller_search.Click += new System.EventHandler(this.btn_seller_search_Click);
@@ -1438,7 +1481,7 @@ namespace Presentation.View.Forms.Recipe
             this.btn_search_optometryst.Location = new System.Drawing.Point(665, 18);
             this.btn_search_optometryst.Name = "btn_search_optometryst";
             this.btn_search_optometryst.Size = new System.Drawing.Size(82, 28);
-            this.btn_search_optometryst.TabIndex = 66;
+            this.btn_search_optometryst.TabIndex = 58;
             this.btn_search_optometryst.Text = "Buscar";
             this.btn_search_optometryst.UseVisualStyleBackColor = false;
             this.btn_search_optometryst.Click += new System.EventHandler(this.btn_search_optometryst_Click);
@@ -1498,7 +1541,7 @@ namespace Presentation.View.Forms.Recipe
             this.dtp_delivery.Location = new System.Drawing.Point(454, 54);
             this.dtp_delivery.Name = "dtp_delivery";
             this.dtp_delivery.Size = new System.Drawing.Size(121, 23);
-            this.dtp_delivery.TabIndex = 73;
+            this.dtp_delivery.TabIndex = 57;
             // 
             // label33
             // 
@@ -1516,7 +1559,7 @@ namespace Presentation.View.Forms.Recipe
             this.dtp_admission.Location = new System.Drawing.Point(268, 54);
             this.dtp_admission.Name = "dtp_admission";
             this.dtp_admission.Size = new System.Drawing.Size(121, 23);
-            this.dtp_admission.TabIndex = 71;
+            this.dtp_admission.TabIndex = 56;
             // 
             // label32
             // 
@@ -1534,7 +1577,7 @@ namespace Presentation.View.Forms.Recipe
             this.dtp_shipping.Location = new System.Drawing.Point(80, 54);
             this.dtp_shipping.Name = "dtp_shipping";
             this.dtp_shipping.Size = new System.Drawing.Size(121, 23);
-            this.dtp_shipping.TabIndex = 67;
+            this.dtp_shipping.TabIndex = 55;
             // 
             // label46
             // 
@@ -1554,7 +1597,7 @@ namespace Presentation.View.Forms.Recipe
             this.btn_search_laboratory.Location = new System.Drawing.Point(666, 20);
             this.btn_search_laboratory.Name = "btn_search_laboratory";
             this.btn_search_laboratory.Size = new System.Drawing.Size(82, 28);
-            this.btn_search_laboratory.TabIndex = 66;
+            this.btn_search_laboratory.TabIndex = 54;
             this.btn_search_laboratory.Text = "Buscar";
             this.btn_search_laboratory.UseVisualStyleBackColor = false;
             this.btn_search_laboratory.Click += new System.EventHandler(this.btn_search_laboratory_Click);
@@ -1603,7 +1646,7 @@ namespace Presentation.View.Forms.Recipe
             this.txt_laboratory_notes_invoice.Multiline = true;
             this.txt_laboratory_notes_invoice.Name = "txt_laboratory_notes_invoice";
             this.txt_laboratory_notes_invoice.Size = new System.Drawing.Size(690, 51);
-            this.txt_laboratory_notes_invoice.TabIndex = 97;
+            this.txt_laboratory_notes_invoice.TabIndex = 63;
             // 
             // label45
             // 
@@ -1620,7 +1663,7 @@ namespace Presentation.View.Forms.Recipe
             this.txt_value_invoice_laboratory.Location = new System.Drawing.Point(360, 20);
             this.txt_value_invoice_laboratory.Name = "txt_value_invoice_laboratory";
             this.txt_value_invoice_laboratory.Size = new System.Drawing.Size(57, 23);
-            this.txt_value_invoice_laboratory.TabIndex = 95;
+            this.txt_value_invoice_laboratory.TabIndex = 62;
             // 
             // label44
             // 
@@ -1637,7 +1680,7 @@ namespace Presentation.View.Forms.Recipe
             this.txt_date_laboratory.Location = new System.Drawing.Point(175, 20);
             this.txt_date_laboratory.Name = "txt_date_laboratory";
             this.txt_date_laboratory.Size = new System.Drawing.Size(118, 23);
-            this.txt_date_laboratory.TabIndex = 93;
+            this.txt_date_laboratory.TabIndex = 61;
             // 
             // label43
             // 
@@ -1654,7 +1697,7 @@ namespace Presentation.View.Forms.Recipe
             this.txt_invoice_laboratory.Location = new System.Drawing.Point(58, 20);
             this.txt_invoice_laboratory.Name = "txt_invoice_laboratory";
             this.txt_invoice_laboratory.Size = new System.Drawing.Size(57, 23);
-            this.txt_invoice_laboratory.TabIndex = 91;
+            this.txt_invoice_laboratory.TabIndex = 60;
             // 
             // label31
             // 
@@ -1684,15 +1727,6 @@ namespace Presentation.View.Forms.Recipe
             this.txt_method.Size = new System.Drawing.Size(87, 23);
             this.txt_method.TabIndex = 75;
             this.txt_method.Visible = false;
-            // 
-            // txt_number_recipe
-            // 
-            this.txt_number_recipe.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_number_recipe.Location = new System.Drawing.Point(680, 94);
-            this.txt_number_recipe.Name = "txt_number_recipe";
-            this.txt_number_recipe.Size = new System.Drawing.Size(62, 23);
-            this.txt_number_recipe.TabIndex = 55;
-            this.txt_number_recipe.Visible = false;
             // 
             // btn_next
             // 
@@ -1725,45 +1759,11 @@ namespace Presentation.View.Forms.Recipe
             this.btn_save_recipe.Name = "btn_save_recipe";
             this.btn_save_recipe.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btn_save_recipe.Size = new System.Drawing.Size(160, 30);
-            this.btn_save_recipe.TabIndex = 35;
+            this.btn_save_recipe.TabIndex = 64;
             this.btn_save_recipe.Text = "Guardar receta";
             this.btn_save_recipe.UseVisualStyleBackColor = false;
             this.btn_save_recipe.Visible = false;
             this.btn_save_recipe.Click += new System.EventHandler(this.btn_save_recipe_Click);
-            // 
-            // pcb_close_create_recipe
-            // 
-            this.pcb_close_create_recipe.Image = global::Presentation.Properties.Resources.close;
-            this.pcb_close_create_recipe.Location = new System.Drawing.Point(756, 2);
-            this.pcb_close_create_recipe.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pcb_close_create_recipe.Name = "pcb_close_create_recipe";
-            this.pcb_close_create_recipe.Size = new System.Drawing.Size(25, 25);
-            this.pcb_close_create_recipe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pcb_close_create_recipe.TabIndex = 4;
-            this.pcb_close_create_recipe.TabStop = false;
-            this.pcb_close_create_recipe.Click += new System.EventHandler(this.pcb_close_create_recipe_Click);
-            // 
-            // pcb_exit
-            // 
-            this.pcb_exit.Image = global::Presentation.Properties.Resources.close;
-            this.pcb_exit.Location = new System.Drawing.Point(1389, 7);
-            this.pcb_exit.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.pcb_exit.Name = "pcb_exit";
-            this.pcb_exit.Size = new System.Drawing.Size(34, 43);
-            this.pcb_exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pcb_exit.TabIndex = 3;
-            this.pcb_exit.TabStop = false;
-            // 
-            // pcb_minus
-            // 
-            this.pcb_minus.Image = global::Presentation.Properties.Resources.minus;
-            this.pcb_minus.Location = new System.Drawing.Point(1347, 7);
-            this.pcb_minus.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.pcb_minus.Name = "pcb_minus";
-            this.pcb_minus.Size = new System.Drawing.Size(34, 43);
-            this.pcb_minus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pcb_minus.TabIndex = 2;
-            this.pcb_minus.TabStop = false;
             // 
             // RecipeCreate
             // 
@@ -1785,6 +1785,9 @@ namespace Presentation.View.Forms.Recipe
             this.Load += new System.EventHandler(this.RecipeCreate_Load);
             this.pnl_top.ResumeLayout(false);
             this.pnl_top.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcb_close_create_recipe)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcb_exit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcb_minus)).EndInit();
             this.tb_recipe.ResumeLayout(false);
             this.tp_clients.ResumeLayout(false);
             this.groupBox9.ResumeLayout(false);
@@ -1810,9 +1813,6 @@ namespace Presentation.View.Forms.Recipe
             this.groupBox5.PerformLayout();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcb_close_create_recipe)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcb_exit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcb_minus)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

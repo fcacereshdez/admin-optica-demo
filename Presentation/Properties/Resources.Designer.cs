@@ -543,6 +543,16 @@ namespace Presentation.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_maximizar_la_ventana_24__2_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-maximizar-la-ventana-24 (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_next_page_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-next-page-24", resourceCulture);
@@ -596,6 +606,16 @@ namespace Presentation.Properties {
         internal static System.Drawing.Bitmap icons8_reembolso_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-reembolso-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_reparto_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-reparto-24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

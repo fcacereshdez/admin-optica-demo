@@ -35,6 +35,10 @@ namespace Presentation.View.Forms.Invoice
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InvoiceCreate));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txt_pay_day_2 = new System.Windows.Forms.TextBox();
+            this.txt_pay_day_1 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.txt_recipe_id = new System.Windows.Forms.TextBox();
             this.txt_first_payment = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -101,6 +105,10 @@ namespace Presentation.View.Forms.Invoice
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label17);
+            this.groupBox1.Controls.Add(this.txt_pay_day_2);
+            this.groupBox1.Controls.Add(this.txt_pay_day_1);
+            this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.txt_recipe_id);
             this.groupBox1.Controls.Add(this.txt_first_payment);
             this.groupBox1.Controls.Add(this.label6);
@@ -125,6 +133,38 @@ namespace Presentation.View.Forms.Invoice
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Información del Cliente";
             // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(669, 100);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(13, 15);
+            this.label17.TabIndex = 72;
+            this.label17.Text = "y";
+            // 
+            // txt_pay_day_2
+            // 
+            this.txt_pay_day_2.Location = new System.Drawing.Point(686, 96);
+            this.txt_pay_day_2.Name = "txt_pay_day_2";
+            this.txt_pay_day_2.Size = new System.Drawing.Size(29, 23);
+            this.txt_pay_day_2.TabIndex = 71;
+            // 
+            // txt_pay_day_1
+            // 
+            this.txt_pay_day_1.Location = new System.Drawing.Point(636, 96);
+            this.txt_pay_day_1.Name = "txt_pay_day_1";
+            this.txt_pay_day_1.Size = new System.Drawing.Size(29, 23);
+            this.txt_pay_day_1.TabIndex = 70;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(534, 96);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(79, 15);
+            this.label9.TabIndex = 69;
+            this.label9.Text = "Días de pago:";
+            // 
             // txt_recipe_id
             // 
             this.txt_recipe_id.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -136,7 +176,7 @@ namespace Presentation.View.Forms.Invoice
             // 
             // txt_first_payment
             // 
-            this.txt_first_payment.Location = new System.Drawing.Point(628, 99);
+            this.txt_first_payment.Location = new System.Drawing.Point(439, 93);
             this.txt_first_payment.Name = "txt_first_payment";
             this.txt_first_payment.Size = new System.Drawing.Size(87, 23);
             this.txt_first_payment.TabIndex = 65;
@@ -145,7 +185,7 @@ namespace Presentation.View.Forms.Invoice
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(581, 102);
+            this.label6.Location = new System.Drawing.Point(392, 96);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(41, 15);
             this.label6.TabIndex = 64;
@@ -661,7 +701,7 @@ namespace Presentation.View.Forms.Invoice
             // 
             this.lbl_error.AutoSize = true;
             this.lbl_error.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lbl_error.Location = new System.Drawing.Point(19, 514);
+            this.lbl_error.Location = new System.Drawing.Point(19, 546);
             this.lbl_error.Name = "lbl_error";
             this.lbl_error.Size = new System.Drawing.Size(10, 15);
             this.lbl_error.TabIndex = 80;
@@ -817,5 +857,9 @@ namespace Presentation.View.Forms.Invoice
         public System.Windows.Forms.TextBox txt_recipe_id;
         private System.Windows.Forms.Button btn_add_element;
         private System.Windows.Forms.Button btn_remove_element;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox txt_pay_day_2;
+        private System.Windows.Forms.TextBox txt_pay_day_1;
+        private System.Windows.Forms.Label label9;
     }
 }

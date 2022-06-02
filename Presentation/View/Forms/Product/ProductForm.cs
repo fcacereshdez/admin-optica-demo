@@ -20,13 +20,16 @@ namespace Presentation.View.Forms.Product
             InitializeComponent();
             SelectAllProducts();
             InsertAction("está en el gestor de productos.");
+            Dock = DockStyle.Fill;
         }
 
         private void SelectAllProducts()
         {
             dgv_products.DataSource = productController.SelectAllProducts();
-            dgv_products.Columns[0].Width = 25;
-            dgv_products.Columns[1].Width = 170;
+            dgv_products.Columns[0].Visible = false;
+            dgv_products.Columns[1].Width = 195;
+            dgv_products.Columns[2].Width = 25;
+            dgv_products.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
 
         private void btn_report_products_Click(object sender, EventArgs e)
@@ -122,6 +125,11 @@ namespace Presentation.View.Forms.Product
             try
             {
               dgv_products.DataSource = productController.SearchProduct(txt_search_product.Text);
+                dgv_products.Columns[0].Visible = false;
+                dgv_products.Columns[1].Width = 250;
+                dgv_products.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                dgv_products.Columns[2].Width = 25;
+                dgv_products.Columns[3].Width = 75;
             }
             catch (Exception errProducts)
             {

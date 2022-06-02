@@ -20,14 +20,17 @@ namespace Presentation.View.Forms.Laboratory
             InitializeComponent();
             SelectAllLaboratories();
             InsertAction("está en el gestor de laboratorios.");
+            Dock = DockStyle.Fill;
         }
 
         private void SelectAllLaboratories()
         {
           dgv_laboratories.DataSource = laboratoryController.SelectAllLaboratories();
-            dgv_laboratories.Columns[0].Width = 30;
-            dgv_laboratories.Columns[1].Width = 325;
-            dgv_laboratories.Columns[2].Width = 63;
+            dgv_laboratories.Columns[0].Visible = false;
+            dgv_laboratories.Columns[1].Width = 255;
+            dgv_laboratories.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dgv_laboratories.Columns[2].Width = 95;
+            dgv_laboratories.Columns[3].Width = 225;
         }
 
         private void btn_create_user_Click(object sender, EventArgs e)

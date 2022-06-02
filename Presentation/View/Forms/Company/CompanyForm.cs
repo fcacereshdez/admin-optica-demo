@@ -22,6 +22,8 @@ namespace Presentation.View.Forms.Company
             InitializeComponent();
             SelectAllCompanies();
             InsertActionUser();
+
+            this.Dock = DockStyle.Fill;
         }
 
         private void SelectAllCompanies()
@@ -29,8 +31,9 @@ namespace Presentation.View.Forms.Company
             try
             {
                 dgv_companies.DataSource = companyController.SelectAllCompanies();
-                dgv_companies.Columns[0].Width = 35;
-                dgv_companies.Columns[1].Width = 275;
+                dgv_companies.Columns[0].Visible = false;
+                dgv_companies.Columns[1].Width = 300;
+                dgv_companies.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 dgv_companies.Columns[2].Visible = false;
                 dgv_companies.Columns[3].Width = 85;
                 dgv_companies.Columns[4].Width = 128;

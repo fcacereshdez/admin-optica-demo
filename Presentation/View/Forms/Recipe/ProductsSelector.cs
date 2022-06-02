@@ -28,8 +28,8 @@ namespace Presentation.View.Forms.Recipe
         private void btn_search_ring_Click(object sender, EventArgs e)
         {
            dgv_products.DataSource = productController.SelectProductsByCategoryId(cmb_categories.SelectedValue.ToString());
-            dgv_products.Columns[0].Width = 25;
-            dgv_products.Columns[1].Width = 170;
+            dgv_products.Columns[0].Visible = false;
+            dgv_products.Columns[1].Width = 275;
         }
 
         private void LoadData()

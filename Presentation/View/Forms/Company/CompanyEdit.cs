@@ -40,6 +40,18 @@ namespace Presentation.View.Forms.Company
                 txt_email.Text = Common.Models.Company.email;
                 txt_attendance_fullname.Text = Common.Models.Company.attendance_fullname;
                 txt_attendance_role.Text = Common.Models.Company.attendance_role;
+                txt_attendance_phone.Text = Common.Models.Company.attendance_phone;
+                txt_attendance_email.Text = Common.Models.Company.attendance_email;
+                txt_attendance_name2.Text = Common.Models.Company.attendance_fullname1;
+                txt_attendance_role2.Text = Common.Models.Company.attendance_role1;
+                txt_attendance_phone2.Text = Common.Models.Company.attendance_phone1;
+                txt_attendance_email2.Text = Common.Models.Company.attendance_email1;
+                txt_attendance_name3.Text = Common.Models.Company.attendance_fullname2;
+                txt_attendance_role3.Text = Common.Models.Company.attendance_role2;
+                txt_attendance_phone3.Text = Common.Models.Company.attendance_phone2;
+                txt_attendance_email3.Text = Common.Models.Company.attendance_email2;
+                txt_comercial_name.Text = Common.Models.Company.comercial_name;
+                txt_legal_name.Text = Common.Models.Company.legal_name;
             }
             catch (Exception iCompanies)
             {
@@ -92,7 +104,7 @@ namespace Presentation.View.Forms.Company
                 {
                     UserController userController = new UserController();
                     CompanyController companyController = new CompanyController();
-                    companyController.UpdateCompany(txt_fullname.Text, txt_phone.Text, txt_secondary_phone.Text, txt_email.Text, txt_address.Text, txt_nit.Text, txt_iva.Text, txt_attendance_fullname.Text, txt_attendance_role.Text, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), Common.Models.Company.company_id);
+                    companyController.UpdateCompany(txt_fullname.Text, txt_phone.Text, txt_secondary_phone.Text, txt_email.Text, txt_address.Text, txt_nit.Text, txt_iva.Text, txt_attendance_fullname.Text, txt_attendance_role.Text, txt_attendance_phone.Text, txt_attendance_email.Text, txt_attendance_name2.Text, txt_attendance_role2.Text, txt_attendance_phone2.Text, txt_attendance_email2.Text, txt_attendance_name3.Text, txt_attendance_role3.Text, txt_attendance_phone3.Text, txt_attendance_email3.Text, txt_comercial_name.Text, txt_legal_name.Text, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), Common.Models.Company.company_id);
                     userController.InsertActionsUser("Actualizó una empresa con código: " + Common.Models.Company.code, Environment.MachineName, "127.0.0.1", UserCache.user_id, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
                     MessageBox.Show("Registro actualizado con éxito.", "Procesado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();

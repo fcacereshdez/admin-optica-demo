@@ -32,6 +32,7 @@ namespace Presentation
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Layout));
             this.pnl_menu = new System.Windows.Forms.Panel();
+            this.txt_claims = new System.Windows.Forms.Button();
             this.btn_iva = new System.Windows.Forms.Button();
             this.btn_banks = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -49,8 +50,10 @@ namespace Presentation
             this.btn_labs = new System.Windows.Forms.Button();
             this.btn_clients = new System.Windows.Forms.Button();
             this.pnl_top = new System.Windows.Forms.Panel();
-            this.pcb_exit = new System.Windows.Forms.PictureBox();
+            this.pcb_maximize = new System.Windows.Forms.PictureBox();
             this.pcb_minus = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pcb_exit = new System.Windows.Forms.PictureBox();
             this.lbl_time = new System.Windows.Forms.Label();
             this.lbl_date = new System.Windows.Forms.Label();
             this.pnl_bottom = new System.Windows.Forms.Panel();
@@ -62,14 +65,14 @@ namespace Presentation
             this.pcb_close_form = new System.Windows.Forms.PictureBox();
             this.lbl_form_name = new System.Windows.Forms.Label();
             this.tmr_layout = new System.Windows.Forms.Timer(this.components);
-            this.label1 = new System.Windows.Forms.Label();
             this.pnl_menu.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_logout)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnl_top.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcb_exit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcb_maximize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_minus)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcb_exit)).BeginInit();
             this.pnl_bottom.SuspendLayout();
             this.pnl_layout.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_logo)).BeginInit();
@@ -79,7 +82,10 @@ namespace Presentation
             // 
             // pnl_menu
             // 
+            this.pnl_menu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.pnl_menu.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnl_menu.Controls.Add(this.txt_claims);
             this.pnl_menu.Controls.Add(this.btn_iva);
             this.pnl_menu.Controls.Add(this.btn_banks);
             this.pnl_menu.Controls.Add(this.panel1);
@@ -92,11 +98,25 @@ namespace Presentation
             this.pnl_menu.Controls.Add(this.btn_recipes);
             this.pnl_menu.Controls.Add(this.btn_labs);
             this.pnl_menu.Controls.Add(this.btn_clients);
-            this.pnl_menu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnl_menu.Location = new System.Drawing.Point(0, 32);
             this.pnl_menu.Name = "pnl_menu";
-            this.pnl_menu.Size = new System.Drawing.Size(184, 586);
+            this.pnl_menu.Size = new System.Drawing.Size(199, 586);
             this.pnl_menu.TabIndex = 0;
+            // 
+            // txt_claims
+            // 
+            this.txt_claims.FlatAppearance.BorderSize = 0;
+            this.txt_claims.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.txt_claims.Image = global::Presentation.Properties.Resources.icons8_reparto_24;
+            this.txt_claims.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txt_claims.Location = new System.Drawing.Point(0, 353);
+            this.txt_claims.Name = "txt_claims";
+            this.txt_claims.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
+            this.txt_claims.Size = new System.Drawing.Size(200, 41);
+            this.txt_claims.TabIndex = 14;
+            this.txt_claims.Text = "Reclamos";
+            this.txt_claims.UseVisualStyleBackColor = true;
+            this.txt_claims.Click += new System.EventHandler(this.txt_claims_Click);
             // 
             // btn_iva
             // 
@@ -105,7 +125,7 @@ namespace Presentation
             this.btn_iva.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_iva.Image = global::Presentation.Properties.Resources.icons8_company_24;
             this.btn_iva.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_iva.Location = new System.Drawing.Point(0, 400);
+            this.btn_iva.Location = new System.Drawing.Point(0, 441);
             this.btn_iva.Name = "btn_iva";
             this.btn_iva.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
             this.btn_iva.Size = new System.Drawing.Size(200, 41);
@@ -121,7 +141,7 @@ namespace Presentation
             this.btn_banks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_banks.Image = global::Presentation.Properties.Resources.icons8_bank_24__1_;
             this.btn_banks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_banks.Location = new System.Drawing.Point(0, 353);
+            this.btn_banks.Location = new System.Drawing.Point(0, 394);
             this.btn_banks.Name = "btn_banks";
             this.btn_banks.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
             this.btn_banks.Size = new System.Drawing.Size(200, 41);
@@ -140,7 +160,7 @@ namespace Presentation
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(184, 60);
+            this.panel1.Size = new System.Drawing.Size(199, 60);
             this.panel1.TabIndex = 4;
             // 
             // pcb_logout
@@ -192,7 +212,7 @@ namespace Presentation
             this.btn_shipping.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_shipping.Image = global::Presentation.Properties.Resources.icons8_shipping_24;
             this.btn_shipping.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_shipping.Location = new System.Drawing.Point(0, 447);
+            this.btn_shipping.Location = new System.Drawing.Point(0, 488);
             this.btn_shipping.Name = "btn_shipping";
             this.btn_shipping.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
             this.btn_shipping.Size = new System.Drawing.Size(200, 41);
@@ -222,7 +242,7 @@ namespace Presentation
             this.btn_reports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_reports.Image = global::Presentation.Properties.Resources.icons8_charts_24;
             this.btn_reports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_reports.Location = new System.Drawing.Point(0, 494);
+            this.btn_reports.Location = new System.Drawing.Point(0, 535);
             this.btn_reports.Name = "btn_reports";
             this.btn_reports.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
             this.btn_reports.Size = new System.Drawing.Size(200, 41);
@@ -267,7 +287,7 @@ namespace Presentation
             this.btn_users.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_users.Image = global::Presentation.Properties.Resources.customer1;
             this.btn_users.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_users.Location = new System.Drawing.Point(0, 541);
+            this.btn_users.Location = new System.Drawing.Point(0, 582);
             this.btn_users.Name = "btn_users";
             this.btn_users.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
             this.btn_users.Size = new System.Drawing.Size(200, 41);
@@ -324,9 +344,10 @@ namespace Presentation
             // pnl_top
             // 
             this.pnl_top.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(29)))), ((int)(((byte)(26)))));
+            this.pnl_top.Controls.Add(this.pcb_maximize);
+            this.pnl_top.Controls.Add(this.pcb_minus);
             this.pnl_top.Controls.Add(this.label1);
             this.pnl_top.Controls.Add(this.pcb_exit);
-            this.pnl_top.Controls.Add(this.pcb_minus);
             this.pnl_top.Controls.Add(this.lbl_time);
             this.pnl_top.Controls.Add(this.lbl_date);
             this.pnl_top.Dock = System.Windows.Forms.DockStyle.Top;
@@ -334,10 +355,52 @@ namespace Presentation
             this.pnl_top.Name = "pnl_top";
             this.pnl_top.Size = new System.Drawing.Size(1058, 32);
             this.pnl_top.TabIndex = 1;
+            this.pnl_top.DoubleClick += new System.EventHandler(this.pnl_top_DoubleClick);
             this.pnl_top.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnl_top_MouseDown);
+            // 
+            // pcb_maximize
+            // 
+            this.pcb_maximize.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pcb_maximize.Image = global::Presentation.Properties.Resources.icons8_maximizar_la_ventana_24__2_;
+            this.pcb_maximize.Location = new System.Drawing.Point(998, 3);
+            this.pcb_maximize.Name = "pcb_maximize";
+            this.pcb_maximize.Size = new System.Drawing.Size(25, 25);
+            this.pcb_maximize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcb_maximize.TabIndex = 5;
+            this.pcb_maximize.TabStop = false;
+            this.pcb_maximize.Click += new System.EventHandler(this.pcb_maximize_Click);
+            // 
+            // pcb_minus
+            // 
+            this.pcb_minus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pcb_minus.Image = global::Presentation.Properties.Resources.minus;
+            this.pcb_minus.Location = new System.Drawing.Point(967, 3);
+            this.pcb_minus.Name = "pcb_minus";
+            this.pcb_minus.Size = new System.Drawing.Size(25, 25);
+            this.pcb_minus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcb_minus.TabIndex = 2;
+            this.pcb_minus.TabStop = false;
+            this.pcb_minus.Click += new System.EventHandler(this.pcb_minus_Click);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(142)))), ((int)(((byte)(4)))));
+            this.label1.Location = new System.Drawing.Point(841, 4);
+            this.label1.Name = "label1";
+            this.label1.Padding = new System.Windows.Forms.Padding(2);
+            this.label1.Size = new System.Drawing.Size(120, 21);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Candidate R6.0.0.0";
             // 
             // pcb_exit
             // 
+            this.pcb_exit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pcb_exit.Image = global::Presentation.Properties.Resources.close;
             this.pcb_exit.Location = new System.Drawing.Point(1029, 4);
             this.pcb_exit.Name = "pcb_exit";
@@ -347,20 +410,11 @@ namespace Presentation
             this.pcb_exit.TabStop = false;
             this.pcb_exit.Click += new System.EventHandler(this.pcb_exit_Click);
             // 
-            // pcb_minus
-            // 
-            this.pcb_minus.Image = global::Presentation.Properties.Resources.minus;
-            this.pcb_minus.Location = new System.Drawing.Point(998, 4);
-            this.pcb_minus.Name = "pcb_minus";
-            this.pcb_minus.Size = new System.Drawing.Size(25, 25);
-            this.pcb_minus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pcb_minus.TabIndex = 2;
-            this.pcb_minus.TabStop = false;
-            this.pcb_minus.Click += new System.EventHandler(this.pcb_minus_Click);
-            // 
             // lbl_time
             // 
+            this.lbl_time.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lbl_time.AutoSize = true;
+            this.lbl_time.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbl_time.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_time.ForeColor = System.Drawing.Color.White;
             this.lbl_time.Location = new System.Drawing.Point(525, 9);
@@ -372,6 +426,8 @@ namespace Presentation
             // 
             // lbl_date
             // 
+            this.lbl_date.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.lbl_date.AutoSize = true;
             this.lbl_date.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_date.ForeColor = System.Drawing.Color.White;
@@ -395,6 +451,8 @@ namespace Presentation
             // 
             // lbl_version_sw
             // 
+            this.lbl_version_sw.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_version_sw.AutoSize = true;
             this.lbl_version_sw.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_version_sw.ForeColor = System.Drawing.Color.Black;
@@ -420,39 +478,46 @@ namespace Presentation
             // 
             // pnl_layout
             // 
-            this.pnl_layout.BackColor = System.Drawing.Color.White;
+            this.pnl_layout.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnl_layout.BackColor = System.Drawing.Color.DarkGray;
             this.pnl_layout.Controls.Add(this.pcb_logo);
-            this.pnl_layout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_layout.Location = new System.Drawing.Point(184, 32);
+            this.pnl_layout.Location = new System.Drawing.Point(197, 32);
             this.pnl_layout.Name = "pnl_layout";
-            this.pnl_layout.Size = new System.Drawing.Size(874, 586);
+            this.pnl_layout.Size = new System.Drawing.Size(861, 586);
             this.pnl_layout.TabIndex = 3;
             // 
             // pcb_logo
             // 
+            this.pcb_logo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pcb_logo.Image = global::Presentation.Properties.Resources.logo_horizontal;
-            this.pcb_logo.Location = new System.Drawing.Point(171, 240);
+            this.pcb_logo.Location = new System.Drawing.Point(262, 259);
+            this.pcb_logo.MaximumSize = new System.Drawing.Size(361, 60);
+            this.pcb_logo.MinimumSize = new System.Drawing.Size(361, 60);
             this.pcb_logo.Name = "pcb_logo";
-            this.pcb_logo.Size = new System.Drawing.Size(569, 60);
+            this.pcb_logo.Size = new System.Drawing.Size(361, 60);
             this.pcb_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pcb_logo.TabIndex = 0;
             this.pcb_logo.TabStop = false;
             // 
             // pnl_name_view
             // 
+            this.pnl_name_view.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnl_name_view.BackColor = System.Drawing.Color.White;
             this.pnl_name_view.Controls.Add(this.pcb_close_form);
             this.pnl_name_view.Controls.Add(this.lbl_form_name);
-            this.pnl_name_view.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnl_name_view.Location = new System.Drawing.Point(184, 32);
+            this.pnl_name_view.Location = new System.Drawing.Point(197, 32);
             this.pnl_name_view.Name = "pnl_name_view";
-            this.pnl_name_view.Size = new System.Drawing.Size(874, 26);
+            this.pnl_name_view.Size = new System.Drawing.Size(861, 26);
             this.pnl_name_view.TabIndex = 4;
             // 
             // pcb_close_form
             // 
+            this.pcb_close_form.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pcb_close_form.Image = global::Presentation.Properties.Resources.close_eyes;
-            this.pcb_close_form.Location = new System.Drawing.Point(847, 3);
+            this.pcb_close_form.Location = new System.Drawing.Point(834, 3);
             this.pcb_close_form.Name = "pcb_close_form";
             this.pcb_close_form.Size = new System.Drawing.Size(20, 20);
             this.pcb_close_form.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -463,6 +528,8 @@ namespace Presentation
             // 
             // lbl_form_name
             // 
+            this.lbl_form_name.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.lbl_form_name.AutoSize = true;
             this.lbl_form_name.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_form_name.Location = new System.Drawing.Point(5, 5);
@@ -474,17 +541,6 @@ namespace Presentation
             // 
             this.tmr_layout.Enabled = true;
             this.tmr_layout.Tick += new System.EventHandler(this.tmr_layout_Tick);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(142)))), ((int)(((byte)(4)))));
-            this.label1.Location = new System.Drawing.Point(865, 6);
-            this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(2);
-            this.label1.Size = new System.Drawing.Size(120, 21);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Candidate R6.0.0.0";
             // 
             // Layout
             // 
@@ -500,9 +556,12 @@ namespace Presentation
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MaximizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1058, 637);
             this.Name = "Layout";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio";
+            this.Load += new System.EventHandler(this.Layout_Load);
             this.pnl_menu.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -510,8 +569,9 @@ namespace Presentation
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnl_top.ResumeLayout(false);
             this.pnl_top.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcb_exit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcb_maximize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_minus)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcb_exit)).EndInit();
             this.pnl_bottom.ResumeLayout(false);
             this.pnl_bottom.PerformLayout();
             this.pnl_layout.ResumeLayout(false);
@@ -557,6 +617,8 @@ namespace Presentation
         public System.Windows.Forms.Button btn_iva;
         public System.Windows.Forms.Button btn_banks;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pcb_maximize;
+        public System.Windows.Forms.Button txt_claims;
     }
 }
 

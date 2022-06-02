@@ -20,6 +20,7 @@ namespace Presentation.View.Forms.Invoice
             InitializeComponent();
             SelectAllInvoice();
             InsertAction("está en el gestor de facturas.");
+            Dock = DockStyle.Fill;
         }
 
         private void SelectAllInvoice()
@@ -28,6 +29,7 @@ namespace Presentation.View.Forms.Invoice
             dgv_invoices.Columns[0].Width = 60;
             dgv_invoices.Columns[1].Visible = false;
             dgv_invoices.Columns[2].Width = 353;
+            dgv_invoices.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dgv_invoices.Columns[3].Width = 60;
         }
 

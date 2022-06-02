@@ -29,10 +29,10 @@ namespace Presentation.View.Forms.Laboratory
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txt_search_company = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -48,9 +48,11 @@ namespace Presentation.View.Forms.Laboratory
             // 
             // groupBox3
             // 
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.txt_search_company);
             this.groupBox3.Controls.Add(this.label1);
-            this.groupBox3.Location = new System.Drawing.Point(208, 18);
+            this.groupBox3.Location = new System.Drawing.Point(201, 33);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(617, 55);
             this.groupBox3.TabIndex = 17;
@@ -58,6 +60,8 @@ namespace Presentation.View.Forms.Laboratory
             // 
             // txt_search_company
             // 
+            this.txt_search_company.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_search_company.Location = new System.Drawing.Point(61, 18);
             this.txt_search_company.Name = "txt_search_company";
             this.txt_search_company.Size = new System.Drawing.Size(550, 23);
@@ -82,14 +86,14 @@ namespace Presentation.View.Forms.Laboratory
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.groupBox1.Location = new System.Drawing.Point(25, 71);
+            this.groupBox1.Location = new System.Drawing.Point(18, 86);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(177, 147);
+            this.groupBox1.Size = new System.Drawing.Size(177, 141);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Acciones";
+            this.groupBox1.Text = "Funciones";
             // 
             // btn_create_user
             // 
@@ -99,7 +103,7 @@ namespace Presentation.View.Forms.Laboratory
             this.btn_create_user.ForeColor = System.Drawing.Color.White;
             this.btn_create_user.Image = global::Presentation.Properties.Resources.icons8_añadir_24;
             this.btn_create_user.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_create_user.Location = new System.Drawing.Point(15, 61);
+            this.btn_create_user.Location = new System.Drawing.Point(18, 68);
             this.btn_create_user.Name = "btn_create_user";
             this.btn_create_user.Padding = new System.Windows.Forms.Padding(15, 0, 5, 0);
             this.btn_create_user.Size = new System.Drawing.Size(143, 30);
@@ -116,7 +120,7 @@ namespace Presentation.View.Forms.Laboratory
             this.btn_laboratory_delete.ForeColor = System.Drawing.Color.White;
             this.btn_laboratory_delete.Image = global::Presentation.Properties.Resources.icons8_eliminar_241;
             this.btn_laboratory_delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_laboratory_delete.Location = new System.Drawing.Point(15, 97);
+            this.btn_laboratory_delete.Location = new System.Drawing.Point(18, 104);
             this.btn_laboratory_delete.Name = "btn_laboratory_delete";
             this.btn_laboratory_delete.Padding = new System.Windows.Forms.Padding(15, 0, 5, 0);
             this.btn_laboratory_delete.Size = new System.Drawing.Size(143, 30);
@@ -133,7 +137,7 @@ namespace Presentation.View.Forms.Laboratory
             this.btn_edit_laboratory.ForeColor = System.Drawing.Color.White;
             this.btn_edit_laboratory.Image = global::Presentation.Properties.Resources.icons8_editar_24;
             this.btn_edit_laboratory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_edit_laboratory.Location = new System.Drawing.Point(15, 25);
+            this.btn_edit_laboratory.Location = new System.Drawing.Point(18, 30);
             this.btn_edit_laboratory.Name = "btn_edit_laboratory";
             this.btn_edit_laboratory.Padding = new System.Windows.Forms.Padding(15, 0, 5, 0);
             this.btn_edit_laboratory.Size = new System.Drawing.Size(143, 30);
@@ -149,44 +153,47 @@ namespace Presentation.View.Forms.Laboratory
             this.dgv_laboratories.AllowUserToOrderColumns = true;
             this.dgv_laboratories.AllowUserToResizeColumns = false;
             this.dgv_laboratories.AllowUserToResizeRows = false;
+            this.dgv_laboratories.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_laboratories.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(241)))));
             this.dgv_laboratories.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_laboratories.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(134)))), ((int)(((byte)(14)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(171)))), ((int)(((byte)(173)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_laboratories.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(134)))), ((int)(((byte)(14)))));
+            dataGridViewCellStyle33.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle33.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(171)))), ((int)(((byte)(173)))));
+            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_laboratories.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle33;
             this.dgv_laboratories.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.WindowFrame;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_laboratories.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle34.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle34.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle34.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.SystemColors.WindowFrame;
+            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_laboratories.DefaultCellStyle = dataGridViewCellStyle34;
             this.dgv_laboratories.EnableHeadersVisualStyles = false;
-            this.dgv_laboratories.Location = new System.Drawing.Point(208, 80);
+            this.dgv_laboratories.Location = new System.Drawing.Point(201, 95);
             this.dgv_laboratories.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgv_laboratories.MultiSelect = false;
             this.dgv_laboratories.Name = "dgv_laboratories";
             this.dgv_laboratories.ReadOnly = true;
             this.dgv_laboratories.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(134)))), ((int)(((byte)(14)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.WindowFrame;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_laboratories.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.WindowFrame;
-            this.dgv_laboratories.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(134)))), ((int)(((byte)(14)))));
+            dataGridViewCellStyle35.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle35.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.SystemColors.WindowFrame;
+            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_laboratories.RowHeadersDefaultCellStyle = dataGridViewCellStyle35;
+            dataGridViewCellStyle36.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.SystemColors.WindowFrame;
+            this.dgv_laboratories.RowsDefaultCellStyle = dataGridViewCellStyle36;
             this.dgv_laboratories.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_laboratories.Size = new System.Drawing.Size(617, 417);
             this.dgv_laboratories.TabIndex = 14;

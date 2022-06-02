@@ -78,13 +78,25 @@ namespace DataAccess
                             Company.iva = reader.GetString(8);
                             Company.attendance_fullname = reader.GetString(9);
                             Company.attendance_role = reader.GetString(10);
+                            Company.attendance_phone = reader.GetString(11);
+                            Company.attendance_email = reader.GetString(12);
+                            Company.attendance_fullname1 = reader.GetString(13);
+                            Company.attendance_role1 = reader.GetString(14);
+                            Company.attendance_phone1 = reader.GetString(15);
+                            Company.attendance_email1 = reader.GetString(16);
+                            Company.attendance_fullname2 = reader.GetString(17);
+                            Company.attendance_role2 = reader.GetString(18);
+                            Company.attendance_phone2 = reader.GetString(19);
+                            Company.attendance_email2 = reader.GetString(20);
+                            Company.comercial_name = reader.GetString(21);
+                            Company.legal_name = reader.GetString(22);
                         }
                     }
                 }
             }
         }
 
-        public void CreateCompany(string fullname, string code, string phone, string secondary_phone, string email, string address, string nit, string iva, string attendance_fullname, string attendance_role, DateTime created_at)
+        public void CreateCompany(string fullname, string code, string phone, string secondary_phone, string email, string address, string nit, string iva, string attendance_fullname, string attendance_role, string attendance_phone, string attendance_email, string attendance_fullname2, string attendance_role2, string attendance_phone2, string attendance_email2, string attendance_fullname3, string attendance_role3, string attendance_phone3, string attendance_email3, string comercial_name, string legal_name, DateTime created_at)
         {
             using (var conn = GetConnection())
             {
@@ -104,6 +116,18 @@ namespace DataAccess
                     cmd.Parameters.AddWithValue("@iva", iva);
                     cmd.Parameters.AddWithValue("@attendance_fullname", attendance_fullname);
                     cmd.Parameters.AddWithValue("@attendance_role", attendance_role);
+                    cmd.Parameters.AddWithValue("@attendance_phone", attendance_phone);
+                    cmd.Parameters.AddWithValue("@attendance_email", attendance_email);
+                    cmd.Parameters.AddWithValue("@attendance_fullname2", attendance_fullname2);
+                    cmd.Parameters.AddWithValue("@attendance_role2", attendance_role2);
+                    cmd.Parameters.AddWithValue("@attendance_phone2", attendance_phone2);
+                    cmd.Parameters.AddWithValue("@attendance_email2", attendance_email2);
+                    cmd.Parameters.AddWithValue("@attendance_fullname3", attendance_fullname3);
+                    cmd.Parameters.AddWithValue("@attendance_role3", attendance_role3);
+                    cmd.Parameters.AddWithValue("@attendance_phone3", attendance_phone3);
+                    cmd.Parameters.AddWithValue("@attendance_email3", attendance_email3);
+                    cmd.Parameters.AddWithValue("@comercial_name", comercial_name);
+                    cmd.Parameters.AddWithValue("@legal_name", legal_name);
                     cmd.Parameters.AddWithValue("@created_at", created_at);
                     cmd.ExecuteNonQuery();
                     conn.Close();
@@ -111,7 +135,7 @@ namespace DataAccess
             }
         }
 
-        public void UpdateCompany(string fullname, string phone, string secondary_phone, string email, string address, string nit, string iva, string attendance_fullname, string attendance_role, DateTime updated_at, Int64 company_id)
+        public void UpdateCompany(string fullname, string phone, string secondary_phone, string email, string address, string nit, string iva, string attendance_fullname, string attendance_role, string attendance_phone, string attendance_email, string attendance_fullname2, string attendance_role2, string attendance_phone2, string attendance_email2, string attendance_fullname3, string attendance_role3, string attendance_phone3, string attendance_email3, string comercial_name, string legal_name, DateTime updated_at, Int64 company_id)
         {
             using (var conn = GetConnection())
             {
@@ -130,6 +154,18 @@ namespace DataAccess
                     cmd.Parameters.AddWithValue("@iva", iva);
                     cmd.Parameters.AddWithValue("@attendance_fullname", attendance_fullname);
                     cmd.Parameters.AddWithValue("@attendance_role", attendance_role);
+                    cmd.Parameters.AddWithValue("@attendance_phone", attendance_phone);
+                    cmd.Parameters.AddWithValue("@attendance_email", attendance_email);
+                    cmd.Parameters.AddWithValue("@attendance_fullname2", attendance_fullname2);
+                    cmd.Parameters.AddWithValue("@attendance_role2", attendance_role2);
+                    cmd.Parameters.AddWithValue("@attendance_phone2", attendance_phone2);
+                    cmd.Parameters.AddWithValue("@attendance_email2", attendance_email2);
+                    cmd.Parameters.AddWithValue("@attendance_fullname3", attendance_fullname3);
+                    cmd.Parameters.AddWithValue("@attendance_role3", attendance_role3);
+                    cmd.Parameters.AddWithValue("@attendance_phone3", attendance_phone3);
+                    cmd.Parameters.AddWithValue("@attendance_email3", attendance_email3);
+                    cmd.Parameters.AddWithValue("@comercial_name", comercial_name);
+                    cmd.Parameters.AddWithValue("@legal_name", legal_name);
                     cmd.Parameters.AddWithValue("@updated_at", updated_at);
                     cmd.Parameters.AddWithValue("@company_id", company_id);
                     cmd.ExecuteNonQuery();

@@ -88,7 +88,7 @@ namespace Presentation.View.Forms.Invoice
 
 
 
-        private void CalculateInvoice()
+        public void CalculateInvoice()
         {
             subtotal = 0;
             for (counter = 0; counter < dgv_products.Rows.Count; counter++)
@@ -163,8 +163,8 @@ namespace Presentation.View.Forms.Invoice
                 {
                     recurrency = 30;
                 }
-                try
-                {
+               // try
+               // {
 
                     foreach (DataGridViewRow rows in dgv_products.Rows)
                     {
@@ -174,15 +174,15 @@ namespace Presentation.View.Forms.Invoice
                             rows.Cells["cl_subtotal_product"].Value.ToString());
                     }
                     invoiceController.InsertInvoice(txt_first_payment.Text, dtp_invoice.Value.ToString(), "1", txt_optometryst_id.Text,
-                    recurrency.ToString(), txt_seller_id.Text, txt_manager_id.Text, txt_recipe_id.Text, cmb_payment_method.SelectedValue.ToString(), subtotal.ToString(), discount.ToString(), total.ToString(), txt_n_fee.Text, txt_fee.Text, txt_notes.Text);
+                    recurrency.ToString(), txt_seller_id.Text, txt_manager_id.Text, txt_recipe_id.Text, cmb_payment_method.SelectedValue.ToString(), subtotal.ToString(), discount.ToString(), total.ToString(), txt_n_fee.Text, txt_fee.Text, txt_notes.Text, txt_pay_day_1.Text, txt_pay_day_2.Text);
                     MessageBox.Show("Se ha generado la factura con éxito");
                     Close();
-                }
-                catch (Exception errInvoice)
-                {
+               // }
+               // catch (Exception errInvoice)
+               // {
 
-                    MessageBox.Show("Ocurrió un error al intentar guardar la factura.\n\nError: " +errInvoice.Message, "Facturas");
-                }
+               //     MessageBox.Show("Ocurrió un error al intentar guardar la factura.\n\nError: " +errInvoice.Message, "Facturas");
+               // }
             }
         }
 

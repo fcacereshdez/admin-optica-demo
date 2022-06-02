@@ -38,9 +38,6 @@ namespace Presentation.View.Forms.User
             this.btn_create_user = new System.Windows.Forms.Button();
             this.btn_user_delete = new System.Windows.Forms.Button();
             this.btn_edit_user = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btn_report_users = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txt_search_user = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -56,6 +53,9 @@ namespace Presentation.View.Forms.User
             this.dgv_users.AllowUserToOrderColumns = true;
             this.dgv_users.AllowUserToResizeColumns = false;
             this.dgv_users.AllowUserToResizeRows = false;
+            this.dgv_users.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_users.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(241)))));
             this.dgv_users.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_users.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -101,11 +101,8 @@ namespace Presentation.View.Forms.User
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.btn_report_users);
             this.groupBox1.Controls.Add(this.btn_create_user);
             this.groupBox1.Controls.Add(this.btn_user_delete);
-            this.groupBox1.Controls.Add(this.button8);
             this.groupBox1.Controls.Add(this.btn_edit_user);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -114,7 +111,7 @@ namespace Presentation.View.Forms.User
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(177, 266);
+            this.groupBox1.Size = new System.Drawing.Size(177, 163);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Funciones";
@@ -170,57 +167,10 @@ namespace Presentation.View.Forms.User
             this.btn_edit_user.UseVisualStyleBackColor = false;
             this.btn_edit_user.Click += new System.EventHandler(this.btn_edit_user_Click);
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::Presentation.Properties.Resources.icons8_asignación_entregado_24__1_;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(18, 186);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(15, 0, 5, 0);
-            this.button1.Size = new System.Drawing.Size(143, 30);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Auditoría";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // btn_report_users
-            // 
-            this.btn_report_users.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
-            this.btn_report_users.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
-            this.btn_report_users.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_report_users.ForeColor = System.Drawing.Color.White;
-            this.btn_report_users.Image = global::Presentation.Properties.Resources.icons8_exportación_de_base_de_datos_24;
-            this.btn_report_users.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_report_users.Location = new System.Drawing.Point(18, 222);
-            this.btn_report_users.Name = "btn_report_users";
-            this.btn_report_users.Padding = new System.Windows.Forms.Padding(15, 0, 5, 0);
-            this.btn_report_users.Size = new System.Drawing.Size(143, 30);
-            this.btn_report_users.TabIndex = 4;
-            this.btn_report_users.Text = "Exportar";
-            this.btn_report_users.UseVisualStyleBackColor = false;
-            this.btn_report_users.Click += new System.EventHandler(this.btn_report_users_Click);
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
-            this.button8.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Image = global::Presentation.Properties.Resources.icons8_usuario_hombre_verificado_24;
-            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(18, 150);
-            this.button8.Name = "button8";
-            this.button8.Padding = new System.Windows.Forms.Padding(15, 0, 5, 0);
-            this.button8.Size = new System.Drawing.Size(143, 30);
-            this.button8.TabIndex = 1;
-            this.button8.Text = "Roles";
-            this.button8.UseVisualStyleBackColor = false;
-            // 
             // groupBox3
             // 
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.txt_search_user);
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Location = new System.Drawing.Point(201, 33);
@@ -231,6 +181,8 @@ namespace Presentation.View.Forms.User
             // 
             // txt_search_user
             // 
+            this.txt_search_user.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_search_user.Location = new System.Drawing.Point(61, 18);
             this.txt_search_user.Name = "txt_search_user";
             this.txt_search_user.Size = new System.Drawing.Size(550, 25);
@@ -276,12 +228,9 @@ namespace Presentation.View.Forms.User
         private System.Windows.Forms.Button btn_create_user;
         private System.Windows.Forms.Button btn_user_delete;
         private System.Windows.Forms.Button btn_edit_user;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button8;
         public System.Windows.Forms.DataGridView dgv_users;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox txt_search_user;
         private System.Windows.Forms.Label label1;
-        public System.Windows.Forms.Button btn_report_users;
     }
 }

@@ -53,6 +53,8 @@ namespace Presentation.View.Forms.Invoice
         private void btn_search_roles_Click(object sender, EventArgs e)
         {
             dgv_users.DataSource = userController.SelectUsersByRoleId(cmb_roles.SelectedValue.ToString());
+            dgv_users.Columns[0].Visible = false;
+            dgv_users.Columns[1].Width = 375;
         }
     }
 }

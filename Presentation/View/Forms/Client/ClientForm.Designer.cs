@@ -50,6 +50,8 @@ namespace Presentation.View.Forms.Client
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.txt_search_client);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Location = new System.Drawing.Point(201, 33);
@@ -62,6 +64,8 @@ namespace Presentation.View.Forms.Client
             // 
             // txt_search_client
             // 
+            this.txt_search_client.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_search_client.Location = new System.Drawing.Point(71, 19);
             this.txt_search_client.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_search_client.Name = "txt_search_client";
@@ -86,6 +90,9 @@ namespace Presentation.View.Forms.Client
             this.dgv_clients.AllowUserToOrderColumns = true;
             this.dgv_clients.AllowUserToResizeColumns = false;
             this.dgv_clients.AllowUserToResizeRows = false;
+            this.dgv_clients.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_clients.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(241)))));
             this.dgv_clients.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_clients.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;

@@ -20,7 +20,7 @@ namespace Presentation.View.Forms.Recipe
             InitializeComponent();
             InsertAction("está en el gestor de recetas.");
             SelectAllRecipes();
-
+            Dock = DockStyle.Fill;
         }
 
         private void btn_create_recipe_Click(object sender, EventArgs e)
@@ -44,6 +44,7 @@ namespace Presentation.View.Forms.Recipe
                 dgv_recipes.Columns[0].Width = 60;
                 dgv_recipes.Columns[3].Width = 413;
                 dgv_recipes.Columns[1].Visible = false;
+                dgv_recipes.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 dgv_recipes.Columns[4].Visible = false;
                 dgv_recipes.Columns[5].Visible = false;
                 dgv_recipes.Columns[6].Visible = false;
@@ -52,6 +53,8 @@ namespace Presentation.View.Forms.Recipe
                 dgv_recipes.Columns[9].Visible = false;
                 dgv_recipes.Columns[10].Visible = false;
                 dgv_recipes.Columns[11].Visible = false;
+                dgv_recipes.Columns[12].Visible = false;
+                dgv_recipes.Columns[13].Visible = false;
             }
             catch (Exception errRecipes)
             {

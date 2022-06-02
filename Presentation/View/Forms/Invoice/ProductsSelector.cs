@@ -17,8 +17,9 @@ namespace Presentation.View.Forms.Invoice
         public ProductsSelector()
         {
             InitializeComponent();
-            //LoadData();
             dgv_products.DataSource = productController.SearchProduct("");
+            dgv_products.Columns[0].Visible = false;
+            dgv_products.Columns[1].Width = 195;
         }
 
         private void ProductsSelector_Load(object sender, EventArgs e)
@@ -60,8 +61,8 @@ namespace Presentation.View.Forms.Invoice
         private void txt_product_search_TextChanged(object sender, EventArgs e)
         {
           dgv_products.DataSource = productController.SearchProduct(txt_product_search.Text);
-            dgv_products.Columns[0].Width = 25;
-            dgv_products.Columns[1].Width = 170;
+            dgv_products.Columns[0].Visible = false;
+            dgv_products.Columns[1].Width = 195;
         }
     }
 }

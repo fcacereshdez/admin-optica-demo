@@ -34,16 +34,12 @@ namespace Presentation
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
         public Layout()
         {
-            InitializeComponent();
-            LoadSystemInfo();
-            LoadUserData();
-            PolicyFunctionsForUsers(UserCache.slug_role);
 
-            pnl_menu.AutoScroll = false;
-            pnl_menu.HorizontalScroll.Enabled = false;
-            pnl_menu.HorizontalScroll.Visible = false;
-            pnl_menu.HorizontalScroll.Maximum = 0;
-            pnl_menu.AutoScroll = true;
+            InitializeComponent();
+           
+
+            //this.MaximumSize = Screen.PrimaryScreen.WorkingArea.Size;
+
         }
 
         private void LoadSystemInfo()
@@ -253,6 +249,48 @@ namespace Presentation
         private void btn_iva_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Gestor de IVA en desarollo");
+        }
+
+        private void pcb_maximize_Click(object sender, EventArgs e)
+        {
+             if (WindowState == FormWindowState.Maximized)
+             {
+                this.WindowState = FormWindowState.Normal;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
+        }
+
+        private void Layout_Load(object sender, EventArgs e)
+        {
+           
+            LoadSystemInfo();
+            LoadUserData();
+            PolicyFunctionsForUsers(UserCache.slug_role);
+            pnl_menu.AutoScroll = false;
+            pnl_menu.HorizontalScroll.Enabled = false;
+            pnl_menu.HorizontalScroll.Visible = false;
+            pnl_menu.HorizontalScroll.Maximum = 0;
+            pnl_menu.AutoScroll = true;
+        }
+
+        private void txt_claims_Click(object sender, EventArgs e)
+        {
+            ShowForm(new ClaimForm());
+        }
+
+        private void pnl_top_DoubleClick(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Maximized)
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
         }
     }
 }
