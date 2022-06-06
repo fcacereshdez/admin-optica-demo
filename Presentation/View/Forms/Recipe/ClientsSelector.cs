@@ -36,8 +36,13 @@ namespace Presentation.View.Forms.Recipe
         private void SelectAllClients()
         {
             dgv_clients_child.DataSource = clientController.SelectAllClients();
-            dgv_clients_child.Columns[0].Width = 25;
-            dgv_clients_child.Columns[1].Width = 170;
+            dgv_clients_child.Columns[0].Visible = false;
+            dgv_clients_child.Columns[1].Width = 275;
+            dgv_clients_child.Columns[2].Visible = false;
+            dgv_clients_child.Columns[3].Visible = false;
+            dgv_clients_child.Columns[4].Visible = false;
+            dgv_clients_child.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dgv_clients_child.Columns[6].Visible = false;
         }
 
         private void pcb_close_create_client_Click(object sender, EventArgs e)

@@ -38,6 +38,7 @@ namespace Presentation.View.Forms.Invoice
             this.txt_search_company = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_view_invoice = new System.Windows.Forms.Button();
             this.btn_create_invoice = new System.Windows.Forms.Button();
             this.btn_delete_invoice = new System.Windows.Forms.Button();
             this.btn_edit_invoice = new System.Windows.Forms.Button();
@@ -82,6 +83,7 @@ namespace Presentation.View.Forms.Invoice
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.btn_view_invoice);
             this.groupBox1.Controls.Add(this.btn_create_invoice);
             this.groupBox1.Controls.Add(this.btn_delete_invoice);
             this.groupBox1.Controls.Add(this.btn_edit_invoice);
@@ -92,10 +94,28 @@ namespace Presentation.View.Forms.Invoice
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(177, 150);
+            this.groupBox1.Size = new System.Drawing.Size(177, 186);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Acciones";
+            this.groupBox1.Text = "Funciones";
+            // 
+            // btn_view_invoice
+            // 
+            this.btn_view_invoice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.btn_view_invoice.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.btn_view_invoice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_view_invoice.ForeColor = System.Drawing.Color.White;
+            this.btn_view_invoice.Image = global::Presentation.Properties.Resources.icons8_ver_24;
+            this.btn_view_invoice.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_view_invoice.Location = new System.Drawing.Point(17, 32);
+            this.btn_view_invoice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_view_invoice.Name = "btn_view_invoice";
+            this.btn_view_invoice.Padding = new System.Windows.Forms.Padding(17, 0, 6, 0);
+            this.btn_view_invoice.Size = new System.Drawing.Size(143, 30);
+            this.btn_view_invoice.TabIndex = 4;
+            this.btn_view_invoice.Text = "Ver";
+            this.btn_view_invoice.UseVisualStyleBackColor = false;
+            this.btn_view_invoice.Click += new System.EventHandler(this.btn_view_invoice_Click);
             // 
             // btn_create_invoice
             // 
@@ -105,7 +125,7 @@ namespace Presentation.View.Forms.Invoice
             this.btn_create_invoice.ForeColor = System.Drawing.Color.White;
             this.btn_create_invoice.Image = global::Presentation.Properties.Resources.icons8_añadir_24;
             this.btn_create_invoice.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_create_invoice.Location = new System.Drawing.Point(15, 61);
+            this.btn_create_invoice.Location = new System.Drawing.Point(17, 105);
             this.btn_create_invoice.Name = "btn_create_invoice";
             this.btn_create_invoice.Padding = new System.Windows.Forms.Padding(15, 0, 5, 0);
             this.btn_create_invoice.Size = new System.Drawing.Size(143, 30);
@@ -122,7 +142,7 @@ namespace Presentation.View.Forms.Invoice
             this.btn_delete_invoice.ForeColor = System.Drawing.Color.White;
             this.btn_delete_invoice.Image = global::Presentation.Properties.Resources.icons8_eliminar_241;
             this.btn_delete_invoice.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_delete_invoice.Location = new System.Drawing.Point(15, 97);
+            this.btn_delete_invoice.Location = new System.Drawing.Point(17, 141);
             this.btn_delete_invoice.Name = "btn_delete_invoice";
             this.btn_delete_invoice.Padding = new System.Windows.Forms.Padding(15, 0, 5, 0);
             this.btn_delete_invoice.Size = new System.Drawing.Size(143, 30);
@@ -139,7 +159,7 @@ namespace Presentation.View.Forms.Invoice
             this.btn_edit_invoice.ForeColor = System.Drawing.Color.White;
             this.btn_edit_invoice.Image = global::Presentation.Properties.Resources.icons8_editar_24;
             this.btn_edit_invoice.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_edit_invoice.Location = new System.Drawing.Point(15, 25);
+            this.btn_edit_invoice.Location = new System.Drawing.Point(17, 69);
             this.btn_edit_invoice.Name = "btn_edit_invoice";
             this.btn_edit_invoice.Padding = new System.Windows.Forms.Padding(15, 0, 5, 0);
             this.btn_edit_invoice.Size = new System.Drawing.Size(143, 30);
@@ -232,5 +252,6 @@ namespace Presentation.View.Forms.Invoice
         private System.Windows.Forms.Button btn_delete_invoice;
         private System.Windows.Forms.Button btn_edit_invoice;
         public System.Windows.Forms.DataGridView dgv_invoices;
+        private System.Windows.Forms.Button btn_view_invoice;
     }
 }

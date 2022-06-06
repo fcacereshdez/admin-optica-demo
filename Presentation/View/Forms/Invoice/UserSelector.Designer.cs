@@ -41,12 +41,12 @@
             this.dgv_users = new System.Windows.Forms.DataGridView();
             this.pnl_top = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.pcb_close_create_client = new System.Windows.Forms.PictureBox();
+            this.pcb_close_create_invoice = new System.Windows.Forms.PictureBox();
             this.pcb_close = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_users)).BeginInit();
             this.pnl_top.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcb_close_create_client)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcb_close_create_invoice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_close)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,6 +93,7 @@
             this.cmb_roles.Name = "cmb_roles";
             this.cmb_roles.Size = new System.Drawing.Size(151, 23);
             this.cmb_roles.TabIndex = 17;
+//            this.cmb_roles.SelectionChangeCommitted += new System.EventHandler(this.cmb_roles_SelectionChangeCommitted);
             // 
             // label1
             // 
@@ -158,7 +159,7 @@
             // 
             this.pnl_top.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(29)))), ((int)(((byte)(26)))));
             this.pnl_top.Controls.Add(this.label2);
-            this.pnl_top.Controls.Add(this.pcb_close_create_client);
+            this.pnl_top.Controls.Add(this.pcb_close_create_invoice);
             this.pnl_top.Controls.Add(this.pcb_close);
             this.pnl_top.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_top.Location = new System.Drawing.Point(0, 0);
@@ -178,16 +179,17 @@
             this.label2.TabIndex = 49;
             this.label2.Text = "Selector de Usuarios";
             // 
-            // pcb_close_create_client
+            // pcb_close_create_invoice
             // 
-            this.pcb_close_create_client.Image = global::Presentation.Properties.Resources.close;
-            this.pcb_close_create_client.Location = new System.Drawing.Point(404, 6);
-            this.pcb_close_create_client.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pcb_close_create_client.Name = "pcb_close_create_client";
-            this.pcb_close_create_client.Size = new System.Drawing.Size(25, 25);
-            this.pcb_close_create_client.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pcb_close_create_client.TabIndex = 15;
-            this.pcb_close_create_client.TabStop = false;
+            this.pcb_close_create_invoice.Image = global::Presentation.Properties.Resources.close;
+            this.pcb_close_create_invoice.Location = new System.Drawing.Point(404, 6);
+            this.pcb_close_create_invoice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pcb_close_create_invoice.Name = "pcb_close_create_invoice";
+            this.pcb_close_create_invoice.Size = new System.Drawing.Size(25, 25);
+            this.pcb_close_create_invoice.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcb_close_create_invoice.TabIndex = 15;
+            this.pcb_close_create_invoice.TabStop = false;
+            this.pcb_close_create_invoice.Click += new System.EventHandler(this.pcb_close_create_invoice_Click);
             // 
             // pcb_close
             // 
@@ -215,13 +217,13 @@
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "UserSelector";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "UserSelector";
+            this.Text = "Seleccionar Usuario";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_users)).EndInit();
             this.pnl_top.ResumeLayout(false);
             this.pnl_top.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcb_close_create_client)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcb_close_create_invoice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_close)).EndInit();
             this.ResumeLayout(false);
 
@@ -237,7 +239,7 @@
         public System.Windows.Forms.DataGridView dgv_users;
         public System.Windows.Forms.Panel pnl_top;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pcb_close_create_client;
+        private System.Windows.Forms.PictureBox pcb_close_create_invoice;
         private System.Windows.Forms.PictureBox pcb_close;
     }
 }

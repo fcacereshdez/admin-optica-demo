@@ -31,7 +31,7 @@
     <PublisherName>Mango Studios</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationRevision>10</ApplicationRevision>
     <ApplicationVersion>6.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -100,6 +100,7 @@
     <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -113,6 +114,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Datasets\ClientStatusAllClients.Designer.cs">
@@ -154,6 +156,21 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SelectProductMovements.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\SalesByOptometrist.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalesByOptometrist.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\SalesByConsultant.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalesByConsultant.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\SalesByManager.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalesByManager.xsd</DependentUpon>
     </Compile>
     <Compile Include="Vendor\SqlServerTypes\Loader.cs" />
     <Compile Include="View\App.cs">
@@ -374,6 +391,24 @@
     <Compile Include="View\Forms\Recipe\UsersSelector.Designer.cs">
       <DependentUpon>UsersSelector.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Forms\Reports\SalesByManagerParams.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Reports\SalesByManagerParams.Designer.cs">
+      <DependentUpon>SalesByManagerParams.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\Reports\SalesByConsultantParams.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Reports\SalesByConsultantParams.Designer.cs">
+      <DependentUpon>SalesByConsultantParams.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\Reports\SalesByOptometristParams.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Reports\SalesByOptometristParams.Designer.cs">
+      <DependentUpon>SalesByOptometristParams.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Forms\Reports\SelectorForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -538,6 +573,15 @@
     <EmbeddedResource Include="View\Forms\Recipe\UsersSelector.resx">
       <DependentUpon>UsersSelector.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Reports\SalesByManagerParams.resx">
+      <DependentUpon>SalesByManagerParams.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Reports\SalesByConsultantParams.resx">
+      <DependentUpon>SalesByConsultantParams.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Reports\SalesByOptometristParams.resx">
+      <DependentUpon>SalesByOptometristParams.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\Reports\SelectorForm.resx">
       <DependentUpon>SelectorForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -559,9 +603,10 @@
     <EmbeddedResource Include="View\Reports\SalesBook.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Reports\SalesByManager.rdlc" />
+    <EmbeddedResource Include="View\Reports\SalesByConsultant.rdlc" />
     <EmbeddedResource Include="View\Reports\SalesByOptometrist.rdlc" />
-    <EmbeddedResource Include="View\Reports\SalesBySeller.rdlc" />
-    <EmbeddedResource Include="View\Reports\UserGeneralAudit.rdlc" />
+    <EmbeddedResource Include="View\Reports\AuditUserActions.rdlc" />
     <EmbeddedResource Include="View\Reports\ViewerForm.resx">
       <DependentUpon>ViewerForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -651,6 +696,39 @@
     </None>
     <None Include="Datasets\SelectProductMovements.xss">
       <DependentUpon>SelectProductMovements.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\SalesByOptometrist.xsc">
+      <DependentUpon>SalesByOptometrist.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\SalesByOptometrist.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SalesByOptometrist.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Datasets\SalesByOptometrist.xss">
+      <DependentUpon>SalesByOptometrist.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\SalesByConsultant.xsc">
+      <DependentUpon>SalesByConsultant.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\SalesByConsultant.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SalesByConsultant.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Datasets\SalesByConsultant.xss">
+      <DependentUpon>SalesByConsultant.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\SalesByManager.xsc">
+      <DependentUpon>SalesByManager.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\SalesByManager.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SalesByManager.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Datasets\SalesByManager.xss">
+      <DependentUpon>SalesByManager.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

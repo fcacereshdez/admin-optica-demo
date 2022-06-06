@@ -33,23 +33,29 @@ namespace Presentation.View.Forms
             if (txt_user.Text != "") {
                 if (txt_password.Text != "") {
                     UserController userController = new UserController();
-                    var validateLogin = userController.LoginUser(txt_user.Text, txt_password.Text);
-                    if (validateLogin == true)
+                    try
                     {
-                        LoginActionUser();
-                        UpdateLastLoginUser();
-                        Layout layoutMain = new Layout();
-                        layoutMain.Show();
-                        layoutMain.FormClosed += Logout;
-                        this.Hide();
+                        var validateLogin = userController.LoginUser(txt_user.Text, txt_password.Text);
+                        if (validateLogin == true)
+                        {
+                            LoginActionUser();
+                            UpdateLastLoginUser();
+                            Layout layoutMain = new Layout();
+                            layoutMain.Show();
+                            layoutMain.FormClosed += Logout;
+                            this.Hide();
+                        }
+                        else
+                        {
+                            msgError("Las credenciales son incorrectas. \n Intenta nuevamente.");
+                            txt_password.Clear();
+                            txt_user.Focus();
+                        }
                     }
-                    else
+                    catch (Exception errLogin)
                     {
-                        msgError("Las credenciales son incorrectas. \n Intenta nuevamente.");
-                        txt_password.Clear();
-                        txt_user.Focus();
-                    }
-                }
+                        MessageBox.Show("Ocurrió un error mientras intentabamos iniciar sesión.\n\nError: " + errLogin.Message, "Iniciar sesión");
+                    }                }
                 else{
                     msgError("Debe ingresar la contraseña.");
                 }

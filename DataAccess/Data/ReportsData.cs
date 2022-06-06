@@ -69,5 +69,67 @@ namespace DataAccess.Data
 
         }
 
+        public DataTable SelectSalesByOptometrist(string from, string to)
+        {
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                using (var cmd = new SqlCommand())
+                {
+                    cmd.Connection = conn;
+                    cmd.CommandText = "ReportByOptometrist";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@from", from);
+                    cmd.Parameters.AddWithValue("@to", to);
+                    SqlDataReader ReaderSales = cmd.ExecuteReader();
+                    DataTable TableSales = new DataTable();
+                    TableSales.Load(ReaderSales);
+                    conn.Close();
+                    return TableSales;
+                }
+            }
+        }
+
+        public DataTable SelectSalesByConsultant(string from, string to)
+        {
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                using (var cmd = new SqlCommand())
+                {
+                    cmd.Connection = conn;
+                    cmd.CommandText = "ReportByConsultant";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@from", from);
+                    cmd.Parameters.AddWithValue("@to", to);
+                    SqlDataReader ReaderSales = cmd.ExecuteReader();
+                    DataTable TableSales = new DataTable();
+                    TableSales.Load(ReaderSales);
+                    conn.Close();
+                    return TableSales;
+                }
+            }
+        }
+
+        public DataTable SelectSalesByManager(string from, string to)
+        {
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                using (var cmd = new SqlCommand())
+                {
+                    cmd.Connection = conn;
+                    cmd.CommandText = "ReportByManager";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@from", from);
+                    cmd.Parameters.AddWithValue("@to", to);
+                    SqlDataReader ReaderSales = cmd.ExecuteReader();
+                    DataTable TableSales = new DataTable();
+                    TableSales.Load(ReaderSales);
+                    conn.Close();
+                    return TableSales;
+                }
+            }
+        }
     }
 }

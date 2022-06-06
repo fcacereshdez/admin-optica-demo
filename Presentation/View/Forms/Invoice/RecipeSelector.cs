@@ -29,6 +29,10 @@ namespace Presentation.View.Forms.Invoice
         private void SelectAllData()
         {
             dgv_recipe_child.DataSource = recipeController.SelectAllRecipes();
+            dgv_recipe_child.Columns[0].Visible = false;
+            dgv_recipe_child.Columns[1].Visible = false;
+            dgv_recipe_child.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dgv_recipe_child.Columns[4].Visible = false;
             dgv_recipe_child.Columns[5].Visible = false;
             dgv_recipe_child.Columns[6].Visible = false;
             dgv_recipe_child.Columns[7].Visible = false;
@@ -57,6 +61,29 @@ namespace Presentation.View.Forms.Invoice
                 dgv_recipe_child.SelectedRows[0].Cells[12].Value.ToString());
             invoiceCreate.CalculateInvoice();
             Close();
+        }
+
+        private void txt_search_recipe_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                dgv_recipe_child.DataSource = recipeController.SearchRecipe(txt_search_recipe.Text);
+                dgv_recipe_child.Columns[0].Width = 60;
+                dgv_recipe_child.Columns[3].Width = 413;
+                dgv_recipe_child.Columns[1].Visible = false;
+                dgv_recipe_child.Columns[4].Visible = false;
+                dgv_recipe_child.Columns[5].Visible = false;
+                dgv_recipe_child.Columns[6].Visible = false;
+                dgv_recipe_child.Columns[7].Visible = false;
+                dgv_recipe_child.Columns[8].Visible = false;
+                dgv_recipe_child.Columns[9].Visible = false;
+                dgv_recipe_child.Columns[10].Visible = false;
+                dgv_recipe_child.Columns[11].Visible = false;
+            }
+            catch (Exception errRecipes)
+            {
+                MessageBox.Show("Ocurrió un error al intentar ejecutar esto.\n\nError: " + errRecipes.Message, "Recetas");
+            }
         }
     }
 }

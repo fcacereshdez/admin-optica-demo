@@ -64,6 +64,7 @@
             this.txt_search_recipe.Name = "txt_search_recipe";
             this.txt_search_recipe.Size = new System.Drawing.Size(437, 23);
             this.txt_search_recipe.TabIndex = 1;
+            this.txt_search_recipe.TextChanged += new System.EventHandler(this.txt_search_recipe_TextChanged);
             // 
             // label1
             // 

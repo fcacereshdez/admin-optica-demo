@@ -9,7 +9,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>VENTAS POR OPTOMETRA</Value>
+                <Value>VENTAS POR ASESOR</Value>
                 <Style>
                   <FontFamily>Segoe UI</FontFamily>
                   <FontWeight>Bold</FontWeight>
@@ -21,7 +21,7 @@
             </Style>
           </Paragraph>
         </Paragraphs>
-        <Top>0.17639cm</Top>
+        <Top>0.14111cm</Top>
         <Left>7.72522cm</Left>
         <Height>0.6cm</Height>
         <Width>11.81333cm</Width>
@@ -48,7 +48,7 @@
               <Width>1.83854cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.97083cm</Width>
+              <Width>1.65333cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>1.91792cm</Width>
@@ -127,7 +127,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.70583cm</Height>
+              <Height>0.6cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -493,7 +493,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.70583cm</Height>
+              <Height>0.6cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -527,7 +527,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -1146,6 +1145,7 @@
                       <PaddingBottom>2pt</PaddingBottom>
                     </Style>
                   </Textbox>
+                  <rd:Selected>true</rd:Selected>
                 </CellContents>
               </TablixHeader>
               <TablixMembers>
@@ -1161,11 +1161,11 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>ds_sales_by_optometrist</DataSetName>
+        <DataSetName>ds_sales_by_consultant</DataSetName>
         <Top>0.95278cm</Top>
         <Left>0.27812cm</Left>
-        <Height>2.61167cm</Height>
-        <Width>25.72856cm</Width>
+        <Height>2.4cm</Height>
+        <Width>25.41106cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -1318,11 +1318,18 @@
       </ConnectionProperties>
       <rd:DataSourceID>090c33f6-068d-4d5c-9ffc-7736b5bcf5ca</rd:DataSourceID>
     </DataSource>
+    <DataSource Name="SalesByConsultant">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>ea332b81-8dee-4772-96e5-a30d50b5d116</rd:DataSourceID>
+    </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="ds_sales_by_optometrist">
+    <DataSet Name="ds_sales_by_consultant">
       <Query>
-        <DataSourceName>SalesByOptometrist</DataSourceName>
+        <DataSourceName>SalesByConsultant</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -1368,12 +1375,12 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>SalesByOptometrist</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Francisco\Documents\Mango Studios\Clientes\Interlenssv\Proyectos\Desktop\InterlensSV_Control_Center\Presentation\SalesByOptometrist.xsd</rd:SchemaPath>
-        <rd:TableName>ReportByOptometrist</rd:TableName>
+        <rd:DataSetName>SalesByConsultant</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\Francisco\Documents\Mango Studios\Clientes\Interlenssv\Proyectos\Desktop\InterlensSV_Control_Center\Presentation\SalesByConsultant.xsd</rd:SchemaPath>
+        <rd:TableName>ReportByConsultant</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>ReportByOptometristTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>ReportByConsultantTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>

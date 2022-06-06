@@ -22,9 +22,18 @@ namespace Presentation.View.Forms.Recipe
 
         private void LoadData()
         {
-            cmb_roles.DataSource = userController.SelectAllRoles();
-            cmb_roles.DisplayMember = "role";
-            cmb_roles.ValueMember = "role_id";
+            cmb_roles.DisplayMember = "Text";
+            cmb_roles.ValueMember = "Value";
+
+            var items = new[]
+            {
+                new { Text = "Seleccionar", Value = "0" },
+                new { Text = "Optometra", Value = "1"},
+                new { Text = "Asesor", Value = "2" },
+                new { Text = "Gestor", Value = "3" }
+            };
+
+            cmb_roles.DataSource = items;
         }
 
         private void dgv_users_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -44,9 +53,37 @@ namespace Presentation.View.Forms.Recipe
 
         private void btn_search_roles_Click(object sender, EventArgs e)
         {
-            dgv_users.DataSource = userController.SelectUsersByRoleId(cmb_roles.SelectedValue.ToString());
-            dgv_users.Columns[0].Visible = false;
-            dgv_users.Columns[1].Width = 375;
+            if (cmb_roles.SelectedValue.ToString() == "0")
+            {
+                MessageBox.Show("Debes seleccionar un rol para continuar", "Selector de Usuarios");
+            }
+            else if (cmb_roles.SelectedValue.ToString() == "1")
+            {
+                dgv_users.DataSource = userController.SelectUsersIsOptometrist();
+                dgv_users.Columns[0].Visible = false;
+                dgv_users.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                dgv_users.Columns[2].Visible = false;
+                dgv_users.Columns[3].Visible = false;
+                dgv_users.Columns[4].Visible = false;
+            }
+            else if (cmb_roles.SelectedValue.ToString() == "2")
+            {
+                dgv_users.DataSource = userController.SelectUsersIsConsultant();
+                dgv_users.Columns[0].Visible = false;
+                dgv_users.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                dgv_users.Columns[2].Visible = false;
+                dgv_users.Columns[3].Visible = false;
+                dgv_users.Columns[4].Visible = false;
+            }
+            else if (cmb_roles.SelectedValue.ToString() == "3")
+            {
+                dgv_users.DataSource = userController.SelectUsersIsManager();
+                dgv_users.Columns[0].Visible = false;
+                dgv_users.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                dgv_users.Columns[2].Visible = false;
+                dgv_users.Columns[3].Visible = false;
+                dgv_users.Columns[4].Visible = false;
+            }
         }
 
         private void pcb_close_create_client_Click(object sender, EventArgs e)

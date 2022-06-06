@@ -69,6 +69,9 @@ namespace Presentation.View.Forms.User
             userEdit.txt_phone.Text = Users.phone;
             userEdit.txt_email.Text = Users.email;
             userEdit.txt_password.Text = Users.password;
+            userEdit.optometrist.Checked = Users.is_optometrist;
+            userEdit.consultant.Checked = Users.is_consultant;
+            userEdit.manager.Checked = Users.is_manager;
             userEdit.FormClosed += new FormClosedEventHandler(UserEdit_FormClosed);
             userEdit.ShowDialog();
         }

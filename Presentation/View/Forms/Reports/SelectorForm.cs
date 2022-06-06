@@ -2,6 +2,7 @@
 using Domain;
 using Microsoft.Reporting.WinForms;
 using Presentation.Datasets;
+using Presentation.View.Forms.Reports;
 using Presentation.View.Reports;
 using System;
 using System.Collections.Generic;
@@ -127,6 +128,24 @@ namespace Presentation.View.Forms
             viewerForm.rv_viewer.LocalReport.DataSources.Add(rds);
             InsertAction("generó un reporte de todos los movimientos de productos.");
             viewerForm.ShowDialog();
+        }
+
+        private void btn_sales_by_optometrist_Click(object sender, EventArgs e)
+        {
+            SalesByOptometristParams salesByOptometristParams = new SalesByOptometristParams();
+            salesByOptometristParams.ShowDialog();
+        }
+
+        private void btn_sales_by_consultant_Click(object sender, EventArgs e)
+        {
+            SalesByConsultantParams salesByConsultantParams = new SalesByConsultantParams();
+            salesByConsultantParams.ShowDialog();
+        }
+
+        private void btn_sales_by_manager_Click(object sender, EventArgs e)
+        {
+            SalesByManagerParams salesByManagerParams = new SalesByManagerParams();
+            salesByManagerParams.ShowDialog();
         }
     }
 }

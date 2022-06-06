@@ -35,6 +35,9 @@ namespace DataAccess
                             UserCache.password = reader.GetString(4);
                             UserCache.role = reader.GetString(5);
                             UserCache.slug_role = reader.GetString(6);
+                            UserCache.is_optometrist = Convert.ToBoolean(reader.GetValue(7));
+                            UserCache.is_consultant = Convert.ToBoolean(reader.GetValue(8));
+                            UserCache.is_manager = Convert.ToBoolean(reader.GetValue(9));
                         }
                         return true;
                     }
@@ -148,14 +151,17 @@ namespace DataAccess
                             Users.email = reader.GetString(5);
                             Users.phone = reader.GetString(6);
                             Users.role = reader.GetInt64(7);
-                            Users.status = reader.GetInt64(8);
+                            Users.is_optometrist = Convert.ToBoolean(reader.GetValue(8));
+                            Users.is_consultant = Convert.ToBoolean(reader.GetValue(9));
+                            Users.is_manager = Convert.ToBoolean(reader.GetValue(10));
+                            Users.status = reader.GetInt64(11);
                         }
                     }
                 }
             }
         }
 
-        public void UpdateUser(string name, string lastname, string username, string password, string email, string phone, Int64 role_id, Int64 user_status_id ,Int64 user_id, DateTime updated_at)
+        public void UpdateUser(string name, string lastname, string username, string password, string email, string phone, Int64 role_id, bool optometrist, bool consultant, bool manager, Int64 user_status_id ,Int64 user_id, DateTime updated_at)
         {
             using (var conn = GetConnection())
             {
@@ -172,6 +178,9 @@ namespace DataAccess
                     cmd.Parameters.AddWithValue("@email", email);
                     cmd.Parameters.AddWithValue("@phone", phone);
                     cmd.Parameters.AddWithValue("@role_id", role_id);
+                    cmd.Parameters.AddWithValue("@optometrist", optometrist);
+                    cmd.Parameters.AddWithValue("@consultant", consultant);
+                    cmd.Parameters.AddWithValue("@manager", manager);
                     cmd.Parameters.AddWithValue("@user_status_id", user_status_id);
                     cmd.Parameters.AddWithValue("@user_id", user_id);
                     cmd.Parameters.AddWithValue("@updated_at", updated_at);
@@ -181,7 +190,7 @@ namespace DataAccess
             }
         }
 
-        public void CreateUser(string name, string lastname, string username, string password, string email, string phone, Int64 role_id, Int64 user_status_id, DateTime created_at)
+        public void CreateUser(string name, string lastname, string username, string password, string email, string phone, Int64 role_id, bool optometrist, bool consultant, bool manager, Int64 user_status_id, DateTime created_at)
         {
             using (var conn = GetConnection())
             {
@@ -198,6 +207,9 @@ namespace DataAccess
                     cmd.Parameters.AddWithValue("@email", email);
                     cmd.Parameters.AddWithValue("@phone", phone);
                     cmd.Parameters.AddWithValue("@role_id", role_id);
+                    cmd.Parameters.AddWithValue("@optometrist", optometrist);
+                    cmd.Parameters.AddWithValue("@consultant", consultant);
+                    cmd.Parameters.AddWithValue("@manager", manager);
                     cmd.Parameters.AddWithValue("@user_status_id", user_status_id);
                     cmd.Parameters.AddWithValue("@created_at", created_at);
                     cmd.ExecuteNonQuery();
@@ -253,6 +265,63 @@ namespace DataAccess
                     cmd.CommandText = "SelectUsersByRoleId";
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@role_id", role_id);
+                    SqlDataReader ReaderUsers = cmd.ExecuteReader();
+                    DataTable TableUsers = new DataTable();
+                    TableUsers.Load(ReaderUsers);
+                    conn.Close();
+                    return TableUsers;
+                }
+            }
+        }
+
+        public DataTable SelectUsersIsOptometrist()
+        {
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                using (var cmd = new SqlCommand())
+                {
+                    cmd.Connection = conn;
+                    cmd.CommandText = "SelectUsersIsOptometrist";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    SqlDataReader ReaderUsers = cmd.ExecuteReader();
+                    DataTable TableUsers = new DataTable();
+                    TableUsers.Load(ReaderUsers);
+                    conn.Close();
+                    return TableUsers;
+                }
+            }
+        }
+
+        public DataTable SelectUsersIsConsultant()
+        {
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                using (var cmd = new SqlCommand())
+                {
+                    cmd.Connection = conn;
+                    cmd.CommandText = "SelectUsersIsConsultant";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    SqlDataReader ReaderUsers = cmd.ExecuteReader();
+                    DataTable TableUsers = new DataTable();
+                    TableUsers.Load(ReaderUsers);
+                    conn.Close();
+                    return TableUsers;
+                }
+            }
+        }
+
+        public DataTable SelectUsersIsManager()
+        {
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                using (var cmd = new SqlCommand())
+                {
+                    cmd.Connection = conn;
+                    cmd.CommandText = "SelectUsersIsManager";
+                    cmd.CommandType = CommandType.StoredProcedure;
                     SqlDataReader ReaderUsers = cmd.ExecuteReader();
                     DataTable TableUsers = new DataTable();
                     TableUsers.Load(ReaderUsers);

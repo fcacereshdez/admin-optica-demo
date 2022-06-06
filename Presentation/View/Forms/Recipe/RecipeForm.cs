@@ -134,11 +134,11 @@ namespace Presentation.View.Forms.Recipe
                 recipeCreate.txt_value_invoice_laboratory.Text = Common.Models.Recipe.value_invoice_laboratory;
                 recipeCreate.txt_laboratory_notes_invoice.Text = Common.Models.Recipe.notes;
                 recipeCreate.btn_search_clients.Enabled = false;
-                recipeCreate.btn_search_ring.Enabled = false;
-                recipeCreate.btn_search_glasses.Enabled = false;
-                recipeCreate.btn_search_laboratory.Enabled = false;
-                recipeCreate.btn_search_optometryst.Enabled = false;
-                recipeCreate.btn_seller_search.Enabled = false;
+                recipeCreate.btn_search_ring.Enabled = true;
+                recipeCreate.btn_search_glasses.Enabled = true;
+                recipeCreate.btn_search_laboratory.Enabled = true;
+                recipeCreate.btn_search_optometryst.Enabled = true;
+                recipeCreate.btn_seller_search.Enabled = true;
                 recipeCreate.txt_method.Text = "update";
             recipeCreate.FormClosed += new FormClosedEventHandler(RecipeCreate_FormClosed);
             recipeCreate.ShowDialog();
@@ -192,6 +192,11 @@ namespace Presentation.View.Forms.Recipe
         private void RecipeCreate_FormClosed(object sender, FormClosedEventArgs e)
         {
             SelectAllRecipes();
+        }
+
+        private void btn_view_recipe_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Función programada con código 07062022-RE-VIEW", "Recetas");
         }
     }
 }

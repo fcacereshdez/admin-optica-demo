@@ -46,9 +46,9 @@ namespace Presentation.View.Forms
             this.btn_companies = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.btn_sales_by_manager = new System.Windows.Forms.Button();
+            this.btn_sales_by_consultant = new System.Windows.Forms.Button();
+            this.btn_sales_by_optometrist = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.button12 = new System.Windows.Forms.Button();
@@ -115,7 +115,6 @@ namespace Presentation.View.Forms
             // btn_invoice_by_companies
             // 
             this.btn_invoice_by_companies.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
-            this.btn_invoice_by_companies.Enabled = false;
             this.btn_invoice_by_companies.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
             this.btn_invoice_by_companies.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_invoice_by_companies.ForeColor = System.Drawing.Color.White;
@@ -265,7 +264,6 @@ namespace Presentation.View.Forms
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
-            this.button1.Enabled = false;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.White;
@@ -311,9 +309,9 @@ namespace Presentation.View.Forms
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.button11);
-            this.groupBox5.Controls.Add(this.button10);
-            this.groupBox5.Controls.Add(this.button8);
+            this.groupBox5.Controls.Add(this.btn_sales_by_manager);
+            this.groupBox5.Controls.Add(this.btn_sales_by_consultant);
+            this.groupBox5.Controls.Add(this.btn_sales_by_optometrist);
             this.groupBox5.Controls.Add(this.btn_book_sales);
             this.groupBox5.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox5.Location = new System.Drawing.Point(558, 30);
@@ -323,53 +321,53 @@ namespace Presentation.View.Forms
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Facturación";
             // 
-            // button11
+            // btn_sales_by_manager
             // 
-            this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
-            this.button11.Enabled = false;
-            this.button11.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.ForeColor = System.Drawing.Color.White;
-            this.button11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button11.Location = new System.Drawing.Point(7, 130);
-            this.button11.Name = "button11";
-            this.button11.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button11.Size = new System.Drawing.Size(237, 30);
-            this.button11.TabIndex = 34;
-            this.button11.Text = "Ventas por Gestor";
-            this.button11.UseVisualStyleBackColor = false;
+            this.btn_sales_by_manager.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.btn_sales_by_manager.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.btn_sales_by_manager.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_sales_by_manager.ForeColor = System.Drawing.Color.White;
+            this.btn_sales_by_manager.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_sales_by_manager.Location = new System.Drawing.Point(7, 130);
+            this.btn_sales_by_manager.Name = "btn_sales_by_manager";
+            this.btn_sales_by_manager.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btn_sales_by_manager.Size = new System.Drawing.Size(237, 30);
+            this.btn_sales_by_manager.TabIndex = 34;
+            this.btn_sales_by_manager.Text = "Ventas por Gestor";
+            this.btn_sales_by_manager.UseVisualStyleBackColor = false;
+            this.btn_sales_by_manager.Click += new System.EventHandler(this.btn_sales_by_manager_Click);
             // 
-            // button10
+            // btn_sales_by_consultant
             // 
-            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
-            this.button10.Enabled = false;
-            this.button10.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.ForeColor = System.Drawing.Color.White;
-            this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button10.Location = new System.Drawing.Point(7, 94);
-            this.button10.Name = "button10";
-            this.button10.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button10.Size = new System.Drawing.Size(237, 30);
-            this.button10.TabIndex = 33;
-            this.button10.Text = "Ventas por Asesor";
-            this.button10.UseVisualStyleBackColor = false;
+            this.btn_sales_by_consultant.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.btn_sales_by_consultant.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.btn_sales_by_consultant.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_sales_by_consultant.ForeColor = System.Drawing.Color.White;
+            this.btn_sales_by_consultant.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_sales_by_consultant.Location = new System.Drawing.Point(7, 94);
+            this.btn_sales_by_consultant.Name = "btn_sales_by_consultant";
+            this.btn_sales_by_consultant.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btn_sales_by_consultant.Size = new System.Drawing.Size(237, 30);
+            this.btn_sales_by_consultant.TabIndex = 33;
+            this.btn_sales_by_consultant.Text = "Ventas por Asesor";
+            this.btn_sales_by_consultant.UseVisualStyleBackColor = false;
+            this.btn_sales_by_consultant.Click += new System.EventHandler(this.btn_sales_by_consultant_Click);
             // 
-            // button8
+            // btn_sales_by_optometrist
             // 
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
-            this.button8.Enabled = false;
-            this.button8.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(7, 60);
-            this.button8.Name = "button8";
-            this.button8.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button8.Size = new System.Drawing.Size(237, 30);
-            this.button8.TabIndex = 31;
-            this.button8.Text = "Ventas por Optómetra";
-            this.button8.UseVisualStyleBackColor = false;
+            this.btn_sales_by_optometrist.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.btn_sales_by_optometrist.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.btn_sales_by_optometrist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_sales_by_optometrist.ForeColor = System.Drawing.Color.White;
+            this.btn_sales_by_optometrist.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_sales_by_optometrist.Location = new System.Drawing.Point(7, 60);
+            this.btn_sales_by_optometrist.Name = "btn_sales_by_optometrist";
+            this.btn_sales_by_optometrist.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btn_sales_by_optometrist.Size = new System.Drawing.Size(237, 30);
+            this.btn_sales_by_optometrist.TabIndex = 31;
+            this.btn_sales_by_optometrist.Text = "Ventas por Optómetra";
+            this.btn_sales_by_optometrist.UseVisualStyleBackColor = false;
+            this.btn_sales_by_optometrist.Click += new System.EventHandler(this.btn_sales_by_optometrist_Click);
             // 
             // button7
             // 
@@ -445,6 +443,7 @@ namespace Presentation.View.Forms
             this.groupBox7.TabIndex = 35;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Investigación y desarrollo (Experimentales)";
+            this.groupBox7.Visible = false;
             // 
             // label1
             // 
@@ -551,10 +550,10 @@ namespace Presentation.View.Forms
         private System.Windows.Forms.Button btn_companies;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btn_sales_by_optometrist;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button btn_sales_by_manager;
+        private System.Windows.Forms.Button btn_sales_by_consultant;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox6;

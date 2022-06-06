@@ -36,18 +36,18 @@ namespace Presentation.View.Forms.Claim
             this.pcb_exit = new System.Windows.Forms.PictureBox();
             this.pcb_minus = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cb_type_claims = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.rb_client = new System.Windows.Forms.RadioButton();
-            this.rb_recipe = new System.Windows.Forms.RadioButton();
             this.rb_product = new System.Windows.Forms.RadioButton();
+            this.rb_recipe = new System.Windows.Forms.RadioButton();
+            this.rb_client = new System.Windows.Forms.RadioButton();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cb_type_claims = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btn_search_element = new System.Windows.Forms.Button();
             this.txt_element = new System.Windows.Forms.TextBox();
             this.btn_save_claim = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.pnl_top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_close_create_claim)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_exit)).BeginInit();
@@ -128,42 +128,16 @@ namespace Presentation.View.Forms.Claim
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Información del reclamo";
             // 
-            // label1
+            // rb_product
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Tipo de reclamo";
-            // 
-            // cb_type_claims
-            // 
-            this.cb_type_claims.FormattingEnabled = true;
-            this.cb_type_claims.Location = new System.Drawing.Point(9, 50);
-            this.cb_type_claims.Name = "cb_type_claims";
-            this.cb_type_claims.Size = new System.Drawing.Size(322, 23);
-            this.cb_type_claims.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(346, 32);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 15);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Motivo de reclamo";
-            // 
-            // rb_client
-            // 
-            this.rb_client.AutoSize = true;
-            this.rb_client.Location = new System.Drawing.Point(349, 51);
-            this.rb_client.Name = "rb_client";
-            this.rb_client.Size = new System.Drawing.Size(61, 19);
-            this.rb_client.TabIndex = 3;
-            this.rb_client.TabStop = true;
-            this.rb_client.Text = "Cliente";
-            this.rb_client.UseVisualStyleBackColor = true;
+            this.rb_product.AutoSize = true;
+            this.rb_product.Location = new System.Drawing.Point(482, 51);
+            this.rb_product.Name = "rb_product";
+            this.rb_product.Size = new System.Drawing.Size(74, 19);
+            this.rb_product.TabIndex = 5;
+            this.rb_product.TabStop = true;
+            this.rb_product.Text = "Producto";
+            this.rb_product.UseVisualStyleBackColor = true;
             // 
             // rb_recipe
             // 
@@ -176,16 +150,42 @@ namespace Presentation.View.Forms.Claim
             this.rb_recipe.Text = "Receta";
             this.rb_recipe.UseVisualStyleBackColor = true;
             // 
-            // rb_product
+            // rb_client
             // 
-            this.rb_product.AutoSize = true;
-            this.rb_product.Location = new System.Drawing.Point(482, 51);
-            this.rb_product.Name = "rb_product";
-            this.rb_product.Size = new System.Drawing.Size(74, 19);
-            this.rb_product.TabIndex = 5;
-            this.rb_product.TabStop = true;
-            this.rb_product.Text = "Producto";
-            this.rb_product.UseVisualStyleBackColor = true;
+            this.rb_client.AutoSize = true;
+            this.rb_client.Location = new System.Drawing.Point(349, 51);
+            this.rb_client.Name = "rb_client";
+            this.rb_client.Size = new System.Drawing.Size(61, 19);
+            this.rb_client.TabIndex = 3;
+            this.rb_client.TabStop = true;
+            this.rb_client.Text = "Cliente";
+            this.rb_client.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(346, 32);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(107, 15);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Motivo de reclamo";
+            // 
+            // cb_type_claims
+            // 
+            this.cb_type_claims.FormattingEnabled = true;
+            this.cb_type_claims.Location = new System.Drawing.Point(9, 50);
+            this.cb_type_claims.Name = "cb_type_claims";
+            this.cb_type_claims.Size = new System.Drawing.Size(322, 23);
+            this.cb_type_claims.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(93, 15);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Tipo de reclamo";
             // 
             // groupBox2
             // 
@@ -197,6 +197,14 @@ namespace Presentation.View.Forms.Claim
             this.groupBox2.TabIndex = 26;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Detalles del reclamo";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(9, 52);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(555, 73);
+            this.textBox1.TabIndex = 7;
             // 
             // label3
             // 
@@ -245,20 +253,12 @@ namespace Presentation.View.Forms.Claim
             this.btn_save_claim.Text = "Guardar";
             this.btn_save_claim.UseVisualStyleBackColor = false;
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(9, 52);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(555, 73);
-            this.textBox1.TabIndex = 7;
-            // 
             // ClaimCreate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(596, 322);
+            this.ClientSize = new System.Drawing.Size(596, 324);
             this.Controls.Add(this.btn_save_claim);
             this.Controls.Add(this.txt_element);
             this.Controls.Add(this.btn_search_element);

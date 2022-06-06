@@ -17,5 +17,8 @@ namespace Common.Cache
         public static string phone { get; set; }
         public static Int64 role { get; set; }
         public static Int64 status { get; set; }
+        public static bool is_optometrist { get; set; }
+        public static bool is_consultant { get; set; }
+        public static bool is_manager { get; set; }
     }
 }

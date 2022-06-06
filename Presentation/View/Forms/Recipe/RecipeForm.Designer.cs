@@ -37,6 +37,7 @@ namespace Presentation.View.Forms.Recipe
             this.txt_search_recipe = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_view_recipe = new System.Windows.Forms.Button();
             this.btn_create_recipe = new System.Windows.Forms.Button();
             this.btn_delete_recipe = new System.Windows.Forms.Button();
             this.btn_edit_recipe = new System.Windows.Forms.Button();
@@ -81,6 +82,7 @@ namespace Presentation.View.Forms.Recipe
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.btn_view_recipe);
             this.groupBox1.Controls.Add(this.btn_create_recipe);
             this.groupBox1.Controls.Add(this.btn_delete_recipe);
             this.groupBox1.Controls.Add(this.btn_edit_recipe);
@@ -91,10 +93,28 @@ namespace Presentation.View.Forms.Recipe
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(177, 143);
+            this.groupBox1.Size = new System.Drawing.Size(177, 179);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Funciones";
+            // 
+            // btn_view_recipe
+            // 
+            this.btn_view_recipe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.btn_view_recipe.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.btn_view_recipe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_view_recipe.ForeColor = System.Drawing.Color.White;
+            this.btn_view_recipe.Image = global::Presentation.Properties.Resources.icons8_ver_24;
+            this.btn_view_recipe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_view_recipe.Location = new System.Drawing.Point(16, 26);
+            this.btn_view_recipe.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_view_recipe.Name = "btn_view_recipe";
+            this.btn_view_recipe.Padding = new System.Windows.Forms.Padding(17, 0, 6, 0);
+            this.btn_view_recipe.Size = new System.Drawing.Size(143, 30);
+            this.btn_view_recipe.TabIndex = 5;
+            this.btn_view_recipe.Text = "Ver";
+            this.btn_view_recipe.UseVisualStyleBackColor = false;
+            this.btn_view_recipe.Click += new System.EventHandler(this.btn_view_recipe_Click);
             // 
             // btn_create_recipe
             // 
@@ -104,7 +124,7 @@ namespace Presentation.View.Forms.Recipe
             this.btn_create_recipe.ForeColor = System.Drawing.Color.White;
             this.btn_create_recipe.Image = global::Presentation.Properties.Resources.icons8_añadir_24;
             this.btn_create_recipe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_create_recipe.Location = new System.Drawing.Point(15, 61);
+            this.btn_create_recipe.Location = new System.Drawing.Point(16, 99);
             this.btn_create_recipe.Name = "btn_create_recipe";
             this.btn_create_recipe.Padding = new System.Windows.Forms.Padding(15, 0, 5, 0);
             this.btn_create_recipe.Size = new System.Drawing.Size(143, 30);
@@ -121,7 +141,7 @@ namespace Presentation.View.Forms.Recipe
             this.btn_delete_recipe.ForeColor = System.Drawing.Color.White;
             this.btn_delete_recipe.Image = global::Presentation.Properties.Resources.icons8_eliminar_241;
             this.btn_delete_recipe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_delete_recipe.Location = new System.Drawing.Point(15, 97);
+            this.btn_delete_recipe.Location = new System.Drawing.Point(16, 135);
             this.btn_delete_recipe.Name = "btn_delete_recipe";
             this.btn_delete_recipe.Padding = new System.Windows.Forms.Padding(15, 0, 5, 0);
             this.btn_delete_recipe.Size = new System.Drawing.Size(143, 30);
@@ -138,7 +158,7 @@ namespace Presentation.View.Forms.Recipe
             this.btn_edit_recipe.ForeColor = System.Drawing.Color.White;
             this.btn_edit_recipe.Image = global::Presentation.Properties.Resources.icons8_editar_24;
             this.btn_edit_recipe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_edit_recipe.Location = new System.Drawing.Point(15, 25);
+            this.btn_edit_recipe.Location = new System.Drawing.Point(16, 63);
             this.btn_edit_recipe.Name = "btn_edit_recipe";
             this.btn_edit_recipe.Padding = new System.Windows.Forms.Padding(15, 0, 5, 0);
             this.btn_edit_recipe.Size = new System.Drawing.Size(143, 30);
@@ -231,5 +251,6 @@ namespace Presentation.View.Forms.Recipe
         private System.Windows.Forms.Button btn_delete_recipe;
         private System.Windows.Forms.Button btn_edit_recipe;
         public System.Windows.Forms.DataGridView dgv_recipes;
+        private System.Windows.Forms.Button btn_view_recipe;
     }
 }

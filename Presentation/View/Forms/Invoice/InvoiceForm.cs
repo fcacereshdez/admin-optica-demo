@@ -80,5 +80,10 @@ namespace Presentation.View.Forms.Invoice
         {
             SelectAllInvoice();
         }
+
+        private void btn_view_invoice_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Función programada con código 07062022-IN-VIEW", "Facturación");
+        }
     }
 }

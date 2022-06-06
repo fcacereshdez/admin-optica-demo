@@ -47,6 +47,25 @@ namespace Domain
             return DataSetAuditAllUsers;
         }
 
+        public DataTable SelectAllSalesByOptometrist(string from, string to)
+        {
+            DataTable DataSetSalesOptometrist = new DataTable();
+            DataSetSalesOptometrist = reportData.SelectSalesByOptometrist(from, to);
+            return DataSetSalesOptometrist;
+        }
+        public DataTable SelectAllSalesByConsultant(string from, string to)
+        {
+            DataTable DataSetSalesConsultant = new DataTable();
+            DataSetSalesConsultant = reportData.SelectSalesByConsultant(from, to);
+            return DataSetSalesConsultant;
+        }
+        public DataTable SelectAllSalesByManager(string from, string to)
+        {
+            DataTable DataSetSalesManager = new DataTable();
+            DataSetSalesManager = reportData.SelectSalesByManager(from, to);
+            return DataSetSalesManager;
+        }
+
         public void CountClients()
         {
             clientData.CountClients();
