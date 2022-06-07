@@ -74,7 +74,18 @@ namespace Presentation.View.Forms.Invoice
 
         private void btn_edit_invoice_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Formulario en desarrollo.", "Facturas");
+            try
+            {
+                invoiceController.SelecInvoiceById(dgv_invoices.SelectedRows[0].Cells[0].Value.ToString());
+                InvoiceEdit invoiceEdit = new InvoiceEdit();
+                invoiceEdit.dgv_products.DataSource = invoiceController.SelectInvoiceDetails(dgv_invoices.SelectedRows[0].Cells[0].Value.ToString());
+                invoiceEdit.FormClosed += new FormClosedEventHandler(InvoiceCreate_FormClosed);
+                invoiceEdit.ShowDialog();
+            }
+            catch (Exception errInvoice)
+            {
+                MessageBox.Show("Ocurrió un error al intentar ejecutar esto.\n\nError: " + errInvoice.Message, "Facturación");
+            }
         }
         private void InvoiceCreate_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -83,7 +94,7 @@ namespace Presentation.View.Forms.Invoice
 
         private void btn_view_invoice_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Función programada con código 07062022-IN-VIEW", "Facturación");
+            MessageBox.Show("Invoice.rdlc y otros componentes no son compatibles con esta versión del Framework .NET", "Facturación");
         }
     }
 }

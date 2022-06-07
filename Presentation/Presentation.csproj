@@ -31,7 +31,7 @@
     <PublisherName>Mango Studios</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>10</ApplicationRevision>
+    <ApplicationRevision>11</ApplicationRevision>
     <ApplicationVersion>6.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -187,6 +187,12 @@
     <Compile Include="View\Forms\About\AboutForm.Designer.cs">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Forms\Bank\BankForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Bank\BankForm.Designer.cs">
+      <DependentUpon>BankForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Forms\Claim\ClaimCreate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -271,6 +277,12 @@
     <Compile Include="View\Forms\Home\SellerForm.Designer.cs">
       <DependentUpon>SellerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Forms\Invoice\InvoiceEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Invoice\InvoiceEdit.Designer.cs">
+      <DependentUpon>InvoiceEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Forms\Invoice\InvoiceCreate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -306,6 +318,12 @@
     </Compile>
     <Compile Include="View\Forms\Invoice\UserSelector.Designer.cs">
       <DependentUpon>UserSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\IVA\IVAForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\IVA\IVAForm.Designer.cs">
+      <DependentUpon>IVAForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Forms\Laboratory\LaboratoryCreate.cs">
       <SubType>Form</SubType>
@@ -513,6 +531,9 @@
     <EmbeddedResource Include="View\Forms\Home\AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Invoice\InvoiceEdit.resx">
+      <DependentUpon>InvoiceEdit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\Invoice\InvoiceCreate.resx">
       <DependentUpon>InvoiceCreate.cs</DependentUpon>
     </EmbeddedResource>
@@ -598,8 +619,12 @@
     <EmbeddedResource Include="View\Reports\AllClients.rdlc" />
     <EmbeddedResource Include="View\Reports\AllCompanies.rdlc" />
     <EmbeddedResource Include="View\Reports\AllProducts.rdlc" />
+    <EmbeddedResource Include="View\Reports\ClientProfile.rdlc" />
+    <EmbeddedResource Include="View\Reports\CompanyProfile.rdlc" />
+    <EmbeddedResource Include="View\Reports\Invoice.rdlc" />
     <EmbeddedResource Include="View\Reports\PendingByCompany.rdlc" />
     <EmbeddedResource Include="View\Reports\ProductMovements.rdlc" />
+    <EmbeddedResource Include="View\Reports\Recipe.rdlc" />
     <EmbeddedResource Include="View\Reports\SalesBook.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>

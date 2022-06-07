@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Installer
+namespace Presentation.View.Forms.Bank
 {
-    public partial class Form1 : Form
+    public partial class BankForm : Form
     {
-        public Form1()
+        public BankForm()
         {
             InitializeComponent();
         }

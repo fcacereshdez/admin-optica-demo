@@ -52,7 +52,6 @@ namespace Presentation
             this.pnl_top = new System.Windows.Forms.Panel();
             this.pcb_maximize = new System.Windows.Forms.PictureBox();
             this.pcb_minus = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.pcb_exit = new System.Windows.Forms.PictureBox();
             this.lbl_time = new System.Windows.Forms.Label();
             this.lbl_date = new System.Windows.Forms.Label();
@@ -346,7 +345,6 @@ namespace Presentation
             this.pnl_top.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(29)))), ((int)(((byte)(26)))));
             this.pnl_top.Controls.Add(this.pcb_maximize);
             this.pnl_top.Controls.Add(this.pcb_minus);
-            this.pnl_top.Controls.Add(this.label1);
             this.pnl_top.Controls.Add(this.pcb_exit);
             this.pnl_top.Controls.Add(this.lbl_time);
             this.pnl_top.Controls.Add(this.lbl_date);
@@ -383,19 +381,6 @@ namespace Presentation
             this.pcb_minus.TabIndex = 2;
             this.pcb_minus.TabStop = false;
             this.pcb_minus.Click += new System.EventHandler(this.pcb_minus_Click);
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(142)))), ((int)(((byte)(4)))));
-            this.label1.Location = new System.Drawing.Point(841, 4);
-            this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(2);
-            this.label1.Size = new System.Drawing.Size(120, 21);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Candidate R6.0.0.0";
             // 
             // pcb_exit
             // 
@@ -481,7 +466,7 @@ namespace Presentation
             this.pnl_layout.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnl_layout.BackColor = System.Drawing.Color.DarkGray;
+            this.pnl_layout.BackColor = System.Drawing.Color.White;
             this.pnl_layout.Controls.Add(this.pcb_logo);
             this.pnl_layout.Location = new System.Drawing.Point(197, 32);
             this.pnl_layout.Name = "pnl_layout";
@@ -616,7 +601,6 @@ namespace Presentation
         public System.Windows.Forms.Button btn_facturation;
         public System.Windows.Forms.Button btn_iva;
         public System.Windows.Forms.Button btn_banks;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pcb_maximize;
         public System.Windows.Forms.Button txt_claims;
     }

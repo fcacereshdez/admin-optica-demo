@@ -142,7 +142,6 @@ namespace Presentation.View.Forms.Recipe
                 recipeCreate.txt_method.Text = "update";
             recipeCreate.FormClosed += new FormClosedEventHandler(RecipeCreate_FormClosed);
             recipeCreate.ShowDialog();
-          
         }
 
         private void btn_delete_recipe_Click(object sender, EventArgs e)
@@ -196,7 +195,7 @@ namespace Presentation.View.Forms.Recipe
 
         private void btn_view_recipe_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Función programada con código 07062022-RE-VIEW", "Recetas");
+            MessageBox.Show("Recipe.rdlc y otros componentes no son compatibles con esta versión del Framework .NET", "Recetas");
         }
     }
 }

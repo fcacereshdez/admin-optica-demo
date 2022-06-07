@@ -42,12 +42,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\BankData.cs" />
     <Compile Include="Data\ClaimData.cs" />
     <Compile Include="Data\ClientAccountData.cs" />
     <Compile Include="Data\ClientData.cs" />
     <Compile Include="Data\CommonData.cs" />
     <Compile Include="Data\CompanyData.cs" />
     <Compile Include="Database\DBConnection.cs" />
+    <Compile Include="Data\FeeData.cs" />
     <Compile Include="Data\InvoiceData.cs" />
     <Compile Include="Data\LaboratoryData.cs" />
     <Compile Include="Data\ProductData.cs" />
