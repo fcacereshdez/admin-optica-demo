@@ -22,7 +22,7 @@ namespace Presentation.View.Forms
 
         private void InicializeInformationEdition()
         {
-            lbl_version_login.Text = "Release Version - v" + System.Reflection.Assembly.GetEntryAssembly().GetName().Version.ToString();
+            lbl_version_login.Text = "Release Version - v" + Application.ProductVersion.ToString();
         }
 
         private void btn_login_Click(object sender, EventArgs e)

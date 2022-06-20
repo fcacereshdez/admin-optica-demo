@@ -299,6 +299,8 @@ namespace Presentation.Datasets {
             
             private global::System.Data.DataColumn columnRECURRENCIA;
             
+            private global::System.Data.DataColumn columnFECHA;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public ReportByManagerDataTable() {
@@ -414,6 +416,14 @@ namespace Presentation.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn FECHAColumn {
+                get {
+                    return this.columnFECHA;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -449,7 +459,7 @@ namespace Presentation.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ReportByManagerRow AddReportByManagerRow(string OPTOMETRA, string EMPRESA, string CLIENTE, decimal TOTAL, decimal SALDO, decimal ACUMULADO, decimal COUTA, int PAGOS, int RECURRENCIA) {
+            public ReportByManagerRow AddReportByManagerRow(string OPTOMETRA, string EMPRESA, string CLIENTE, decimal TOTAL, decimal SALDO, decimal ACUMULADO, decimal COUTA, int PAGOS, int RECURRENCIA, string FECHA) {
                 ReportByManagerRow rowReportByManagerRow = ((ReportByManagerRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         OPTOMETRA,
@@ -461,7 +471,8 @@ namespace Presentation.Datasets {
                         ACUMULADO,
                         COUTA,
                         PAGOS,
-                        RECURRENCIA};
+                        RECURRENCIA,
+                        FECHA};
                 rowReportByManagerRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowReportByManagerRow);
                 return rowReportByManagerRow;
@@ -501,6 +512,7 @@ namespace Presentation.Datasets {
                 this.columnCOUTA = base.Columns["COUTA"];
                 this.columnPAGOS = base.Columns["PAGOS"];
                 this.columnRECURRENCIA = base.Columns["RECURRENCIA"];
+                this.columnFECHA = base.Columns["FECHA"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -526,6 +538,8 @@ namespace Presentation.Datasets {
                 base.Columns.Add(this.columnPAGOS);
                 this.columnRECURRENCIA = new global::System.Data.DataColumn("RECURRENCIA", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRECURRENCIA);
+                this.columnFECHA = new global::System.Data.DataColumn("FECHA", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFECHA);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnFACTURA}, true));
                 this.columnOPTOMETRA.ReadOnly = true;
@@ -834,6 +848,22 @@ namespace Presentation.Datasets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string FECHA {
+                get {
+                    try {
+                        return ((string)(this[this.tableReportByManager.FECHAColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'FECHA\' de la tabla \'ReportByManager\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableReportByManager.FECHAColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsOPTOMETRANull() {
                 return this.IsNull(this.tableReportByManager.OPTOMETRAColumn);
             }
@@ -938,6 +968,18 @@ namespace Presentation.Datasets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetRECURRENCIANull() {
                 this[this.tableReportByManager.RECURRENCIAColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsFECHANull() {
+                return this.IsNull(this.tableReportByManager.FECHAColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetFECHANull() {
+                this[this.tableReportByManager.FECHAColumn] = global::System.Convert.DBNull;
             }
         }
         

@@ -147,5 +147,10 @@ namespace Presentation.View.Forms
             SalesByManagerParams salesByManagerParams = new SalesByManagerParams();
             salesByManagerParams.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Informe marcado como [En desarrollo].\n\nEstado: Añadiendo procesador de datos.");
+        }
     }
 }

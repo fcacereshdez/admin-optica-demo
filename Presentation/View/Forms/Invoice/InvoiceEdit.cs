@@ -98,7 +98,7 @@ namespace Presentation.View.Forms.Invoice
                     price_product = decimal.Parse(dgv_products.Rows[counter].Cells[4].Value.ToString());
                     subtotal_product = quantity * price_product;
                     dgv_products.Rows[counter].Cells[5].Value = subtotal_product;
-                    FormatDataGridView();
+                    //FormatDataGridView();
                 }
             }
             foreach (DataGridViewRow row in dgv_products.Rows)
@@ -110,11 +110,11 @@ namespace Presentation.View.Forms.Invoice
             total = Math.Round(subtotal, 2);
         }
 
-        private void FormatDataGridView()
-        {
-           // dgv_products.Columns["cl_priceUnit_product"].DefaultCellStyle.Format = "c";
-            dgv_products.Columns[5].DefaultCellStyle.Format = "c";
-        }
+        //private void FormatDataGridView()
+        //{
+        //   // dgv_products.Columns["cl_priceUnit_product"].DefaultCellStyle.Format = "c";
+        //    dgv_products.Columns[5].DefaultCellStyle.Format = "c";
+        //}
 
         private void btn_save_invoice_Click(object sender, EventArgs e)
         {
@@ -160,13 +160,16 @@ namespace Presentation.View.Forms.Invoice
 
                     foreach (DataGridViewRow rows in dgv_products.Rows)
                     {
-                        invoiceController.UpdateDetailInvoice(rows.Cells[0].Value.ToString(),
+                        invoiceController.UpdateDetailInvoice(
+                            rows.Cells[0].Value.ToString(),
                             rows.Cells[3].Value.ToString(),
                             rows.Cells[4].Value.ToString(),
-                            rows.Cells[5].Value.ToString());
+                            rows.Cells[5].Value.ToString()
+                            );
                     }
-                     invoiceController.UpdateInvoice(txt_first_payment.Text, dtp_invoice.Value.ToString(), txt_optometryst_id.Text,
-                     recurrency.ToString(), txt_seller_id.Text, txt_manager_id.Text, cmb_payment_method.SelectedValue.ToString(), subtotal.ToString(), discount.ToString(), total.ToString(), txt_n_fee.Text, txt_fee.Text, txt_notes.Text, txt_pay_day_1.Text, txt_pay_day_2.Text, Common.Models.Invoice.id_invoice.ToString());
+
+                    invoiceController.UpdateInvoice(txt_first_payment.Text, dtp_invoice.Value.ToString(), txt_optometryst_id.Text,
+                    recurrency.ToString(), txt_seller_id.Text, txt_manager_id.Text, cmb_payment_method.SelectedValue.ToString(), subtotal.ToString(), discount.ToString(), total.ToString(), txt_n_fee.Text, txt_fee.Text, txt_notes.Text, txt_pay_day_1.Text, txt_pay_day_2.Text, Common.Models.Invoice.id_invoice.ToString());
                     MessageBox.Show("Se ha modificado la factura con éxito");
                     Close();
                }
@@ -186,6 +189,24 @@ namespace Presentation.View.Forms.Invoice
         private void dgv_products_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             CalculateInvoice();
+        }
+
+        private void RevisionValues()
+        {
+            if (txt_discount.Text == "")
+            {
+                txt_with_discount.Text = "$0.00";
+                txt_total.Text = "$" + Math.Round(subtotal, 2).ToString();
+                total = Math.Round(subtotal, 2);
+            }
+            else
+            {
+                discount = Convert.ToDecimal(txt_discount.Text);
+                decimal withDiscount = subtotal * (discount / 100);
+                txt_with_discount.Text = "$" + Math.Round(withDiscount, 2).ToString();
+                total = subtotal - withDiscount;
+                txt_total.Text = "$" + Math.Round(total, 2).ToString();
+            }
         }
 
         private void txt_discount_TextChanged(object sender, EventArgs e)
@@ -228,7 +249,7 @@ namespace Presentation.View.Forms.Invoice
 
         private void InvoiceEdit_Load(object sender, EventArgs e)
         {
-            dtp_invoice.Value = Common.Models.Invoice.date;
+            dtp_invoice.Value = Convert.ToDateTime(Common.Models.Invoice.date.ToString("yyyy-MM-dd"));
             lbl_client_name.Text = Common.Models.Invoice.client_name;
             cmb_payment_method.SelectedValue = Common.Models.Invoice.payment_method;
             if (Common.Models.Invoice.recurrence == 30)
@@ -258,6 +279,7 @@ namespace Presentation.View.Forms.Invoice
             dgv_products.Columns[2].Width = 287;
 
             CalculateInvoice();
+            RevisionValues();
         }
     }
 }

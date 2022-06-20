@@ -96,8 +96,8 @@ namespace Presentation.View.Forms.Recipe
         {
             if (txt_method.Text == "update")
             {
-                try
-                {
+                //try
+                //{
                     recipeController.UpdateRecipe(
                         dtp_date.Value.ToString(),
                     txt_esf_od.Text,
@@ -156,16 +156,18 @@ namespace Presentation.View.Forms.Recipe
                     txt_invoice_laboratory.Text,
                     txt_date_laboratory.Text,
                     txt_value_invoice_laboratory.Text,
-                    txt_laboratory_notes_invoice.Text
+                    txt_laboratory_notes_invoice.Text,
+                    txt_ring_id.Text,
+                    txt_glasses_id.Text
                         );
                     txt_method.Clear();
                     MessageBox.Show("Se ha actualizado una receta con éxito.");
                     Close();
-                }
-                catch (Exception errRecipe)
-                {
-                    MessageBox.Show("Ocurrió un error al intentar procesa esto.\n\nError: " + errRecipe.Message, "Recetas");
-                }
+                //}
+                //catch (Exception errRecipe)
+                //{
+                //    MessageBox.Show("Ocurrió un error al intentar procesa esto.\n\nError: " + errRecipe.Message, "Recetas");
+                //}
             }
             else
             {

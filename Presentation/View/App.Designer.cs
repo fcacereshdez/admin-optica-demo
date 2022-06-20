@@ -32,6 +32,7 @@ namespace Presentation
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Layout));
             this.pnl_menu = new System.Windows.Forms.Panel();
+            this.btn_system_information = new System.Windows.Forms.Button();
             this.txt_claims = new System.Windows.Forms.Button();
             this.btn_iva = new System.Windows.Forms.Button();
             this.btn_banks = new System.Windows.Forms.Button();
@@ -84,6 +85,7 @@ namespace Presentation
             this.pnl_menu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.pnl_menu.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnl_menu.Controls.Add(this.btn_system_information);
             this.pnl_menu.Controls.Add(this.txt_claims);
             this.pnl_menu.Controls.Add(this.btn_iva);
             this.pnl_menu.Controls.Add(this.btn_banks);
@@ -101,6 +103,21 @@ namespace Presentation
             this.pnl_menu.Name = "pnl_menu";
             this.pnl_menu.Size = new System.Drawing.Size(199, 586);
             this.pnl_menu.TabIndex = 0;
+            // 
+            // btn_system_information
+            // 
+            this.btn_system_information.FlatAppearance.BorderSize = 0;
+            this.btn_system_information.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_system_information.Image = global::Presentation.Properties.Resources.icons8_info_24;
+            this.btn_system_information.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_system_information.Location = new System.Drawing.Point(-1, 627);
+            this.btn_system_information.Name = "btn_system_information";
+            this.btn_system_information.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
+            this.btn_system_information.Size = new System.Drawing.Size(200, 41);
+            this.btn_system_information.TabIndex = 15;
+            this.btn_system_information.Text = "Sistema";
+            this.btn_system_information.UseVisualStyleBackColor = true;
+            this.btn_system_information.Click += new System.EventHandler(this.btn_system_information_Click);
             // 
             // txt_claims
             // 
@@ -603,6 +620,7 @@ namespace Presentation
         public System.Windows.Forms.Button btn_banks;
         private System.Windows.Forms.PictureBox pcb_maximize;
         public System.Windows.Forms.Button txt_claims;
+        public System.Windows.Forms.Button btn_system_information;
     }
 }
 

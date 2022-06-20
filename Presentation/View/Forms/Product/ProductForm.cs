@@ -137,5 +137,22 @@ namespace Presentation.View.Forms.Product
             }
         }
 
+        private void btn_categories_Click_1(object sender, EventArgs e)
+        {
+            CategoriesForm categoriesForm = new CategoriesForm();
+            categoriesForm.ShowDialog();
+        }
+
+        private void btn_types_Click_1(object sender, EventArgs e)
+        {
+            ModelsForm modelsForm = new ModelsForm();
+            modelsForm.ShowDialog();
+        }
+
+        private void btn_brands_Click_1(object sender, EventArgs e)
+        {
+            BrandsForm brandForm = new BrandsForm();
+            brandForm.ShowDialog();
+        }
     }
 }

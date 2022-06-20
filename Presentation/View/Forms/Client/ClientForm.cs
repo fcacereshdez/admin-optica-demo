@@ -113,14 +113,14 @@ namespace Presentation.View.Forms.Client
             ClientController clientController = new ClientController();
             if (dgv_clients.SelectedRows.Count > 0)
             {
-                InvoiceView invoiceView = new InvoiceView();
+                InvoiceViewer invoiceView = new InvoiceViewer();
                 try
                 {
                     invoiceView.dgv_invoices_client.DataSource = clientController.GetInvoiceByClient(Convert.ToInt64(dgv_clients.CurrentRow.Cells[0].Value));
-                    invoiceView.dgv_invoices_client.Columns[0].Width = 25;
+                    invoiceView.dgv_invoices_client.Columns[0].Width = 40;
                     invoiceView.dgv_invoices_client.Columns[1].Width = 75;
                     invoiceView.dgv_invoices_client.Columns[2].Width = 130;
-                    invoiceView.dgv_invoices_client.Columns[3].Width = 100;
+                   // invoiceView.dgv_invoices_client.Columns[3].Width = 100;
                     invoiceView.ShowDialog();
                 }
                 catch (Exception PClients)
@@ -169,6 +169,31 @@ namespace Presentation.View.Forms.Client
 
                     MessageBox.Show("Ocurrión un error al eliminarlo. \n\nError: " + dClients.Message, "Clientes");
                 }
+            }
+        }
+
+        private void btn_view_client_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ClientController clientController = new ClientController();
+                clientController.SelectClientById(dgv_clients.SelectedRows[0].Cells[0].Value.ToString());
+                ClientView clientView = new ClientView();
+                clientView.txt_name_client.Text = Common.Models.Client.name;
+                clientView.txt_lastname_client.Text = Common.Models.Client.lastname;
+                clientView.txt_dui_client.Text = Common.Models.Client.dui;
+                clientView.txt_nit_client.Text = Common.Models.Client.nit;
+                clientView.txt_address_client.Text = Common.Models.Client.address;
+                clientView.txt_phone_client.Text = Common.Models.Client.phone;
+                clientView.txt_secondary_phone_client.Text = Common.Models.Client.secondary_phone;
+                clientView.txt_email_client.Text = Common.Models.Client.email;
+                clientView.txt_notes_client.Text = Common.Models.Client.notes;
+                clientView.txt_id_client.Text = Common.Models.Client.client_id.ToString();
+                clientView.ShowDialog();
+            }
+            catch (Exception SelClient)
+            {
+                MessageBox.Show("Ocurrió un error al seleccionar este cliente. \n\nError: " + SelClient.Message, "Clientes");
             }
         }
     }

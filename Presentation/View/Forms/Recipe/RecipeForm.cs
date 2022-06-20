@@ -99,8 +99,10 @@ namespace Presentation.View.Forms.Recipe
                 recipeCreate.txt_base_oi_recipe.Text = Common.Models.Recipe.base_oi_recipe;
                 recipeCreate.txt_lensometry_notes.Text = Common.Models.Recipe.lensometry_notes;
                 recipeCreate.txt_ring_name.Text = Common.Models.Recipe.ring;
+                recipeCreate.txt_ring_id.Text = Common.Models.Recipe.ring_id.ToString();
                 recipeCreate.txt_glasses_name.Text = Common.Models.Recipe.glasses;
-                recipeCreate.rb_comp.Checked = Common.Models.Recipe.comp;
+            recipeCreate.txt_glasses_id.Text = Common.Models.Recipe.glasses_id.ToString();
+            recipeCreate.rb_comp.Checked = Common.Models.Recipe.comp;
                 recipeCreate.rb_sa.Checked = Common.Models.Recipe.sa;
                 recipeCreate.rb_aa.Checked = Common.Models.Recipe.aa;
                 recipeCreate.cb_ar.Checked = Common.Models.Recipe.ar;
@@ -195,7 +197,88 @@ namespace Presentation.View.Forms.Recipe
 
         private void btn_view_recipe_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Recipe.rdlc y otros componentes no son compatibles con esta versión del Framework .NET", "Recetas");
+            try
+            {
+                recipeController.SelectRecipeById(dgv_recipes.SelectedRows[0].Cells[0].Value.ToString());
+                RecipeView recipeView = new RecipeView();
+                recipeView.lbl_client_name.Text = Common.Models.Recipe.client_name;
+                recipeView.lbl_company_name.Text = Common.Models.Recipe.company_name;
+                recipeView.dtp_date.Value = Convert.ToDateTime(Common.Models.Recipe.date_recipe);
+                recipeView.dgv_recipes.Visible = false;
+                recipeView.txt_esf_od.Text = Common.Models.Recipe.esf_od;
+                recipeView.txt_esf_oi.Text = Common.Models.Recipe.esf_oi;
+                recipeView.txt_cil_od.Text = Common.Models.Recipe.cil_od;
+                recipeView.txt_cil_oi.Text = Common.Models.Recipe.cil_oi;
+                recipeView.txt_eje_od.Text = Common.Models.Recipe.eje_od;
+                recipeView.txt_eje_oi.Text = Common.Models.Recipe.eje_oi;
+                recipeView.txt_adic_od.Text = Common.Models.Recipe.adic_od;
+                recipeView.txt_adic_oi.Text = Common.Models.Recipe.adic_oi;
+                recipeView.txt_esf_od_recipe.Text = Common.Models.Recipe.esf_od_recipe;
+                recipeView.txt_esf_oi_recipe.Text = Common.Models.Recipe.esf_oi_recipe;
+                recipeView.txt_cil_od_recipe.Text = Common.Models.Recipe.cil_od_recipe;
+                recipeView.txt_cil_oi_recipe.Text = Common.Models.Recipe.cil_oi_recipe;
+                recipeView.txt_eje_od_recipe.Text = Common.Models.Recipe.eje_od_recipe;
+                recipeView.txt_eje_oi_recipe.Text = Common.Models.Recipe.eje_oi_recipe;
+                recipeView.txt_adic_od_recipe.Text = Common.Models.Recipe.adic_od_recipe;
+                recipeView.txt_adic_oi_recipe.Text = Common.Models.Recipe.adic_oi_recipe;
+                recipeView.txt_altob_od_recipe.Text = Common.Models.Recipe.altob_od_recipe;
+                recipeView.txt_altob_oi_recipe.Text = Common.Models.Recipe.altob_oi_recipe;
+                recipeView.txt_altpu_od_recipe.Text = Common.Models.Recipe.altpu_od_recipe;
+                recipeView.txt_altpu_oi_recipe.Text = Common.Models.Recipe.altpu_oi_recipe;
+                recipeView.txt_dplej_od_recipe.Text = Common.Models.Recipe.dplej_od_recipe;
+                recipeView.txt_dplej_oi_recipe.Text = Common.Models.Recipe.dplej_oi_recipe;
+                recipeView.txt_dpcer_od_recipe.Text = Common.Models.Recipe.dpcer_od_recipe;
+                recipeView.txt_dpcer_oi_recipe.Text = Common.Models.Recipe.dpcer_oi_recipe;
+                recipeView.txt_base_od_recipe.Text = Common.Models.Recipe.base_od_recipe;
+                recipeView.txt_base_oi_recipe.Text = Common.Models.Recipe.base_oi_recipe;
+                recipeView.txt_lensometry_notes.Text = Common.Models.Recipe.lensometry_notes;
+                recipeView.txt_ring_name.Text = Common.Models.Recipe.ring;
+                recipeView.txt_glasses_name.Text = Common.Models.Recipe.glasses;
+                recipeView.rb_comp.Checked = Common.Models.Recipe.comp;
+                recipeView.rb_sa.Checked = Common.Models.Recipe.sa;
+                recipeView.rb_aa.Checked = Common.Models.Recipe.aa;
+                recipeView.cb_ar.Checked = Common.Models.Recipe.ar;
+                recipeView.cb_process.Checked = Common.Models.Recipe.process;
+                recipeView.txt_quantity.Text = Common.Models.Recipe.quantity.ToString();
+                recipeView.txt_value.Text = Common.Models.Recipe.value.ToString();
+                recipeView.cb_hypertension.Checked = Common.Models.Recipe.hypertension;
+                recipeView.cb_diabetes.Checked = Common.Models.Recipe.diabetes;
+                recipeView.cb_cataract.Checked = Common.Models.Recipe.cataract;
+                recipeView.cb_pterigion.Checked = Common.Models.Recipe.pterigion;
+                recipeView.cb_irritation.Checked = Common.Models.Recipe.irritation;
+                recipeView.cb_sleepiness.Checked = Common.Models.Recipe.sleepiness;
+                recipeView.cb_burning.Checked = Common.Models.Recipe.burning;
+                recipeView.cb_headache.Checked = Common.Models.Recipe.headache;
+                recipeView.cb_itch.Checked = Common.Models.Recipe.itch;
+                recipeView.cb_tearing.Checked = Common.Models.Recipe.tearing;
+                recipeView.txt_eye_movements.Text = Common.Models.Recipe.eye_movementes;
+                recipeView.txt_ophtalmoscopy.Text = Common.Models.Recipe.ophthalmoscopy;
+                recipeView.txt_ocular_abnex.Text = Common.Models.Recipe.eye_adnexa;
+                recipeView.txt_hirsscheberg_test.Text = Common.Models.Recipe.hirsscheberg_test;
+                recipeView.txt_retinoscopy.Text = Common.Models.Recipe.retinoscopy;
+                recipeView.txt_laboratory_name.Text = Common.Models.Recipe.laboratory;
+                recipeView.dtp_shipping.Value = Common.Models.Recipe.shipping_date;
+                recipeView.dtp_admission.Value = Common.Models.Recipe.admission_date;
+                recipeView.dtp_delivery.Value = Common.Models.Recipe.delivery_date;
+                recipeView.txt_optometryst.Text = Common.Models.Recipe.optometryst;
+                recipeView.txt_seller.Text = Common.Models.Recipe.seller;
+                recipeView.txt_age.Text = Common.Models.Recipe.client_age.ToString();
+                recipeView.txt_invoice_laboratory.Text = Common.Models.Recipe.invoice_laboratory;
+                recipeView.txt_date_laboratory.Text = Common.Models.Recipe.date_invoice_laboratory;
+                recipeView.txt_value_invoice_laboratory.Text = Common.Models.Recipe.value_invoice_laboratory;
+                recipeView.txt_laboratory_notes_invoice.Text = Common.Models.Recipe.notes;
+                recipeView.btn_search_clients.Enabled = false;
+                recipeView.btn_search_ring.Enabled = true;
+                recipeView.btn_search_glasses.Enabled = true;
+                recipeView.btn_search_laboratory.Enabled = true;
+                recipeView.btn_search_optometryst.Enabled = true;
+                recipeView.btn_seller_search.Enabled = true;
+                recipeView.ShowDialog();
+            }
+            catch (Exception errRecipe)
+            {
+                MessageBox.Show("Ocurrió un error cuando intentamos cargar esto.\n\nError: " + errRecipe.Message, "Recetas");
+            }
         }
     }
 }

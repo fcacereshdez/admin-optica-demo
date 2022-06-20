@@ -39,11 +39,11 @@ namespace Presentation.View.Forms.Client
             this.label1 = new System.Windows.Forms.Label();
             this.dgv_clients = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_view_client = new System.Windows.Forms.Button();
             this.btn_pay_fee = new System.Windows.Forms.Button();
             this.btn_create_client = new System.Windows.Forms.Button();
             this.btn_delete_client = new System.Windows.Forms.Button();
             this.btn_edit_client = new System.Windows.Forms.Button();
-            this.btn_view_company = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_clients)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -139,7 +139,7 @@ namespace Presentation.View.Forms.Client
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.btn_view_company);
+            this.groupBox1.Controls.Add(this.btn_view_client);
             this.groupBox1.Controls.Add(this.btn_pay_fee);
             this.groupBox1.Controls.Add(this.btn_create_client);
             this.groupBox1.Controls.Add(this.btn_delete_client);
@@ -155,6 +155,24 @@ namespace Presentation.View.Forms.Client
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Funciones";
+            // 
+            // btn_view_client
+            // 
+            this.btn_view_client.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.btn_view_client.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.btn_view_client.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_view_client.ForeColor = System.Drawing.Color.White;
+            this.btn_view_client.Image = global::Presentation.Properties.Resources.icons8_ver_24;
+            this.btn_view_client.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_view_client.Location = new System.Drawing.Point(18, 27);
+            this.btn_view_client.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_view_client.Name = "btn_view_client";
+            this.btn_view_client.Padding = new System.Windows.Forms.Padding(17, 0, 6, 0);
+            this.btn_view_client.Size = new System.Drawing.Size(143, 30);
+            this.btn_view_client.TabIndex = 3;
+            this.btn_view_client.Text = "Ver";
+            this.btn_view_client.UseVisualStyleBackColor = false;
+            this.btn_view_client.Click += new System.EventHandler(this.btn_view_client_Click);
             // 
             // btn_pay_fee
             // 
@@ -228,23 +246,6 @@ namespace Presentation.View.Forms.Client
             this.btn_edit_client.UseVisualStyleBackColor = false;
             this.btn_edit_client.Click += new System.EventHandler(this.btn_edit_client_Click);
             // 
-            // btn_view_company
-            // 
-            this.btn_view_company.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
-            this.btn_view_company.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
-            this.btn_view_company.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_view_company.ForeColor = System.Drawing.Color.White;
-            this.btn_view_company.Image = global::Presentation.Properties.Resources.icons8_ver_24;
-            this.btn_view_company.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_view_company.Location = new System.Drawing.Point(18, 27);
-            this.btn_view_company.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btn_view_company.Name = "btn_view_company";
-            this.btn_view_company.Padding = new System.Windows.Forms.Padding(17, 0, 6, 0);
-            this.btn_view_company.Size = new System.Drawing.Size(143, 30);
-            this.btn_view_company.TabIndex = 3;
-            this.btn_view_company.Text = "Ver";
-            this.btn_view_company.UseVisualStyleBackColor = false;
-            // 
             // ClientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -280,6 +281,6 @@ namespace Presentation.View.Forms.Client
         private System.Windows.Forms.Button btn_delete_client;
         private System.Windows.Forms.Button btn_edit_client;
         private System.Windows.Forms.Button btn_pay_fee;
-        private System.Windows.Forms.Button btn_view_company;
+        private System.Windows.Forms.Button btn_view_client;
     }
 }

@@ -18,6 +18,12 @@ namespace Domain
             return TableInvoices;
         }
 
+        public DataTable SearchlInvoices(string client)
+        {
+            DataTable TableInvoices = new DataTable();
+            TableInvoices = invoiceData.SearchInvoice(client);
+            return TableInvoices;
+        }
         public void InsertInvoice(string firstpayment, string date, string number, string optometryst_id, string recurrency, string seller_id, string manager_id, string recipe_id, string payment_method, string subtotal, string discount, string total, string nfee, string fee, string notes, string fday, string sday)
         {
             invoiceData.InsertInvoice(Convert.ToDecimal(firstpayment), Convert.ToDateTime(date), Convert.ToInt32(number), Convert.ToInt64(optometryst_id),

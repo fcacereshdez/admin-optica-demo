@@ -42,6 +42,7 @@ namespace Presentation.View.Forms.Recipe
             this.btn_delete_recipe = new System.Windows.Forms.Button();
             this.btn_edit_recipe = new System.Windows.Forms.Button();
             this.dgv_recipes = new System.Windows.Forms.DataGridView();
+            this.btn_print_recipe = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_recipes)).BeginInit();
@@ -82,6 +83,7 @@ namespace Presentation.View.Forms.Recipe
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.btn_print_recipe);
             this.groupBox1.Controls.Add(this.btn_view_recipe);
             this.groupBox1.Controls.Add(this.btn_create_recipe);
             this.groupBox1.Controls.Add(this.btn_delete_recipe);
@@ -93,7 +95,7 @@ namespace Presentation.View.Forms.Recipe
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(177, 179);
+            this.groupBox1.Size = new System.Drawing.Size(177, 213);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Funciones";
@@ -219,6 +221,23 @@ namespace Presentation.View.Forms.Recipe
             this.dgv_recipes.Size = new System.Drawing.Size(617, 413);
             this.dgv_recipes.TabIndex = 14;
             // 
+            // btn_print_recipe
+            // 
+            this.btn_print_recipe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.btn_print_recipe.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.btn_print_recipe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_print_recipe.ForeColor = System.Drawing.Color.White;
+            this.btn_print_recipe.Image = global::Presentation.Properties.Resources.icons8_print_24__1_;
+            this.btn_print_recipe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_print_recipe.Location = new System.Drawing.Point(16, 172);
+            this.btn_print_recipe.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_print_recipe.Name = "btn_print_recipe";
+            this.btn_print_recipe.Padding = new System.Windows.Forms.Padding(17, 0, 6, 0);
+            this.btn_print_recipe.Size = new System.Drawing.Size(143, 30);
+            this.btn_print_recipe.TabIndex = 6;
+            this.btn_print_recipe.Text = "Imprimir";
+            this.btn_print_recipe.UseVisualStyleBackColor = false;
+            // 
             // RecipeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -252,5 +271,6 @@ namespace Presentation.View.Forms.Recipe
         private System.Windows.Forms.Button btn_edit_recipe;
         public System.Windows.Forms.DataGridView dgv_recipes;
         private System.Windows.Forms.Button btn_view_recipe;
+        private System.Windows.Forms.Button btn_print_recipe;
     }
 }

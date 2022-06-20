@@ -13,7 +13,7 @@ namespace DataAccess
         private readonly string connectionString;
         public DBConnection()
         {
-            bool DEVELOPMENT_MODE = false;
+            bool DEVELOPMENT_MODE = true;
             string server, user, password, database;
 
             if (DEVELOPMENT_MODE == true)

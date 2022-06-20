@@ -44,7 +44,7 @@
   <xs:element name="SalesByOptometrist" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="SalesByOptometrist" msprop:Generator_UserDSName="SalesByOptometrist">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="ReportByOptometrist" msprop:Generator_TableClassName="ReportByOptometristDataTable" msprop:Generator_TableVarName="tableReportByOptometrist" msprop:Generator_TablePropName="ReportByOptometrist" msprop:Generator_RowDeletingName="ReportByOptometristRowDeleting" msprop:Generator_RowChangingName="ReportByOptometristRowChanging" msprop:Generator_RowEvHandlerName="ReportByOptometristRowChangeEventHandler" msprop:Generator_RowDeletedName="ReportByOptometristRowDeleted" msprop:Generator_UserTableName="ReportByOptometrist" msprop:Generator_RowChangedName="ReportByOptometristRowChanged" msprop:Generator_RowEvArgName="ReportByOptometristRowChangeEvent" msprop:Generator_RowClassName="ReportByOptometristRow">
+        <xs:element name="ReportByOptometrist" msprop:Generator_TableClassName="ReportByOptometristDataTable" msprop:Generator_TableVarName="tableReportByOptometrist" msprop:Generator_RowChangedName="ReportByOptometristRowChanged" msprop:Generator_TablePropName="ReportByOptometrist" msprop:Generator_RowDeletingName="ReportByOptometristRowDeleting" msprop:Generator_RowChangingName="ReportByOptometristRowChanging" msprop:Generator_RowEvHandlerName="ReportByOptometristRowChangeEventHandler" msprop:Generator_RowDeletedName="ReportByOptometristRowDeleted" msprop:Generator_RowClassName="ReportByOptometristRow" msprop:Generator_UserTableName="ReportByOptometrist" msprop:Generator_RowEvArgName="ReportByOptometristRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="OPTOMETRA" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnOPTOMETRA" msprop:Generator_ColumnPropNameInRow="OPTOMETRA" msprop:Generator_ColumnPropNameInTable="OPTOMETRAColumn" msprop:Generator_UserColumnName="OPTOMETRA" minOccurs="0">
@@ -75,6 +75,7 @@
               <xs:element name="COUTA" msprop:Generator_ColumnVarNameInTable="columnCOUTA" msprop:Generator_ColumnPropNameInRow="COUTA" msprop:Generator_ColumnPropNameInTable="COUTAColumn" msprop:Generator_UserColumnName="COUTA" type="xs:decimal" minOccurs="0" />
               <xs:element name="PAGOS" msprop:Generator_ColumnVarNameInTable="columnPAGOS" msprop:Generator_ColumnPropNameInRow="PAGOS" msprop:Generator_ColumnPropNameInTable="PAGOSColumn" msprop:Generator_UserColumnName="PAGOS" type="xs:int" minOccurs="0" />
               <xs:element name="RECURRENCIA" msprop:Generator_ColumnVarNameInTable="columnRECURRENCIA" msprop:Generator_ColumnPropNameInRow="RECURRENCIA" msprop:Generator_ColumnPropNameInTable="RECURRENCIAColumn" msprop:Generator_UserColumnName="RECURRENCIA" type="xs:int" minOccurs="0" />
+              <xs:element name="FECHA" msprop:Generator_ColumnVarNameInTable="columnFECHA" msprop:Generator_ColumnPropNameInRow="FECHA" msprop:Generator_ColumnPropNameInTable="FECHAColumn" msprop:Generator_UserColumnName="FECHA" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

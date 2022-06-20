@@ -21,6 +21,8 @@ using Presentation.View.Forms.Recipe;
 using Presentation.View.Forms.Home;
 using Presentation.View.Forms.User;
 using Presentation.View.Forms.Invoice;
+using Presentation.View.Forms.Updates;
+using System.Deployment.Application;
 
 // añadir ajustes en la interfaz inicial
 
@@ -45,7 +47,18 @@ namespace Presentation
         private void LoadSystemInfo()
         {
             lbl_name_pc.Text = Environment.MachineName;
-            lbl_version_sw.Text = "v" + System.Reflection.Assembly.GetEntryAssembly().GetName().Version.ToString();
+            string strVersion;
+           
+            if (ApplicationDeployment.IsNetworkDeployed)
+            {
+                strVersion = "v" + ApplicationDeployment.CurrentDeployment.CurrentVersion.ToString();
+            }
+            else
+            {
+                strVersion = "v" + Application.ProductVersion.ToString();
+            }
+
+            lbl_version_sw.Text = strVersion;
 
         }
         private void LoadUserData()
@@ -269,6 +282,16 @@ namespace Presentation
             LoadSystemInfo();
             LoadUserData();
             PolicyFunctionsForUsers(UserCache.slug_role);
+
+            UpdateController updateController = new UpdateController();
+            updateController.SearchRecentUpdate();
+
+            if (Common.Models.Update.id_version != 0)
+            {
+                UpdatesForm updatesForm = new UpdatesForm();
+                updatesForm.ShowDialog();
+            }
+
             pnl_menu.AutoScroll = false;
             pnl_menu.HorizontalScroll.Enabled = false;
             pnl_menu.HorizontalScroll.Visible = false;
@@ -291,6 +314,11 @@ namespace Presentation
             {
                 this.WindowState = FormWindowState.Maximized;
             }
+        }
+
+        private void btn_system_information_Click(object sender, EventArgs e)
+        {
+            ShowForm(new AboutForm());
         }
     }
 }

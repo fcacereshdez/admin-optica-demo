@@ -44,7 +44,7 @@
   <xs:element name="SalesByManager" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="SalesByManager" msprop:Generator_UserDSName="SalesByManager">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="ReportByManager" msprop:Generator_TableClassName="ReportByManagerDataTable" msprop:Generator_TableVarName="tableReportByManager" msprop:Generator_TablePropName="ReportByManager" msprop:Generator_RowDeletingName="ReportByManagerRowDeleting" msprop:Generator_RowChangingName="ReportByManagerRowChanging" msprop:Generator_RowEvHandlerName="ReportByManagerRowChangeEventHandler" msprop:Generator_RowDeletedName="ReportByManagerRowDeleted" msprop:Generator_UserTableName="ReportByManager" msprop:Generator_RowChangedName="ReportByManagerRowChanged" msprop:Generator_RowEvArgName="ReportByManagerRowChangeEvent" msprop:Generator_RowClassName="ReportByManagerRow">
+        <xs:element name="ReportByManager" msprop:Generator_TableClassName="ReportByManagerDataTable" msprop:Generator_TableVarName="tableReportByManager" msprop:Generator_RowChangedName="ReportByManagerRowChanged" msprop:Generator_TablePropName="ReportByManager" msprop:Generator_RowDeletingName="ReportByManagerRowDeleting" msprop:Generator_RowChangingName="ReportByManagerRowChanging" msprop:Generator_RowEvHandlerName="ReportByManagerRowChangeEventHandler" msprop:Generator_RowDeletedName="ReportByManagerRowDeleted" msprop:Generator_RowClassName="ReportByManagerRow" msprop:Generator_UserTableName="ReportByManager" msprop:Generator_RowEvArgName="ReportByManagerRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="OPTOMETRA" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnOPTOMETRA" msprop:Generator_ColumnPropNameInRow="OPTOMETRA" msprop:Generator_ColumnPropNameInTable="OPTOMETRAColumn" msprop:Generator_UserColumnName="OPTOMETRA" minOccurs="0">
@@ -75,6 +75,7 @@
               <xs:element name="COUTA" msprop:Generator_ColumnVarNameInTable="columnCOUTA" msprop:Generator_ColumnPropNameInRow="COUTA" msprop:Generator_ColumnPropNameInTable="COUTAColumn" msprop:Generator_UserColumnName="COUTA" type="xs:decimal" minOccurs="0" />
               <xs:element name="PAGOS" msprop:Generator_ColumnVarNameInTable="columnPAGOS" msprop:Generator_ColumnPropNameInRow="PAGOS" msprop:Generator_ColumnPropNameInTable="PAGOSColumn" msprop:Generator_UserColumnName="PAGOS" type="xs:int" minOccurs="0" />
               <xs:element name="RECURRENCIA" msprop:Generator_ColumnVarNameInTable="columnRECURRENCIA" msprop:Generator_ColumnPropNameInRow="RECURRENCIA" msprop:Generator_ColumnPropNameInTable="RECURRENCIAColumn" msprop:Generator_UserColumnName="RECURRENCIA" type="xs:int" minOccurs="0" />
+              <xs:element name="FECHA" msprop:Generator_ColumnVarNameInTable="columnFECHA" msprop:Generator_ColumnPropNameInRow="FECHA" msprop:Generator_ColumnPropNameInTable="FECHAColumn" msprop:Generator_UserColumnName="FECHA" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

@@ -42,7 +42,7 @@ namespace Presentation.View.Forms.Invoice
 
         private void txt_search_company_TextChanged(object sender, EventArgs e)
         {
-
+            dgv_invoices.DataSource = invoiceController.SearchlInvoices(txt_search_invoice.Text);
         }
 
         private void InsertAction(string action)
@@ -94,7 +94,18 @@ namespace Presentation.View.Forms.Invoice
 
         private void btn_view_invoice_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Invoice.rdlc y otros componentes no son compatibles con esta versión del Framework .NET", "Facturación");
+            try
+            {
+                invoiceController.SelecInvoiceById(dgv_invoices.SelectedRows[0].Cells[0].Value.ToString());
+                InvoiceView invoiceView = new InvoiceView();
+                invoiceView.dgv_products.DataSource = invoiceController.SelectInvoiceDetails(dgv_invoices.SelectedRows[0].Cells[0].Value.ToString());
+                invoiceView.FormClosed += new FormClosedEventHandler(InvoiceCreate_FormClosed);
+                invoiceView.ShowDialog();
+            }
+            catch (Exception errInvoice)
+            {
+                MessageBox.Show("Ocurrió un error mientras intentabamos mostrar esto.\n\nError: " + errInvoice.Message, "Facturación");
+            }
         }
     }
 }

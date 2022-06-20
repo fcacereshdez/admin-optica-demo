@@ -22,12 +22,15 @@ namespace Presentation.View.Forms.About
         private void AboutForm_Load(object sender, EventArgs e)
         {
             LoadAction();
+            Dock = DockStyle.Fill;
         }
 
         private void LoadAction()
         {
             UserController userController = new UserController();
             userController.InsertActionsUser(UserCache.name + " " + UserCache.lastname + " revisó la información del sistema", Environment.MachineName, "127.0.0.1", UserCache.user_id, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+
         }
+
     }
 }

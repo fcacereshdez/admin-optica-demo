@@ -60,18 +60,18 @@ namespace Presentation.View.Forms.Payment
             this.txt_invoice_id = new System.Windows.Forms.TextBox();
             this.lbl_error = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.txt_ccf = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txt_check = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txt_pay_note = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.txt_ref_bank = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.cmb_bank = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.cmb_method_payment = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txt_pay_note = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txt_check = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.txt_ccf = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.pnl_top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_close_payment)).BeginInit();
@@ -399,7 +399,6 @@ namespace Presentation.View.Forms.Payment
             this.txt_invoice_id.Name = "txt_invoice_id";
             this.txt_invoice_id.Size = new System.Drawing.Size(86, 25);
             this.txt_invoice_id.TabIndex = 35;
-            this.txt_invoice_id.Visible = false;
             // 
             // lbl_error
             // 
@@ -435,6 +434,57 @@ namespace Presentation.View.Forms.Payment
             this.groupBox4.TabIndex = 39;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Información del abono";
+            // 
+            // txt_ccf
+            // 
+            this.txt_ccf.Location = new System.Drawing.Point(90, 197);
+            this.txt_ccf.Name = "txt_ccf";
+            this.txt_ccf.Size = new System.Drawing.Size(117, 25);
+            this.txt_ccf.TabIndex = 46;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(8, 200);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(54, 17);
+            this.label14.TabIndex = 45;
+            this.label14.Text = "N° CCF:";
+            // 
+            // txt_check
+            // 
+            this.txt_check.Location = new System.Drawing.Point(90, 166);
+            this.txt_check.Name = "txt_check";
+            this.txt_check.Size = new System.Drawing.Size(117, 25);
+            this.txt_check.TabIndex = 44;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(8, 169);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(77, 17);
+            this.label13.TabIndex = 43;
+            this.label13.Text = "N° Cheque:";
+            // 
+            // txt_pay_note
+            // 
+            this.txt_pay_note.Location = new System.Drawing.Point(110, 135);
+            this.txt_pay_note.Name = "txt_pay_note";
+            this.txt_pay_note.Size = new System.Drawing.Size(97, 25);
+            this.txt_pay_note.TabIndex = 42;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(8, 138);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(104, 17);
+            this.label12.TabIndex = 41;
+            this.label12.Text = "Nota de abono:";
             // 
             // txt_ref_bank
             // 
@@ -488,57 +538,6 @@ namespace Presentation.View.Forms.Payment
             this.label1.Size = new System.Drawing.Size(64, 17);
             this.label1.TabIndex = 35;
             this.label1.Text = "Método: ";
-            // 
-            // txt_pay_note
-            // 
-            this.txt_pay_note.Location = new System.Drawing.Point(110, 135);
-            this.txt_pay_note.Name = "txt_pay_note";
-            this.txt_pay_note.Size = new System.Drawing.Size(97, 25);
-            this.txt_pay_note.TabIndex = 42;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(8, 138);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(104, 17);
-            this.label12.TabIndex = 41;
-            this.label12.Text = "Nota de abono:";
-            // 
-            // txt_check
-            // 
-            this.txt_check.Location = new System.Drawing.Point(90, 166);
-            this.txt_check.Name = "txt_check";
-            this.txt_check.Size = new System.Drawing.Size(117, 25);
-            this.txt_check.TabIndex = 44;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(8, 169);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(77, 17);
-            this.label13.TabIndex = 43;
-            this.label13.Text = "N° Cheque:";
-            // 
-            // txt_ccf
-            // 
-            this.txt_ccf.Location = new System.Drawing.Point(90, 197);
-            this.txt_ccf.Name = "txt_ccf";
-            this.txt_ccf.Size = new System.Drawing.Size(117, 25);
-            this.txt_ccf.TabIndex = 46;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(8, 200);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(54, 17);
-            this.label14.TabIndex = 45;
-            this.label14.Text = "N° CCF:";
             // 
             // groupBox3
             // 

@@ -53,16 +53,35 @@ namespace Domain
             DataSetSalesOptometrist = reportData.SelectSalesByOptometrist(from, to);
             return DataSetSalesOptometrist;
         }
+        public DataTable SelectAllSalesByOptometristAll()
+        {
+            DataTable DataSetSalesOptometrist = new DataTable();
+            DataSetSalesOptometrist = reportData.SelectSalesByOptometristAll();
+            return DataSetSalesOptometrist;
+        }
         public DataTable SelectAllSalesByConsultant(string from, string to)
         {
             DataTable DataSetSalesConsultant = new DataTable();
             DataSetSalesConsultant = reportData.SelectSalesByConsultant(from, to);
             return DataSetSalesConsultant;
         }
+        public DataTable SelectAllSalesByConsultantAll()
+        {
+            DataTable DataSetSalesConsultant = new DataTable();
+            DataSetSalesConsultant = reportData.SelectSalesByConsultantAll();
+            return DataSetSalesConsultant;
+        }
         public DataTable SelectAllSalesByManager(string from, string to)
         {
             DataTable DataSetSalesManager = new DataTable();
             DataSetSalesManager = reportData.SelectSalesByManager(from, to);
+            return DataSetSalesManager;
+        }
+
+        public DataTable SelectAllSalesByManagerAll()
+        {
+            DataTable DataSetSalesManager = new DataTable();
+            DataSetSalesManager = reportData.SelectSalesByManagerAll();
             return DataSetSalesManager;
         }
 

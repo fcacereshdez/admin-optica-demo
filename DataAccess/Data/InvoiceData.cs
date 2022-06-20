@@ -30,6 +30,26 @@ namespace DataAccess.Data
             }
         }
 
+        public DataTable SearchInvoice(string client)
+        {
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                using (var cmd = new SqlCommand())
+                {
+                    cmd.Connection = conn;
+                    cmd.CommandText = "SearchInvoice";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@client", client);
+                    SqlDataReader ReaderInvoices = cmd.ExecuteReader();
+                    DataTable TableInvoices = new DataTable();
+                    TableInvoices.Load(ReaderInvoices);
+                    conn.Close();
+                    return TableInvoices;
+                }
+            }
+        }
+
         public void InsertInvoice(decimal firstpayment, DateTime date, int number, Int64 optometryst_id, int recurrency, Int64 seller_id, Int64 manager_id, Int64 recipe_id, Int64 payment_method, decimal subtotal, decimal discount, decimal total, int n_fee, decimal fee, string notes, string fday, string sday)
         {
             using (var conn = GetConnection())

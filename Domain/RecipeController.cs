@@ -100,7 +100,7 @@ string dpcer_oi_recipe, string base_od_recipe, string base_oi_recipe, string len
 string ar, string process, string quantity, string value, string hypertension, string diabetes, string cataract, string pterigion, string irritation,
 string sleepiness, string burning, string headache, string itch, string tearing, string eye_movementes, string ophthalmoscopy, string eye_adnexa,
 string hirsscheberg_test, string retinoscopy, string shipping_date, string admission_date, string delivery_date,
-string age, string invoice_laboratory, string date_invoice_laboratory, string value_invoice_laboratory, string notes
+string age, string invoice_laboratory, string date_invoice_laboratory, string value_invoice_laboratory, string notes, string ring, string glasses
            )
         {
             recipeData.UpdateRecipe(Convert.ToDateTime(date_recipe), esf_od, esf_oi, cil_od, cil_oi, eje_od, eje_oi, adic_od, adic_oi,
@@ -138,7 +138,10 @@ string age, string invoice_laboratory, string date_invoice_laboratory, string va
                   invoice_laboratory,
                   date_invoice_laboratory,
                   value_invoice_laboratory,
-                  notes);
+                  notes,
+                  Convert.ToInt64(ring),
+                  Convert.ToInt64(glasses)
+                  );
         }
 
         public void DeleteRecipe (string recipe_id)

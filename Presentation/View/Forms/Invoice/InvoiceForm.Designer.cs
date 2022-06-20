@@ -35,9 +35,10 @@ namespace Presentation.View.Forms.Invoice
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InvoiceForm));
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.txt_search_company = new System.Windows.Forms.TextBox();
+            this.txt_search_invoice = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_print_invoice = new System.Windows.Forms.Button();
             this.btn_view_invoice = new System.Windows.Forms.Button();
             this.btn_create_invoice = new System.Windows.Forms.Button();
             this.btn_delete_invoice = new System.Windows.Forms.Button();
@@ -52,7 +53,7 @@ namespace Presentation.View.Forms.Invoice
             // 
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox3.Controls.Add(this.txt_search_company);
+            this.groupBox3.Controls.Add(this.txt_search_invoice);
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Location = new System.Drawing.Point(208, 18);
             this.groupBox3.Name = "groupBox3";
@@ -60,15 +61,15 @@ namespace Presentation.View.Forms.Invoice
             this.groupBox3.TabIndex = 17;
             this.groupBox3.TabStop = false;
             // 
-            // txt_search_company
+            // txt_search_invoice
             // 
-            this.txt_search_company.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txt_search_invoice.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_search_company.Location = new System.Drawing.Point(61, 18);
-            this.txt_search_company.Name = "txt_search_company";
-            this.txt_search_company.Size = new System.Drawing.Size(550, 23);
-            this.txt_search_company.TabIndex = 1;
-            this.txt_search_company.TextChanged += new System.EventHandler(this.txt_search_company_TextChanged);
+            this.txt_search_invoice.Location = new System.Drawing.Point(61, 18);
+            this.txt_search_invoice.Name = "txt_search_invoice";
+            this.txt_search_invoice.Size = new System.Drawing.Size(550, 23);
+            this.txt_search_invoice.TabIndex = 1;
+            this.txt_search_invoice.TextChanged += new System.EventHandler(this.txt_search_company_TextChanged);
             // 
             // label1
             // 
@@ -83,6 +84,7 @@ namespace Presentation.View.Forms.Invoice
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.btn_print_invoice);
             this.groupBox1.Controls.Add(this.btn_view_invoice);
             this.groupBox1.Controls.Add(this.btn_create_invoice);
             this.groupBox1.Controls.Add(this.btn_delete_invoice);
@@ -94,10 +96,27 @@ namespace Presentation.View.Forms.Invoice
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(177, 186);
+            this.groupBox1.Size = new System.Drawing.Size(177, 223);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Funciones";
+            // 
+            // btn_print_invoice
+            // 
+            this.btn_print_invoice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.btn_print_invoice.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.btn_print_invoice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_print_invoice.ForeColor = System.Drawing.Color.White;
+            this.btn_print_invoice.Image = global::Presentation.Properties.Resources.icons8_print_24__1_;
+            this.btn_print_invoice.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_print_invoice.Location = new System.Drawing.Point(17, 178);
+            this.btn_print_invoice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_print_invoice.Name = "btn_print_invoice";
+            this.btn_print_invoice.Padding = new System.Windows.Forms.Padding(17, 0, 6, 0);
+            this.btn_print_invoice.Size = new System.Drawing.Size(143, 30);
+            this.btn_print_invoice.TabIndex = 5;
+            this.btn_print_invoice.Text = "Imprimir";
+            this.btn_print_invoice.UseVisualStyleBackColor = false;
             // 
             // btn_view_invoice
             // 
@@ -245,7 +264,7 @@ namespace Presentation.View.Forms.Invoice
 
         #endregion
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox txt_search_company;
+        private System.Windows.Forms.TextBox txt_search_invoice;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btn_create_invoice;
@@ -253,5 +272,6 @@ namespace Presentation.View.Forms.Invoice
         private System.Windows.Forms.Button btn_edit_invoice;
         public System.Windows.Forms.DataGridView dgv_invoices;
         private System.Windows.Forms.Button btn_view_invoice;
+        private System.Windows.Forms.Button btn_print_invoice;
     }
 }

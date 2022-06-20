@@ -256,7 +256,7 @@ bool comp, bool sa, bool aa,
 bool ar, bool process, int quantity, string value, bool hypertension, bool diabetes, bool cataract, bool pterigion, bool irritation,
 bool sleepiness, bool burning, bool headache, bool itch, bool tearing, string eye_movementes, string ophthalmoscopy, string eye_adnexa,
 string hirsscheberg_test, string retinoscopy, DateTime shipping_date, DateTime admission_date, DateTime delivery_date,
-Int32 age, string invoice_laboratory, string date_invoice_laboratory, string value_invoice_laboratory, string notes
+Int32 age, string invoice_laboratory, string date_invoice_laboratory, string value_invoice_laboratory, string notes, Int64 ring, Int64 glasses
 
             )
         {
@@ -326,10 +326,11 @@ Int32 age, string invoice_laboratory, string date_invoice_laboratory, string val
                     cmd.Parameters.AddWithValue("@date_invoice_laboratory", date_invoice_laboratory);
                     cmd.Parameters.AddWithValue("@value_invoice_laboratory", value_invoice_laboratory);
                     cmd.Parameters.AddWithValue("@notes", notes);
+                    cmd.Parameters.AddWithValue("@ring", ring);
+                    cmd.Parameters.AddWithValue("@glasses", glasses);
                     cmd.Parameters.AddWithValue("@recipe_id", Recipe.recipe_id);
                     cmd.ExecuteNonQuery();
                     conn.Close();
-
                 }
             }
         }
