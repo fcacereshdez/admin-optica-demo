@@ -152,5 +152,11 @@ namespace Presentation.View.Forms
         {
             MessageBox.Show("Informe marcado como [En desarrollo].\n\nEstado: Añadiendo procesador de datos.");
         }
+
+        private void btn_transactions_by_client_Click(object sender, EventArgs e)
+        {
+            GetAllTransactionsByClientParams getAllTransactionsByClientParams = new GetAllTransactionsByClientParams();
+            getAllTransactionsByClientParams.ShowDialog();
+        }
     }
 }

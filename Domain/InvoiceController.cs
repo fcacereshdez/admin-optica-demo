@@ -62,5 +62,10 @@ namespace Domain
         {
             invoiceData.UpdateDetailInvoice(Convert.ToInt64(id), Convert.ToInt32(quantity), Convert.ToDecimal(value), Convert.ToDecimal(total));
         }
+
+        public void SumSalesDay()
+        {
+            invoiceData.SumSalesDay(DateTime.Now.ToString("yyyy-MM-dd"));
+        }
     }
 }

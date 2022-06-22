@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.Deployment.Application;
 using System.Net;
 using Common.Cache;
 using Domain;
@@ -22,7 +23,10 @@ using Presentation.View.Forms.Home;
 using Presentation.View.Forms.User;
 using Presentation.View.Forms.Invoice;
 using Presentation.View.Forms.Updates;
-using System.Deployment.Application;
+using Presentation.View.Forms.Bank;
+using Presentation.View.Forms.IVA;
+using Presentation.View.Forms.Shipping;
+using Presentation.View.Forms.Keygen;
 
 // añadir ajustes en la interfaz inicial
 
@@ -194,7 +198,7 @@ namespace Presentation
 
         private void btn_shipping_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Este servicio no ha sido habilitado", "Entregas", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            ShowForm(new ShippingForm());
         }
 
         private void btn_about_info_Click(object sender, EventArgs e)
@@ -256,12 +260,12 @@ namespace Presentation
 
         private void btn_banks_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Gestor de bancos en desarollo");
+            ShowForm(new BankForm());
         }
 
         private void btn_iva_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Gestor de IVA en desarollo");
+            ShowForm(new IVAForm());
         }
 
         private void pcb_maximize_Click(object sender, EventArgs e)
@@ -319,6 +323,17 @@ namespace Presentation
         private void btn_system_information_Click(object sender, EventArgs e)
         {
             ShowForm(new AboutForm());
+        }
+
+        private void btn_home_Click(object sender, EventArgs e)
+        {
+            ShowForm(new AdminForm());
+        }
+
+        private void pb_keygen_Click(object sender, EventArgs e)
+        {
+            FormKey formKey = new FormKey();
+            formKey.ShowDialog();
         }
     }
 }

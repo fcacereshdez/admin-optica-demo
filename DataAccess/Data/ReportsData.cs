@@ -187,5 +187,25 @@ namespace DataAccess.Data
                 }
             }
         }
+
+        public DataTable GetAllTransactionsByClient(Int64 client_id)
+        {
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                using (var cmd = new SqlCommand())
+                {
+                    cmd.Connection = conn;
+                    cmd.CommandText = "GetAllTransactionsByClient";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@client", client_id);     
+                    SqlDataReader ReaderTransactions = cmd.ExecuteReader();
+                    DataTable TableTransactions = new DataTable();
+                    TableTransactions.Load(ReaderTransactions);
+                    conn.Close();
+                    return TableTransactions;
+                }
+            }
+        }
     }
 }

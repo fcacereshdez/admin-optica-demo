@@ -33,6 +33,7 @@ namespace Presentation.View.Forms.Invoice
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InvoiceViewer));
             this.pnl_top = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.pcb_close_invoice_client = new System.Windows.Forms.PictureBox();
@@ -197,9 +198,10 @@ namespace Presentation.View.Forms.Invoice
             this.Controls.Add(this.dgv_invoices_client);
             this.Controls.Add(this.pnl_top);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "InvoiceViewer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "InvoiceView";
+            this.Text = "Selector de facturas";
             this.Load += new System.EventHandler(this.InvoiceViewer_Load);
             this.pnl_top.ResumeLayout(false);
             this.pnl_top.PerformLayout();

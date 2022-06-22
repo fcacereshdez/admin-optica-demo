@@ -100,7 +100,7 @@ namespace DataAccess.Data
                     {
                         while (reader.Read())
                         {
-                            ClientCache.countClients = reader.GetInt32(0);
+                            HomeCache.count_clients = reader.GetInt32(0);
                         }
                     }
                 }

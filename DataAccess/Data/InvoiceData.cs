@@ -1,4 +1,5 @@
-﻿using Common.Models;
+﻿using Common.Cache;
+using Common.Models;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -231,6 +232,37 @@ namespace DataAccess.Data
                     cmd.Parameters.AddWithValue("@total", total);
                     cmd.ExecuteNonQuery();
                     conn.Close();
+                }
+            }
+        }
+
+        public void SumSalesDay(string date)
+        {
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                using (var cmd = new SqlCommand())
+                {
+                    cmd.Connection = conn;
+                    cmd.CommandText = "SumSalesDay";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@day", date);
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            
+                            if (reader.GetValue(0) == DBNull.Value)
+                            {
+                                HomeCache.sum_sales_day = 0;
+                            }
+                            else
+                            {
+                                HomeCache.sum_sales_day = reader.GetDecimal(0);
+                            }
+                        }
+                    }
                 }
             }
         }

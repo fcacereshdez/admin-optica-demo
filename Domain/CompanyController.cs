@@ -61,5 +61,10 @@ namespace Domain
             TableClients = clientAccountData.GetClientsByCompany(company_id);
             return TableClients;
         }
+
+        public void CountCompanies()
+        {
+            companyData.CountCompanies();
+        }
     }
 }

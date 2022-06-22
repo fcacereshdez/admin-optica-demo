@@ -237,5 +237,26 @@ namespace DataAccess
             }
         }
 
+        public void CountCompanies()
+        {
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+                using (var cmd = new SqlCommand())
+                {
+                    cmd.Connection = conn;
+                    cmd.CommandText = "CountCompanies";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            HomeCache.count_companies = reader.GetInt32(0);
+                        }
+                    }
+                }
+            }
+        }
     }
 }

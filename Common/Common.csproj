@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cache\ClientCache.cs" />
+    <Compile Include="Cache\HomeCache.cs" />
     <Compile Include="Cache\UserCache.cs" />
     <Compile Include="Models\Bank.cs" />
     <Compile Include="Models\Claim.cs" />

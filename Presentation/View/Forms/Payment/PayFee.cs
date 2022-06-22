@@ -45,7 +45,7 @@ namespace Presentation.View.Forms.Payment
             {
                 try
                 {
-                    clientController.PayInovice(cmb_method_payment.SelectedValue.ToString(), txt_amount.Text, cmb_bank.SelectedValue.ToString(), txt_ref_bank.Text, txt_pay_note.Text, txt_check.Text, txt_ccf.Text, txt_invoice_id.Text);
+                    clientController.PayInovice(cmb_method_payment.SelectedValue.ToString(), txt_amount.Text, cmb_bank.SelectedValue.ToString(), txt_ref_bank.Text, txt_pay_note.Text, txt_check.Text, txt_ccf.Text, txt_invoice_id.Text, dtp_payment.Value.ToString("yyyy-MM-dd"));
                     MessageBox.Show("Abono aplicado", "Abonos", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     InsertAction("abonó " + txt_amount.Text + " al cliente " + lbl_client_name.Text + " en la factura " + lbl_invoice.Text);
                     this.Close();
@@ -60,13 +60,15 @@ namespace Presentation.View.Forms.Payment
         private void LoadCommonData()
         {
             cmb_bank.DataSource = commonController.SelectAllBank();
-            cmb_bank.DisplayMember = "bank_name";
-            cmb_bank.ValueMember = "bank_id";
+            cmb_bank.DisplayMember = "BANCO";
+            cmb_bank.ValueMember = "ID";
 
             cmb_method_payment.DataSource = commonController.SelectAllPaymentMethod();
             cmb_method_payment.DisplayMember = "payment_method";
             cmb_method_payment.ValueMember = "payment_method_id";
             cmb_method_payment.SelectedValue = 1;
+
+          //  lbl_payment_pending.Text = "$" + (Convert.ToDecimal(Common.Models.ClientAccount.invoice_total) - Common.Models.ClientAccount.balance).ToString();
         }
 
         private void InsertAction(string action)

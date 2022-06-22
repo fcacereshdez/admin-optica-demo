@@ -38,7 +38,6 @@ namespace Presentation.View.Forms
             this.btn_products = new System.Windows.Forms.Button();
             this.btn_product_movements = new System.Windows.Forms.Button();
             this.btn_companies = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.btn_sales_by_manager = new System.Windows.Forms.Button();
             this.btn_sales_by_consultant = new System.Windows.Forms.Button();
@@ -50,6 +49,7 @@ namespace Presentation.View.Forms
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.btn_transactions_by_client = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox7.SuspendLayout();
@@ -199,21 +199,6 @@ namespace Presentation.View.Forms
             this.btn_companies.UseVisualStyleBackColor = false;
             this.btn_companies.Click += new System.EventHandler(this.btn_companies_Click);
             // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(231, 24);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(222, 30);
-            this.button3.TabIndex = 30;
-            this.button3.Text = "Estados de cuenta por Empresa";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.btn_audit_actions_users);
@@ -319,8 +304,8 @@ namespace Presentation.View.Forms
             // 
             // groupBox8
             // 
+            this.groupBox8.Controls.Add(this.btn_transactions_by_client);
             this.groupBox8.Controls.Add(this.btn_client_status_all);
-            this.groupBox8.Controls.Add(this.button3);
             this.groupBox8.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox8.Location = new System.Drawing.Point(12, 100);
             this.groupBox8.Name = "groupBox8";
@@ -376,6 +361,22 @@ namespace Presentation.View.Forms
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btn_transactions_by_client
+            // 
+            this.btn_transactions_by_client.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.btn_transactions_by_client.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.btn_transactions_by_client.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_transactions_by_client.ForeColor = System.Drawing.Color.White;
+            this.btn_transactions_by_client.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_transactions_by_client.Location = new System.Drawing.Point(231, 24);
+            this.btn_transactions_by_client.Name = "btn_transactions_by_client";
+            this.btn_transactions_by_client.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btn_transactions_by_client.Size = new System.Drawing.Size(219, 30);
+            this.btn_transactions_by_client.TabIndex = 33;
+            this.btn_transactions_by_client.Text = "Transacciones por Cliente";
+            this.btn_transactions_by_client.UseVisualStyleBackColor = false;
+            this.btn_transactions_by_client.Click += new System.EventHandler(this.btn_transactions_by_client_Click);
+            // 
             // SelectorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -412,7 +413,6 @@ namespace Presentation.View.Forms
         private System.Windows.Forms.Button btn_products;
         private System.Windows.Forms.Button btn_product_movements;
         private System.Windows.Forms.Button btn_companies;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Button btn_sales_by_optometrist;
         private System.Windows.Forms.Button btn_sales_by_manager;
@@ -425,5 +425,6 @@ namespace Presentation.View.Forms
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button5;
+        public System.Windows.Forms.Button btn_transactions_by_client;
     }
 }

@@ -58,6 +58,8 @@ namespace DataAccess.Data
                             ClientAccount.balance = reader.GetDecimal(7);
                             ClientAccount.last_payment = reader.GetDateTime(8);
                             ClientAccount.fee = reader.GetDecimal(9);
+                            ClientAccount.accumulated = reader.GetDecimal(10);
+                            ClientAccount.last_payment = reader.GetDateTime(11);
                         }
                     }
                 }

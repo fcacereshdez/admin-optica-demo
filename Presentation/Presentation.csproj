@@ -31,7 +31,7 @@
     <PublisherName>Mango Studios</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationRevision>9</ApplicationRevision>
     <ApplicationVersion>11.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -168,6 +168,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SalesByManager.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Datasets\GetAllTransactionsByClient.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GetAllTransactionsByClient.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -187,6 +192,18 @@
     </Compile>
     <Compile Include="View\Forms\About\AboutForm.Designer.cs">
       <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\Bank\BankEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Bank\BankEdit.Designer.cs">
+      <DependentUpon>BankEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\Bank\BankCreate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Bank\BankCreate.Designer.cs">
+      <DependentUpon>BankCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Forms\Bank\BankForm.cs">
       <SubType>Form</SubType>
@@ -278,12 +295,6 @@
     <Compile Include="View\Forms\Home\AdminForm.Designer.cs">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Forms\Home\SellerForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Forms\Home\SellerForm.Designer.cs">
-      <DependentUpon>SellerForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\Forms\Invoice\InvoiceView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -337,6 +348,12 @@
     </Compile>
     <Compile Include="View\Forms\IVA\IVAForm.Designer.cs">
       <DependentUpon>IVAForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\Keygen\FormKey.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Keygen\FormKey.Designer.cs">
+      <DependentUpon>FormKey.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Forms\Laboratory\LaboratoryCreate.cs">
       <SubType>Form</SubType>
@@ -446,6 +463,12 @@
     <Compile Include="View\Forms\Reports\SalesByClient.Designer.cs">
       <DependentUpon>SalesByClient.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Forms\Reports\GetAllTransactionsByClientParams.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Reports\GetAllTransactionsByClientParams.Designer.cs">
+      <DependentUpon>GetAllTransactionsByClientParams.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Forms\Reports\SalesByManagerParams.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -550,6 +573,15 @@
     <EmbeddedResource Include="View\Forms\Auth\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Bank\BankEdit.resx">
+      <DependentUpon>BankEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Bank\BankCreate.resx">
+      <DependentUpon>BankCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Bank\BankForm.resx">
+      <DependentUpon>BankForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\Claim\ClaimCreate.resx">
       <DependentUpon>ClaimCreate.cs</DependentUpon>
     </EmbeddedResource>
@@ -613,6 +645,12 @@
     <EmbeddedResource Include="View\Forms\Invoice\UserSelector.resx">
       <DependentUpon>UserSelector.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\IVA\IVAForm.resx">
+      <DependentUpon>IVAForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Keygen\FormKey.resx">
+      <DependentUpon>FormKey.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\Laboratory\LaboratoryCreate.resx">
       <DependentUpon>LaboratoryCreate.cs</DependentUpon>
     </EmbeddedResource>
@@ -667,6 +705,9 @@
     <EmbeddedResource Include="View\Forms\Reports\SalesByClient.resx">
       <DependentUpon>SalesByClient.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Reports\GetAllTransactionsByClientParams.resx">
+      <DependentUpon>GetAllTransactionsByClientParams.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\Reports\SalesByManagerParams.resx">
       <DependentUpon>SalesByManagerParams.cs</DependentUpon>
     </EmbeddedResource>
@@ -684,6 +725,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\Reports\SelectorForm.resx">
       <DependentUpon>SelectorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Shipping\ShippingForm.resx">
+      <DependentUpon>ShippingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\Updates\UpdatesForm.resx">
       <DependentUpon>UpdatesForm.cs</DependentUpon>
@@ -703,6 +747,7 @@
     <EmbeddedResource Include="View\Reports\AllProducts.rdlc" />
     <EmbeddedResource Include="View\Reports\ClientProfile.rdlc" />
     <EmbeddedResource Include="View\Reports\CompanyProfile.rdlc" />
+    <EmbeddedResource Include="View\Reports\GetAllTransactionsByClient.rdlc" />
     <EmbeddedResource Include="View\Reports\Invoice.rdlc" />
     <EmbeddedResource Include="View\Reports\PendingByCompany.rdlc" />
     <EmbeddedResource Include="View\Reports\ProductMovements.rdlc" />
@@ -738,6 +783,17 @@
     </None>
     <None Include="Datasets\AuditAllUsers.xss">
       <DependentUpon>AuditAllUsers.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\GetAllTransactionsByClient.xsc">
+      <DependentUpon>GetAllTransactionsByClient.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\GetAllTransactionsByClient.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GetAllTransactionsByClient.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Datasets\GetAllTransactionsByClient.xss">
+      <DependentUpon>GetAllTransactionsByClient.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -1084,6 +1140,13 @@
     <None Include="Resources\icons8-print-24 %281%29.png" />
     <None Include="Resources\icons8-print-24 %281%291.png" />
     <None Include="Resources\icons8-info-24.png" />
+    <None Include="Resources\icons8-dashboard-24.png" />
+    <None Include="Resources\icons8-history-book-24.png" />
+    <None Include="Resources\icons8-password-key-24.png" />
+    <None Include="Resources\icons8-smart-24.png" />
+    <None Include="Resources\icons8-model-24.png" />
+    <None Include="Resources\icons8-category-24.png" />
+    <None Include="Resources\icons8-vehicle-24.png" />
     <Content Include="Resources\interlenssv_icon-removebg-preview.ico" />
     <None Include="Resources\icons8-marca-24.png" />
     <None Include="Resources\icons8-basculas-en-3d-24.png" />

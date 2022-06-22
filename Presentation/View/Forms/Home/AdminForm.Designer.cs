@@ -38,7 +38,7 @@ namespace Presentation.View.Forms.Home
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.pnl_sales_day = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lbl_sales_day = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -50,7 +50,7 @@ namespace Presentation.View.Forms.Home
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chart_sales_resume = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.pnl_clients.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.pnl_sales_day.SuspendLayout();
@@ -59,7 +59,7 @@ namespace Presentation.View.Forms.Home
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnl_shipping.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart_sales_resume)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_clients
@@ -87,9 +87,9 @@ namespace Presentation.View.Forms.Home
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Presentation.Properties.Resources.business_and_finance;
-            this.pictureBox3.Location = new System.Drawing.Point(118, 29);
+            this.pictureBox3.Location = new System.Drawing.Point(138, 34);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(57, 45);
+            this.pictureBox3.Size = new System.Drawing.Size(37, 45);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 6;
             this.pictureBox3.TabStop = false;
@@ -108,7 +108,7 @@ namespace Presentation.View.Forms.Home
             // pnl_sales_day
             // 
             this.pnl_sales_day.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.pnl_sales_day.Controls.Add(this.label7);
+            this.pnl_sales_day.Controls.Add(this.lbl_sales_day);
             this.pnl_sales_day.Controls.Add(this.pictureBox4);
             this.pnl_sales_day.Controls.Add(this.label9);
             this.pnl_sales_day.Controls.Add(this.label8);
@@ -117,23 +117,23 @@ namespace Presentation.View.Forms.Home
             this.pnl_sales_day.Size = new System.Drawing.Size(181, 97);
             this.pnl_sales_day.TabIndex = 1;
             // 
-            // label7
+            // lbl_sales_day
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(9, 37);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(33, 37);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "0";
+            this.lbl_sales_day.AutoSize = true;
+            this.lbl_sales_day.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_sales_day.ForeColor = System.Drawing.Color.White;
+            this.lbl_sales_day.Location = new System.Drawing.Point(9, 37);
+            this.lbl_sales_day.Name = "lbl_sales_day";
+            this.lbl_sales_day.Size = new System.Drawing.Size(33, 37);
+            this.lbl_sales_day.TabIndex = 11;
+            this.lbl_sales_day.Text = "0";
             // 
             // pictureBox4
             // 
             this.pictureBox4.Image = global::Presentation.Properties.Resources.discount;
-            this.pictureBox4.Location = new System.Drawing.Point(117, 29);
+            this.pictureBox4.Location = new System.Drawing.Point(137, 34);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(57, 45);
+            this.pictureBox4.Size = new System.Drawing.Size(37, 45);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 9;
             this.pictureBox4.TabStop = false;
@@ -196,9 +196,9 @@ namespace Presentation.View.Forms.Home
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Presentation.Properties.Resources.save_money;
-            this.pictureBox1.Location = new System.Drawing.Point(119, 29);
+            this.pictureBox1.Location = new System.Drawing.Point(139, 34);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(57, 45);
+            this.pictureBox1.Size = new System.Drawing.Size(37, 45);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -228,9 +228,9 @@ namespace Presentation.View.Forms.Home
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Presentation.Properties.Resources.delivery_truck;
-            this.pictureBox2.Location = new System.Drawing.Point(117, 29);
+            this.pictureBox2.Location = new System.Drawing.Point(137, 34);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(57, 45);
+            this.pictureBox2.Size = new System.Drawing.Size(37, 45);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
@@ -246,18 +246,18 @@ namespace Presentation.View.Forms.Home
             this.label4.TabIndex = 4;
             this.label4.Text = "Envíos a cobro";
             // 
-            // chart1
+            // chart_sales_resume
             // 
             chartArea1.BorderColor = System.Drawing.Color.Gray;
             chartArea1.Name = "ChartArea1";
             chartArea1.ShadowColor = System.Drawing.Color.Silver;
-            this.chart1.ChartAreas.Add(chartArea1);
+            this.chart_sales_resume.ChartAreas.Add(chartArea1);
             legend1.Alignment = System.Drawing.StringAlignment.Center;
             legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(34, 156);
-            this.chart1.Name = "chart1";
-            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
+            this.chart_sales_resume.Legends.Add(legend1);
+            this.chart_sales_resume.Location = new System.Drawing.Point(34, 156);
+            this.chart_sales_resume.Name = "chart_sales_resume";
+            this.chart_sales_resume.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
             series1.BorderWidth = 5;
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
@@ -272,12 +272,12 @@ namespace Presentation.View.Forms.Home
             series2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             series2.Legend = "Legend1";
             series2.Name = "Clientes";
-            this.chart1.Series.Add(series1);
-            this.chart1.Series.Add(series2);
-            this.chart1.Size = new System.Drawing.Size(778, 307);
-            this.chart1.TabIndex = 4;
-            this.chart1.Text = "chart1";
-            this.chart1.Click += new System.EventHandler(this.chart1_Click);
+            this.chart_sales_resume.Series.Add(series1);
+            this.chart_sales_resume.Series.Add(series2);
+            this.chart_sales_resume.Size = new System.Drawing.Size(778, 307);
+            this.chart_sales_resume.TabIndex = 4;
+            this.chart_sales_resume.Text = "chart1";
+//            this.chart_sales_resume.Click += new System.EventHandler(this.chart1_Click);
             // 
             // AdminForm
             // 
@@ -286,7 +286,7 @@ namespace Presentation.View.Forms.Home
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(849, 480);
-            this.Controls.Add(this.chart1);
+            this.Controls.Add(this.chart_sales_resume);
             this.Controls.Add(this.pnl_shipping);
             this.Controls.Add(this.pnl_sales_day);
             this.Controls.Add(this.pnl_charges);
@@ -307,7 +307,7 @@ namespace Presentation.View.Forms.Home
             this.pnl_shipping.ResumeLayout(false);
             this.pnl_shipping.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart_sales_resume)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -324,11 +324,11 @@ namespace Presentation.View.Forms.Home
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart_sales_resume;
         private System.Windows.Forms.Label lbl_client_count;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lbl_sales_day;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;

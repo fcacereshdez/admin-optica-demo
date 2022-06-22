@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Presentation.View.Forms.Home
+namespace Presentation.View.Forms.Keygen
 {
-    public partial class SellerForm : Form
+    public partial class FormKey : Form
     {
-        public SellerForm()
+        public FormKey()
         {
             InitializeComponent();
+        }
+
+        private void pcb_close_keygen_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

@@ -62,9 +62,9 @@ namespace Domain
             clientAccountData.GetClientAccountById(invoice_id);
         }
 
-        public void PayInovice(string payment_method, string amount, string bank, string reference, string note, string check, string ccf, string invoice)
+        public void PayInovice(string payment_method, string amount, string bank, string reference, string note, string check, string ccf, string invoice, string created_at)
         {
-            clientAccountData.PayInovice(Convert.ToInt64(payment_method), Convert.ToDecimal(amount), DateTime.Now.ToString("yyyy-MM-dd"), UserCache.user_id, DateTime.Now.ToString("yyyy-MM-dd"), Convert.ToInt64(bank), reference, note, check, ccf, Convert.ToInt64(invoice));
+            clientAccountData.PayInovice(Convert.ToInt64(payment_method), Convert.ToDecimal(amount), created_at, UserCache.user_id, DateTime.Now.ToString("yyyy-MM-dd"), Convert.ToInt64(bank), reference, note, check, ccf, Convert.ToInt64(invoice));
         }
 
         public void CountClients()

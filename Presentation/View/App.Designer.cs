@@ -32,6 +32,7 @@ namespace Presentation
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Layout));
             this.pnl_menu = new System.Windows.Forms.Panel();
+            this.btn_home = new System.Windows.Forms.Button();
             this.btn_system_information = new System.Windows.Forms.Button();
             this.txt_claims = new System.Windows.Forms.Button();
             this.btn_iva = new System.Windows.Forms.Button();
@@ -51,6 +52,7 @@ namespace Presentation
             this.btn_labs = new System.Windows.Forms.Button();
             this.btn_clients = new System.Windows.Forms.Button();
             this.pnl_top = new System.Windows.Forms.Panel();
+            this.pb_keygen = new System.Windows.Forms.PictureBox();
             this.pcb_maximize = new System.Windows.Forms.PictureBox();
             this.pcb_minus = new System.Windows.Forms.PictureBox();
             this.pcb_exit = new System.Windows.Forms.PictureBox();
@@ -70,6 +72,7 @@ namespace Presentation
             ((System.ComponentModel.ISupportInitialize)(this.pcb_logout)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnl_top.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_keygen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_maximize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_minus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_exit)).BeginInit();
@@ -85,6 +88,7 @@ namespace Presentation
             this.pnl_menu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.pnl_menu.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnl_menu.Controls.Add(this.btn_home);
             this.pnl_menu.Controls.Add(this.btn_system_information);
             this.pnl_menu.Controls.Add(this.txt_claims);
             this.pnl_menu.Controls.Add(this.btn_iva);
@@ -104,13 +108,28 @@ namespace Presentation
             this.pnl_menu.Size = new System.Drawing.Size(199, 586);
             this.pnl_menu.TabIndex = 0;
             // 
+            // btn_home
+            // 
+            this.btn_home.FlatAppearance.BorderSize = 0;
+            this.btn_home.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_home.Image = global::Presentation.Properties.Resources.icons8_dashboard_24;
+            this.btn_home.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_home.Location = new System.Drawing.Point(-1, 63);
+            this.btn_home.Name = "btn_home";
+            this.btn_home.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
+            this.btn_home.Size = new System.Drawing.Size(200, 41);
+            this.btn_home.TabIndex = 16;
+            this.btn_home.Text = "Inicio";
+            this.btn_home.UseVisualStyleBackColor = true;
+            this.btn_home.Click += new System.EventHandler(this.btn_home_Click);
+            // 
             // btn_system_information
             // 
             this.btn_system_information.FlatAppearance.BorderSize = 0;
             this.btn_system_information.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_system_information.Image = global::Presentation.Properties.Resources.icons8_info_24;
             this.btn_system_information.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_system_information.Location = new System.Drawing.Point(-1, 627);
+            this.btn_system_information.Location = new System.Drawing.Point(-1, 665);
             this.btn_system_information.Name = "btn_system_information";
             this.btn_system_information.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
             this.btn_system_information.Size = new System.Drawing.Size(200, 41);
@@ -125,7 +144,7 @@ namespace Presentation
             this.txt_claims.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.txt_claims.Image = global::Presentation.Properties.Resources.icons8_reparto_24;
             this.txt_claims.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.txt_claims.Location = new System.Drawing.Point(0, 353);
+            this.txt_claims.Location = new System.Drawing.Point(0, 392);
             this.txt_claims.Name = "txt_claims";
             this.txt_claims.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
             this.txt_claims.Size = new System.Drawing.Size(200, 41);
@@ -136,12 +155,11 @@ namespace Presentation
             // 
             // btn_iva
             // 
-            this.btn_iva.Enabled = false;
             this.btn_iva.FlatAppearance.BorderSize = 0;
             this.btn_iva.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_iva.Image = global::Presentation.Properties.Resources.icons8_company_24;
             this.btn_iva.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_iva.Location = new System.Drawing.Point(0, 441);
+            this.btn_iva.Location = new System.Drawing.Point(0, 480);
             this.btn_iva.Name = "btn_iva";
             this.btn_iva.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
             this.btn_iva.Size = new System.Drawing.Size(200, 41);
@@ -152,12 +170,11 @@ namespace Presentation
             // 
             // btn_banks
             // 
-            this.btn_banks.Enabled = false;
             this.btn_banks.FlatAppearance.BorderSize = 0;
             this.btn_banks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_banks.Image = global::Presentation.Properties.Resources.icons8_bank_24__1_;
             this.btn_banks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_banks.Location = new System.Drawing.Point(0, 394);
+            this.btn_banks.Location = new System.Drawing.Point(0, 433);
             this.btn_banks.Name = "btn_banks";
             this.btn_banks.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
             this.btn_banks.Size = new System.Drawing.Size(200, 41);
@@ -223,12 +240,11 @@ namespace Presentation
             // 
             // btn_shipping
             // 
-            this.btn_shipping.Enabled = false;
             this.btn_shipping.FlatAppearance.BorderSize = 0;
             this.btn_shipping.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_shipping.Image = global::Presentation.Properties.Resources.icons8_shipping_24;
             this.btn_shipping.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_shipping.Location = new System.Drawing.Point(0, 488);
+            this.btn_shipping.Location = new System.Drawing.Point(0, 527);
             this.btn_shipping.Name = "btn_shipping";
             this.btn_shipping.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
             this.btn_shipping.Size = new System.Drawing.Size(200, 41);
@@ -243,7 +259,7 @@ namespace Presentation
             this.btn_facturation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_facturation.Image = global::Presentation.Properties.Resources.icons8_file_invoice_dollar_24;
             this.btn_facturation.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_facturation.Location = new System.Drawing.Point(0, 259);
+            this.btn_facturation.Location = new System.Drawing.Point(0, 298);
             this.btn_facturation.Name = "btn_facturation";
             this.btn_facturation.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
             this.btn_facturation.Size = new System.Drawing.Size(200, 41);
@@ -258,7 +274,7 @@ namespace Presentation
             this.btn_reports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_reports.Image = global::Presentation.Properties.Resources.icons8_charts_24;
             this.btn_reports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_reports.Location = new System.Drawing.Point(0, 535);
+            this.btn_reports.Location = new System.Drawing.Point(0, 573);
             this.btn_reports.Name = "btn_reports";
             this.btn_reports.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
             this.btn_reports.Size = new System.Drawing.Size(200, 41);
@@ -273,7 +289,7 @@ namespace Presentation
             this.btn_products.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_products.Image = global::Presentation.Properties.Resources.icons8_producto_24;
             this.btn_products.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_products.Location = new System.Drawing.Point(0, 306);
+            this.btn_products.Location = new System.Drawing.Point(0, 345);
             this.btn_products.Name = "btn_products";
             this.btn_products.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
             this.btn_products.Size = new System.Drawing.Size(200, 41);
@@ -288,7 +304,7 @@ namespace Presentation
             this.btn_companies.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_companies.Image = global::Presentation.Properties.Resources.icons8_organización_24;
             this.btn_companies.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_companies.Location = new System.Drawing.Point(0, 71);
+            this.btn_companies.Location = new System.Drawing.Point(0, 110);
             this.btn_companies.Name = "btn_companies";
             this.btn_companies.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
             this.btn_companies.Size = new System.Drawing.Size(200, 41);
@@ -303,7 +319,7 @@ namespace Presentation
             this.btn_users.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_users.Image = global::Presentation.Properties.Resources.customer1;
             this.btn_users.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_users.Location = new System.Drawing.Point(0, 582);
+            this.btn_users.Location = new System.Drawing.Point(0, 620);
             this.btn_users.Name = "btn_users";
             this.btn_users.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
             this.btn_users.Size = new System.Drawing.Size(200, 41);
@@ -318,7 +334,7 @@ namespace Presentation
             this.btn_recipes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_recipes.Image = global::Presentation.Properties.Resources.icons8_documentos_24;
             this.btn_recipes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_recipes.Location = new System.Drawing.Point(0, 212);
+            this.btn_recipes.Location = new System.Drawing.Point(0, 251);
             this.btn_recipes.Name = "btn_recipes";
             this.btn_recipes.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
             this.btn_recipes.Size = new System.Drawing.Size(200, 41);
@@ -333,7 +349,7 @@ namespace Presentation
             this.btn_labs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_labs.Image = global::Presentation.Properties.Resources.icons8_laboratory_24;
             this.btn_labs.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_labs.Location = new System.Drawing.Point(2, 165);
+            this.btn_labs.Location = new System.Drawing.Point(2, 204);
             this.btn_labs.Name = "btn_labs";
             this.btn_labs.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
             this.btn_labs.Size = new System.Drawing.Size(200, 41);
@@ -348,7 +364,7 @@ namespace Presentation
             this.btn_clients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_clients.Image = global::Presentation.Properties.Resources.costumer;
             this.btn_clients.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_clients.Location = new System.Drawing.Point(0, 118);
+            this.btn_clients.Location = new System.Drawing.Point(0, 157);
             this.btn_clients.Name = "btn_clients";
             this.btn_clients.Padding = new System.Windows.Forms.Padding(15, 5, 0, 5);
             this.btn_clients.Size = new System.Drawing.Size(200, 41);
@@ -360,6 +376,7 @@ namespace Presentation
             // pnl_top
             // 
             this.pnl_top.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(29)))), ((int)(((byte)(26)))));
+            this.pnl_top.Controls.Add(this.pb_keygen);
             this.pnl_top.Controls.Add(this.pcb_maximize);
             this.pnl_top.Controls.Add(this.pcb_minus);
             this.pnl_top.Controls.Add(this.pcb_exit);
@@ -372,6 +389,19 @@ namespace Presentation
             this.pnl_top.TabIndex = 1;
             this.pnl_top.DoubleClick += new System.EventHandler(this.pnl_top_DoubleClick);
             this.pnl_top.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnl_top_MouseDown);
+            // 
+            // pb_keygen
+            // 
+            this.pb_keygen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pb_keygen.Image = global::Presentation.Properties.Resources.icons8_password_key_24;
+            this.pb_keygen.Location = new System.Drawing.Point(936, 4);
+            this.pb_keygen.Name = "pb_keygen";
+            this.pb_keygen.Size = new System.Drawing.Size(25, 25);
+            this.pb_keygen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_keygen.TabIndex = 6;
+            this.pb_keygen.TabStop = false;
+            this.pb_keygen.Click += new System.EventHandler(this.pb_keygen_Click);
             // 
             // pcb_maximize
             // 
@@ -458,7 +488,7 @@ namespace Presentation
             this.lbl_version_sw.AutoSize = true;
             this.lbl_version_sw.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_version_sw.ForeColor = System.Drawing.Color.Black;
-            this.lbl_version_sw.Location = new System.Drawing.Point(1009, 3);
+            this.lbl_version_sw.Location = new System.Drawing.Point(1006, 3);
             this.lbl_version_sw.Name = "lbl_version_sw";
             this.lbl_version_sw.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lbl_version_sw.Size = new System.Drawing.Size(46, 13);
@@ -471,7 +501,7 @@ namespace Presentation
             this.lbl_name_pc.AutoSize = true;
             this.lbl_name_pc.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_name_pc.ForeColor = System.Drawing.Color.Black;
-            this.lbl_name_pc.Location = new System.Drawing.Point(5, 3);
+            this.lbl_name_pc.Location = new System.Drawing.Point(6, 3);
             this.lbl_name_pc.Name = "lbl_name_pc";
             this.lbl_name_pc.Size = new System.Drawing.Size(94, 13);
             this.lbl_name_pc.TabIndex = 2;
@@ -571,6 +601,7 @@ namespace Presentation
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnl_top.ResumeLayout(false);
             this.pnl_top.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_keygen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_maximize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_minus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_exit)).EndInit();
@@ -621,6 +652,8 @@ namespace Presentation
         private System.Windows.Forms.PictureBox pcb_maximize;
         public System.Windows.Forms.Button txt_claims;
         public System.Windows.Forms.Button btn_system_information;
+        public System.Windows.Forms.Button btn_home;
+        private System.Windows.Forms.PictureBox pb_keygen;
     }
 }
 

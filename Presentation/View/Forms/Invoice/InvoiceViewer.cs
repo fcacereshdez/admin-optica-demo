@@ -46,8 +46,9 @@ namespace Presentation.View.Forms.Invoice
                 payFee.lbl_fee.Text = "$" + ClientAccount.fee.ToString();
                 payFee.lbl_balance.Text = "$" + ClientAccount.balance.ToString();
                 payFee.lbl_invoice_payment.Text = "$" + ClientAccount.invoice_total.ToString();
-                // payFee.txt_invoice_id.Text = ClientAccount.id_client_account.ToString();
+                payFee.lbl_acumulated.Text = "$" + ClientAccount.accumulated.ToString();
                 payFee.txt_invoice_id.Text = dgv_invoices_client.SelectedRows[0].Cells[0].Value.ToString();
+                payFee.lbl_last_date.Text = ClientAccount.last_payment.ToString("yyyy-MM-dd");
                 payFee.ShowDialog();
                 this.Close();
             }

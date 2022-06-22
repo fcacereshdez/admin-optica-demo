@@ -54,12 +54,13 @@ namespace Presentation.View.Forms.About
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(270, 43);
+            this.label2.Location = new System.Drawing.Point(187, 47);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(303, 17);
+            this.label2.Size = new System.Drawing.Size(529, 17);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Ésta versión del sistema presenta mora de pago.";
+            this.label2.Text = "Ésta versión del sistema no posee licencia, será desactivado en su fecha de expir" +
+    "ación.";
             // 
             // pictureBox1
             // 
@@ -81,12 +82,12 @@ namespace Presentation.View.Forms.About
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DarkRed;
-            this.label3.Location = new System.Drawing.Point(318, 64);
+            this.label3.Location = new System.Drawing.Point(318, 66);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(197, 17);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Fecha de expiración: 15/06/2022";
+            this.label3.Text = "Fecha de expiración: 23/06/2022";
             // 
             // AboutForm
             // 

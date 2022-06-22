@@ -85,6 +85,13 @@ namespace Domain
             return DataSetSalesManager;
         }
 
+        public DataTable GetAllTransactionsByClient(string client_id)
+        {
+            DataTable DataSetAllTransactions = new DataTable();
+            DataSetAllTransactions = reportData.GetAllTransactionsByClient(Convert.ToInt64(client_id));
+            return DataSetAllTransactions;
+        }
+
         public void CountClients()
         {
             clientData.CountClients();

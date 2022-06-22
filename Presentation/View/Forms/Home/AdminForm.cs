@@ -16,6 +16,8 @@ namespace Presentation.View.Forms.Home
     {
         CommonController commonController = new CommonController();
         ClientController clientController = new ClientController();
+        InvoiceController invoiceController = new InvoiceController();
+
         public AdminForm()
         {
             InitializeComponent();
@@ -28,15 +30,13 @@ namespace Presentation.View.Forms.Home
             this.Close();
         }
 
-        private void chart1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void LoadHome()
         {
             clientController.CountClients();
-            lbl_client_count.Text = ClientCache.countClients.ToString();
+            invoiceController.SumSalesDay();
+            lbl_client_count.Text = HomeCache.count_clients.ToString();
+            lbl_sales_day.Text = "$" + HomeCache.sum_sales_day.ToString();
         }
         private void InsertAction(string action)
         {

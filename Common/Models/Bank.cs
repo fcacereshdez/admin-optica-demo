@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace Common.Models
 {
-  public class Bank
+    public class Bank
     {
         public static Int64 bank_id;
         public static string bank_name;
         public static Int32 last_check;
+        public static string number_account;
         public static decimal bank_balance;
     }
 }
