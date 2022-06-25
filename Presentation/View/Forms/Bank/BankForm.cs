@@ -95,5 +95,12 @@ namespace Presentation.View.Forms.Bank
 
             }
         }
+
+        private void btn_view_view_Click(object sender, EventArgs e)
+        {
+            bankController.SelectBankById(dgv_banks.SelectedRows[0].Cells[0].Value.ToString());
+            BankView bankView = new BankView();
+            bankView.ShowDialog();
+        }
     }
 }

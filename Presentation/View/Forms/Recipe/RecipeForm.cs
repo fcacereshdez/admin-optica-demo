@@ -101,8 +101,8 @@ namespace Presentation.View.Forms.Recipe
                 recipeCreate.txt_ring_name.Text = Common.Models.Recipe.ring;
                 recipeCreate.txt_ring_id.Text = Common.Models.Recipe.ring_id.ToString();
                 recipeCreate.txt_glasses_name.Text = Common.Models.Recipe.glasses;
-            recipeCreate.txt_glasses_id.Text = Common.Models.Recipe.glasses_id.ToString();
-            recipeCreate.rb_comp.Checked = Common.Models.Recipe.comp;
+                recipeCreate.txt_glasses_id.Text = Common.Models.Recipe.glasses_id.ToString();
+                recipeCreate.rb_comp.Checked = Common.Models.Recipe.comp;
                 recipeCreate.rb_sa.Checked = Common.Models.Recipe.sa;
                 recipeCreate.rb_aa.Checked = Common.Models.Recipe.aa;
                 recipeCreate.cb_ar.Checked = Common.Models.Recipe.ar;
@@ -141,9 +141,10 @@ namespace Presentation.View.Forms.Recipe
                 recipeCreate.btn_search_laboratory.Enabled = true;
                 recipeCreate.btn_search_optometryst.Enabled = true;
                 recipeCreate.btn_seller_search.Enabled = true;
+                recipeCreate.gb_functions.Visible = false;
                 recipeCreate.txt_method.Text = "update";
-            recipeCreate.FormClosed += new FormClosedEventHandler(RecipeCreate_FormClosed);
-            recipeCreate.ShowDialog();
+                recipeCreate.FormClosed += new FormClosedEventHandler(RecipeCreate_FormClosed);
+                recipeCreate.ShowDialog();
         }
 
         private void btn_delete_recipe_Click(object sender, EventArgs e)

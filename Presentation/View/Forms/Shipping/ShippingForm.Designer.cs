@@ -29,10 +29,10 @@ namespace Presentation.View.Forms.Shipping
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txt_search_vehicles = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,7 +44,7 @@ namespace Presentation.View.Forms.Shipping
             this.btn_vehicle = new System.Windows.Forms.Button();
             this.btn_model = new System.Windows.Forms.Button();
             this.btn_view_invoice = new System.Windows.Forms.Button();
-            this.btn_create_invoice = new System.Windows.Forms.Button();
+            this.btn_create_shippment = new System.Windows.Forms.Button();
             this.btn_delete_invoice = new System.Windows.Forms.Button();
             this.btn_edit_invoice = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
@@ -88,7 +88,7 @@ namespace Presentation.View.Forms.Shipping
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.btn_view_invoice);
-            this.groupBox1.Controls.Add(this.btn_create_invoice);
+            this.groupBox1.Controls.Add(this.btn_create_shippment);
             this.groupBox1.Controls.Add(this.btn_delete_invoice);
             this.groupBox1.Controls.Add(this.btn_edit_invoice);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -116,23 +116,23 @@ namespace Presentation.View.Forms.Shipping
             this.dgv_vehicles.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(237)))), ((int)(((byte)(241)))));
             this.dgv_vehicles.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_vehicles.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(134)))), ((int)(((byte)(14)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(171)))), ((int)(((byte)(173)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_vehicles.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(134)))), ((int)(((byte)(14)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(171)))), ((int)(((byte)(173)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_vehicles.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_vehicles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.WindowFrame;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_vehicles.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.WindowFrame;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_vehicles.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_vehicles.EnableHeadersVisualStyles = false;
             this.dgv_vehicles.Location = new System.Drawing.Point(208, 80);
             this.dgv_vehicles.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -140,17 +140,17 @@ namespace Presentation.View.Forms.Shipping
             this.dgv_vehicles.Name = "dgv_vehicles";
             this.dgv_vehicles.ReadOnly = true;
             this.dgv_vehicles.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(134)))), ((int)(((byte)(14)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.WindowFrame;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_vehicles.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.WindowFrame;
-            this.dgv_vehicles.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(134)))), ((int)(((byte)(14)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.WindowFrame;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_vehicles.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.WindowFrame;
+            this.dgv_vehicles.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_vehicles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_vehicles.Size = new System.Drawing.Size(617, 413);
             this.dgv_vehicles.TabIndex = 18;
@@ -190,6 +190,7 @@ namespace Presentation.View.Forms.Shipping
             this.btn_brand.TabIndex = 4;
             this.btn_brand.Text = "Marca";
             this.btn_brand.UseVisualStyleBackColor = false;
+            this.btn_brand.Click += new System.EventHandler(this.btn_brand_Click);
             // 
             // btn_category
             // 
@@ -206,6 +207,7 @@ namespace Presentation.View.Forms.Shipping
             this.btn_category.TabIndex = 1;
             this.btn_category.Text = "Categoría";
             this.btn_category.UseVisualStyleBackColor = false;
+            this.btn_category.Click += new System.EventHandler(this.btn_category_Click);
             // 
             // btn_vehicle
             // 
@@ -222,6 +224,7 @@ namespace Presentation.View.Forms.Shipping
             this.btn_vehicle.TabIndex = 2;
             this.btn_vehicle.Text = "Vehículo";
             this.btn_vehicle.UseVisualStyleBackColor = false;
+            this.btn_vehicle.Click += new System.EventHandler(this.btn_vehicle_Click);
             // 
             // btn_model
             // 
@@ -238,6 +241,7 @@ namespace Presentation.View.Forms.Shipping
             this.btn_model.TabIndex = 1;
             this.btn_model.Text = "Modelo";
             this.btn_model.UseVisualStyleBackColor = false;
+            this.btn_model.Click += new System.EventHandler(this.btn_model_Click);
             // 
             // btn_view_invoice
             // 
@@ -256,22 +260,22 @@ namespace Presentation.View.Forms.Shipping
             this.btn_view_invoice.Text = "Ver";
             this.btn_view_invoice.UseVisualStyleBackColor = false;
             // 
-            // btn_create_invoice
+            // btn_create_shippment
             // 
-            this.btn_create_invoice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
-            this.btn_create_invoice.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
-            this.btn_create_invoice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_create_invoice.ForeColor = System.Drawing.Color.White;
-            this.btn_create_invoice.Image = global::Presentation.Properties.Resources.icons8_añadir_24;
-            this.btn_create_invoice.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_create_invoice.Location = new System.Drawing.Point(17, 105);
-            this.btn_create_invoice.Name = "btn_create_invoice";
-            this.btn_create_invoice.Padding = new System.Windows.Forms.Padding(15, 0, 5, 0);
-            this.btn_create_invoice.Size = new System.Drawing.Size(143, 30);
-            this.btn_create_invoice.TabIndex = 1;
-            this.btn_create_invoice.Text = "Crear";
-            this.btn_create_invoice.UseVisualStyleBackColor = false;
-//            this.btn_create_invoice.Click += new System.EventHandler(this.btn_create_invoice_Click);
+            this.btn_create_shippment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.btn_create_shippment.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.btn_create_shippment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_create_shippment.ForeColor = System.Drawing.Color.White;
+            this.btn_create_shippment.Image = global::Presentation.Properties.Resources.icons8_añadir_24;
+            this.btn_create_shippment.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_create_shippment.Location = new System.Drawing.Point(17, 105);
+            this.btn_create_shippment.Name = "btn_create_shippment";
+            this.btn_create_shippment.Padding = new System.Windows.Forms.Padding(15, 0, 5, 0);
+            this.btn_create_shippment.Size = new System.Drawing.Size(143, 30);
+            this.btn_create_shippment.TabIndex = 1;
+            this.btn_create_shippment.Text = "Crear";
+            this.btn_create_shippment.UseVisualStyleBackColor = false;
+            this.btn_create_shippment.Click += new System.EventHandler(this.btn_create_shippment_Click);
             // 
             // btn_delete_invoice
             // 
@@ -336,7 +340,7 @@ namespace Presentation.View.Forms.Shipping
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btn_view_invoice;
-        private System.Windows.Forms.Button btn_create_invoice;
+        private System.Windows.Forms.Button btn_create_shippment;
         private System.Windows.Forms.Button btn_delete_invoice;
         private System.Windows.Forms.Button btn_edit_invoice;
         public System.Windows.Forms.DataGridView dgv_vehicles;

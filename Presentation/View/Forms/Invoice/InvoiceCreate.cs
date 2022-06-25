@@ -20,10 +20,10 @@ namespace Presentation.View.Forms.Invoice
         int counter;
         decimal subtotal_product;
         decimal price_product;
-        decimal subtotal;
-        decimal total;
+        decimal subtotal, subtotal_secondary;
+        decimal total, total_final;
         int quantity;
-        decimal discount;
+        decimal discount, discount_secondary;
         public InvoiceCreate()
         {
             InitializeComponent();
@@ -111,7 +111,7 @@ namespace Presentation.View.Forms.Invoice
                 subtotal += Convert.ToDecimal(row.Cells["cl_subtotal_product"].Value);
             }
             txt_sub_total.Text = "$" + Math.Round(subtotal, 2).ToString();
-            txt_total.Text = "$" + Math.Round(subtotal, 2).ToString();
+            txt_total2.Text = "$" + Math.Round(subtotal, 2).ToString();
             total = Math.Round(subtotal, 2);
         }
 
@@ -167,7 +167,7 @@ namespace Presentation.View.Forms.Invoice
                  {
 
                 invoiceController.InsertInvoice(txt_first_payment.Text, dtp_invoice.Value.ToString(), "1", txt_optometryst_id.Text,
-                   recurrency.ToString(), txt_seller_id.Text, txt_manager_id.Text, txt_recipe_id.Text, cmb_payment_method.SelectedValue.ToString(), subtotal.ToString(), discount.ToString(), total.ToString(), txt_n_fee.Text, txt_fee.Text, txt_notes.Text, txt_pay_day_1.Text, txt_pay_day_2.Text);
+                   recurrency.ToString(), txt_seller_id.Text, txt_manager_id.Text, txt_recipe_id.Text, cmb_payment_method.SelectedValue.ToString(), subtotal.ToString(), discount.ToString(), total_final.ToString(),  txt_n_fee.Text, txt_fee.Text, txt_notes.Text, txt_pay_day_1.Text, txt_pay_day_2.Text, subtotal_secondary.ToString(), discount_secondary.ToString());
 
                 foreach (DataGridViewRow rows in dgv_products.Rows)
                     {
@@ -190,7 +190,7 @@ namespace Presentation.View.Forms.Invoice
 
         private void txt_sub_total_TextChanged(object sender, EventArgs e)
         {
-            txt_total.Text = Math.Round(subtotal, 2).ToString();
+            txt_total2.Text = Math.Round(subtotal, 2).ToString();
         }
 
         private void dgv_products_CellEndEdit(object sender, DataGridViewCellEventArgs e)
@@ -203,7 +203,8 @@ namespace Presentation.View.Forms.Invoice
             if (txt_discount.Text == "")
             {
                 txt_with_discount.Text = "$0.00";
-                txt_total.Text = "$" + Math.Round(subtotal, 2).ToString();
+                txt_total2.Text =  Math.Round(subtotal, 2).ToString();
+                txt_total.Text =  Math.Round(subtotal, 2).ToString();
                 total = Math.Round(subtotal, 2);
             }
             else
@@ -212,7 +213,8 @@ namespace Presentation.View.Forms.Invoice
                 decimal withDiscount = subtotal * (discount / 100);
                 txt_with_discount.Text = "$"+Math.Round(withDiscount, 2).ToString();
                 total = subtotal - withDiscount;
-                txt_total.Text = "$" + Math.Round(total, 2).ToString();
+                txt_total2.Text = Math.Round(total, 2).ToString();
+                txt_total.Text =  Math.Round(total, 2).ToString();
             }
         }
 
@@ -235,5 +237,25 @@ namespace Presentation.View.Forms.Invoice
                 CalculateInvoice();
             }
         }
+
+        private void txt_discount_secondary_TextChanged(object sender, EventArgs e)
+        {
+            if (txt_discount_secondary.Text == "")
+            {
+                txt_discount_secondary.Text = "0.00";
+                total_final = Math.Round(subtotal - subtotal_secondary, 2);
+                txt_total.Text = "$" + Math.Round(total_final, 2).ToString();
+            }
+            else
+            {
+                subtotal_secondary = Convert.ToDecimal(txt_total2.Text);
+                discount_secondary = Convert.ToDecimal(txt_discount_secondary.Text);
+                decimal withDiscountSecondary = total * (discount_secondary / 100);
+                txt_with_discount_secondary.Text = "$" + Math.Round(withDiscountSecondary, 2).ToString();
+                total_final = subtotal_secondary - withDiscountSecondary;
+                txt_total.Text = "$" + Math.Round(total_final, 2).ToString();
+            }
+        }
+
     }
 }

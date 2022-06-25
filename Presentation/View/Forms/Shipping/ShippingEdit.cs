@@ -16,5 +16,10 @@ namespace Presentation.View.Forms.Shipping
         {
             InitializeComponent();
         }
+
+        private void pcb_close_update_shipping_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

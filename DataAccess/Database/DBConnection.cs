@@ -13,7 +13,7 @@ namespace DataAccess
         private readonly string connectionString;
         public DBConnection()
         {
-            bool DEVELOPMENT_MODE = true;
+            bool DEVELOPMENT_MODE = false;
             string server, user, password, database;
 
             if (DEVELOPMENT_MODE == true)
@@ -25,7 +25,7 @@ namespace DataAccess
             }
             else
             {
-                server = "WILFREDO";
+                server = "INTERLENS";
                 user = "InterlenssvNetwork";
                 password = "Frank0089hdez@";
                 database = "INTERLENSSV";

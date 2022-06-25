@@ -1,6 +1,7 @@
 ﻿using Common.Cache;
 using Domain;
 using Microsoft.Reporting.WinForms;
+using Presentation.View.Forms.Messages;
 using Presentation.View.Reports;
 using System;
 using System.Collections.Generic;
@@ -29,15 +30,22 @@ namespace Presentation.View.Forms.Reports
 
         private void btn_generate_report_Click(object sender, EventArgs e)
         {
+            MessageOutLoader messageOutLoader = new MessageOutLoader();
+
             if (rb_all.Checked == true)
             {
                 CommonController commonController = new CommonController();
                 ViewerForm viewerForm = new ViewerForm();
+                Hide();
+                messageOutLoader.Show();
+                Application.DoEvents();
+                System.Threading.Thread.Sleep(4000);
                 ReportDataSource rds = new ReportDataSource("ds_sales_by_manager", commonController.SelectAllSalesByManagerAll());
                 viewerForm.rv_viewer.Reset();
                 viewerForm.rv_viewer.ProcessingMode = ProcessingMode.Local;
                 viewerForm.rv_viewer.LocalReport.ReportEmbeddedResource = "Presentation.View.Reports.SalesByManager.rdlc";
                 viewerForm.rv_viewer.LocalReport.DataSources.Add(rds);
+                messageOutLoader.Close();
                 InsertAction("generó un reporte de todas las ventas por gestor.");
                 Close();
                 viewerForm.ShowDialog();
@@ -46,11 +54,16 @@ namespace Presentation.View.Forms.Reports
             {
                 CommonController commonController = new CommonController();
                 ViewerForm viewerForm = new ViewerForm();
+                Hide();
+                messageOutLoader.Show();
+                Application.DoEvents();
+                System.Threading.Thread.Sleep(4000);
                 ReportDataSource rds = new ReportDataSource("ds_sales_by_manager", commonController.SelectAllSalesByManager(dtp_from.Value.ToString("yyyy-MM-dd"), dtp_to.Value.ToString("yyyy-MM-dd")));
                 viewerForm.rv_viewer.Reset();
                 viewerForm.rv_viewer.ProcessingMode = ProcessingMode.Local;
                 viewerForm.rv_viewer.LocalReport.ReportEmbeddedResource = "Presentation.View.Reports.SalesByManager.rdlc";
                 viewerForm.rv_viewer.LocalReport.DataSources.Add(rds);
+                messageOutLoader.Close();
                 InsertAction("generó un reporte de todas las ventas por gestor.");
                 Close();
                 viewerForm.ShowDialog();

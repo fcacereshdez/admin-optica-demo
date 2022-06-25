@@ -35,10 +35,11 @@ namespace Presentation.View.Forms.Client
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClaimForm));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txt_search_client = new System.Windows.Forms.TextBox();
+            this.txt_search_claim = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgv_claims = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_view_claim = new System.Windows.Forms.Button();
             this.btn_create_claim = new System.Windows.Forms.Button();
             this.btn_delete_claim = new System.Windows.Forms.Button();
             this.btn_edit_claim = new System.Windows.Forms.Button();
@@ -51,7 +52,7 @@ namespace Presentation.View.Forms.Client
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.txt_search_client);
+            this.groupBox2.Controls.Add(this.txt_search_claim);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Location = new System.Drawing.Point(198, 23);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -61,15 +62,16 @@ namespace Presentation.View.Forms.Client
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
             // 
-            // txt_search_client
+            // txt_search_claim
             // 
-            this.txt_search_client.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txt_search_claim.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_search_client.Location = new System.Drawing.Point(71, 19);
-            this.txt_search_client.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txt_search_client.Name = "txt_search_client";
-            this.txt_search_client.Size = new System.Drawing.Size(560, 23);
-            this.txt_search_client.TabIndex = 1;
+            this.txt_search_claim.Location = new System.Drawing.Point(71, 19);
+            this.txt_search_claim.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txt_search_claim.Name = "txt_search_claim";
+            this.txt_search_claim.Size = new System.Drawing.Size(560, 23);
+            this.txt_search_claim.TabIndex = 1;
+            this.txt_search_claim.TextChanged += new System.EventHandler(this.txt_search_claim_TextChanged);
             // 
             // label1
             // 
@@ -136,6 +138,7 @@ namespace Presentation.View.Forms.Client
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.btn_view_claim);
             this.groupBox1.Controls.Add(this.btn_create_claim);
             this.groupBox1.Controls.Add(this.btn_delete_claim);
             this.groupBox1.Controls.Add(this.btn_edit_claim);
@@ -146,10 +149,28 @@ namespace Presentation.View.Forms.Client
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.groupBox1.Size = new System.Drawing.Size(177, 152);
+            this.groupBox1.Size = new System.Drawing.Size(177, 189);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Funciones";
+            // 
+            // btn_view_claim
+            // 
+            this.btn_view_claim.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.btn_view_claim.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.btn_view_claim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_view_claim.ForeColor = System.Drawing.Color.White;
+            this.btn_view_claim.Image = global::Presentation.Properties.Resources.icons8_eliminar_241;
+            this.btn_view_claim.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_view_claim.Location = new System.Drawing.Point(18, 25);
+            this.btn_view_claim.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_view_claim.Name = "btn_view_claim";
+            this.btn_view_claim.Padding = new System.Windows.Forms.Padding(17, 0, 6, 0);
+            this.btn_view_claim.Size = new System.Drawing.Size(143, 30);
+            this.btn_view_claim.TabIndex = 3;
+            this.btn_view_claim.Text = "Ver";
+            this.btn_view_claim.UseVisualStyleBackColor = false;
+            this.btn_view_claim.Click += new System.EventHandler(this.btn_view_claim_Click);
             // 
             // btn_create_claim
             // 
@@ -159,7 +180,7 @@ namespace Presentation.View.Forms.Client
             this.btn_create_claim.ForeColor = System.Drawing.Color.White;
             this.btn_create_claim.Image = global::Presentation.Properties.Resources.icons8_añadir_24;
             this.btn_create_claim.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_create_claim.Location = new System.Drawing.Point(18, 65);
+            this.btn_create_claim.Location = new System.Drawing.Point(18, 101);
             this.btn_create_claim.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_create_claim.Name = "btn_create_claim";
             this.btn_create_claim.Padding = new System.Windows.Forms.Padding(17, 0, 6, 0);
@@ -177,7 +198,7 @@ namespace Presentation.View.Forms.Client
             this.btn_delete_claim.ForeColor = System.Drawing.Color.White;
             this.btn_delete_claim.Image = global::Presentation.Properties.Resources.icons8_eliminar_241;
             this.btn_delete_claim.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_delete_claim.Location = new System.Drawing.Point(18, 103);
+            this.btn_delete_claim.Location = new System.Drawing.Point(18, 139);
             this.btn_delete_claim.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_delete_claim.Name = "btn_delete_claim";
             this.btn_delete_claim.Padding = new System.Windows.Forms.Padding(17, 0, 6, 0);
@@ -185,6 +206,7 @@ namespace Presentation.View.Forms.Client
             this.btn_delete_claim.TabIndex = 2;
             this.btn_delete_claim.Text = "Eliminar";
             this.btn_delete_claim.UseVisualStyleBackColor = false;
+            this.btn_delete_claim.Click += new System.EventHandler(this.btn_delete_claim_Click);
             // 
             // btn_edit_claim
             // 
@@ -194,7 +216,7 @@ namespace Presentation.View.Forms.Client
             this.btn_edit_claim.ForeColor = System.Drawing.Color.White;
             this.btn_edit_claim.Image = global::Presentation.Properties.Resources.icons8_editar_24;
             this.btn_edit_claim.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_edit_claim.Location = new System.Drawing.Point(18, 27);
+            this.btn_edit_claim.Location = new System.Drawing.Point(18, 63);
             this.btn_edit_claim.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_edit_claim.Name = "btn_edit_claim";
             this.btn_edit_claim.Padding = new System.Windows.Forms.Padding(17, 0, 6, 0);
@@ -202,6 +224,7 @@ namespace Presentation.View.Forms.Client
             this.btn_edit_claim.TabIndex = 1;
             this.btn_edit_claim.Text = "Editar";
             this.btn_edit_claim.UseVisualStyleBackColor = false;
+            this.btn_edit_claim.Click += new System.EventHandler(this.btn_edit_claim_Click);
             // 
             // ClaimForm
             // 
@@ -230,12 +253,13 @@ namespace Presentation.View.Forms.Client
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox txt_search_client;
+        private System.Windows.Forms.TextBox txt_search_claim;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.DataGridView dgv_claims;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btn_create_claim;
         private System.Windows.Forms.Button btn_delete_claim;
         private System.Windows.Forms.Button btn_edit_claim;
+        private System.Windows.Forms.Button btn_view_claim;
     }
 }

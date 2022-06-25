@@ -51,7 +51,7 @@ namespace DataAccess.Data
             }
         }
 
-        public void InsertInvoice(decimal firstpayment, DateTime date, int number, Int64 optometryst_id, int recurrency, Int64 seller_id, Int64 manager_id, Int64 recipe_id, Int64 payment_method, decimal subtotal, decimal discount, decimal total, int n_fee, decimal fee, string notes, string fday, string sday)
+        public void InsertInvoice(decimal firstpayment, DateTime date, int number, Int64 optometryst_id, int recurrency, Int64 seller_id, Int64 manager_id, Int64 recipe_id, Int64 payment_method, decimal subtotal, decimal discount, decimal total, int n_fee, decimal fee, string notes, string fday, string sday, decimal subtotal_secondary, decimal discount_secondary)
         {
             using (var conn = GetConnection())
             {
@@ -70,8 +70,10 @@ namespace DataAccess.Data
                     cmd.Parameters.AddWithValue("@manager_id", manager_id);
                     cmd.Parameters.AddWithValue("@recipe_id", recipe_id);
                     cmd.Parameters.AddWithValue("@payment_method", payment_method);
-                    cmd.Parameters.AddWithValue("@subtotal", subtotal);
-                    cmd.Parameters.AddWithValue("@discount", discount);
+                    cmd.Parameters.AddWithValue("@subtotal_primary", subtotal);
+                    cmd.Parameters.AddWithValue("@discount_primary", discount);
+                    cmd.Parameters.AddWithValue("@subtotal_secondary", subtotal_secondary);
+                    cmd.Parameters.AddWithValue("@discount_secondary", discount_secondary);
                     cmd.Parameters.AddWithValue("@total", total);
                     cmd.Parameters.AddWithValue("@n_fee", n_fee);
                     cmd.Parameters.AddWithValue("@fee", fee);
@@ -157,6 +159,8 @@ namespace DataAccess.Data
                             Invoice.discount = reader.GetDecimal(16);
                             Invoice.total = reader.GetDecimal(17);
                             Invoice.notes = reader.GetString(18);
+                            Invoice.discount_secondary = reader.GetDecimal(19);
+                            Invoice.subtotal_secondary = reader.GetDecimal(20);
                         }
                     }
                 }
@@ -183,7 +187,7 @@ namespace DataAccess.Data
             }
         }
 
-        public void UpdateInvoice(decimal first_payment, DateTime date, Int64 optometrist, int recurrency, Int64 consultant, Int64 manager, Int64 payment_method, decimal subtotal, decimal discount, decimal total, int n_fee, decimal fee, string notes, string fday, string sday, Int64 invoice_id)
+        public void UpdateInvoice(decimal first_payment, DateTime date, Int64 optometrist, int recurrency, Int64 consultant, Int64 manager, Int64 payment_method, decimal subtotal, decimal discount, decimal total, int n_fee, decimal fee, string notes, string fday, string sday, decimal subtotal_secondary, decimal discount_secondary, Int64 invoice_id)
         {
             using (var conn = GetConnection())
             {
@@ -208,6 +212,8 @@ namespace DataAccess.Data
                     cmd.Parameters.AddWithValue("@notes", notes);
                     cmd.Parameters.AddWithValue("@fday", fday);
                     cmd.Parameters.AddWithValue("@sday", sday);
+                    cmd.Parameters.AddWithValue("@subtotal_secondary", subtotal_secondary);
+                    cmd.Parameters.AddWithValue("@discount_secondary", discount_secondary);
                     cmd.Parameters.AddWithValue("@updated_at", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
                     cmd.Parameters.AddWithValue("@invoice", invoice_id);
                     cmd.ExecuteNonQuery();

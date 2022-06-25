@@ -387,7 +387,8 @@ namespace Presentation
             this.pnl_top.Name = "pnl_top";
             this.pnl_top.Size = new System.Drawing.Size(1058, 32);
             this.pnl_top.TabIndex = 1;
-            this.pnl_top.DoubleClick += new System.EventHandler(this.pnl_top_DoubleClick);
+//            this.pnl_top.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_top_Paint);
+//            this.pnl_top.DoubleClick += new System.EventHandler(this.pnl_top_DoubleClick);
             this.pnl_top.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnl_top_MouseDown);
             // 
             // pb_keygen
@@ -488,7 +489,7 @@ namespace Presentation
             this.lbl_version_sw.AutoSize = true;
             this.lbl_version_sw.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_version_sw.ForeColor = System.Drawing.Color.Black;
-            this.lbl_version_sw.Location = new System.Drawing.Point(1006, 3);
+            this.lbl_version_sw.Location = new System.Drawing.Point(1000, 3);
             this.lbl_version_sw.Name = "lbl_version_sw";
             this.lbl_version_sw.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lbl_version_sw.Size = new System.Drawing.Size(46, 13);
@@ -501,7 +502,7 @@ namespace Presentation
             this.lbl_name_pc.AutoSize = true;
             this.lbl_name_pc.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_name_pc.ForeColor = System.Drawing.Color.Black;
-            this.lbl_name_pc.Location = new System.Drawing.Point(6, 3);
+            this.lbl_name_pc.Location = new System.Drawing.Point(10, 3);
             this.lbl_name_pc.Name = "lbl_name_pc";
             this.lbl_name_pc.Size = new System.Drawing.Size(94, 13);
             this.lbl_name_pc.TabIndex = 2;

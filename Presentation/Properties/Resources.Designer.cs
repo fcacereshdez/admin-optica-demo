@@ -383,6 +383,16 @@ namespace Presentation.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_derecha_en_cuadrado_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-derecha-en-cuadrado-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_documentos_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-documentos-24", resourceCulture);
@@ -473,6 +483,16 @@ namespace Presentation.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_fin_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-fin-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_google_code_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-google-code-24", resourceCulture);
@@ -516,6 +536,16 @@ namespace Presentation.Properties {
         internal static System.Drawing.Bitmap icons8_info_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-info-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_izquierda_en_cuadrado_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-izquierda-en-cuadrado-24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -696,6 +726,16 @@ namespace Presentation.Properties {
         internal static System.Drawing.Bitmap icons8_reparto_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-reparto-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_saltar_a_inicio_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-saltar-a-inicio-24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

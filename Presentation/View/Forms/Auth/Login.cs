@@ -14,54 +14,16 @@ namespace Presentation.View.Forms
 {
     public partial class Login : Form
     {
+        UserController userController = new UserController();
+
         public Login()
         {
             InitializeComponent();
-            InicializeInformationEdition();
         }
 
         private void InicializeInformationEdition()
         {
             lbl_version_login.Text = "Release Version - v" + Application.ProductVersion.ToString();
-        }
-
-        private void btn_login_Click(object sender, EventArgs e)
-        {
-            //Layout layout = new Layout();
-            //this.Hide();
-            //layout.Show();
-            if (txt_user.Text != "") {
-                if (txt_password.Text != "") {
-                    UserController userController = new UserController();
-                    try
-                    {
-                        var validateLogin = userController.LoginUser(txt_user.Text, txt_password.Text);
-                        if (validateLogin == true)
-                        {
-                            LoginActionUser();
-                            UpdateLastLoginUser();
-                            Layout layoutMain = new Layout();
-                            layoutMain.Show();
-                            layoutMain.FormClosed += Logout;
-                            this.Hide();
-                        }
-                        else
-                        {
-                            msgError("Las credenciales son incorrectas. \n Intenta nuevamente.");
-                            txt_password.Clear();
-                            txt_user.Focus();
-                        }
-                    }
-                    catch (Exception errLogin)
-                    {
-                        MessageBox.Show("Ocurrió un error mientras intentabamos iniciar sesión.\n\nError: " + errLogin.Message, "Iniciar sesión");
-                    }                }
-                else{
-                    msgError("Debe ingresar la contraseña.");
-                }
-            }else{
-                msgError("Debe ingresar el su usuario.");
-            }
         }
 
         private void pcb_exit_Click(object sender, EventArgs e)
@@ -94,6 +56,62 @@ namespace Presentation.View.Forms
         {
             UserController userController = new UserController();
             userController.UpdateLastAccessUser(UserCache.user_id, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+        }
+
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            InicializeInformationEdition();
+        }
+
+        private void btn_login_action_Click(object sender, EventArgs e)
+        {
+            if (txt_user.Text != "")
+            {
+                if (txt_password.Text != "")
+                {
+                    lbl_login_status.Visible = true;
+                    btn_login.Visible = false;
+                    lbl_msg_error.Visible = false;
+                    Application.DoEvents();
+                    System.Threading.Thread.Sleep(2000);
+                    try
+                    {
+                        var validateLogin = userController.LoginUser(txt_user.Text, txt_password.Text);
+                        if (validateLogin == true)
+                        {
+                            LoginActionUser();
+                            UpdateLastLoginUser();
+                            Layout layoutMain = new Layout();
+                            layoutMain.Show();
+                            layoutMain.FormClosed += Logout;
+                            this.Hide();
+                            lbl_login_status.Visible = false;
+                            btn_login.Visible = true;
+                        }
+                        else
+                        {
+                            msgError("Las credenciales son incorrectas. \n Intenta nuevamente.");
+                            lbl_login_status.Visible = false;
+                            btn_login.Visible = true;
+                            txt_password.Clear();
+                            txt_user.Focus();
+                        }
+                    }
+                    catch (Exception errLogin)
+                    {
+                        MessageBox.Show("Ocurrió un error mientras intentabamos iniciar sesión.\n\nError: " + errLogin.Message, "Iniciar sesión");
+                    }
+                }
+                else
+                {
+                    msgError("Debe ingresar la contraseña.");
+                }
+            }
+            else
+            {
+                msgError("Debe ingresar el su usuario.");
+            }
         }
     }
 }

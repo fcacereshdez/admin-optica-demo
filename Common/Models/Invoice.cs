@@ -29,5 +29,7 @@ namespace Common.Models
         public static decimal discount;
         public static decimal total;
         public static string notes;
+        public static decimal subtotal_secondary;
+        public static decimal discount_secondary;
     }
 }

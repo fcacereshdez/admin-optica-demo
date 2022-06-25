@@ -27,6 +27,7 @@ using Presentation.View.Forms.Bank;
 using Presentation.View.Forms.IVA;
 using Presentation.View.Forms.Shipping;
 using Presentation.View.Forms.Keygen;
+using System.Net.Sockets;
 
 // añadir ajustes en la interfaz inicial
 
@@ -40,12 +41,7 @@ namespace Presentation
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
         public Layout()
         {
-
             InitializeComponent();
-           
-
-            //this.MaximumSize = Screen.PrimaryScreen.WorkingArea.Size;
-
         }
 
         private void LoadSystemInfo()
@@ -299,25 +295,13 @@ namespace Presentation
             pnl_menu.AutoScroll = false;
             pnl_menu.HorizontalScroll.Enabled = false;
             pnl_menu.HorizontalScroll.Visible = false;
-            pnl_menu.HorizontalScroll.Maximum = 0;
+           // pnl_menu.HorizontalScroll.Maximum = 0;
             pnl_menu.AutoScroll = true;
         }
 
         private void txt_claims_Click(object sender, EventArgs e)
         {
             ShowForm(new ClaimForm());
-        }
-
-        private void pnl_top_DoubleClick(object sender, EventArgs e)
-        {
-            if (WindowState == FormWindowState.Maximized)
-            {
-                this.WindowState = FormWindowState.Normal;
-            }
-            else
-            {
-                this.WindowState = FormWindowState.Maximized;
-            }
         }
 
         private void btn_system_information_Click(object sender, EventArgs e)
@@ -335,5 +319,6 @@ namespace Presentation
             FormKey formKey = new FormKey();
             formKey.ShowDialog();
         }
+
     }
 }

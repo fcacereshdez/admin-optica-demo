@@ -81,7 +81,7 @@ namespace Presentation.View.Forms.Invoice
             this.label13 = new System.Windows.Forms.Label();
             this.txt_with_discount = new System.Windows.Forms.TextBox();
             this.txt_discount = new System.Windows.Forms.TextBox();
-            this.txt_total = new System.Windows.Forms.TextBox();
+            this.txt_total2 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.pnl_top = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
@@ -94,6 +94,11 @@ namespace Presentation.View.Forms.Invoice
             this.btn_add_element = new System.Windows.Forms.Button();
             this.btn_remove_element = new System.Windows.Forms.Button();
             this.btn_save_invoice = new System.Windows.Forms.Button();
+            this.txt_discount_secondary = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.txt_with_discount_secondary = new System.Windows.Forms.TextBox();
+            this.txt_total = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_products)).BeginInit();
@@ -559,7 +564,7 @@ namespace Presentation.View.Forms.Invoice
             // txt_sub_total
             // 
             this.txt_sub_total.Enabled = false;
-            this.txt_sub_total.Location = new System.Drawing.Point(624, 458);
+            this.txt_sub_total.Location = new System.Drawing.Point(622, 413);
             this.txt_sub_total.Name = "txt_sub_total";
             this.txt_sub_total.ReadOnly = true;
             this.txt_sub_total.Size = new System.Drawing.Size(118, 23);
@@ -569,7 +574,7 @@ namespace Presentation.View.Forms.Invoice
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(558, 463);
+            this.label12.Location = new System.Drawing.Point(556, 418);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(60, 15);
             this.label12.TabIndex = 68;
@@ -578,7 +583,7 @@ namespace Presentation.View.Forms.Invoice
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(458, 493);
+            this.label13.Location = new System.Drawing.Point(456, 448);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(85, 15);
             this.label13.TabIndex = 73;
@@ -587,7 +592,7 @@ namespace Presentation.View.Forms.Invoice
             // txt_with_discount
             // 
             this.txt_with_discount.Enabled = false;
-            this.txt_with_discount.Location = new System.Drawing.Point(624, 487);
+            this.txt_with_discount.Location = new System.Drawing.Point(622, 442);
             this.txt_with_discount.Name = "txt_with_discount";
             this.txt_with_discount.ReadOnly = true;
             this.txt_with_discount.Size = new System.Drawing.Size(118, 23);
@@ -596,30 +601,30 @@ namespace Presentation.View.Forms.Invoice
             // 
             // txt_discount
             // 
-            this.txt_discount.Location = new System.Drawing.Point(549, 487);
+            this.txt_discount.Location = new System.Drawing.Point(547, 442);
             this.txt_discount.Name = "txt_discount";
             this.txt_discount.Size = new System.Drawing.Size(69, 23);
             this.txt_discount.TabIndex = 75;
             this.txt_discount.TextChanged += new System.EventHandler(this.txt_discount_TextChanged);
             // 
-            // txt_total
+            // txt_total2
             // 
-            this.txt_total.Enabled = false;
-            this.txt_total.Location = new System.Drawing.Point(624, 516);
-            this.txt_total.Name = "txt_total";
-            this.txt_total.ReadOnly = true;
-            this.txt_total.Size = new System.Drawing.Size(118, 23);
-            this.txt_total.TabIndex = 77;
-            this.txt_total.Text = "$0.00";
+            this.txt_total2.Enabled = false;
+            this.txt_total2.Location = new System.Drawing.Point(622, 471);
+            this.txt_total2.Name = "txt_total2";
+            this.txt_total2.ReadOnly = true;
+            this.txt_total2.Size = new System.Drawing.Size(118, 23);
+            this.txt_total2.TabIndex = 77;
+            this.txt_total2.Text = "$0.00";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(582, 524);
+            this.label14.Location = new System.Drawing.Point(556, 477);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(36, 15);
+            this.label14.Size = new System.Drawing.Size(60, 15);
             this.label14.TabIndex = 76;
-            this.label14.Text = "Total:";
+            this.label14.Text = "Sub-total:";
             // 
             // pnl_top
             // 
@@ -694,7 +699,7 @@ namespace Presentation.View.Forms.Invoice
             this.txt_notes.Location = new System.Drawing.Point(65, 466);
             this.txt_notes.Multiline = true;
             this.txt_notes.Name = "txt_notes";
-            this.txt_notes.Size = new System.Drawing.Size(380, 73);
+            this.txt_notes.Size = new System.Drawing.Size(366, 132);
             this.txt_notes.TabIndex = 68;
             // 
             // lbl_error
@@ -746,7 +751,7 @@ namespace Presentation.View.Forms.Invoice
             this.btn_save_invoice.ForeColor = System.Drawing.Color.White;
             this.btn_save_invoice.Image = global::Presentation.Properties.Resources.icons8_guardar_24;
             this.btn_save_invoice.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_save_invoice.Location = new System.Drawing.Point(549, 555);
+            this.btn_save_invoice.Location = new System.Drawing.Point(549, 568);
             this.btn_save_invoice.Name = "btn_save_invoice";
             this.btn_save_invoice.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btn_save_invoice.Size = new System.Drawing.Size(193, 30);
@@ -755,12 +760,63 @@ namespace Presentation.View.Forms.Invoice
             this.btn_save_invoice.UseVisualStyleBackColor = false;
             this.btn_save_invoice.Click += new System.EventHandler(this.btn_save_invoice_Click);
             // 
+            // txt_discount_secondary
+            // 
+            this.txt_discount_secondary.Location = new System.Drawing.Point(547, 500);
+            this.txt_discount_secondary.Name = "txt_discount_secondary";
+            this.txt_discount_secondary.Size = new System.Drawing.Size(69, 23);
+            this.txt_discount_secondary.TabIndex = 84;
+            this.txt_discount_secondary.TextChanged += new System.EventHandler(this.txt_discount_secondary_TextChanged);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(456, 506);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(85, 15);
+            this.label18.TabIndex = 82;
+            this.label18.Text = "Descuento(%):";
+            // 
+            // txt_with_discount_secondary
+            // 
+            this.txt_with_discount_secondary.Enabled = false;
+            this.txt_with_discount_secondary.Location = new System.Drawing.Point(622, 500);
+            this.txt_with_discount_secondary.Name = "txt_with_discount_secondary";
+            this.txt_with_discount_secondary.ReadOnly = true;
+            this.txt_with_discount_secondary.Size = new System.Drawing.Size(118, 23);
+            this.txt_with_discount_secondary.TabIndex = 83;
+            this.txt_with_discount_secondary.Text = "$0.00";
+            // 
+            // txt_total
+            // 
+            this.txt_total.Enabled = false;
+            this.txt_total.Location = new System.Drawing.Point(622, 529);
+            this.txt_total.Name = "txt_total";
+            this.txt_total.ReadOnly = true;
+            this.txt_total.Size = new System.Drawing.Size(118, 23);
+            this.txt_total.TabIndex = 86;
+            this.txt_total.Text = "$0.00";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(574, 537);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(36, 15);
+            this.label19.TabIndex = 85;
+            this.label19.Text = "Total:";
+            // 
             // InvoiceCreate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(752, 595);
+            this.ClientSize = new System.Drawing.Size(752, 610);
+            this.Controls.Add(this.txt_total);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.txt_discount_secondary);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.txt_with_discount_secondary);
             this.Controls.Add(this.btn_remove_element);
             this.Controls.Add(this.btn_add_element);
             this.Controls.Add(this.lbl_error);
@@ -768,7 +824,7 @@ namespace Presentation.View.Forms.Invoice
             this.Controls.Add(this.txt_notes);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.pnl_top);
-            this.Controls.Add(this.txt_total);
+            this.Controls.Add(this.txt_total2);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.txt_discount);
             this.Controls.Add(this.label13);
@@ -828,7 +884,7 @@ namespace Presentation.View.Forms.Invoice
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txt_with_discount;
         private System.Windows.Forms.TextBox txt_discount;
-        private System.Windows.Forms.TextBox txt_total;
+        private System.Windows.Forms.TextBox txt_total2;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Panel pnl_top;
         private System.Windows.Forms.Label label15;
@@ -861,5 +917,10 @@ namespace Presentation.View.Forms.Invoice
         private System.Windows.Forms.TextBox txt_pay_day_2;
         private System.Windows.Forms.TextBox txt_pay_day_1;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txt_discount_secondary;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox txt_with_discount_secondary;
+        private System.Windows.Forms.TextBox txt_total;
+        private System.Windows.Forms.Label label19;
     }
 }

@@ -10,11 +10,11 @@ namespace Common.Models
     {
         public static Int64 claim_id;
         public static Int64 claim_type_id;
+        public static Int64 claim_motive_id;
         public static Int64 client_id;
-        public static Int64 recipe_id;
-        public static Int64 product_id;
-        public static Int64 optometryst_id;
-        public static Int64 manager_id;
+        public static string client_name;
+        public static string company_name;
         public static string claim_description;
+        public static DateTime claim_date;
     }
 }

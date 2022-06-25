@@ -179,6 +179,11 @@ namespace Presentation.View.Forms.Recipe
             this.txt_method = new System.Windows.Forms.TextBox();
             this.btn_next = new System.Windows.Forms.Button();
             this.btn_save_recipe = new System.Windows.Forms.Button();
+            this.gb_functions = new System.Windows.Forms.GroupBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.pnl_top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_close_create_recipe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcb_exit)).BeginInit();
@@ -199,6 +204,7 @@ namespace Presentation.View.Forms.Recipe
             this.groupBox10.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox8.SuspendLayout();
+            this.gb_functions.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_top
@@ -266,7 +272,7 @@ namespace Presentation.View.Forms.Recipe
             this.tb_recipe.Controls.Add(this.tp_tests);
             this.tb_recipe.Controls.Add(this.tp_health);
             this.tb_recipe.Controls.Add(this.tp_others);
-            this.tb_recipe.Location = new System.Drawing.Point(12, 37);
+            this.tb_recipe.Location = new System.Drawing.Point(12, 101);
             this.tb_recipe.Name = "tb_recipe";
             this.tb_recipe.SelectedIndex = 0;
             this.tb_recipe.Size = new System.Drawing.Size(775, 415);
@@ -1748,7 +1754,7 @@ namespace Presentation.View.Forms.Recipe
             this.lbl_errors.AutoSize = true;
             this.lbl_errors.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_errors.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lbl_errors.Location = new System.Drawing.Point(28, 466);
+            this.lbl_errors.Location = new System.Drawing.Point(28, 530);
             this.lbl_errors.Name = "lbl_errors";
             this.lbl_errors.Size = new System.Drawing.Size(10, 15);
             this.lbl_errors.TabIndex = 53;
@@ -1757,7 +1763,7 @@ namespace Presentation.View.Forms.Recipe
             // txt_method
             // 
             this.txt_method.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_method.Location = new System.Drawing.Point(362, 463);
+            this.txt_method.Location = new System.Drawing.Point(362, 527);
             this.txt_method.Name = "txt_method";
             this.txt_method.Size = new System.Drawing.Size(87, 23);
             this.txt_method.TabIndex = 75;
@@ -1772,7 +1778,7 @@ namespace Presentation.View.Forms.Recipe
             this.btn_next.ForeColor = System.Drawing.Color.White;
             this.btn_next.Image = global::Presentation.Properties.Resources.icons8_chevron_derecha_en_círculo_24;
             this.btn_next.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_next.Location = new System.Drawing.Point(455, 458);
+            this.btn_next.Location = new System.Drawing.Point(455, 522);
             this.btn_next.Name = "btn_next";
             this.btn_next.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btn_next.Size = new System.Drawing.Size(160, 30);
@@ -1791,7 +1797,7 @@ namespace Presentation.View.Forms.Recipe
             this.btn_save_recipe.ForeColor = System.Drawing.Color.White;
             this.btn_save_recipe.Image = global::Presentation.Properties.Resources.icons8_guardar_24;
             this.btn_save_recipe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_save_recipe.Location = new System.Drawing.Point(621, 458);
+            this.btn_save_recipe.Location = new System.Drawing.Point(621, 522);
             this.btn_save_recipe.Name = "btn_save_recipe";
             this.btn_save_recipe.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btn_save_recipe.Size = new System.Drawing.Size(160, 30);
@@ -1801,12 +1807,97 @@ namespace Presentation.View.Forms.Recipe
             this.btn_save_recipe.Visible = false;
             this.btn_save_recipe.Click += new System.EventHandler(this.btn_save_recipe_Click);
             // 
+            // gb_functions
+            // 
+            this.gb_functions.Controls.Add(this.button4);
+            this.gb_functions.Controls.Add(this.button3);
+            this.gb_functions.Controls.Add(this.button2);
+            this.gb_functions.Controls.Add(this.button1);
+            this.gb_functions.Location = new System.Drawing.Point(12, 40);
+            this.gb_functions.Name = "gb_functions";
+            this.gb_functions.Size = new System.Drawing.Size(771, 55);
+            this.gb_functions.TabIndex = 77;
+            this.gb_functions.TabStop = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Image = global::Presentation.Properties.Resources.icons8_fin_24;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button4.Location = new System.Drawing.Point(498, 18);
+            this.button4.Name = "button4";
+            this.button4.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button4.Size = new System.Drawing.Size(96, 25);
+            this.button4.TabIndex = 80;
+            this.button4.Text = "Último";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Image = global::Presentation.Properties.Resources.icons8_saltar_a_inicio_24;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(175, 18);
+            this.button3.Name = "button3";
+            this.button3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button3.Size = new System.Drawing.Size(98, 25);
+            this.button3.TabIndex = 79;
+            this.button3.Text = "Primero";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = global::Presentation.Properties.Resources.icons8_izquierda_en_cuadrado_24;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(279, 18);
+            this.button2.Name = "button2";
+            this.button2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button2.Size = new System.Drawing.Size(98, 25);
+            this.button2.TabIndex = 78;
+            this.button2.Text = "Anterior";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = global::Presentation.Properties.Resources.icons8_derecha_en_cuadrado_24;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.Location = new System.Drawing.Point(383, 18);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(109, 25);
+            this.button1.TabIndex = 77;
+            this.button1.Text = "Siguiente";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // RecipeView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(799, 499);
+            this.ClientSize = new System.Drawing.Size(799, 562);
+            this.Controls.Add(this.gb_functions);
             this.Controls.Add(this.txt_method);
             this.Controls.Add(this.lbl_errors);
             this.Controls.Add(this.btn_next);
@@ -1849,6 +1940,7 @@ namespace Presentation.View.Forms.Recipe
             this.groupBox5.PerformLayout();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
+            this.gb_functions.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2002,5 +2094,10 @@ namespace Presentation.View.Forms.Recipe
         public System.Windows.Forms.Button btn_search_optometryst;
         public System.Windows.Forms.TextBox txt_method;
         public System.Windows.Forms.TextBox txt_number_recipe;
+        public System.Windows.Forms.GroupBox gb_functions;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }

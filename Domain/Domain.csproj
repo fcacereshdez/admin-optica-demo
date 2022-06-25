@@ -53,6 +53,7 @@
     <Compile Include="LaboratoryController.cs" />
     <Compile Include="ProductController.cs" />
     <Compile Include="RecipeController.cs" />
+    <Compile Include="ShippmentController.cs" />
     <Compile Include="UpdateController.cs" />
     <Compile Include="UserController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

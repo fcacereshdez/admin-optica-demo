@@ -72,9 +72,9 @@ namespace Presentation.View.Forms.Bank
             this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(11, 4);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(122, 17);
+            this.label10.Size = new System.Drawing.Size(110, 17);
             this.label10.TabIndex = 6;
-            this.label10.Text = "Creador de bancos";
+            this.label10.Text = "Editor de bancos";
             // 
             // pcb_close_create_bank
             // 
@@ -186,7 +186,7 @@ namespace Presentation.View.Forms.Bank
             this.btn_save_bank.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btn_save_bank.Size = new System.Drawing.Size(135, 30);
             this.btn_save_bank.TabIndex = 33;
-            this.btn_save_bank.Text = "Guardar";
+            this.btn_save_bank.Text = "Actualizar";
             this.btn_save_bank.UseVisualStyleBackColor = false;
             this.btn_save_bank.Click += new System.EventHandler(this.btn_save_bank_Click);
             // 
@@ -223,7 +223,7 @@ namespace Presentation.View.Forms.Bank
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "BankEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Crear banco";
+            this.Text = "Editar banco";
             this.Load += new System.EventHandler(this.BankEdit_Load);
             this.pnl_top.ResumeLayout(false);
             this.pnl_top.PerformLayout();

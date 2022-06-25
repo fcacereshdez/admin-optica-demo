@@ -36,12 +36,14 @@ namespace Presentation.View.Forms.Recipe
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RecipeCreate));
             this.pnl_top = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
+            this.pcb_close_create_recipe = new System.Windows.Forms.PictureBox();
+            this.pcb_exit = new System.Windows.Forms.PictureBox();
+            this.pcb_minus = new System.Windows.Forms.PictureBox();
             this.tb_recipe = new System.Windows.Forms.TabControl();
             this.tp_clients = new System.Windows.Forms.TabPage();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.dgv_recipes = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.txt_number_recipe = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_age = new System.Windows.Forms.TextBox();
@@ -176,13 +178,17 @@ namespace Presentation.View.Forms.Recipe
             this.label31 = new System.Windows.Forms.Label();
             this.lbl_errors = new System.Windows.Forms.Label();
             this.txt_method = new System.Windows.Forms.TextBox();
+            this.gb_functions = new System.Windows.Forms.GroupBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.btn_next = new System.Windows.Forms.Button();
             this.btn_save_recipe = new System.Windows.Forms.Button();
-            this.pcb_close_create_recipe = new System.Windows.Forms.PictureBox();
-            this.pcb_exit = new System.Windows.Forms.PictureBox();
-            this.pcb_minus = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.pnl_top.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcb_close_create_recipe)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcb_exit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcb_minus)).BeginInit();
             this.tb_recipe.SuspendLayout();
             this.tp_clients.SuspendLayout();
             this.groupBox9.SuspendLayout();
@@ -199,9 +205,7 @@ namespace Presentation.View.Forms.Recipe
             this.groupBox10.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcb_close_create_recipe)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcb_exit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcb_minus)).BeginInit();
+            this.gb_functions.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_top
@@ -229,13 +233,47 @@ namespace Presentation.View.Forms.Recipe
             this.label10.TabIndex = 6;
             this.label10.Text = "Recetas";
             // 
+            // pcb_close_create_recipe
+            // 
+            this.pcb_close_create_recipe.Image = global::Presentation.Properties.Resources.close;
+            this.pcb_close_create_recipe.Location = new System.Drawing.Point(756, 2);
+            this.pcb_close_create_recipe.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pcb_close_create_recipe.Name = "pcb_close_create_recipe";
+            this.pcb_close_create_recipe.Size = new System.Drawing.Size(25, 25);
+            this.pcb_close_create_recipe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcb_close_create_recipe.TabIndex = 4;
+            this.pcb_close_create_recipe.TabStop = false;
+            this.pcb_close_create_recipe.Click += new System.EventHandler(this.pcb_close_create_recipe_Click);
+            // 
+            // pcb_exit
+            // 
+            this.pcb_exit.Image = global::Presentation.Properties.Resources.close;
+            this.pcb_exit.Location = new System.Drawing.Point(1389, 7);
+            this.pcb_exit.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.pcb_exit.Name = "pcb_exit";
+            this.pcb_exit.Size = new System.Drawing.Size(34, 43);
+            this.pcb_exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcb_exit.TabIndex = 3;
+            this.pcb_exit.TabStop = false;
+            // 
+            // pcb_minus
+            // 
+            this.pcb_minus.Image = global::Presentation.Properties.Resources.minus;
+            this.pcb_minus.Location = new System.Drawing.Point(1347, 7);
+            this.pcb_minus.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.pcb_minus.Name = "pcb_minus";
+            this.pcb_minus.Size = new System.Drawing.Size(34, 43);
+            this.pcb_minus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcb_minus.TabIndex = 2;
+            this.pcb_minus.TabStop = false;
+            // 
             // tb_recipe
             // 
             this.tb_recipe.Controls.Add(this.tp_clients);
             this.tb_recipe.Controls.Add(this.tp_tests);
             this.tb_recipe.Controls.Add(this.tp_health);
             this.tb_recipe.Controls.Add(this.tp_others);
-            this.tb_recipe.Location = new System.Drawing.Point(12, 37);
+            this.tb_recipe.Location = new System.Drawing.Point(12, 107);
             this.tb_recipe.Name = "tb_recipe";
             this.tb_recipe.SelectedIndex = 0;
             this.tb_recipe.Size = new System.Drawing.Size(775, 415);
@@ -315,8 +353,6 @@ namespace Presentation.View.Forms.Recipe
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.checkBox1);
             this.groupBox1.Controls.Add(this.txt_number_recipe);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txt_age);
@@ -337,16 +373,6 @@ namespace Presentation.View.Forms.Recipe
             this.groupBox1.TabIndex = 44;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Información básica";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(596, 135);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(146, 19);
-            this.checkBox1.TabIndex = 56;
-            this.checkBox1.Text = "Receta de otra persona";
-            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // txt_number_recipe
             // 
@@ -1694,7 +1720,7 @@ namespace Presentation.View.Forms.Recipe
             this.lbl_errors.AutoSize = true;
             this.lbl_errors.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_errors.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lbl_errors.Location = new System.Drawing.Point(28, 466);
+            this.lbl_errors.Location = new System.Drawing.Point(28, 536);
             this.lbl_errors.Name = "lbl_errors";
             this.lbl_errors.Size = new System.Drawing.Size(10, 15);
             this.lbl_errors.TabIndex = 53;
@@ -1703,11 +1729,95 @@ namespace Presentation.View.Forms.Recipe
             // txt_method
             // 
             this.txt_method.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_method.Location = new System.Drawing.Point(362, 463);
+            this.txt_method.Location = new System.Drawing.Point(362, 533);
             this.txt_method.Name = "txt_method";
             this.txt_method.Size = new System.Drawing.Size(87, 23);
             this.txt_method.TabIndex = 75;
             this.txt_method.Visible = false;
+            // 
+            // gb_functions
+            // 
+            this.gb_functions.Controls.Add(this.button4);
+            this.gb_functions.Controls.Add(this.button3);
+            this.gb_functions.Controls.Add(this.button2);
+            this.gb_functions.Controls.Add(this.button1);
+            this.gb_functions.Location = new System.Drawing.Point(12, 34);
+            this.gb_functions.Name = "gb_functions";
+            this.gb_functions.Size = new System.Drawing.Size(771, 55);
+            this.gb_functions.TabIndex = 76;
+            this.gb_functions.TabStop = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Image = global::Presentation.Properties.Resources.icons8_fin_24;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button4.Location = new System.Drawing.Point(498, 18);
+            this.button4.Name = "button4";
+            this.button4.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button4.Size = new System.Drawing.Size(96, 25);
+            this.button4.TabIndex = 80;
+            this.button4.Text = "Último";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Image = global::Presentation.Properties.Resources.icons8_saltar_a_inicio_24;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(175, 18);
+            this.button3.Name = "button3";
+            this.button3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button3.Size = new System.Drawing.Size(98, 25);
+            this.button3.TabIndex = 79;
+            this.button3.Text = "Primero";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = global::Presentation.Properties.Resources.icons8_izquierda_en_cuadrado_24;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(279, 18);
+            this.button2.Name = "button2";
+            this.button2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button2.Size = new System.Drawing.Size(98, 25);
+            this.button2.TabIndex = 78;
+            this.button2.Text = "Anterior";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(56)))), ((int)(((byte)(45)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = global::Presentation.Properties.Resources.icons8_derecha_en_cuadrado_24;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.Location = new System.Drawing.Point(383, 18);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(109, 25);
+            this.button1.TabIndex = 77;
+            this.button1.Text = "Siguiente";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // btn_next
             // 
@@ -1718,7 +1828,7 @@ namespace Presentation.View.Forms.Recipe
             this.btn_next.ForeColor = System.Drawing.Color.White;
             this.btn_next.Image = global::Presentation.Properties.Resources.icons8_chevron_derecha_en_círculo_24;
             this.btn_next.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_next.Location = new System.Drawing.Point(455, 458);
+            this.btn_next.Location = new System.Drawing.Point(455, 528);
             this.btn_next.Name = "btn_next";
             this.btn_next.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btn_next.Size = new System.Drawing.Size(160, 30);
@@ -1736,68 +1846,22 @@ namespace Presentation.View.Forms.Recipe
             this.btn_save_recipe.ForeColor = System.Drawing.Color.White;
             this.btn_save_recipe.Image = global::Presentation.Properties.Resources.icons8_guardar_24;
             this.btn_save_recipe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_save_recipe.Location = new System.Drawing.Point(621, 458);
+            this.btn_save_recipe.Location = new System.Drawing.Point(621, 528);
             this.btn_save_recipe.Name = "btn_save_recipe";
             this.btn_save_recipe.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btn_save_recipe.Size = new System.Drawing.Size(160, 30);
             this.btn_save_recipe.TabIndex = 64;
             this.btn_save_recipe.Text = "Guardar receta";
             this.btn_save_recipe.UseVisualStyleBackColor = false;
-            this.btn_save_recipe.Visible = false;
             this.btn_save_recipe.Click += new System.EventHandler(this.btn_save_recipe_Click);
-            // 
-            // pcb_close_create_recipe
-            // 
-            this.pcb_close_create_recipe.Image = global::Presentation.Properties.Resources.close;
-            this.pcb_close_create_recipe.Location = new System.Drawing.Point(756, 2);
-            this.pcb_close_create_recipe.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pcb_close_create_recipe.Name = "pcb_close_create_recipe";
-            this.pcb_close_create_recipe.Size = new System.Drawing.Size(25, 25);
-            this.pcb_close_create_recipe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pcb_close_create_recipe.TabIndex = 4;
-            this.pcb_close_create_recipe.TabStop = false;
-            this.pcb_close_create_recipe.Click += new System.EventHandler(this.pcb_close_create_recipe_Click);
-            // 
-            // pcb_exit
-            // 
-            this.pcb_exit.Image = global::Presentation.Properties.Resources.close;
-            this.pcb_exit.Location = new System.Drawing.Point(1389, 7);
-            this.pcb_exit.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.pcb_exit.Name = "pcb_exit";
-            this.pcb_exit.Size = new System.Drawing.Size(34, 43);
-            this.pcb_exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pcb_exit.TabIndex = 3;
-            this.pcb_exit.TabStop = false;
-            // 
-            // pcb_minus
-            // 
-            this.pcb_minus.Image = global::Presentation.Properties.Resources.minus;
-            this.pcb_minus.Location = new System.Drawing.Point(1347, 7);
-            this.pcb_minus.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.pcb_minus.Name = "pcb_minus";
-            this.pcb_minus.Size = new System.Drawing.Size(34, 43);
-            this.pcb_minus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pcb_minus.TabIndex = 2;
-            this.pcb_minus.TabStop = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(506, 136);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(84, 15);
-            this.label5.TabIndex = 57;
-            this.label5.Text = "(Experimental)";
             // 
             // RecipeCreate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(799, 499);
+            this.ClientSize = new System.Drawing.Size(799, 569);
+            this.Controls.Add(this.gb_functions);
             this.Controls.Add(this.txt_method);
             this.Controls.Add(this.lbl_errors);
             this.Controls.Add(this.btn_next);
@@ -1813,6 +1877,9 @@ namespace Presentation.View.Forms.Recipe
             this.Load += new System.EventHandler(this.RecipeCreate_Load);
             this.pnl_top.ResumeLayout(false);
             this.pnl_top.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcb_close_create_recipe)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcb_exit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcb_minus)).EndInit();
             this.tb_recipe.ResumeLayout(false);
             this.tp_clients.ResumeLayout(false);
             this.groupBox9.ResumeLayout(false);
@@ -1838,9 +1905,7 @@ namespace Presentation.View.Forms.Recipe
             this.groupBox5.PerformLayout();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcb_close_create_recipe)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcb_exit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcb_minus)).EndInit();
+            this.gb_functions.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1994,7 +2059,10 @@ namespace Presentation.View.Forms.Recipe
         public System.Windows.Forms.Button btn_search_optometryst;
         public System.Windows.Forms.TextBox txt_method;
         public System.Windows.Forms.TextBox txt_number_recipe;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        public System.Windows.Forms.GroupBox gb_functions;
     }
 }

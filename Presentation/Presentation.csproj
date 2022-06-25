@@ -23,20 +23,21 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>false</MapFileExtensions>
-    <InstallUrl>\\WILFREDO\sigop\</InstallUrl>
-    <UpdateUrl>\\WILFREDO\sigop\</UpdateUrl>
+    <InstallUrl>\\INTERLENS\sigop\</InstallUrl>
+    <UpdateUrl>\\INTERLENS\sigop\</UpdateUrl>
     <SupportUrl>https://www.themangostudios.com</SupportUrl>
     <TargetCulture>es</TargetCulture>
     <ProductName>Interlenssv</ProductName>
     <PublisherName>Mango Studios</PublisherName>
+    <MinimumRequiredVersion>12.0.0.0</MinimumRequiredVersion>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>9</ApplicationRevision>
-    <ApplicationVersion>11.0.0.%2a</ApplicationVersion>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>12.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
-    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperEnabled>false</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -47,6 +48,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>2</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -79,7 +81,7 @@
     <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup>
-    <SignAssembly>false</SignAssembly>
+    <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
@@ -193,6 +195,12 @@
     <Compile Include="View\Forms\About\AboutForm.Designer.cs">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Forms\Bank\BankView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Bank\BankView.Designer.cs">
+      <DependentUpon>BankView.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Forms\Bank\BankEdit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -211,6 +219,18 @@
     <Compile Include="View\Forms\Bank\BankForm.Designer.cs">
       <DependentUpon>BankForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Forms\Claim\ClaimEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Claim\ClaimEdit.Designer.cs">
+      <DependentUpon>ClaimEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\Claim\ClaimView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Claim\ClaimView.Designer.cs">
+      <DependentUpon>ClaimView.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Forms\Claim\ClaimCreate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -222,6 +242,12 @@
     </Compile>
     <Compile Include="View\Forms\Claim\ClaimForm.Designer.cs">
       <DependentUpon>ClaimForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\Claim\ClientSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Claim\ClientSelector.Designer.cs">
+      <DependentUpon>ClientSelector.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Forms\Client\ClientView.cs">
       <SubType>Form</SubType>
@@ -367,6 +393,12 @@
     <Compile Include="View\Forms\Laboratory\LaboratoryForm.Designer.cs">
       <DependentUpon>LaboratoryForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Forms\Messages\MessageOutLoader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Messages\MessageOutLoader.Designer.cs">
+      <DependentUpon>MessageOutLoader.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Forms\Payment\PayFee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -505,6 +537,30 @@
     <Compile Include="View\Forms\Reports\SelectorForm.Designer.cs">
       <DependentUpon>SelectorForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Forms\Shipping\CarriersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Shipping\CarriersForm.Designer.cs">
+      <DependentUpon>CarriersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\Shipping\BrandsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Shipping\BrandsForm.Designer.cs">
+      <DependentUpon>BrandsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\Shipping\CategoriesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Shipping\CategoriesForm.Designer.cs">
+      <DependentUpon>CategoriesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\Shipping\ModelsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Shipping\ModelsForm.Designer.cs">
+      <DependentUpon>ModelsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Forms\Shipping\ShippingCreate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -573,6 +629,9 @@
     <EmbeddedResource Include="View\Forms\Auth\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Bank\BankView.resx">
+      <DependentUpon>BankView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\Bank\BankEdit.resx">
       <DependentUpon>BankEdit.cs</DependentUpon>
     </EmbeddedResource>
@@ -582,11 +641,20 @@
     <EmbeddedResource Include="View\Forms\Bank\BankForm.resx">
       <DependentUpon>BankForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Claim\ClaimEdit.resx">
+      <DependentUpon>ClaimEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Claim\ClaimView.resx">
+      <DependentUpon>ClaimView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\Claim\ClaimCreate.resx">
       <DependentUpon>ClaimCreate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\Claim\ClaimForm.resx">
       <DependentUpon>ClaimForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Claim\ClientSelector.resx">
+      <DependentUpon>ClientSelector.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\Client\ClientCreate.resx">
       <DependentUpon>ClientCreate.cs</DependentUpon>
@@ -657,6 +725,9 @@
     <EmbeddedResource Include="View\Forms\Laboratory\LaboratoryForm.resx">
       <DependentUpon>LaboratoryForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Messages\MessageOutLoader.resx">
+      <DependentUpon>MessageOutLoader.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\Payment\PayFee.resx">
       <DependentUpon>PayFee.cs</DependentUpon>
     </EmbeddedResource>
@@ -725,6 +796,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\Reports\SelectorForm.resx">
       <DependentUpon>SelectorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Shipping\CarriersForm.resx">
+      <DependentUpon>CarriersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Shipping\BrandsForm.resx">
+      <DependentUpon>BrandsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Shipping\CategoriesForm.resx">
+      <DependentUpon>CategoriesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Shipping\ModelsForm.resx">
+      <DependentUpon>ModelsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Shipping\ShippingCreate.resx">
+      <DependentUpon>ShippingCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Shipping\ShippingEdit.resx">
+      <DependentUpon>ShippingEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\Shipping\ShippingForm.resx">
       <DependentUpon>ShippingForm.cs</DependentUpon>
@@ -1147,6 +1236,10 @@
     <None Include="Resources\icons8-model-24.png" />
     <None Include="Resources\icons8-category-24.png" />
     <None Include="Resources\icons8-vehicle-24.png" />
+    <None Include="Resources\icons8-izquierda-en-cuadrado-24.png" />
+    <None Include="Resources\icons8-derecha-en-cuadrado-24.png" />
+    <None Include="Resources\icons8-saltar-a-inicio-24.png" />
+    <None Include="Resources\icons8-fin-24.png" />
     <Content Include="Resources\interlenssv_icon-removebg-preview.ico" />
     <None Include="Resources\icons8-marca-24.png" />
     <None Include="Resources\icons8-basculas-en-3d-24.png" />

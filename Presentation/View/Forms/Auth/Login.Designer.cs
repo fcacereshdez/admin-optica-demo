@@ -36,6 +36,7 @@ namespace Presentation.View.Forms
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbl_msg_error = new System.Windows.Forms.Label();
             this.pnl_right = new System.Windows.Forms.Panel();
+            this.lbl_login_status = new System.Windows.Forms.Label();
             this.pcb_exit = new System.Windows.Forms.PictureBox();
             this.btn_login = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -104,6 +105,7 @@ namespace Presentation.View.Forms
             // pnl_right
             // 
             this.pnl_right.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(29)))), ((int)(((byte)(26)))));
+            this.pnl_right.Controls.Add(this.lbl_login_status);
             this.pnl_right.Controls.Add(this.pcb_exit);
             this.pnl_right.Controls.Add(this.btn_login);
             this.pnl_right.Controls.Add(this.lbl_msg_error);
@@ -116,6 +118,17 @@ namespace Presentation.View.Forms
             this.pnl_right.Name = "pnl_right";
             this.pnl_right.Size = new System.Drawing.Size(298, 361);
             this.pnl_right.TabIndex = 1;
+            // 
+            // lbl_login_status
+            // 
+            this.lbl_login_status.AutoSize = true;
+            this.lbl_login_status.ForeColor = System.Drawing.Color.White;
+            this.lbl_login_status.Location = new System.Drawing.Point(41, 223);
+            this.lbl_login_status.Name = "lbl_login_status";
+            this.lbl_login_status.Size = new System.Drawing.Size(210, 17);
+            this.lbl_login_status.TabIndex = 8;
+            this.lbl_login_status.Text = "Estámos iniciando sesión, espere...";
+            this.lbl_login_status.Visible = false;
             // 
             // pcb_exit
             // 
@@ -135,13 +148,13 @@ namespace Presentation.View.Forms
             this.btn_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_login.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_login.ForeColor = System.Drawing.Color.White;
-            this.btn_login.Location = new System.Drawing.Point(41, 240);
+            this.btn_login.Location = new System.Drawing.Point(41, 243);
             this.btn_login.Name = "btn_login";
             this.btn_login.Size = new System.Drawing.Size(109, 37);
             this.btn_login.TabIndex = 5;
             this.btn_login.Text = "Entrar";
             this.btn_login.UseVisualStyleBackColor = false;
-            this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
+            this.btn_login.Click += new System.EventHandler(this.btn_login_action_Click);
             // 
             // label3
             // 
@@ -194,6 +207,7 @@ namespace Presentation.View.Forms
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Iniciar sesión";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.pnl_left.ResumeLayout(false);
             this.pnl_left.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -218,5 +232,6 @@ namespace Presentation.View.Forms
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pcb_exit;
         private System.Windows.Forms.Label lbl_version_login;
+        private System.Windows.Forms.Label lbl_login_status;
     }
 }
